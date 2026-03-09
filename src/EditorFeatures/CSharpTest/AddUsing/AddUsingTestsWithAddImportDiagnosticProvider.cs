@@ -34,7 +34,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddUsing
 
         [WorkItem(1239, @"https://github.com/dotnet/roslyn/issues/1239")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIncompleteLambda1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Linq;
@@ -58,7 +60,9 @@ class C
 
         [WorkItem(1239, @"https://github.com/dotnet/roslyn/issues/1239")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIncompleteLambda2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Linq;
@@ -83,7 +87,9 @@ class C
         [WorkItem(860648, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/860648")]
         [WorkItem(902014, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/902014")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIncompleteSimpleLambdaExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Linq;
@@ -111,7 +117,9 @@ class Program
 
         [WorkItem(829970, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/829970")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnknownIdentifierGenericName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -128,7 +136,9 @@ class C
 
         [WorkItem(829970, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/829970")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnknownIdentifierInAttributeSyntaxWithoutTarget()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -144,7 +154,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOutsideOfMethodWithMalformedGenericParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -162,7 +174,9 @@ class Program
 
         [WorkItem(752640, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/752640")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnknownIdentifierWithSyntaxError()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -179,7 +193,9 @@ class C
 
         [WorkItem(855748, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/855748")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericNameWithBrackets()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -220,7 +236,9 @@ class Class
 
         [WorkItem(867496, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/867496")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMalformedGenericParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -245,7 +263,9 @@ class Class
 
         [WorkItem(18621, "https://github.com/dotnet/roslyn/issues/18621")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIncompleteMemberWithAsyncTaskReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"

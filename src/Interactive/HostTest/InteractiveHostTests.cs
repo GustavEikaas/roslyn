@@ -44,12 +44,16 @@ namespace Microsoft.CodeAnalysis.UnitTests.Interactive
 
             RedirectOutput();
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ResetAsync(new InteractiveHostOptions(initializationFile: null, culture: CultureInfo.InvariantCulture)).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             var remoteService = _host.TryGetService();
             Assert.NotNull(remoteService);
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.SetPathsAsync(new[] { s_fxDir }, new[] { s_homeDir }, s_homeDir).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             // assert and remove logo:
             var output = SplitLines(ReadOutputToEnd());
@@ -109,8 +113,12 @@ namespace Microsoft.CodeAnalysis.UnitTests.Interactive
         private bool Execute(string code)
         {
             var task = _host.ExecuteAsync(code);
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             task.Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             return task.Result.Success;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
 
         private bool IsShadowCopy(string path)
@@ -135,7 +143,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.Interactive
             ClearOutput();
 
             var initTask = _host.ResetAsync(new InteractiveHostOptions(initializationFile: rspFile, culture: CultureInfo.InvariantCulture));
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             initTask.Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
 
         public string ReadOutputToEnd(bool isError = false)
@@ -282,7 +292,9 @@ void goo()
 
             RestartHost();
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             executeTask.Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             Assert.True(Execute(@"1+1"));
             Assert.Equal("2\r\n", ReadOutputToEnd());
@@ -352,7 +364,9 @@ while(true) {}
 
             RestartHost();
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             executeTask.Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             Assert.True(Execute(@"1+1"));
             Assert.Equal("2\r\n", ReadOutputToEnd());
@@ -363,8 +377,12 @@ while(true) {}
         {
             var file = Temp.CreateFile().WriteAllText("1 1").Path;
             var task = _host.ExecuteFileAsync(file);
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             task.Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             Assert.False(task.Result.Success);
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             var errorOut = ReadErrorOutputToEnd().Trim();
             Assert.True(errorOut.StartsWith(file + "(1,3):", StringComparison.Ordinal), "Error output should start with file name, line and column");
@@ -372,7 +390,9 @@ while(true) {}
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AsyncExecuteFile_NonExistingFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var result = await _host.ExecuteFileAsync("non existing file");
             Assert.False(result.Success);
@@ -399,9 +419,13 @@ public int Goo(int i) { return i; }
 WriteLine(5);
 ").Path;
             var task = _host.ExecuteFileAsync(file);
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             task.Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             Assert.True(task.Result.Success);
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             Assert.Equal("5", ReadOutputToEnd().Trim());
 
             Execute("Goo(2)");
@@ -419,7 +443,9 @@ WriteLine(5);
         {
             var executeTask = _host.ExecuteFileAsync(typeof(Process).Assembly.Location);
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             executeTask.Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             var errorOut = ReadErrorOutputToEnd().Trim();
             Assert.True(errorOut.StartsWith(typeof(Process).Assembly.Location + "(1,3):", StringComparison.Ordinal), "Error output should start with file name, line and column");
@@ -432,7 +458,9 @@ WriteLine(5);
         {
             var file = Temp.CreateFile().WriteAllText("#load blah.csx" + "\r\n" + "class C {}");
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ExecuteFileAsync(file.Path).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             var errorOut = ReadErrorOutputToEnd().Trim();
             Assert.True(errorOut.StartsWith(file.Path + "(1,7):", StringComparison.Ordinal), "Error output should start with file name, line and column");
@@ -453,7 +481,9 @@ WriteLine(5);
             var executeTask = _host.AddReferenceAsync("nonexistingassembly" + Guid.NewGuid());
 
             Assert.True(mayTerminate.WaitOne());
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             executeTask.Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             Assert.True(Execute(@"1+1"));
 
@@ -848,7 +878,9 @@ new D().Y
             var rspFile = Temp.CreateFile();
             rspFile.WriteAllText("/lib:" + directory.Path);
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ResetAsync(new InteractiveHostOptions(initializationFile: rspFile.Path, culture: CultureInfo.InvariantCulture)).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             Execute(
 $@"#r ""{assemblyName}.dll""
@@ -880,7 +912,9 @@ typeof(C).Assembly.GetName()");
 /u:System.Text
 /u:System.Threading.Tasks
 ");
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ResetAsync(new InteractiveHostOptions(initializationFile: rspFile.Path, culture: CultureInfo.InvariantCulture)).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             Execute(@"
 dynamic d = new ExpandoObject();
@@ -929,7 +963,9 @@ OK
 {initFile.Path}
 ");
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ResetAsync(new InteractiveHostOptions(initializationFile: rspFile.Path, culture: CultureInfo.InvariantCulture)).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             Execute("new Process()");
 
@@ -955,7 +991,9 @@ a
 b
 c
 ");
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ResetAsync(new InteractiveHostOptions(initializationFile: rspFile.Path, culture: CultureInfo.InvariantCulture)).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             Assert.Equal("", ReadErrorOutputToEnd());
 
@@ -1066,33 +1104,49 @@ new object[] { new Class1(), new Class2(), new Class3() }
             string normalizeSeparatorsAndFrameworkFolders(string s) => s.Replace("\\", "\\\\").Replace("Framework64", "Framework");
 
             // print default:
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ExecuteAsync(@"ReferencePaths").Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             var output = ReadOutputToEnd();
             Assert.Equal("SearchPaths { \"" + normalizeSeparatorsAndFrameworkFolders(string.Join("\", \"", new[] { s_fxDir })) + "\" }\r\n", output);
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ExecuteAsync(@"SourcePaths").Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             output = ReadOutputToEnd();
             Assert.Equal("SearchPaths { \"" + normalizeSeparatorsAndFrameworkFolders(string.Join("\", \"", new[] { s_homeDir })) + "\" }\r\n", output);
 
             // add and test if added:
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ExecuteAsync("SourcePaths.Add(@\"" + srcDir + "\");").Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ExecuteAsync(@"SourcePaths").Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             output = ReadOutputToEnd();
             Assert.Equal("SearchPaths { \"" + normalizeSeparatorsAndFrameworkFolders(string.Join("\", \"", new[] { s_homeDir, srcDir.Path })) + "\" }\r\n", output);
 
             // execute file (uses modified search paths), the file adds a reference path
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ExecuteFileAsync("goo.csx").Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ExecuteAsync(@"ReferencePaths").Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             output = ReadOutputToEnd();
             Assert.Equal("SearchPaths { \"" + normalizeSeparatorsAndFrameworkFolders(string.Join("\", \"", new[] { s_fxDir, dllDir })) + "\" }\r\n", output);
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.AddReferenceAsync(Path.GetFileName(dll.Path)).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _host.ExecuteAsync(@"typeof(Metadata.ICSProp)").Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             var error = ReadErrorOutputToEnd();
             Assert.Equal("", error);
@@ -1175,7 +1229,9 @@ Console.Write(Task.Run(() => { Thread.CurrentThread.Join(100); return 42; }).Con
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Bitness()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await _host.ExecuteAsync(@"System.IntPtr.Size");
             await _host.ResetAsync(new InteractiveHostOptions(initializationFile: null, culture: CultureInfo.InvariantCulture, is64Bit: true));

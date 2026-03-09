@@ -32,7 +32,9 @@ namespace N2
 }}";
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousClassObjectCreationUsingsInNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var classDef = GetAmbiguousDefinition("public class Ambiguous { }");
             var initialMarkup = classDef + @"
@@ -84,7 +86,9 @@ namespace Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousClassObjectCreationUsingsInCompilationUnit()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var classDef = GetAmbiguousDefinition("public class Ambiguous { }");
             await TestInRegularAndScriptAsync(@"
@@ -118,7 +122,9 @@ namespace Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousClassObjectCreationGenericsDontOfferDiagnostic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var genericAmbiguousClassDefinition = GetAmbiguousDefinition("public class Ambiguous<T> { }");
             await TestMissingAsync(@"
@@ -138,7 +144,9 @@ namespace Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var classDef = GetAmbiguousDefinition("public class AmbiguousAttribute: System.Attribute { }");
             await TestInRegularAndScriptAsync(@"
@@ -166,7 +174,9 @@ namespace Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamespaceAndTypenameIdenticalOffersNoDiagnostics()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // This gives CS0433: The type 'Ambiguous' exists in both 'Assembly1' and 'Assembly2'
             // Couldn't get a CS0104 in this situation. Keep the test anyway if someone finds a way to force CS0104 here
@@ -214,7 +224,9 @@ namespace N1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousAliasNoDiagnostics()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(@"
 extern alias alias;
@@ -226,7 +238,9 @@ class myClass : [|alias|]::Uri
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousNestedClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initialMarkup = @"
 using static Static<string>;
@@ -296,7 +310,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousClassDiagnosedAtBaseList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var classDef = GetAmbiguousDefinition(@"public class AmbiguousClass { }");
             var initialMarkup = @"
@@ -322,7 +338,9 @@ namespace NTest
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousClassDiagnosedAtTypeConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var classDef = GetAmbiguousDefinition(@"public class AmbiguousClass { }");
             var initialMarkup = @"
@@ -348,7 +366,9 @@ namespace NTest
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousEnumDiagnosedAtFieldDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var enumDef = GetAmbiguousDefinition(@"public enum AmbiguousEnum { }");
             var initialMarkup = @"
@@ -380,7 +400,9 @@ namespace NTest
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousStructDiagnosedAtPropertyDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var strcutDef = GetAmbiguousDefinition(@"public struct AmbiguousStruct { }");
             var initialMarkup = @"
@@ -412,7 +434,9 @@ namespace NTest
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousClassDiagnosedAtTypeArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var classDef = GetAmbiguousDefinition(@"public class AmbiguousClass { }");
             var initialMarkup = @"
@@ -450,7 +474,9 @@ namespace NTest
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousClassDiagnosedAtIdentifierOfIncompleteExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var classDef = GetAmbiguousDefinition(@"public class AmbiguousClass { }");
             var initialMarkup = @"
@@ -488,7 +514,9 @@ namespace NTest
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousClassDiagnosedAtMethodParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var classDef = GetAmbiguousDefinition(@"public class AmbiguousClass { }");
             var initialMarkup = @"
@@ -524,7 +552,9 @@ namespace NTest
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAliasAmbiguousType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAmbiguousClassDiagnosedAtFromClauseTypeIdentifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var classDef = GetAmbiguousDefinition(@"public class AmbiguousClass { }");
             var initialMarkup = @"

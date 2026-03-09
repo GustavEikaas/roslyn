@@ -40,8 +40,14 @@ Window wind = new Window();
 wind.Title = ""wpf window text"";
 wind.Show();");
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
+#pragma warning disable VSTHRD104 // Offer async methods
             var form =  AutomationElementHelper.FindAutomationElementAsync("win form text").Result;
+#pragma warning restore VSTHRD104 // Offer async methods
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             var  wpf = AutomationElementHelper.FindAutomationElementAsync("wpf window text").Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             // 3) Add UI elements to windows and verify
             VisualStudio.InteractiveWindow.SubmitText(@"// add a label to the form

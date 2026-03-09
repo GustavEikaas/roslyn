@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.EventHookup
     public class EventHookupCommandHandlerTests
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task HandlerName_EventInThisClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -34,7 +36,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task HandlerName_EventOnLocal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -60,7 +64,9 @@ class D
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task HandlerName_EventOnFieldOfObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -91,7 +97,9 @@ class E
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoHookupOnIntegerPlusEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -126,7 +134,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task HandlerName_DefaultHandlerNameAlreadyExistsWithSameNonStaticState()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -152,7 +162,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task HandlerName_DefaultHandlerNameAlreadyExistsWithDifferentStaticState()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -178,7 +190,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task HandlerName_DefaultHandlerNameAlreadyExistsAsField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -200,7 +214,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task HookupInLambdaInLocalDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -222,7 +238,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypingSpacesDoesNotDismiss()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -246,7 +264,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypingLettersDismisses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -270,7 +290,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypingEqualsInSessionDismisses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -294,7 +316,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CancelViaLeftKey()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -326,7 +350,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CancelViaBackspace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -354,7 +380,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EventHookupBeforeEventHookup()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -402,7 +430,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EventHookupBeforeComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -450,7 +480,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EventHookupInArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -494,7 +526,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task HookupInFieldDeclarationSingleLineLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -524,7 +558,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task HookupInFieldDeclarationMultiLineLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -560,7 +596,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EventHookupInUnformattedPosition1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -595,7 +633,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EventHookupInUnformattedPosition2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -648,7 +688,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SessionCancelledByCharacterBeforeEventHookupDeterminationCompleted()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -673,7 +715,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TabBeforeEventHookupDeterminationCompleted()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -716,7 +760,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveCaretOutOfSpanBeforeEventHookupDeterminationCompleted()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -741,7 +787,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EnsureNameUniquenessInPartialClasses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public partial class C
@@ -769,7 +817,9 @@ public partial class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EnsureNameUniquenessAgainstBaseClasses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Base
@@ -793,7 +843,9 @@ class Program : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EnsureNameUniquenessAgainstParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -814,7 +866,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DelegateInvokeMethodReturnsNonVoid()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -855,7 +909,9 @@ class C
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
         [WorkItem(553660, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/553660")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PlusEqualsInsideComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -876,7 +932,9 @@ class C
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
         [WorkItem(951664, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/951664")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UseInvocationLocationTypeNameWhenEventIsMemberOfBaseType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 namespace Scenarios
@@ -929,7 +987,9 @@ class TestClass_T1_S1_4 : Scenarios.DelegateTest_Generics_NonGenericClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EventHookupWithQualifiedMethodAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -965,7 +1025,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.EventHookup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EventHookupWithQualifiedMethodAccessAndNotificationOptionSilent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // This validates the scenario where the user has stated that they prefer `this.` qualification but the
             // notification level is `Silent`, which means existing violations of the rule won't be flagged but newly

@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         internal override AbstractSyntaxStructureProvider CreateProvider() => new BlockSyntaxStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTryBlock1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -38,7 +40,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnsafe1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -56,7 +60,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixed1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -74,7 +80,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUsing1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -92,7 +100,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLock1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -110,7 +120,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForStatement1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -128,7 +140,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForEachStatement1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -146,7 +160,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundForEachStatement1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -164,7 +180,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhileStatement1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -182,7 +200,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDoStatement1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -201,7 +221,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatement1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -219,7 +241,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatement2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -240,7 +264,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatement3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -260,7 +286,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestElseClause1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -281,7 +309,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfElse1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -302,7 +332,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -320,7 +352,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedBlockInSwitchSection1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -342,7 +376,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedBlockInSwitchSection2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C

@@ -201,7 +201,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeActions
                 expectedDocumentName, action);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected async Task TestAddDocument(
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             string initialMarkup,
             string expectedMarkup,
             ImmutableArray<string> expectedContainers,
@@ -217,7 +219,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeActions
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task<Tuple<Solution, Solution>> TestAddDocument(
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             TestWorkspace workspace,
             string expectedMarkup,
             ImmutableArray<string> expectedFolders,
@@ -235,7 +239,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeActions
                 expectedDocumentName: expectedDocumentName);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected async Task<Tuple<Solution, Solution>> TestAddDocument(
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             TestWorkspace workspace,
             string expected,
             ImmutableArray<CodeActionOperation> operations,

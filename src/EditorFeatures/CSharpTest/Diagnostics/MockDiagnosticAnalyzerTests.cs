@@ -57,7 +57,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.MockDiagnos
 
         [WorkItem(906919, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/906919")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Bug906919()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = "[|class C { }|]";
             await VerifyDiagnosticsAsync(source);

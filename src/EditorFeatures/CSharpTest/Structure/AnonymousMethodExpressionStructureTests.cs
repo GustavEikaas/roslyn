@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         internal override AbstractSyntaxStructureProvider CreateProvider() => new AnonymousMethodExpressionStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAnonymousMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -32,7 +34,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAnonymousMethodInForLoop()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -47,7 +51,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAnonymousMethodInMethodCall1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -65,7 +71,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAnonymousMethodInMethodCall2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C

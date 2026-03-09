@@ -17,7 +17,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.RenameTracking
     {
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotOnCreation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C$$
@@ -31,7 +33,9 @@ class C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotInBlankFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"$$";
             using (var state = RenameTrackingTestState.Create(code, LanguageNames.CSharp))
@@ -43,7 +47,9 @@ class C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingTypingAtEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C$$
@@ -58,7 +64,9 @@ class C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingTypingAtBeginning()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class $$C
@@ -73,7 +81,9 @@ class $$C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingTypingInMiddle()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class AB$$CD
@@ -88,7 +98,9 @@ class AB$$CD
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingDeleteFromEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class ABC$$
@@ -103,7 +115,9 @@ class ABC$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingDeleteFromBeginning()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class $$ABC
@@ -118,7 +132,9 @@ class $$ABC
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingDeleteFromMiddle()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class AB$$C
@@ -133,7 +149,9 @@ class AB$$C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotOnClassKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class$$ ABCD
@@ -148,7 +166,9 @@ class$$ ABCD
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotAtMethodArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class ABCD
@@ -171,7 +191,9 @@ class ABCD
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingSessionContinuesAfterViewingTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C$$
@@ -189,7 +211,9 @@ class C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotInString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -208,7 +232,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingHandlesAtSignAsCSharpEscape()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class $$C
@@ -223,7 +249,9 @@ class $$C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingHandlesSquareBracketsAsVisualBasicEscape()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 Class $$C
@@ -241,7 +269,9 @@ End Class";
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotOnSquareBracketsInCSharp()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class $$C
@@ -260,7 +290,9 @@ class $$C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingHandlesUnicode()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C$$
@@ -275,7 +307,9 @@ class C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingThroughKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class i$$
@@ -296,7 +330,9 @@ class i$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingThroughIllegalStartCharacter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class $$abc
@@ -315,7 +351,9 @@ class $$abc
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingOnBothSidesOfIdentifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class $$Def
@@ -334,7 +372,9 @@ class $$Def
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingThroughSameIdentifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C$$
@@ -355,7 +395,9 @@ class C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingThroughEmptyString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C$$
@@ -373,7 +415,9 @@ class C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingThroughEmptyStringWithCaretMove()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C$$
@@ -393,7 +437,9 @@ class C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotThroughEmptyStringResumeOnDifferentSpace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class  C$$
@@ -413,7 +459,9 @@ class  C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingReplaceIdentifierSuffix()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Identifi[|er|]$$
@@ -429,7 +477,9 @@ class Identifi[|er|]$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingReplaceIdentifierPrefix()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class $$[|Ident|]ifier
@@ -445,7 +495,9 @@ class $$[|Ident|]ifier
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingReplaceIdentifierCompletely()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class [|Cat|]$$
@@ -461,7 +513,9 @@ class [|Cat|]$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotAfterInvoke()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Cat$$
@@ -478,7 +532,9 @@ class Cat$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingInvokeAndChangeBackToOriginal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Cat$$
@@ -498,7 +554,9 @@ class Cat$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingUndoOnceAndStartNewSession()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Cat$$
@@ -522,7 +580,9 @@ class Cat$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingUndoTwiceAndContinueSession()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Cat$$
@@ -546,7 +606,9 @@ class Cat$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingRedoAlwaysClearsState()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Cat$$
@@ -573,7 +635,9 @@ class Cat$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingUndoTwiceRedoTwiceUndoStillWorks()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Cat$$
@@ -605,7 +669,9 @@ class Cat$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingOnReference_ParameterAsArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -624,7 +690,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingOnReference_ParameterAsNamedArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -643,7 +711,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingOnReference_Namespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 namespace NS
@@ -665,7 +735,9 @@ namespace NS
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotifiesThirdPartiesOfRenameOperation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Cat$$
@@ -697,7 +769,9 @@ class Cats
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingHonorsThirdPartyRequestsForCancellationBeforeRename()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Cat$$
@@ -731,7 +805,9 @@ class Cat
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingAlertsAboutThirdPartyRequestsForCancellationAfterRename()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Cat$$
@@ -764,7 +840,9 @@ class Cats
 
         [WpfFact, WorkItem(530469, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530469")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotWhenStartedFromTextualWordInTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 Module Program
@@ -781,7 +859,9 @@ End Module";
 
         [WpfFact, WorkItem(530495, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530495")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotWhenCaseCorrectingReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 Module Program
@@ -800,7 +880,9 @@ End Module";
 
         [WpfFact, WorkItem(599508, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/599508")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotWhenNewIdentifierReferenceBinds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 Module Program
@@ -822,7 +904,9 @@ End Module";
 
         [WpfFact, WorkItem(530400, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530400")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotWhenDeclaringEnumMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 Enum E
@@ -870,7 +954,9 @@ End Enum";
 
         [WpfFact, WorkItem(1063943, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1063943")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotFromReferenceWithWrongNumberOfArguments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -890,7 +976,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CancelRenameTracking()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C$$
@@ -907,7 +995,9 @@ class C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotWhenDeclaringEnumMembersEvenAfterCancellation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 Enum E
@@ -927,7 +1017,9 @@ End Enum";
         [WpfFact]
         [WorkItem(540, "https://github.com/dotnet/roslyn/issues/540")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingDoesNotProvideDiagnosticAfterCancellation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C$$
@@ -949,7 +1041,9 @@ class C$$
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_Nameof_FromMethodGroupReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -989,7 +1083,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_Nameof_FromMethodDefinition_NoOverloads()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1021,7 +1117,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_Nameof_FromMethodDefinition_WithOverloads()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1061,7 +1159,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_Nameof_FromReferenceToMetadata_NoTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1081,7 +1181,9 @@ class C
         [WpfFact]
         [WorkItem(762964, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/762964")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_NoTagWhenFirstEditChangesReferenceToAnotherSymbol()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1103,7 +1205,9 @@ class C
         [WpfFact]
         [WorkItem(2605, "https://github.com/dotnet/roslyn/issues/2605")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_CannotRenameToVarInCSharp()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1134,7 +1238,9 @@ class C
         [WpfFact]
         [WorkItem(2605, "https://github.com/dotnet/roslyn/issues/2605")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_CannotRenameFromVarInCSharp()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1155,7 +1261,9 @@ class C
         [WpfFact]
         [WorkItem(2605, "https://github.com/dotnet/roslyn/issues/2605")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_CanRenameToVarInVisualBasic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 Class C
@@ -1176,7 +1284,9 @@ End Class";
         [WpfFact]
         [WorkItem(2605, "https://github.com/dotnet/roslyn/issues/2605")]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_CannotRenameToDynamicInCSharp()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1206,7 +1316,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameImplicitTupleField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1228,7 +1340,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameImplicitTupleFieldVB()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1249,7 +1363,9 @@ End Class
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameImplicitTupleFieldExtended()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1272,7 +1388,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameImplicitTupleFieldExtendedVB()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 Class C
@@ -1294,7 +1412,9 @@ End Class
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
         [WorkItem(371205, "https://devdiv.visualstudio.com/DevDiv/_workitems?_a=edit&id=371205")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotOnExplicitTupleReturnDeclaration_CSharp()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1317,7 +1437,9 @@ class C
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
         [WorkItem(371205, "https://devdiv.visualstudio.com/DevDiv/_workitems?_a=edit&id=371205")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotOnExplicitTupleReturnDeclaration_VB()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1338,7 +1460,9 @@ End Class";
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
         [WorkItem(371205, "https://devdiv.visualstudio.com/DevDiv/_workitems?_a=edit&id=371205")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotOnExplicitTupleFieldReference_CSharp()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1361,7 +1485,9 @@ class C
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
         [WorkItem(371205, "https://devdiv.visualstudio.com/DevDiv/_workitems?_a=edit&id=371205")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotOnExplicitTupleFieldReference_VB()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1382,7 +1508,9 @@ End Class";
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
         [WorkItem(371205, "https://devdiv.visualstudio.com/DevDiv/_workitems?_a=edit&id=371205")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotOnExplicitTupleElementsInDeclarations_CSharp()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1402,7 +1530,9 @@ class C
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
         [WorkItem(371205, "https://devdiv.visualstudio.com/DevDiv/_workitems?_a=edit&id=371205")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotOnExplicitTupleElementsInDeclarations_VB()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 Class C
@@ -1420,7 +1550,9 @@ End Class";
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
         [WorkItem(14159, "https://github.com/dotnet/roslyn/issues/14159")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingNotOnWellKnownValueTupleType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspaceXml = @"
 <Workspace>
@@ -1456,7 +1588,9 @@ namespace System
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
         [WorkItem(14159, "https://github.com/dotnet/roslyn/issues/14159")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingOnThingsCalledValueTupleThatAreNotTheWellKnownType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspaceXml = @"
 <Workspace>
@@ -1486,7 +1620,9 @@ public struct ValueTuple&lt;T1&gt;
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTrackingOnDeconstruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1506,7 +1642,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_UnmanagedConstraint_Keyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C&lt;T&gt; where T : $$unmanaged
@@ -1520,7 +1658,9 @@ class C&lt;T&gt; where T : $$unmanaged
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.RenameTracking)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RenameTracking_UnmanagedConstraint_Type()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 interface unmanaged

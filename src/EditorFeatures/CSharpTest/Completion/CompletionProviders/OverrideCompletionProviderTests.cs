@@ -38,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         #region "CompletionItem tests"
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InheritedVirtualPublicMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 public class a
@@ -54,7 +56,9 @@ public class b : a
 
         [WorkItem(543799, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543799")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InheritedParameterDefaultValue1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"public class a
 {
@@ -69,7 +73,9 @@ public class b : a
 
         [WorkItem(543799, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543799")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InheritedParameterDefaultValue2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"public class a
 {
@@ -83,7 +89,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InheritedAbstractPublicMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 public class a
@@ -98,7 +106,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotPrivateInheritedMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"
 public class a
@@ -113,7 +123,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MatchReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class a
@@ -132,7 +144,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InvalidReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class a
@@ -152,7 +166,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAlreadyImplementedMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"
 public class a
@@ -171,7 +187,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotSealed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"
 public class a
@@ -186,7 +204,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ShowEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 using System;
@@ -202,7 +222,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfTokensAfterPosition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyNoItemsExistAsync(@"
 public class a
@@ -217,7 +239,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfNameAfterPosition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyNoItemsExistAsync(@"
 public class a
@@ -232,7 +256,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfStatic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyNoItemsExistAsync(@"
 public class a
@@ -247,7 +273,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterSingleLineMethodDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyNoItemsExistAsync(@"
 public class a
@@ -262,7 +290,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 public class a
@@ -277,7 +307,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotSuggestSealed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"
 public class a
@@ -292,7 +324,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GatherModifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 public class a
@@ -307,7 +341,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IgnorePartial()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyNoItemsExistAsync(@"
 public class a
@@ -322,7 +358,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IgnoreSealed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"
 public class a
@@ -337,7 +375,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IgnoreIfTokenAfter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyNoItemsExistAsync(@"
 public class a
@@ -352,7 +392,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestAfterUnsafeAbstractExtern()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 public class a
@@ -367,7 +409,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestAfterSealed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 public class a
@@ -382,7 +426,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoAccessibility()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class a
@@ -401,7 +447,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FilterAccessibility()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class a
@@ -439,7 +487,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FilterPublicInternal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var protectedinternal = @"
 public class a
@@ -473,7 +523,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task VerifySignatureFormat()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class a
@@ -485,7 +537,9 @@ public class a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PrivateNoFilter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class c
@@ -502,7 +556,9 @@ public class a : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOfferedOnFirstLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class c { override $$";
 
@@ -510,7 +566,9 @@ public class a : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOfferedOverrideAlone()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"override $$";
 
@@ -518,7 +576,9 @@ public class a : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IntermediateClassOverriddenMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"abstract class Base
 {
@@ -540,7 +600,9 @@ class SomeClass : Derived
 
         [WorkItem(543748, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543748")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOfferedBaseClassMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"abstract class Base
 {
@@ -561,7 +623,9 @@ class SomeClass : Derived
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOfferedOnNonVirtual()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class Base
 {
@@ -577,7 +641,9 @@ class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericTypeNameSubstitutedForGenericInDerivedClass1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public abstract class Base<T>
 {
@@ -593,7 +659,9 @@ public class SomeClass<X> : Base<X>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericTypeNameSubstitutedForGenericInDerivedClass2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public abstract class Base<T>
 {
@@ -609,7 +677,9 @@ public class SomeClass<X, Y, Z> : Base<Y>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericTypeNameSubstitutedForGenericInDerivedClass3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public abstract class Base<T, S>
 {
@@ -625,7 +695,9 @@ public class SomeClass<X, Y, Z> : Base<Y, Z>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericTypeNameSubstitutedForNonGenericInDerivedClass1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public abstract class Base<T>
 {
@@ -641,7 +713,9 @@ public class SomeClass : Base<int>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericTypeNameSubstitutedForNonGenericInDerivedClass2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public abstract class Base<T>
 {
@@ -657,7 +731,9 @@ public class SomeClass<X, Y, Z> : Base<int>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericTypeNameSubstitutedForNonGenericInDerivedClass3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System;
 
@@ -676,7 +752,9 @@ public class SomeClass : Base<int, Exception>
 
         [WorkItem(543756, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543756")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ParameterTypeSimplified()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System;
 
@@ -694,7 +772,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EscapedMethodNameInIntelliSenseList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public abstract class Base
 {
@@ -712,7 +792,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EscapedPropertyNameInIntelliSenseList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public abstract class Base
 {
@@ -730,7 +812,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EscapedParameterNameInIntelliSenseList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public abstract class Base
 {
@@ -746,7 +830,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RefParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public abstract class Base
 {
@@ -762,7 +848,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OutParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public abstract class Base
 {
@@ -779,7 +867,9 @@ public class SomeClass : Base
 
         [WorkItem(529714, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529714")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericMethodTypeParametersNotRenamed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"abstract class CGoo    
 {    
@@ -799,7 +889,9 @@ class Derived<X> : CGoo
         #region "Commit tests"
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitInEmptyClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -819,7 +911,9 @@ class Derived<X> : CGoo
 
         [WorkItem(529714, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529714")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitGenericMethodTypeParametersNotRenamed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"abstract class CGoo    
 {    
@@ -851,7 +945,9 @@ class Derived<X> : CGoo
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitMethodBeforeMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -874,7 +970,9 @@ class Derived<X> : CGoo
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitMethodAfterMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -898,7 +996,9 @@ class Derived<X> : CGoo
 
         [WorkItem(543798, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543798")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitOptionalParameterValuesAreGenerated()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -931,7 +1031,9 @@ public class Derived : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitAttributesAreNotGenerated()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -970,7 +1072,9 @@ public class Derived : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitVoidMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -999,7 +1103,9 @@ class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitVoidMethodWithParams()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -1028,7 +1134,9 @@ class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitNonVoidMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -1057,7 +1165,9 @@ class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitNonVoidMethodWithParams()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -1086,7 +1196,9 @@ class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitProtectedMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -1114,7 +1226,9 @@ class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitInternalMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -1143,7 +1257,9 @@ class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitProtectedInternalMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"public class c
 {
@@ -1172,7 +1288,9 @@ class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitAbstractMethodThrows()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -1205,7 +1323,9 @@ class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitOverrideAsAbstract()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -1231,7 +1351,9 @@ class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitOverrideAsUnsafeSealed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class c
 {
@@ -1260,7 +1382,9 @@ class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitInsertProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"public class c
 {
@@ -1297,7 +1421,9 @@ public class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitInsertPropertyAfterMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"public class c
 {
@@ -1336,7 +1462,9 @@ public class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitInsertPropertyBeforeMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"public class c
 {
@@ -1375,7 +1503,9 @@ public class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitPropertyInaccessibleGet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"public class c
 {
@@ -1407,7 +1537,9 @@ public class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitPropertyInaccessibleSet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"public class c
 {
@@ -1439,7 +1571,9 @@ public class d : c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitAccessibleEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 public class a
@@ -1467,7 +1601,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitEventAfterMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -1499,7 +1635,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitGenericMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -1532,7 +1670,9 @@ public class b : a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitInsertIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"public class MyIndexer<T>
 {
@@ -1591,7 +1731,9 @@ class d : MyIndexer<T>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitAbstractIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"public class MyIndexer<T>
 {
@@ -1635,7 +1777,9 @@ class d : MyIndexer<T>
         // public void CommitInsertAtEndOfFileAfterMethod()
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitFormats()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Base
 {
@@ -1664,7 +1808,9 @@ class Derived : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitSimplifiesParameterTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -1697,7 +1843,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitSimplifiesReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -1730,7 +1878,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitEscapedMethodName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -1762,7 +1912,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitEscapedPropertyName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"public abstract class Base
 {
@@ -1799,7 +1951,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitEscapedParameterName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -1832,7 +1986,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitRefParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -1865,7 +2021,9 @@ public class SomeClass : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitOutParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -1899,7 +2057,9 @@ public class SomeClass : Base
 
         [WorkItem(544560, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544560")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnsafe1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit =
 @"public class A
@@ -1935,7 +2095,9 @@ public class B : A
 
         [WorkItem(544560, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544560")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnsafe2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit =
 @"public class A
@@ -1971,7 +2133,9 @@ public class B : A
 
         [WorkItem(544560, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544560")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnsafe3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit =
 @"public class A
@@ -2007,7 +2171,9 @@ public class B : A
 
         [WorkItem(544560, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544560")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnsafe4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit =
 @"public class A
@@ -2043,7 +2209,9 @@ public class B : A
 
         [WorkItem(545534, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545534")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPrivateVirtualProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit =
 @"public class B
@@ -2084,7 +2252,9 @@ public class B : A
 
         [WorkItem(636706, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/636706")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrossLanguageParameterizedPropertyOverride()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var vbFile = @"Public Class Goo
     Public Overridable Property Bar(bay As Integer) As Integer
@@ -2160,7 +2330,9 @@ End Class
 
         [WorkItem(529199, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529199")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitSurroundingTriviaDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Base
 {
@@ -2193,7 +2365,9 @@ class Derived : Base
 
         [WorkItem(529199, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529199")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitBeforeTriviaDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Base
 {
@@ -2225,7 +2399,9 @@ class Derived : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitAfterTriviaDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Base
 {
@@ -2258,7 +2434,9 @@ class Derived : Base
 
         [WorkItem(529199, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529199")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitBeforeComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Base
 {
@@ -2288,7 +2466,9 @@ class Derived : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitAfterComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Base
 {
@@ -2318,7 +2498,9 @@ class Derived : Base
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFormatFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Program
 {
@@ -2357,7 +2539,9 @@ int bar;
 
         [WorkItem(736742, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/736742")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AcrossPartialTypes1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file1 = @"partial class c
 {
@@ -2412,7 +2596,9 @@ int bar;
 
         [WorkItem(736742, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/736742")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AcrossPartialTypes2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file1 = @"partial class c
 {
@@ -2472,7 +2658,9 @@ int bar;
         [WpfFact]
         [WorkItem(545678, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545678")]
         [Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_IgnoredWhenOverridingMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class D : B
@@ -2498,7 +2686,9 @@ public class B
         #endregion
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DuplicateMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Program
 {
@@ -2528,7 +2718,9 @@ class C : Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LeaveTrailingTriviaAlone()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 namespace ConsoleApplication46
@@ -2564,7 +2756,9 @@ namespace ConsoleApplication46
 
         [WorkItem(8257, "https://github.com/dotnet/roslyn/issues/8257")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotImplementedQualifiedWhenSystemUsingNotPresent_Property()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"abstract class C
 {
@@ -2602,7 +2796,9 @@ class Program : C
 
         [WorkItem(8257, "https://github.com/dotnet/roslyn/issues/8257")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotImplementedQualifiedWhenSystemUsingNotPresent_Method()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"abstract class C
 {
@@ -2631,7 +2827,9 @@ class Program : C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FilterOutMethodsWithNonRoundTrippableSymbolKeys()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = XElement.Parse(@"<Workspace>
     <Project Name=""P1"" Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -2695,7 +2893,9 @@ namespace ClassLibrary7
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = XElement.Parse(@"<Workspace>
     <Project Name=""P1"" Language=""C#"" LanguageVersion=""Latest"" CommonReferences=""true"" AssemblyName=""Proj1"">

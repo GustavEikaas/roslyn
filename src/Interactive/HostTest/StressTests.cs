@@ -75,12 +75,16 @@ namespace Microsoft.CodeAnalysis.UnitTests.Interactive
                 t.Start();
             });
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             p.ResetAsync(new InteractiveHostOptions()).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             for (int j = 0; j < 10; j++)
             {
                 var rs = p.ExecuteAsync("1+1");
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                 rs.Wait(CancellationToken.None);
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             }
         }
     }

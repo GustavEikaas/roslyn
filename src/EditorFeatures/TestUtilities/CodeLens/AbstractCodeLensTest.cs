@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeLens
     [UseExportProvider]
     public abstract class AbstractCodeLensTest
     {
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected static async Task RunCountTest(XElement input, int cap = 0)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.Create(input))
             {
@@ -41,12 +43,16 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeLens
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected static Task RunCountTest(string input, int cap = 0)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             return RunCountTest(XElement.Parse(input), cap);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected static async Task RunReferenceTest(XElement input)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.Create(input))
             {
@@ -71,12 +77,16 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeLens
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected static Task RunReferenceTest(string input)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             return RunReferenceTest(XElement.Parse(input));
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected static async Task RunMethodReferenceTest(XElement input)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.Create(input))
             {
@@ -101,12 +111,16 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeLens
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected static Task RunMethodReferenceTest(string input)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             return RunMethodReferenceTest(XElement.Parse(input));
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected static async Task RunFullyQualifiedNameTest(XElement input)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.Create(input))
             {
@@ -130,7 +144,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeLens
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected static Task RunFullyQualifiedNameTest(string input)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             return RunFullyQualifiedNameTest(XElement.Parse(input));
         }

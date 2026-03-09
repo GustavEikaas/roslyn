@@ -25,7 +25,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
             WithStrongNameProvider(s_defaultDesktopProvider);
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArraysAreEquivalent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode =
 @"class C
@@ -96,7 +98,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArraysInDifferentLanguagesAreEquivalent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode =
 @"class C
@@ -163,7 +167,9 @@ end class";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -219,7 +225,9 @@ class Type2
 
         [WorkItem(538124, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538124")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldsAcrossLanguages()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -269,7 +277,9 @@ end class";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldsInGenericTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"class C<T>
@@ -318,7 +328,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsWithDifferentReturnTypeNotEquivalent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -345,7 +357,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsWithDifferentNamesAreNotEquivalent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -372,7 +386,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsWithDifferentAritiesAreNotEquivalent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -399,7 +415,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsWithDifferentParametersAreNotEquivalent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -426,7 +444,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsWithDifferentTypeParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -455,7 +475,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsWithSameParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -484,7 +506,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsWithDifferentParameterNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -513,7 +537,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsAreEquivalentOutToRef()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -540,7 +566,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsNotEquivalentRemoveOut()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -567,7 +595,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsAreEquivalentIgnoreParams()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -596,7 +626,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsNotEquivalentDifferentParameterTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -623,7 +655,9 @@ class D
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsAcrossLanguages()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -670,7 +704,9 @@ end class";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsInGenericTypesAcrossLanguages()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -717,7 +753,9 @@ end class";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestObjectAndDynamicAreNotEqualNormally()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -739,7 +777,9 @@ end class";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestObjectAndDynamicAreEqualInSignatures()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"class Type1
@@ -770,7 +810,9 @@ end class";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnequalGenericsInSignatures()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -805,7 +847,9 @@ class Type1
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericsWithDynamicAndObjectInSignatures()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -842,7 +886,9 @@ class Type1
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDynamicAndUnrelatedTypeInSignatures()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -877,7 +923,9 @@ class Type1
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamespaces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"namespace Outer
@@ -950,7 +998,9 @@ class Type1
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamedTypesEquivalent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -998,7 +1048,9 @@ class Type2<Y>
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamedTypesDifferentIfNameChanges()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -1025,7 +1077,9 @@ class Type2
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamedTypesDifferentIfTypeKindChanges()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -1052,7 +1106,9 @@ class Type1
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamedTypesDifferentIfArityChanges()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -1079,7 +1135,9 @@ class Type1<T>
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamedTypesDifferentIfContainerDifferent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -1114,7 +1172,9 @@ class Other
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAliasedTypes1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -1150,7 +1210,9 @@ class Type1
 
         [WorkItem(599, "https://github.com/dotnet/roslyn/issues/599")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefVersusOut()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode1 =
 @"
@@ -1190,7 +1252,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCSharpReducedExtensionMethodsAreEquivalent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Zed {}
@@ -1256,7 +1320,9 @@ class Test
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVisualBasicReducedExtensionMethodsAreEquivalent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 Imports System.Runtime.CompilerServices
@@ -1332,7 +1398,9 @@ End Class
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDifferentModules()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var csharpCode =
 @"namespace N

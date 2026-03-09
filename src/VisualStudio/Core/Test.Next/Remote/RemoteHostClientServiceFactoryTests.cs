@@ -35,7 +35,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Enable_Disable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var service = CreateRemoteHostClientService();
 
@@ -51,7 +53,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GlobalAssets()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace(TestHostServices.CreateHostServices());
 
@@ -74,7 +78,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SynchronizeGlobalAssets()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace(TestHostServices.CreateHostServices());
 
@@ -92,7 +98,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpdaterService()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var exportProvider = TestHostServices.CreateMinimalExportProvider();
 
@@ -126,7 +134,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSessionWithNoSolution()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var service = CreateRemoteHostClientService();
 
@@ -146,7 +156,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSessionClosed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // enable local remote host service
             var service = CreateRemoteHostClientService();
@@ -179,7 +191,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRequestNewRemoteHost()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var service = CreateRemoteHostClientService();
 

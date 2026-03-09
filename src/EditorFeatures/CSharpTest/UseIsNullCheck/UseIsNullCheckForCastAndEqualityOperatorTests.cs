@@ -17,7 +17,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseIsNullCheck
             => (new CSharpUseIsNullCheckForCastAndEqualityOperatorDiagnosticAnalyzer(), new CSharpUseIsNullCheckForCastAndEqualityOperatorCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEquality()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -43,7 +45,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualitySwapped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -69,7 +73,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotEquality()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -95,7 +101,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotEqualitySwapped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -121,7 +129,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingPreCSharp7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -137,7 +147,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnlyForObjectCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -153,7 +165,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -185,7 +199,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllNested1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -211,7 +227,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -237,7 +255,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -263,7 +283,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstrainedTypeParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -289,7 +311,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnconstrainedTypeParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -305,7 +329,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComplexExpr()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -331,7 +357,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseIsNullCheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnDefault()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;

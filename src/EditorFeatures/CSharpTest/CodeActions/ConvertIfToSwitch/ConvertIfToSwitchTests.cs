@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
             => new CSharpConvertIfToSwitchCodeRefactoringProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnreachableEndPoint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -43,7 +45,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReachableEndPoint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -71,7 +75,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleCases_01()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -108,7 +114,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleCases_02()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -140,7 +148,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExpressionOrder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -167,7 +177,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstantExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -196,7 +208,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnNonConstantExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -211,7 +225,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnDifferentOperands()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -224,7 +240,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnSingleCase()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -237,7 +255,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -264,7 +284,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsPatternExpression_01()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -293,7 +315,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsPatternExpression_02()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -322,7 +346,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsPatternExpression_03()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -351,7 +377,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsPatternExpression_04()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -380,7 +408,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreserveTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -418,7 +448,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfCaretDoesntIntersectWithTheIfKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -431,7 +463,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestKeepBlockIfThereIsVariableDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -467,7 +501,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnBreak_01()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -483,7 +519,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnBreak_02()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -500,7 +538,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedBreak()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -540,7 +580,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSubsequentIfStatements_01()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -569,7 +611,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSubsequentIfStatements_02()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -600,7 +644,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSubsequentIfStatements_03()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -638,7 +684,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSubsequentIfStatements_04()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -669,7 +717,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSubsequentIfStatements_05()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -700,7 +750,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSubsequentIfStatements_06()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -743,7 +795,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSubsequentIfStatements_07()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -805,7 +859,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21109, "https://github.com/dotnet/roslyn/issues/21109")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -849,7 +905,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21101, "https://github.com/dotnet/roslyn/issues/21101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -879,7 +937,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -909,7 +969,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -939,7 +1001,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -969,7 +1033,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -999,7 +1065,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1029,7 +1097,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1059,7 +1129,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1089,7 +1161,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1119,7 +1193,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd9()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1149,7 +1225,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd10()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1179,7 +1257,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd11()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1209,7 +1289,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd12()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1239,7 +1321,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd13()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1269,7 +1353,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd14()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1299,7 +1385,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd15()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1329,7 +1417,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertIfTo
 
         [WorkItem(21360, "https://github.com/dotnet/roslyn/issues/21360")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertIfToSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCompoundLogicalAnd16()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C

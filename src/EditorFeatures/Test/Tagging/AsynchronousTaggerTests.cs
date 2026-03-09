@@ -31,7 +31,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Tagging
         /// </summary>
         [WpfFact]
         [WorkItem(530368, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530368")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LargeNumberOfSpans()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp(@"class Program
 {

@@ -24,7 +24,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.SuggestionTags
         private readonly DiagnosticTagProducer<DiagnosticsSuggestionTaggerProvider> _producer = new DiagnosticTagProducer<DiagnosticsSuggestionTaggerProvider>();
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.SuggestionTags)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestionTagTest1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var spansAndSelection = await GetTagSpansAndSelectionAsync(
 @"class C {

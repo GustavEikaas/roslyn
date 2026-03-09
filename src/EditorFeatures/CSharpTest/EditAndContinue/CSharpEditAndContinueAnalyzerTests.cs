@@ -234,7 +234,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_InsignificantChangesInMethodBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source1 = @"
 class C
@@ -292,7 +294,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_SyntaxError_Change()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source1 = @"
 class C
@@ -330,7 +334,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_SyntaxError_NoChange()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 class C
@@ -356,7 +362,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_SyntaxError_NoChange2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source1 = @"
 class C
@@ -394,7 +402,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_Features_NoChange()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 class C
@@ -424,7 +434,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_Features_Change()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // these are all the experimental features currently implemented
             string[] experimentalFeatures = Array.Empty<string>();
@@ -473,7 +485,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_SemanticError_NoChange()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 class C
@@ -500,7 +514,9 @@ class C
         }
 
         [Fact, WorkItem(10683, "https://github.com/dotnet/roslyn/issues/10683")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_SemanticErrorInMethodBody_Change()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source1 = @"
 class C
@@ -542,7 +558,9 @@ class C
         }
 
         [Fact, WorkItem(10683, "https://github.com/dotnet/roslyn/issues/10683")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_SemanticErrorInDeclaration_Change()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source1 = @"
 class C
@@ -580,7 +598,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_AddingNewFileHavingRudeEdits()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source1 = @"
 namespace N
@@ -636,7 +656,9 @@ namespace N
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzeDocumentAsync_AddingNewFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source1 = @"
 namespace N

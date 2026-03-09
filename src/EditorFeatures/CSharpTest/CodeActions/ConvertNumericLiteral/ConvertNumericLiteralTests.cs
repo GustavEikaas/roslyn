@@ -33,74 +33,98 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertNume
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveDigitSeparators()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync("0b1_0_01UL", "0b1001UL", Refactoring.AddOrRemoveDigitSeparators);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConvertToBinary()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync("5", "0b101", Refactoring.ChangeBase1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConvertToDecimal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync("0b101", "5", Refactoring.ChangeBase1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConvertToHex()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync("10", "0xA", Refactoring.ChangeBase2);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSeparateThousands()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync("100000000", "100_000_000", Refactoring.AddOrRemoveDigitSeparators);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSeparateWords()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync("0x1111abcd1111", "0x1111_abcd_1111", Refactoring.AddOrRemoveDigitSeparators);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSeparateNibbles()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync("0b10101010", "0b1010_1010", Refactoring.AddOrRemoveDigitSeparators);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnFloatingPoint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingOneAsync("1.1");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnScientificNotation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingOneAsync("1e5");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConvertToDecimal_02()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync("0x1e5", "485", Refactoring.ChangeBase1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeCharacter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync("0x1e5UL", "0b111100101UL", Refactoring.ChangeBase2);
         }
 
         [WorkItem(19225, "https://github.com/dotnet/roslyn/issues/19225")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreserveWhitespaces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -125,7 +149,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertNume
 
         [WorkItem(19369, "https://github.com/dotnet/roslyn/issues/19369")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCaretPositionAtTheEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -139,7 +165,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertNume
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSelectionMatchesToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -153,7 +181,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertNume
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertNumericLiteral)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSelectionDoesntMatchToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C

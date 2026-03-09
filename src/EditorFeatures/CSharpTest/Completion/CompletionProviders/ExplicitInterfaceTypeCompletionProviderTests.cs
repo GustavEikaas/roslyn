@@ -21,7 +21,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
             => new ExplicitInterfaceTypeCompletionProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAtStartOfClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -39,7 +41,9 @@ class C : IList
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
         [WorkItem(459044, "https://devdiv.visualstudio.com/DefaultCollection/DevDiv/_workitems?id=459044")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInMisplacedUsing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -51,7 +55,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAtStartOfStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -69,7 +75,9 @@ struct C : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -88,7 +96,9 @@ class C : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -107,7 +117,9 @@ class C : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterExpressionBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -126,7 +138,9 @@ class C : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithAttributeFollowing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -148,7 +162,9 @@ class C : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithModifierFollowing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -169,7 +185,9 @@ class C : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithTypeFollowing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -190,7 +208,9 @@ class C : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithTypeFollowing2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -211,7 +231,9 @@ class C : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -229,7 +251,9 @@ class C : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotWithAccessibility()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;
@@ -244,7 +268,9 @@ class C : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections;

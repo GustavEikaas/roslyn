@@ -11,7 +11,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ChangeSignature
     public partial class ChangeSignatureTests : AbstractChangeSignatureTests
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderLocalFunctionParametersAndArguments_OnDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -43,7 +45,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderLocalFunctionParametersAndArguments_OnInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -75,7 +79,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderMethodParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -99,7 +105,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderMethodParametersAndArguments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -125,7 +133,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderMethodParametersAndArgumentsOfNestedCalls()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -151,7 +161,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderConstructorParametersAndArguments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -201,7 +213,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderAttributeConstructorParametersAndArguments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 [My(""test"", 8)]
@@ -233,7 +247,9 @@ class MyAttribute : System.Attribute
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderExtensionMethodParametersAndArguments_StaticCall()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -269,7 +285,9 @@ public static class CExt
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderExtensionMethodParametersAndArguments_ExtensionCall()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -305,7 +323,9 @@ public static class CExt
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamsMethodParametersAndArguments_ParamsAsArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -329,7 +349,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamsMethodParametersAndArguments_ParamsExpanded()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -353,7 +375,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderExtensionAndParamsMethodParametersAndArguments_VariedCallsites()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -395,7 +419,9 @@ public static class CExt
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderIndexerParametersAndArguments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -433,7 +459,9 @@ class Program
         }
         
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_SingleLineDocComments_OnIndividualLines()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -463,7 +491,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_SingleLineDocComments_OnSameLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -489,7 +519,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_SingleLineDocComments_MixedLineDistribution()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -525,7 +557,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_SingleLineDocComments_MixedWithRegularComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -555,7 +589,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_MultiLineDocComments_OnSeparateLines1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -587,7 +623,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_MultiLineDocComments_OnSingleLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -611,7 +649,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_IncorrectOrder_MaintainsOrder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -640,7 +680,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_WrongNames_MaintainsOrder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -669,7 +711,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_InsufficientTags_MaintainsOrder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -696,7 +740,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_ExcessiveTags_MaintainsOrder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -727,7 +773,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_OnConstructors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -756,7 +804,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParamTagsInDocComments_OnIndexers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C
@@ -787,7 +837,9 @@ public class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParametersInCrefs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -813,7 +865,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParametersInMethodThatImplementsInterfaceMethodOnlyThroughADerivedType1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface I
@@ -853,7 +907,9 @@ class D : C, I
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReorderParametersInMethodThatImplementsInterfaceMethodOnlyThroughADerivedType2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface I

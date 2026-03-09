@@ -48,7 +48,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddUsing
             => FlattenActions(actions);
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSearchPackageSingleName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Make a loose mock for the installer service.  We don't care what this test
             // calls on it.
@@ -77,7 +79,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSearchPackageMultipleNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Make a loose mock for the installer service.  We don't care what this test
             // calls on it.
@@ -106,7 +110,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfPackageAlreadyInstalled()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Make a loose mock for the installer service.  We don't care what this test
             // calls on it.
@@ -129,7 +135,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOptionsOffered()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Make a loose mock for the installer service.  We don't care what this test
             // calls on it.
@@ -171,7 +179,9 @@ parameters: new TestParameters(index: 2, fixProviderData: data));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInstallGetsCalledNoVersion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var installerServiceMock = new Mock<IPackageInstallerService>(MockBehavior.Loose);
             installerServiceMock.Setup(i => i.IsEnabled(It.IsAny<ProjectId>())).Returns(true);
@@ -199,7 +209,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInstallGetsCalledWithVersion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var installerServiceMock = new Mock<IPackageInstallerService>(MockBehavior.Loose);
             installerServiceMock.Setup(i => i.IsEnabled(It.IsAny<ProjectId>())).Returns(true);
@@ -229,7 +241,9 @@ class C
 
         [WorkItem(14516, "https://github.com/dotnet/roslyn/pull/14516")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFailedInstallRollsBackFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var installerServiceMock = new Mock<IPackageInstallerService>(MockBehavior.Loose);
             installerServiceMock.Setup(i => i.IsEnabled(It.IsAny<ProjectId>())).Returns(true);
@@ -255,7 +269,9 @@ class C
             installerServiceMock.Verify();
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private Task<IList<PackageWithTypeResult>> CreateSearchResult(
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             string packageName, string typeName, ImmutableArray<string> containingNamespaceNames)
         {
             return CreateSearchResult(new PackageWithTypeResult(
@@ -263,7 +279,9 @@ class C
                 rank: 0, containingNamespaceNames: containingNamespaceNames));
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private Task<IList<PackageWithTypeResult>> CreateSearchResult(params PackageWithTypeResult[] results)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             => Task.FromResult<IList<PackageWithTypeResult>>(ImmutableArray.Create(results));
 
         private ImmutableArray<string> CreateNameParts(params string[] parts) => parts.ToImmutableArray();

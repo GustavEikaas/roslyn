@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.UseExp
             => new UseExplicitTypeCodeRefactoringProvider();
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIntLocalDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -40,7 +42,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForeachInsideLocalDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -64,7 +68,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInVarPattern()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -79,7 +85,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIntLocalDeclaration_Multiple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -95,7 +103,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIntLocalDeclaration_NoInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -110,7 +120,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIntForLoop()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -134,7 +146,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInDispose()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C : System.IDisposable
@@ -158,7 +172,9 @@ class C : System.IDisposable
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypelessVarLocalDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class var
@@ -172,7 +188,9 @@ class var
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIntForeachLoop()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -196,7 +214,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIntDeconstruction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -220,7 +240,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIntDeconstruction2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -244,7 +266,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithAnonymousType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -259,7 +283,9 @@ class C
         }
 
         [Fact, WorkItem(26923, "https://github.com/dotnet/roslyn/issues/26923")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoSuggestionOnForeachCollectionExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 using System.Collections.Generic;

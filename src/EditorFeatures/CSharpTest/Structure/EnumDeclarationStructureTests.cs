@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         internal override AbstractSyntaxStructureProvider CreateProvider() => new EnumDeclarationStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint:$$enum E{|textspan:
@@ -26,7 +28,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnumWithLeadingComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span1:// Goo
@@ -41,7 +45,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnumWithNestedComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint1:$$enum E{|textspan1:

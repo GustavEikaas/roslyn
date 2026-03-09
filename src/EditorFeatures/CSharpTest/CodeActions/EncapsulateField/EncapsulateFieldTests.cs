@@ -42,7 +42,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Encaps
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PrivateFieldToPropertyIgnoringReferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -84,7 +86,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PrivateFieldToPropertyUpdatingReferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -126,7 +130,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -171,7 +177,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -203,7 +211,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PublicFieldIntoPublicPropertyIgnoringReferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -245,7 +255,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PublicFieldIntoPublicPropertyUpdatingReferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -287,7 +299,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StaticPreserved()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program
 {
@@ -315,7 +329,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UniqueNameGenerated()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Program
@@ -347,7 +363,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C<T>
@@ -377,7 +395,9 @@ class C<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NewFieldNameIsUnique()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -409,7 +429,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RespectReadonly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -434,7 +456,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PreserveNewAndConsiderBaseMemberNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class c
@@ -478,7 +502,9 @@ class d : c
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EncapsulateMultiplePrivateFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -533,7 +559,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EncapsulateMultiplePrivateFields2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -590,7 +618,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EncapsulateSinglePublicFieldInMultipleVariableDeclarationAndUpdateReferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -634,7 +664,9 @@ class goo
 
         [WorkItem(694057, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/694057")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ConstFieldNoGetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Program
@@ -662,7 +694,9 @@ class Program
 
         [WorkItem(694276, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/694276")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EncapsulateFieldNamedValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Program
@@ -690,7 +724,9 @@ class Program
 
         [WorkItem(694276, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/694276")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PublicFieldNamed__()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Program
@@ -723,7 +759,9 @@ class Program
 
         [WorkItem(695046, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/695046")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AvailableNotJustOnVariableName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Program
@@ -737,7 +775,9 @@ class Program
 
         [WorkItem(705898, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/705898")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CopyFieldAccessibility()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Program
@@ -764,7 +804,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpdateReferencesCrossProject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 <Workspace>
@@ -833,7 +875,9 @@ public class D
 
         [WorkItem(713269, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/713269")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PreserveUnsafe()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -866,7 +910,9 @@ class C
 
         [WorkItem(713240, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/713240")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ConsiderReturnTypeAccessibility()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 public class Program
@@ -909,7 +955,9 @@ internal enum State
 
         [WorkItem(713191, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/713191")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReferToReadOnlyPropertyInConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Program
@@ -945,7 +993,9 @@ class Program
 
         [WorkItem(713191, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/713191")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReferToStaticReadOnlyPropertyInConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Program
@@ -981,7 +1031,9 @@ class Program
 
         [WorkItem(765959, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/765959")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateInTheCorrectPart()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 partial class Program {}
@@ -1015,7 +1067,9 @@ partial class Program {
 
         [WorkItem(829178, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/829178")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ErrorTolerance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program 
 {
@@ -1027,7 +1081,9 @@ partial class Program {
 
         [WorkItem(834072, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/834072")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DuplicateFieldErrorTolerance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Program
@@ -1042,7 +1098,9 @@ class Program
 
         [WorkItem(862517, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/862517")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Trivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 namespace ConsoleApplication1
@@ -1084,7 +1142,9 @@ namespace ConsoleApplication1
 
         [WorkItem(1096007, "https://github.com/dotnet/roslyn/issues/282")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotEncapsulateOutsideTypeDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"var [|x|] = 1;");
@@ -1104,7 +1164,9 @@ namespace ConsoleApplication1
 
         [WorkItem(5524, "https://github.com/dotnet/roslyn/issues/5524")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysUseEnglishUSCultureWhenFixingVariableNames_TurkishDottedI()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (new CultureContext(new CultureInfo("tr-TR", useUserOverride: false)))
             {
@@ -1135,7 +1197,9 @@ namespace ConsoleApplication1
 
         [WorkItem(5524, "https://github.com/dotnet/roslyn/issues/5524")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysUseEnglishUSCultureWhenFixingVariableNames_TurkishUndottedI()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (new CultureContext(new CultureInfo("tr-TR", useUserOverride: false)))
             {
@@ -1166,7 +1230,9 @@ namespace ConsoleApplication1
 
         [WorkItem(5524, "https://github.com/dotnet/roslyn/issues/5524")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysUseEnglishUSCultureWhenFixingVariableNames_Arabic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (new CultureContext(new CultureInfo("ar-EG", useUserOverride: false)))
             {
@@ -1197,7 +1263,9 @@ namespace ConsoleApplication1
 
         [WorkItem(5524, "https://github.com/dotnet/roslyn/issues/5524")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysUseEnglishUSCultureWhenFixingVariableNames_Spanish()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (new CultureContext(new CultureInfo("es-ES", useUserOverride: false)))
             {
@@ -1228,7 +1296,9 @@ namespace ConsoleApplication1
 
         [WorkItem(5524, "https://github.com/dotnet/roslyn/issues/5524")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysUseEnglishUSCultureWhenFixingVariableNames_Greek()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (new CultureContext(new CultureInfo("el-GR", useUserOverride: false)))
             {
@@ -1258,7 +1328,9 @@ namespace ConsoleApplication1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEncapsulateEscapedIdentifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAllOptionsOffAsync(@"
 class C
@@ -1287,7 +1359,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEncapsulateEscapedIdentifierAndQualifiedAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAllOptionsOffAsync(@"
 class C
@@ -1317,7 +1391,9 @@ class C
 
         [WorkItem(7090, "https://github.com/dotnet/roslyn/issues/7090")]
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ApplyCurrentThisPrefixStyle()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAllOptionsOffAsync(
 @"class C
@@ -1344,7 +1420,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField), Test.Utilities.CompilerTrait(Test.Utilities.CompilerFeature.Tuples)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -1387,7 +1465,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.EncapsulateField), Test.Utilities.CompilerTrait(Test.Utilities.CompilerFeature.Tuples)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleWithNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C

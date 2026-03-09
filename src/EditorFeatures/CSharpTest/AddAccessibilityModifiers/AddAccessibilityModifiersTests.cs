@@ -22,7 +22,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddAccessibilityModifie
             OptionsSet(SingleOption(CodeStyleOptions.RequireAccessibilityModifiers, AccessibilityModifiersRequired.OmitIfDefault, NotificationOption.Suggestion));
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddAccessibilityModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAllConstructs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -145,7 +147,9 @@ namespace Outer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddAccessibilityModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefStructs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(@"
 namespace Test
@@ -159,7 +163,9 @@ namespace Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddAccessibilityModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReadOnlyStructs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(@"
 namespace Test
@@ -173,7 +179,9 @@ namespace Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddAccessibilityModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAllConstructsWithOmit()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -297,7 +305,9 @@ namespace Outer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddAccessibilityModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefStructsWithOmit()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(@"
 namespace Test
@@ -311,7 +321,9 @@ namespace Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddAccessibilityModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReadOnlyStructsWithOmit()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(@"
 namespace Test
@@ -325,7 +337,9 @@ namespace Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddAccessibilityModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClassOutsideNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(@"
 internal class [|C1|] { }", @"

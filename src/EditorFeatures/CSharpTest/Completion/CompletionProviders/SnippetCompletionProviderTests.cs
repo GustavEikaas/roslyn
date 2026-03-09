@@ -25,84 +25,110 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsInEmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"$$", MockSnippetInfoService.SnippetShortcut, sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetDescriptions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"$$", MockSnippetInfoService.SnippetShortcut, MockSnippetInfoService.SnippetTitle + Environment.NewLine + MockSnippetInfoService.SnippetDescription, SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsInNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"namespace NS { $$ }", MockSnippetInfoService.SnippetShortcut, sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsInClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"namespace NS { class C { $$ } }", MockSnippetInfoService.SnippetShortcut, sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsInMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"namespace NS { class C { void M() { $$ } } }", MockSnippetInfoService.SnippetShortcut, sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsNotInLocalDeclarationIdentifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"namespace NS { class C { void M() { int $$ } } }", MockSnippetInfoService.SnippetShortcut, sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsNotInEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"namespace NS { enum E { $$ } }", MockSnippetInfoService.SnippetShortcut, sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsInExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"namespace NS { class C { void M() { bool b = true && $$ } } }", MockSnippetInfoService.SnippetShortcut, sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
         [WorkItem(608860, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/608860")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsInPreProcessorContextWhenShortcutBeginsWithHash()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"#$$", MockSnippetInfoService.PreProcessorSnippetShortcut.Substring(1), sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
         [WorkItem(608860, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/608860")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsNotInPreProcessorContextWhenShortcutDoesNotBeginWithHash()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"#$$", MockSnippetInfoService.SnippetShortcut, sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
         [WorkItem(770156, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/770156")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsNotInPreProcessorContextDirectiveNameAlreadyTyped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"#region $$", MockSnippetInfoService.PreProcessorSnippetShortcut, sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
         [WorkItem(839555, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/839555")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ShowRegionSnippetWithHashRTyped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"#r$$", MockSnippetInfoService.PreProcessorSnippetShortcut.Substring(1), sourceCodeKind: SourceCodeKind.Regular);
         }
 
         [WorkItem(968256, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/968256")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ShowSnippetsFromOtherContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -125,7 +151,9 @@ class C
 
         [WorkItem(1140893, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1140893")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitWithEnterObeysOption()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifySendEnterThroughToEnterAsync("$$", "SnippetShortcu", sendThroughEnterOption: EnterKeyRule.Always, expected: true);
             await VerifySendEnterThroughToEnterAsync("$$", "SnippetShortcut", sendThroughEnterOption: EnterKeyRule.Always, expected: true);
@@ -139,7 +167,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
         [WorkItem(6405, "https://github.com/dotnet/roslyn/issues/6405")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SnippetsNotInPreProcessorContextForScriptDirectives()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"#r f$$", MockSnippetInfoService.SnippetShortcut, sourceCodeKind: SourceCodeKind.Script);
             await VerifyItemIsAbsentAsync(@"#load f$$", MockSnippetInfoService.SnippetShortcut, sourceCodeKind: SourceCodeKind.Script);

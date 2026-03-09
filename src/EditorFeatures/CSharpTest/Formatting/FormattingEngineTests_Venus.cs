@@ -10,7 +10,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting
     public class FormattingEngineTests_Venus : FormattingEngineTestBase
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.Formatting), Trait(Traits.Feature, Traits.Features.Venus)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SimpleOneLineNugget()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"public class Default
 {
@@ -38,7 +40,9 @@ int x=1 ;
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Formatting), Trait(Traits.Feature, Traits.Features.Venus)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SimpleMultiLineNugget()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"public class Default
 {
@@ -71,7 +75,9 @@ Console.WriteLine(5);}
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Formatting), Trait(Traits.Feature, Traits.Features.Venus)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SimpleQueryWithinNugget()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"public class Default
 {
@@ -105,7 +111,9 @@ var even =  from     n      in  numbers
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Formatting), Trait(Traits.Feature, Traits.Features.Venus)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LambdaExpressionInNugget()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"public class Default
 {
@@ -140,7 +148,9 @@ foreach(int i   in source.Where(x  =>  x  > 5))
 
         [WorkItem(576457, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/576457")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Formatting), Trait(Traits.Feature, Traits.Features.Venus)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StatementLambdaInNugget()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"public class Default
 {

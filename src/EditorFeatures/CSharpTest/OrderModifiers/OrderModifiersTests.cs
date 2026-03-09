@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
             => (new CSharpOrderModifiersDiagnosticAnalyzer(), new CSharpOrderModifiersCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"[|static|] internal class C
@@ -28,7 +30,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"[|unsafe|] public struct C
@@ -40,7 +44,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"[|unsafe|] public interface C
@@ -52,7 +58,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"[|internal|] protected enum C
@@ -64,7 +72,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"[|unsafe|] public delegate void D();",
@@ -72,7 +82,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -86,7 +98,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -100,7 +114,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -114,7 +130,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -128,7 +146,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAccessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -142,7 +162,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPropertyEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -156,7 +178,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -170,7 +194,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -184,7 +210,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConversionOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -198,7 +226,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"{|FixAllInDocument:static|} internal class C
@@ -212,7 +242,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"static internal class C
@@ -226,7 +258,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.OrderModifiers
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -242,7 +276,9 @@ internal static class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -256,7 +292,9 @@ internal static class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsOrderModifiers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"

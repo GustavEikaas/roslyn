@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.UseExplicit
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocumentScope_PreferExplicitTypeEverywhere()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>
@@ -128,7 +130,9 @@ class Program2
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInProject_PreferExplicitTypeEverywhere()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>
@@ -242,7 +246,9 @@ class Program2
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInSolution_PreferExplicitTypeEverywhere()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>
@@ -356,7 +362,9 @@ class Program2
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocumentScope_PreferExplicitTypeExceptWhereApparent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>

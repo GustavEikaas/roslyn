@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         internal override AbstractSyntaxStructureProvider CreateProvider() => new EventDeclarationStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -31,7 +33,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEventWithComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C

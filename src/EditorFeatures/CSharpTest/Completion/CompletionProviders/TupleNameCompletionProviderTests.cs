@@ -19,7 +19,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionSe
         internal override CompletionProvider CreateCompletionProvider() => new TupleNameCompletionProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterOpenParen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 class Program
@@ -32,7 +34,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterOpenParenWithBraceCompletion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 class Program
@@ -45,7 +49,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterOpenParenInTupleExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 class Program
@@ -58,7 +64,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterOpenParenInTupleExpressionWithBraceCompletion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 class Program
@@ -71,7 +79,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterComma()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 class Program
@@ -84,7 +94,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterCommaWithBraceCompletion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 class Program
@@ -97,7 +109,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InTupleAsArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 class Program
@@ -110,7 +124,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultiplePossibleTuples()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -125,7 +141,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultiplePossibleTuplesAfterComma()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -140,7 +158,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AtIndexGreaterThanNumberOfTupleElements()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -154,7 +174,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ConvertCastToTupleExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C

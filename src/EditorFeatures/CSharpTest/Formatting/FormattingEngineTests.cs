@@ -292,7 +292,9 @@ class Program
 
         [WorkItem(987373, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/987373")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Formatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FormatSpansIndividuallyWithoutCollapsing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -380,14 +382,18 @@ class Program
                 var document = workspace.CurrentSolution.Projects.Single().Documents.Single();
                 var syntaxRoot = await document.GetSyntaxRootAsync();
 
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 var node = Formatter.Format(syntaxRoot, spans, workspace);
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                 Assert.Equal(expected, node.ToFullString());
             }
         }
 
         [WorkItem(987373, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/987373")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Formatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FormatSpansWithCollapsing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -476,7 +482,9 @@ class Program
                 var document = workspace.CurrentSolution.Projects.Single().Documents.Single();
                 var syntaxRoot = await document.GetSyntaxRootAsync();
 
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 var node = Formatter.Format(syntaxRoot, spans, workspace);
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                 Assert.Equal(expected, node.ToFullString());
             }
         }
@@ -1640,7 +1648,9 @@ class C
 
         [WorkItem(11642, "https://github.com/dotnet/roslyn/issues/11642")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Formatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FormatArbitraryNodeParenthesizedLambdaExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // code equivalent to an expression synthesized like so:
             // ParenthesizedExpression(ParenthesizedLambdaExpression(ParameterList(), Block()))

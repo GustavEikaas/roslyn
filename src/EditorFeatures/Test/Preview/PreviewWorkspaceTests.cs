@@ -94,7 +94,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Preview
                 var text = "class C {}";
                 var changedSolution = previewWorkspace.CurrentSolution.Projects.First().Documents.First().WithText(SourceText.From(text)).Project.Solution;
                 Assert.True(previewWorkspace.TryApplyChanges(changedSolution));
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                 Assert.Equal(previewWorkspace.CurrentSolution.Projects.First().Documents.First().GetTextAsync().Result.ToString(), text);
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
                 var removedSolution = previewWorkspace.CurrentSolution.Projects.First()
                                                     .RemoveMetadataReference(previewWorkspace.CurrentSolution.Projects.First().MetadataReferences[0])
@@ -167,16 +169,22 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Preview
                 previewWorkspace.EnableDiagnostic();
 
                 // wait 20 seconds
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                 taskSource.Task.Wait(20000);
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
                 Assert.True(taskSource.Task.IsCompleted);
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                 var args = taskSource.Task.Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
                 Assert.True(args.Diagnostics.Length > 0);
             }
         }
 
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreviewDiagnosticTagger()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp("class { }", exportProvider: EditorServicesUtil.ExportProvider))
             using (var previewWorkspace = new PreviewWorkspace(workspace.CurrentSolution))
@@ -197,7 +205,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Preview
         }
 
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreviewDiagnosticTaggerInPreviewPane()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp("class { }", exportProvider: EditorServicesUtil.ExportProvider))
             {
@@ -208,7 +218,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Preview
 
                 // make a change to remove squiggle
                 var oldDocument = workspace.CurrentSolution.GetDocument(hostDocument.Id);
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 var oldText = oldDocument.GetTextAsync().Result;
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
 
                 var newDocument = oldDocument.WithText(oldText.WithChanges(new TextChange(new TextSpan(0, oldText.Length), "class C { }")));
 
@@ -275,10 +287,14 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Preview
             var workspaceAnalyzerOptions = new WorkspaceAnalyzerOptions(analyzerOptions, null, previewWorkspace.CurrentSolution);
             var compilationWithAnalyzersOptions = new CompilationWithAnalyzersOptions(workspaceAnalyzerOptions, onAnalyzerException: null, concurrentAnalysis: false, logAnalyzerExecutionTime: false);
             var project = previewWorkspace.CurrentSolution.Projects.Single();
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             var compilation = project.GetCompilationAsync().Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             var compilationReference = ObjectReference.Create(compilation);
             var compilationWithAnalyzers = new CompilationWithAnalyzers(compilation, analyzers, compilationWithAnalyzersOptions);
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             var result = compilationWithAnalyzers.GetAnalysisResultAsync(CancellationToken.None).Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             Assert.Equal(1, result.CompilationDiagnostics.Count);
         }
     }

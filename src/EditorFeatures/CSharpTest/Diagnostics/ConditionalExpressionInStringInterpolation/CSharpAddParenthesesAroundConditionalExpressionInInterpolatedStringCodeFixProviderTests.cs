@@ -30,7 +30,9 @@ class Application
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesSimpleConditionalExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s = $""{ true ? 1 [|:|] 2}"";",
@@ -38,7 +40,9 @@ class Application
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesMultiLineConditionalExpression1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"
 var s = $@""{ true
@@ -52,7 +56,9 @@ var s = $@""{ (true
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesMultiLineConditionalExpression2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"
 var s = $@""{
@@ -74,7 +80,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesWithTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s = $""{ /* Leading1 */ true /* Leading2 */ ? /* TruePart1 */ 1 /* TruePart2 */[|:|] /* FalsePart1 */ 2 /* FalsePart2 */ }"";",
@@ -82,7 +90,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesClosingBracketInFalseCondition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s = $""{ true ? new int[0] [|:|] new int[] {} }"";",
@@ -90,7 +100,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesStringLiteralInFalseCondition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s = $""{ true ? ""1"" [|:|] ""2"" }"";",
@@ -98,7 +110,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesVerbatimStringLiteralInFalseCondition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s = $""{ true ? ""1"" [|:|] @""""""2"""""" }"";",
@@ -106,7 +120,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesStringLiteralInFalseConditionWithClosingParenthesisInLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s = $""{ true ? ""1"" [|:|] ""2)"" }"";",
@@ -114,7 +130,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesStringLiteralInFalseConditionWithEscapedDoubleQuotes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s = $""{ true ? ""1"" [|:|] ""2\"""" }"";",
@@ -122,7 +140,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesStringLiteralInFalseConditionWithCodeLikeContent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s = $""{ true ? ""1"" [|:|] ""M(new int[] {}, \""Parameter\"");"" }"";",
@@ -130,7 +150,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesNestedConditionalExpression1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s2 = $""{ true ? ""1"" [|:|] (false ? ""2"" : ""3"") };",
@@ -138,7 +160,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesNestedConditionalExpression2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s2 = $""{ true ? ""1"" [|:|] false ? ""2"" : ""3"" };",
@@ -146,7 +170,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesNestedConditionalWithNestedInterpolatedString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s2 = $""{ (true ? ""1"" : false ? $""{ true ? ""2"" [|:|] ""3""}"" : ""4"") }""",
@@ -154,7 +180,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesMultipleInterpolatedSections1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s3 = $""Text1 { true ? ""Text2"" [|:|] ""Text3""} Text4 { (true ? ""Text5"" : ""Text6"")} Text7"";",
@@ -162,7 +190,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesMultipleInterpolatedSections2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s3 = $""Text1 { (true ? ""Text2"" : ""Text3"")} Text4 { true ? ""Text5"" [|:|] ""Text6""} Text7"";",
@@ -170,7 +200,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesMultipleInterpolatedSections3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s3 = $""Text1 { true ? ""Text2"" [|:|] ""Text3""} Text4 { true ? ""Text5"" : ""Text6""} Text7"";",
@@ -178,7 +210,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesWhileTyping1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"
@@ -192,7 +226,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesWhileTyping2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"
@@ -206,7 +242,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesWhileTyping3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"
@@ -220,7 +258,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesWhileTyping4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"
@@ -234,7 +274,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesWhileTyping5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"
@@ -248,7 +290,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesWithCS1026PresentBeforeFixIsApplied1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"
@@ -262,7 +306,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesWithCS1026PresentBeforeFixIsApplied2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"
@@ -276,7 +322,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesWithCS1026PresentBeforeFixIsApplied3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"
@@ -290,7 +338,9 @@ var s = $@""{
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParenthesesAroundConditionalExpressionInInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddParenthesesAddOpeningParenthesisOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 @"var s3 = $""{ true ? 1 [|:|] 2 )}""",

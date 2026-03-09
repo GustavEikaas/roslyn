@@ -24,7 +24,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.SignatureHelp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InvocationAfterOpenParen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -40,7 +42,9 @@ class C
 
         [WorkItem(655607, "https://devdiv.visualstudio.com/DevDiv/_workitems/edit/655607")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingTupleElement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -58,7 +62,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InvocationAfterOpenParen2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -73,7 +79,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InvocationAfterComma1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -88,7 +96,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InvocationAfterComma2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -103,7 +113,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ParameterIndexWithNameTyped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -122,7 +134,9 @@ class C
         }
 
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/14277"), Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedTuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -137,7 +151,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedTupleWhenNotInferred()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -152,7 +168,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedTupleWhenNotInferred2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -167,7 +185,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedTupleWhenNotInferred3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -182,7 +202,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedTupleWhenNotInferred4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -197,7 +219,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleOverloads()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -220,7 +244,9 @@ class Program
 
         [WorkItem(14793, "https://github.com/dotnet/roslyn/issues/14793")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotCrashInLinkedFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"" PreprocessorSymbols=""GOO"">

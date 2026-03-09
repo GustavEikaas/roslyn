@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.KeywordHighlighting
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExample2_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -45,7 +47,9 @@ class AsyncExample
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExample2_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -74,7 +78,9 @@ class AsyncExample
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExample2_4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -103,7 +109,9 @@ class AsyncExample
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExample3_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -133,7 +141,9 @@ class AsyncExample
 
         [WorkItem(573625, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/573625")]
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedAwaits1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -168,7 +178,9 @@ class AsyncExample
 
         [WorkItem(573625, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/573625")]
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedAwaits2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;

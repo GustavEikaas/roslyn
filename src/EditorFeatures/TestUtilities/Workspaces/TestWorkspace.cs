@@ -611,7 +611,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Workspaces
             var oldSolution = this.CurrentSolution;
             var newSolution = this.SetCurrentSolution(oldSolution.WithDocumentText(documentId, text));
 
+#pragma warning disable VSTHRD110 // Observe result of async calls
             this.RaiseWorkspaceChangedEventAsync(WorkspaceChangeKind.DocumentChanged, oldSolution, newSolution, documentId.ProjectId, documentId);
+#pragma warning restore VSTHRD110 // Observe result of async calls
         }
 
         public void ChangeAdditionalDocument(DocumentId documentId, SourceText text)
@@ -619,7 +621,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Workspaces
             var oldSolution = this.CurrentSolution;
             var newSolution = this.SetCurrentSolution(oldSolution.WithAdditionalDocumentText(documentId, text));
 
+#pragma warning disable VSTHRD110 // Observe result of async calls
             this.RaiseWorkspaceChangedEventAsync(WorkspaceChangeKind.AdditionalDocumentChanged, oldSolution, newSolution, documentId.ProjectId, documentId);
+#pragma warning restore VSTHRD110 // Observe result of async calls
         }
 
         public void ChangeProject(ProjectId projectId, Solution solution)
@@ -627,7 +631,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Workspaces
             var oldSolution = this.CurrentSolution;
             var newSolution = this.SetCurrentSolution(solution);
 
+#pragma warning disable VSTHRD110 // Observe result of async calls
             this.RaiseWorkspaceChangedEventAsync(WorkspaceChangeKind.ProjectChanged, oldSolution, newSolution, projectId);
+#pragma warning restore VSTHRD110 // Observe result of async calls
         }
 
         public new void ClearSolution()
@@ -640,7 +646,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Workspaces
             var oldSolution = this.CurrentSolution;
             var newSolution = this.SetCurrentSolution(solution);
 
+#pragma warning disable VSTHRD110 // Observe result of async calls
             this.RaiseWorkspaceChangedEventAsync(WorkspaceChangeKind.SolutionChanged, oldSolution, newSolution);
+#pragma warning restore VSTHRD110 // Observe result of async calls
         }
     }
 }

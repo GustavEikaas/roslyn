@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         internal override AbstractSyntaxStructureProvider CreateProvider() => new DisabledTextTriviaStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDisabledIf()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 #if false
@@ -29,7 +31,9 @@ Blah|}
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDisabledElse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 #if true
@@ -45,7 +49,9 @@ Blah|}
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDisabledElIf()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 #if true
@@ -62,7 +68,9 @@ Blah|}
 
         [WorkItem(531360, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/531360")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DisabledCodeWithEmbeddedPreprocessorDirectivesShouldCollapseEntireDisabledRegion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class P {
@@ -83,7 +91,9 @@ class P {
 
         [WorkItem(531360, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/531360")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DisabledCodeShouldNotCollapseUnlessItFollowsADirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class P {
@@ -103,7 +113,9 @@ class P {
 
         [WorkItem(1070677, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070677")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedDisabledCodePreProcessorDirectivesShouldCollapseEntireDisabledRegion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class P {
@@ -124,7 +136,9 @@ class P {
 
         [WorkItem(459257, "https://devdiv.visualstudio.com/DevDiv/_workitems?id=459257")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedDisabledCodePreProcessorDirectivesWithElseShouldCollapseEntireDisabledRegion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class P {
@@ -147,7 +161,9 @@ class P {
 
         [WorkItem(459257, "https://devdiv.visualstudio.com/DevDiv/_workitems?id=459257")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedDisabledCodePreProcessorDirectivesWithElifShouldCollapseEntireDisabledRegion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class P {
@@ -170,7 +186,9 @@ class P {
 
         [WorkItem(459257, "https://devdiv.visualstudio.com/DevDiv/_workitems?id=459257")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedDisabledCodePreProcessorDirectivesWithElseAndElifShouldCollapseEntireDisabledRegion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class P {
@@ -195,7 +213,9 @@ class P {
 
         [WorkItem(1070677, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070677")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedDisabledCodePreProcessorDirectivesShouldCollapseEntireDisabledRegion2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class P {
@@ -217,7 +237,9 @@ class P {
 
         [WorkItem(1070677, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070677")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedDisabledCodePreProcessorDirectivesShouldCollapseEntireDisabledRegion3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class P {
@@ -238,7 +260,9 @@ class P {
 
         [WorkItem(1070677, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070677")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedDisabledCodePreProcessorDirectivesShouldCollapseEntireDisabledRegion4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class P {
@@ -268,7 +292,9 @@ class P {
 
         [WorkItem(1100600, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1100600")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PreprocessorDirectivesInTrailingTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class P {

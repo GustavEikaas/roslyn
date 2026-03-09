@@ -10,7 +10,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
     public partial class MoveTypeTests : CSharpMoveTypeTestsBase
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleClassInFile_RenameType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]class Class1 { }";
@@ -22,7 +24,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoreThanOneTypeInFile_RenameType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]class Class1
@@ -40,7 +44,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissing_TypeNameMatchesFileName_RenameType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // testworkspace creates files like test1.cs, test2.cs and so on.. 
             // so type name matches filename here and rename file action should not be offered.
@@ -51,7 +57,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissing_MultipleTopLevelTypesInFileAndAtleastOneMatchesFileName_RenameType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]class Class1 { }
@@ -61,7 +69,9 @@ class test1 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleTopLevelTypesInFileAndNoneMatchFileName1_RenameType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]class Class1 { }
@@ -75,7 +85,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleTopLevelTypesInFileAndNoneMatchFileName2_RenameType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"class Class1 { }

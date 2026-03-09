@@ -39,7 +39,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <NuGetPackageToIncludeInVsix Include="Nerdbank.FullDuplexStream" />
+    <NuGetPackageToIncludeInVsix Include="Nerdbank.Streams" />
     <NuGetPackageToIncludeInVsix Include="Validation" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'" />

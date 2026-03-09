@@ -17,7 +17,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
     public class OrganizeTypeDeclarationTests : AbstractOrganizerTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldsWithoutInitializers1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -36,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldsWithoutInitializers2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -55,7 +59,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldsWithInitializers1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -74,7 +80,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldsWithInitializers2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -93,7 +101,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEventFieldDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -110,7 +120,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEventDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C  {
@@ -139,7 +151,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C  {
@@ -162,7 +176,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C  {
@@ -195,7 +211,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstructorAndDestructors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C  {
@@ -214,7 +232,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C  {}
@@ -237,7 +257,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStaticInstance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -258,7 +280,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAccessibility()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -283,7 +307,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStaticAccessibility()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -316,7 +342,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerics()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -341,7 +369,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsidePPRegion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -364,7 +394,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsidePPRegion2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -397,7 +429,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsidePPRegion3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -426,7 +460,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsidePPRegion4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -455,7 +491,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsidePPRegion5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -486,7 +524,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsidePPRegion6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -527,7 +567,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPinned()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -572,7 +614,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSensitivity()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class C {
@@ -665,7 +709,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhitespaceBetweenMethods1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -695,7 +741,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhitespaceBetweenMethods2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -727,7 +775,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhitespaceBetweenMethods3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -759,7 +809,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhitespaceBetweenMethods4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -793,7 +845,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhitespaceBetweenMethods5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -829,7 +883,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhitespaceBetweenMethods6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -867,7 +923,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMoveComments1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -899,7 +957,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMoveComments2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -933,7 +993,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMoveDocComments1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -965,7 +1027,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMoveDocComments2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -999,7 +1063,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDontMoveBanner()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -1033,7 +1099,9 @@ interface I
 
         [WorkItem(537614, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537614")]
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDontMoveBanner2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program

@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ReplaceDocCommentTextWi
             => new CSharpReplaceDocCommentTextWithTagCodeRefactoringProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStartOfKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -33,7 +35,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEndOfKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -50,7 +54,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEndOfKeyword_NewLineFollowing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -67,7 +73,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSelectedKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -84,7 +92,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsideKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -101,7 +111,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInsideKeywordIfNonEmptySpan()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -112,7 +124,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStartOfFullyQualifiedTypeName_Start()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -129,7 +143,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStartOfFullyQualifiedTypeName_Mid1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -146,7 +162,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStartOfFullyQualifiedTypeName_Mid2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -163,7 +181,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStartOfFullyQualifiedTypeName_End()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -180,7 +200,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStartOfFullyQualifiedTypeName_Selected()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -197,7 +219,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeParameterReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -214,7 +238,9 @@ class C<TKey>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeParameterReference_EmptyClassBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -227,7 +253,9 @@ class C<TKey>{}");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCanSeeInnerMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -246,7 +274,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnMispelledName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -258,7 +288,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodTypeParameterSymbol()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -277,7 +309,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodTypeParameterSymbol_EmptyBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -296,7 +330,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodTypeParameterSymbol_ExpressionBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -315,7 +351,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodTypeParameter_SemicolonBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -334,7 +372,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodParameterSymbol()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -353,7 +393,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodParameterSymbol_EmptyBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -372,7 +414,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodParameterSymbol_ExpressionBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -391,7 +435,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodParameterSymbol_SemicolonBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -411,7 +457,9 @@ class C
 
         [WorkItem(22278, "https://github.com/dotnet/roslyn/issues/22278")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNonApplicableKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -423,7 +471,9 @@ class C<TKey>
 
         [WorkItem(22278, "https://github.com/dotnet/roslyn/issues/22278")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInXMLAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -436,7 +486,9 @@ class C
 
         [WorkItem(22278, "https://github.com/dotnet/roslyn/issues/22278")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceDocCommentTextWithTag)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInXMLAttribute2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"

@@ -158,7 +158,9 @@ namespace Microsoft.VisualStudio.IntegrationTest.Utilities.InProcess
 
         public void SubmitText(string text)
         {
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             _interactiveWindow.SubmitAsync(new[] { text }).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
 
         public void CloseWindow()

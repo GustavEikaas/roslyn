@@ -19,7 +19,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseCoalesceExpression
                 new UseCoalesceExpressionForNullableCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseCoalesceExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnLeft_Equals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -43,7 +45,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseCoalesceExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnLeft_NotEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -67,7 +71,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseCoalesceExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComplexExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -91,7 +97,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseCoalesceExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestParens1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -115,7 +123,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseCoalesceExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -141,7 +151,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseCoalesceExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -165,7 +177,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseCoalesceExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -190,7 +204,9 @@ class C
 
         [WorkItem(17028, "https://github.com/dotnet/roslyn/issues/17028")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseCoalesceExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInExpressionOfT()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;

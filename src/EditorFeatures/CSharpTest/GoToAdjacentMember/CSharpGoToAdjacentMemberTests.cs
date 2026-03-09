@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.GoToAdjacentMember
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"$$";
             Assert.Null(await GetTargetPositionAsync(code, next: true));
@@ -24,7 +26,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.GoToAdjacentMember
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ClassWithNoMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -35,7 +39,9 @@ $$
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BeforeClassWithMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"$$
 class C
@@ -48,7 +54,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterClassWithMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -63,7 +71,9 @@ $$";
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BetweenClasses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C1
@@ -83,7 +93,9 @@ class C2
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BetweenClassesPrevious()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C1
@@ -103,7 +115,9 @@ class C2
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FromFirstMemberToSecond()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -117,7 +131,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FromSecondToFirst()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -131,7 +147,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NextWraps()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -145,7 +163,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PreviousWraps()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -159,7 +179,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DescendsIntoNestedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -177,7 +199,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StopsAtConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -190,7 +214,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StopsAtDestructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -203,7 +229,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StopsAtOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -215,7 +243,9 @@ class C
         }
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StopsAtField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -228,7 +258,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StopsAtFieldlikeEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -241,7 +273,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StopsAtAutoProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -254,7 +288,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StopsAtPropertyWithAccessors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -273,7 +309,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SkipsPropertyAccessors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -294,7 +332,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FromInsideAccessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -315,7 +355,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StopsAtIndexerWithAccessors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -334,7 +376,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SkipsIndexerAccessors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -355,7 +399,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StopsAtEventWithAddRemove()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -374,7 +420,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SkipsEventAddRemove()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -395,7 +443,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FromInsideMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -413,7 +463,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NextFromBetweenMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -430,7 +482,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PreviousFromBetweenMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -447,7 +501,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NextFromBetweenMethodsInTrailingTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -464,7 +520,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PreviousFromBetweenMethodsInTrailingTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -481,7 +539,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StopsAtExpressionBodiedMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -497,7 +557,9 @@ class C
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
         [WorkItem(10588, "https://github.com/dotnet/roslyn/issues/10588")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PreviousFromInsideCurrent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -517,7 +579,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NextInScript()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 $$void M1() { }
@@ -529,7 +593,9 @@ $$void M1() { }
 
         [Fact, Trait(Traits.Feature, Traits.Features.GoToAdjacentMember)]
         [WorkItem(4311, "https://github.com/dotnet/roslyn/issues/4311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PrevInScript()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 [||]void M1() { }

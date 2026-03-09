@@ -12,7 +12,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
     public partial class MoveTypeTests : CSharpMoveTypeTestsBase
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissing_OnMatchingFileName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]class test1 { }";
@@ -21,7 +23,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissing_Nested_OnMatchingFileName_Simple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"class outer
@@ -33,7 +37,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMatchingFileName_CaseSensitive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]class Test1 { }";
@@ -42,7 +48,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForSpans1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[|clas|]s Class1 { }
@@ -52,7 +60,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForSpans2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]class Class1 { }
@@ -68,7 +78,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
         [WorkItem(14008, "https://github.com/dotnet/roslyn/issues/14008")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMoveToNewFileWithFolders()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -93,7 +105,9 @@ class Class2 { }
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForSpans3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[|class Class1|] { }
@@ -103,7 +117,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForSpans4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"class Class1[||] { }
@@ -118,7 +134,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveTypeWithNoContainerNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]class Class1 { }
@@ -133,7 +151,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveTypeWithWithUsingsAndNoContainerNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"// Banner Text
@@ -157,7 +177,9 @@ class Class1 { }
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveTypeWithWithMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"// Banner Text
@@ -194,7 +216,9 @@ class Class1
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveTypeWithWithMembers2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"// Banner Text
@@ -246,7 +270,9 @@ class Class1
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveAnInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]interface IMoveType { }
@@ -261,7 +287,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveAStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]struct MyStruct { }
@@ -276,7 +304,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveAnEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"[||]enum MyEnum { }
@@ -291,7 +321,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveTypeWithWithContainerNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -317,7 +349,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveNestedTypeToNewFile_Simple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -353,7 +387,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveNestedTypePreserveModifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -390,7 +426,9 @@ class Class2 { }";
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
         [WorkItem(14004, "https://github.com/dotnet/roslyn/issues/14004")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveNestedTypeToNewFile_Attributes1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -431,7 +469,9 @@ class Class2 { }";
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
         [WorkItem(14484, "https://github.com/dotnet/roslyn/issues/14484")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveNestedTypeToNewFile_Comments1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -473,7 +513,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveNestedTypeToNewFile_Simple_DottedName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -509,7 +551,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveNestedTypeToNewFile_ParentHasOtherMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -552,7 +596,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveNestedTypeToNewFile_HasOtherTopLevelMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -602,7 +648,9 @@ class Class2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveNestedTypeToNewFile_HasMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -651,7 +699,9 @@ class Class2 { }";
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
         [WorkItem(13969, "https://github.com/dotnet/roslyn/issues/13969")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveTypeInFileWithComplexHierarchy()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace OuterN1.N1
@@ -765,7 +815,9 @@ namespace OuterN2.N2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveTypeUsings1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -808,7 +860,9 @@ partial class Outer {
 
         [WorkItem(16283, "https://github.com/dotnet/roslyn/issues/16283")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLeadingTrivia1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -845,7 +899,9 @@ partial class Outer
 
         [WorkItem(17171, "https://github.com/dotnet/roslyn/issues/17171")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsertFinalNewLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -887,7 +943,9 @@ partial class Outer
 
         [WorkItem(17171, "https://github.com/dotnet/roslyn/issues/17171")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsertFinalNewLine2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -928,7 +986,9 @@ partial class Outer
 
         [WorkItem(16282, "https://github.com/dotnet/roslyn/issues/16282")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveTypeRemoveOuterInheritanceTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -958,7 +1018,9 @@ partial class Outer
 
         [WorkItem(17930, "https://github.com/dotnet/roslyn/issues/17930")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveTypeWithDirectives1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -1011,7 +1073,9 @@ public class Inner
 
         [WorkItem(17930, "https://github.com/dotnet/roslyn/issues/17930")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveTypeWithDirectives2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -1069,7 +1133,9 @@ namespace N
 
         [WorkItem(21456, "https://github.com/dotnet/roslyn/issues/21456")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLeadingBlankLines1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"// Banner Text
@@ -1122,7 +1188,9 @@ class Class1
 
         [WorkItem(21456, "https://github.com/dotnet/roslyn/issues/21456")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLeadingBlankLines2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"// Banner Text

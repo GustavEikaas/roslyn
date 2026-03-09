@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Remote;
 using Microsoft.VisualStudio.LanguageServices.Remote;
-using Nerdbank;
 using Roslyn.Utilities;
 using StreamJsonRpc;
 
@@ -163,7 +162,7 @@ namespace Roslyn.Test.Utilities.Remote
                 Func<Stream, IServiceProvider, ServiceHubServiceBase> creator;
                 if (_creatorMap.TryGetValue(serviceName, out creator))
                 {
-                    var tuple = FullDuplexStream.CreateStreams();
+                    var tuple = Nerdbank.Streams.FullDuplexStream.CreatePair();
                     return Task.FromResult<Stream>(new WrappedStream(creator(tuple.Item1, _serviceProvider), tuple.Item2));
                 }
 

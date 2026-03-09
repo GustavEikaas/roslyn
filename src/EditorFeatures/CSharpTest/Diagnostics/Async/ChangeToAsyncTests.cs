@@ -12,7 +12,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.Async
     public partial class ChangeToAsyncTests : AbstractCSharpDiagnosticProviderBasedUserDiagnosticTest
     {
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToAsync)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CantAwaitAsyncVoid()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System.Threading.Tasks;

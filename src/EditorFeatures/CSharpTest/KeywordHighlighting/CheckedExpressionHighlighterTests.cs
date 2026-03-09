@@ -15,7 +15,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.KeywordHighlighting
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExample1_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -40,7 +42,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.KeywordHighlighting
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExample2_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C

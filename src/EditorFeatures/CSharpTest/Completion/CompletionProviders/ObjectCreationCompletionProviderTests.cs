@@ -22,7 +22,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InObjectCreation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class MyGeneric<T> { }
@@ -36,7 +38,9 @@ void goo()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInAnonymousTypeObjectCreation1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -52,7 +56,9 @@ class C
 
         [WorkItem(854497, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/854497")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotVoid()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -68,7 +74,9 @@ class C
 
         [WorkItem(827897, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/827897")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InYieldReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -86,7 +94,9 @@ class Program
 
         [WorkItem(827897, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/827897")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InAsyncMethodReturnStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -104,7 +114,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IsCommitCharacterTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string markup = @"
 using D = System.Globalization.DigitShapes; 
@@ -132,7 +144,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SendEnterThroughToEditorTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string markup = @"
 using D = System.Globalization.DigitShapes; 
@@ -151,7 +165,9 @@ class Program
 
         [WorkItem(828196, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/828196")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestAlias()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using D = System.Globalization.DigitShapes; 
@@ -167,7 +183,9 @@ class Program
 
         [WorkItem(828196, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/828196")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestAlias2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 namespace N
@@ -188,7 +206,9 @@ class Program
 
         [WorkItem(1075275, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1075275")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitAlias()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using D = System.Globalization.DigitShapes; 
@@ -214,7 +234,9 @@ class Program
 
         [WorkItem(1090377, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1090377")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterNewFollowedByAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Location {}
@@ -240,7 +262,9 @@ class Goo
 
         [WorkItem(1090377, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1090377")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterNewFollowedByAssignment_GrandParentIsSimpleAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -256,7 +280,9 @@ class Program
 
         [WorkItem(2836, "https://github.com/dotnet/roslyn/issues/2836")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterNewFollowedBySimpleAssignment_GrandParentIsEqualsValueClause()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -273,7 +299,9 @@ class Program
 
         [WorkItem(2836, "https://github.com/dotnet/roslyn/issues/2836")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterNewFollowedByCompoundAssignment_GrandParentIsEqualsValueClause()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -290,7 +318,9 @@ class Program
 
         [WorkItem(2836, "https://github.com/dotnet/roslyn/issues/2836")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterNewFollowedByCompoundAssignment_GrandParentIsEqualsValueClause2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -307,7 +337,9 @@ class Program
 
         [WorkItem(4115, "https://github.com/dotnet/roslyn/issues/4115")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitObjectWithParenthesis1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -332,7 +364,9 @@ class C
 
         [WorkItem(4115, "https://github.com/dotnet/roslyn/issues/4115")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitObjectWithParenthesis2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -361,7 +395,9 @@ class C
 
         [WorkItem(4115, "https://github.com/dotnet/roslyn/issues/4115")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontCommitObjectWithOpenBrace1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -386,7 +422,9 @@ class C
 
         [WorkItem(4115, "https://github.com/dotnet/roslyn/issues/4115")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontCommitObjectWithOpenBrace2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -415,7 +453,9 @@ class C
 
         [WorkItem(4310, "https://github.com/dotnet/roslyn/issues/4310")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InExpressionBodiedProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"class C
@@ -428,7 +468,9 @@ class C
 
         [WorkItem(4310, "https://github.com/dotnet/roslyn/issues/4310")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InExpressionBodiedMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"class C
@@ -441,7 +483,9 @@ class C
 
         [WorkItem(15804, "https://github.com/dotnet/roslyn/issues/15804")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BeforeAttributeParsedAsImplicitArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"class Program
@@ -457,7 +501,9 @@ class C
 		
         [WorkItem(14084, "https://github.com/dotnet/roslyn/issues/14084")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InMethodCallBeforeAssignment1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"namespace ConsoleApplication1
@@ -481,7 +527,9 @@ class C
 
         [WorkItem(14084, "https://github.com/dotnet/roslyn/issues/14084")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InMethodCallBeforeAssignment2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"namespace ConsoleApplication1
@@ -505,7 +553,9 @@ class C
 
         [WorkItem(2644, "https://github.com/dotnet/roslyn/issues/2644")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InPropertyWithSameNameAsGenericTypeArgument1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"namespace ConsoleApplication1
@@ -530,7 +580,9 @@ class C
 
         [WorkItem(2644, "https://github.com/dotnet/roslyn/issues/2644")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InPropertyWithSameNameAsGenericTypeArgument2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"namespace ConsoleApplication1
@@ -550,7 +602,9 @@ class C
 
         [WorkItem(2644, "https://github.com/dotnet/roslyn/issues/2644")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InPropertyWithSameNameAsGenericTypeArgument3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"namespace ConsoleApplication1
@@ -570,7 +624,9 @@ class C
 
         [WorkItem(2644, "https://github.com/dotnet/roslyn/issues/2644")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InPropertyWithSameNameAsGenericTypeArgument4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"namespace ConsoleApplication1
@@ -595,7 +651,9 @@ class C
 
         [WorkItem(21674, "https://github.com/dotnet/roslyn/issues/21674")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PropertyWithSameNameAsOtherType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"namespace ConsoleApplication1

@@ -24,7 +24,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.NamingStyle
             => (new CSharpNamingStyleDiagnosticAnalyzer(), new NamingStyleCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseClass_CorrectName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class [|C|]
@@ -33,7 +35,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.NamingStyle
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseClass_NameGetsCapitalized()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class [|c|]
@@ -64,7 +68,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.NamingStyle
         [InlineData("S_", "s_")]
         [InlineData("T_", "t_")]
         [InlineData("M_S__T_", "t_")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseField_PrefixGetsStripped(string fieldName, string correctedName)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 $@"class C
@@ -98,7 +104,9 @@ $@"class C
         [InlineData("S_", "_s_")]
         [InlineData("T_", "_t_")]
         [InlineData("M_S__T_", "_t_")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseField_PrefixGetsStrippedBeforeAddition(string fieldName, string correctedName)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 $@"class C
@@ -113,7 +121,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_CorrectName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -133,7 +143,9 @@ $@"class C
         [InlineData("private")]
         [InlineData("protected private")]
         [WorkItem(20907, "https://github.com/dotnet/roslyn/issues/20907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_NoneAndDefaultAccessibilities(string accessibility)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 $@"class C
@@ -175,7 +187,9 @@ $@"class C
         [InlineData("void Outer(int [|m|]) {}", "void Outer(int M) {}")]
         [InlineData("void Outer() { int [|m|]; }", "void Outer() { int M; }")]
         [WorkItem(20907, "https://github.com/dotnet/roslyn/issues/20907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseSymbol_NoneAndDefaultSymbolKinds(string camelCaseSymbol, string pascalCaseSymbol)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 $@"class C
@@ -216,7 +230,9 @@ $@"class C
         [InlineData("void Outer() { System.Action<int> action = delegate (int [|m|]) {} }", "void Outer() { System.Action<int> action = delegate (int M) {} }", SymbolKind.Parameter, Accessibility.NotApplicable)]
         [InlineData("void Outer() { int [|m|]; }", "void Outer() { int M; }", SymbolKind.Local, Accessibility.NotApplicable)]
         [WorkItem(20907, "https://github.com/dotnet/roslyn/issues/20907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseSymbol_ExpectedSymbolAndAccessibility(string camelCaseSymbol, string pascalCaseSymbol, object symbolKind, Accessibility accessibility)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var alternateSymbolKind = TypeKind.Class.Equals(symbolKind) ? TypeKind.Interface : TypeKind.Class;
             var alternateAccessibility = accessibility == Accessibility.Public ? Accessibility.Protected : Accessibility.Public;
@@ -247,7 +263,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_NameGetsCapitalized()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -266,7 +284,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_ConstructorsAreIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class c
@@ -278,7 +298,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_PropertyAccessorsAreIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -288,7 +310,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_IndexerNameIsIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -304,7 +328,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_LocalFunctionIsIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -319,7 +345,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -338,7 +366,9 @@ $@"class C
 		}
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_LocalDeclaration1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -359,7 +389,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_LocalDeclaration2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -380,7 +412,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_UsingVariable1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -405,7 +439,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_UsingVariable2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -430,7 +466,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_ForVariable1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -455,7 +493,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_ForVariable2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -480,7 +520,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_ForEachVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -505,7 +547,9 @@ $@"class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_CatchVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -538,7 +582,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_CatchWithoutVariableIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -557,7 +603,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_CatchWithoutDeclarationIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -576,7 +624,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_Deconstruction1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -599,7 +649,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_Deconstruction2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -622,7 +674,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_ForEachDeconstruction1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -645,7 +699,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_ForEachDeconstruction2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -668,7 +724,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_OutVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -691,7 +749,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_PatternVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -714,7 +774,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_QueryFromClauseIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // This is an IRangeVariableSymbol, not ILocalSymbol
             await TestMissingInRegularAndScriptAsync(
@@ -733,7 +795,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_QueryLetClauseIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // This is an IRangeVariableSymbol, not ILocalSymbol
             await TestMissingInRegularAndScriptAsync(
@@ -752,7 +816,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_ParameterIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -764,7 +830,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_TupleTypeElementNameIgnored1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -777,7 +845,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_TupleTypeElementNameIgnored2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -790,7 +860,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocals_TupleExpressionElementNameIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -803,7 +875,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpperCaseConstants_ConstField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -818,7 +892,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpperCaseConstants_ConstLocal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -839,7 +915,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpperCaseConstants_NonConstFieldIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -849,7 +927,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpperCaseConstants_NonConstLocalIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -862,7 +942,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocalsUpperCaseConstants_ConstLocal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -883,7 +965,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocalsUpperCaseConstants_NonConstLocal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -904,7 +988,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocalFunctions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -929,7 +1015,9 @@ class C
         }
  
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCamelCaseLocalFunctions_MethodIsIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -941,7 +1029,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAsyncFunctions_AsyncMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -960,7 +1050,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAsyncFunctions_AsyncLocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -985,7 +1077,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAsyncFunctions_NonAsyncMethodIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -1000,7 +1094,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAsyncFunctions_NonAsyncLocalFunctionIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -1015,7 +1111,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_InInterfaceWithImplicitImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"interface I
@@ -1040,7 +1138,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_InInterfaceWithExplicitImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"interface I
@@ -1065,7 +1165,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_NotInImplicitInterfaceImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"interface I
@@ -1080,7 +1182,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_NotInExplicitInterfaceImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"interface I
@@ -1095,7 +1199,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_InAbstractType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -1122,7 +1228,9 @@ class D : C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_NotInAbstractMethodImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -1138,7 +1246,9 @@ class D : C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseProperty_InInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -1165,7 +1275,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseProperty_NotInImplicitInterfaceImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -1181,7 +1293,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPascalCaseMethod_OverrideInternalMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -1198,7 +1312,9 @@ class D : C
 
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
         [WorkItem(19106, "https://github.com/dotnet/roslyn/issues/19106")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnSymbolsWithNoName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -1211,7 +1327,9 @@ namespace Microsoft.CodeAnalysis.Host
         
         [Fact, Trait(Traits.Feature, Traits.Features.NamingStyle)]
         [WorkItem(16562, "https://github.com/dotnet/roslyn/issues/16562")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefactorNotify()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public class [|c|] { }";
             var testParameters = new TestParameters(options: options.ClassNamesArePascalCase);

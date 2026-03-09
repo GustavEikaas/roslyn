@@ -19,7 +19,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertAutoPropertyToFu
             => new CSharpConvertAutoPropertyToFullPropertyCodeRefactoringProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SimpleAutoPropertyTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -49,7 +51,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtraLineAfterProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -81,7 +85,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithInitialValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -111,7 +117,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithCalculatedInitialValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -143,7 +151,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithPrivateSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -173,7 +183,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithFieldNameAlreadyUsed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -206,7 +218,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -240,7 +254,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithExpressionBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -260,7 +276,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithExpressionBodyWhenOnSingleLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -280,7 +298,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithExpressionBodyWhenOnSingleLine2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -308,7 +328,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithExpressionBodyWithTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -328,7 +350,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithPropertyOpenBraceOnSameLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -357,7 +381,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithAccessorOpenBraceOnSameLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -385,7 +411,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StaticProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -415,7 +443,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ProtectedProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -445,7 +475,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InternalProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -475,7 +507,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithAttributes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -507,7 +541,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommentsInAccessors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -543,7 +579,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OverrideProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class MyBaseClass
@@ -583,7 +621,9 @@ class MyDerivedClass : MyBaseClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SealedProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class MyClass
@@ -613,7 +653,9 @@ class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task VirtualProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class MyBaseClass
@@ -653,7 +695,9 @@ class MyDerivedClass : MyBaseClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PrivateProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class MyClass
@@ -683,7 +727,9 @@ class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AbstractProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class MyBaseClass
@@ -700,7 +746,9 @@ class MyDerivedClass : MyBaseClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExternProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class MyBaseClass
@@ -712,7 +760,9 @@ class MyBaseClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GetterOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -738,7 +788,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GetterOnlyExpressionBodies()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -758,7 +810,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SetterOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -773,7 +827,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedAccessors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -787,7 +843,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CursorAtBeginning()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -817,7 +875,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CursorAtEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -847,7 +907,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CursorOnAccessors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -859,7 +921,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoreThanOneGetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -871,7 +935,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoreThanOneSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -883,7 +949,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CustomFieldName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -913,7 +981,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NonStaticPropertyWithCustomStaticFieldName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -943,7 +1013,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StaticPropertyWithCustomStaticFieldName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class goo
@@ -973,7 +1045,9 @@ class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 interface IGoo
@@ -985,7 +1059,9 @@ interface IGoo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 struct goo
@@ -1016,7 +1092,9 @@ struct goo
 
         [WorkItem(22146, "https://github.com/dotnet/roslyn/issues/22146")]
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PartialClasses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 partial class Program
@@ -1047,7 +1125,9 @@ partial class Program
 
         [WorkItem(22146, "https://github.com/dotnet/roslyn/issues/22146")]
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PartialClassInSeparateFiles1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file1 = @"
 partial class Program
@@ -1093,7 +1173,9 @@ partial class Program
 
         [WorkItem(22146, "https://github.com/dotnet/roslyn/issues/22146")]
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PartialClassInSeparateFiles2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file1 = @"
 partial class Program
@@ -1138,7 +1220,9 @@ partial class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ConvertAutoPropertyToFullProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InvalidLocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(@"namespace NS
 {

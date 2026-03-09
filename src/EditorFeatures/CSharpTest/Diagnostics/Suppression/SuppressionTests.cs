@@ -50,7 +50,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.Suppression
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestPragmaWarningDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"
@@ -75,7 +77,9 @@ class Class
 
                 [WorkItem(26015, "https://github.com/dotnet/roslyn/issues/26015")]
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestPragmaWarningDirectiveAroundMultiLineStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"
@@ -101,7 +105,9 @@ line"";
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestMultilineStatementPragmaWarningDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"
@@ -127,7 +133,9 @@ class Class
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestPragmaWarningDirectiveWithExistingTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"
@@ -156,7 +164,9 @@ class Class
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestMultipleInstancesOfPragmaWarningDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"
@@ -181,7 +191,9 @@ class Class
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
                 [WorkItem(3311, "https://github.com/dotnet/roslyn/issues/3311")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestNoDuplicateSuppressionCodeFixes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     var source = @"
 class Class
@@ -229,7 +241,9 @@ class Class
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestErrorAndWarningScenario()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"
@@ -256,7 +270,9 @@ class Class
 
                 [WorkItem(956453, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/956453")]
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestWholeFilePragmaWarningDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"class Class { void Method() { [|int x = 0;|] } }",
@@ -267,7 +283,9 @@ class Class {{ void Method() {{ int x = 0; }} }}
 
                 [WorkItem(970129, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/970129")]
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionAroundSingleToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"
@@ -298,7 +316,9 @@ class Program
 
                 [WorkItem(1066576, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1066576")]
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestPragmaWarningDirectiveAroundTrivia1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"
@@ -337,7 +357,9 @@ class Class
 
                 [WorkItem(1066576, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1066576")]
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestPragmaWarningDirectiveAroundTrivia2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"[|#pragma abcde|]",
@@ -348,7 +370,9 @@ class Class
 
                 [WorkItem(1066576, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1066576")]
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestPragmaWarningDirectiveAroundTrivia3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"[|#pragma abcde|]  ",
@@ -359,7 +383,9 @@ class Class
 
                 [WorkItem(1066576, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1066576")]
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestPragmaWarningDirectiveAroundTrivia4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"
@@ -380,7 +406,9 @@ class C {{ }}
 
                 [WorkItem(1066576, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1066576")]
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestPragmaWarningDirectiveAroundTrivia5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"class C1 { }
@@ -397,7 +425,9 @@ class C3 {{ }}");
 
                 [WorkItem(1066576, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1066576")]
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestPragmaWarningDirectiveAroundTrivia6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
         @"class C1 { }
@@ -425,7 +455,9 @@ C3 {{ }} // comment
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestHiddenDiagnosticCannotBeSuppressed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestMissingAsync(
         @"
@@ -476,7 +508,9 @@ int Method()
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestInfoDiagnosticSuppressed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -538,7 +572,9 @@ class Class
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestErrorDiagnosticCanBeSuppressed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -603,7 +639,9 @@ class Class
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestDiagnosticWithBadIdSuppressed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     // Diagnostics with bad/invalid ID are not reported.
                     await TestMissingAsync(
@@ -656,7 +694,9 @@ using System;
 
             [WorkItem(2764, "https://github.com/dotnet/roslyn/issues/2764")]
             [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestPragmaWarningDirectiveAroundMultilineDiagnostic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 await TestAsync(
     @"
@@ -692,7 +732,9 @@ class Class
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestCompilerDiagnosticsCannotBeSuppressed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     // Another test verifies we have a pragma warning action for this source, this verifies there are no other suppression actions.
                     await TestActionCountAsync(
@@ -716,7 +758,9 @@ class Class
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestHiddenDiagnosticsCannotBeSuppressed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestMissingAsync(
         @"
@@ -803,7 +847,9 @@ class Class
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnSimpleType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -843,7 +889,9 @@ using System;
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestInRegularAndScriptAsync(
             @"
@@ -889,7 +937,9 @@ using System;
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnTypeInsideNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -941,7 +991,9 @@ namespace N1
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnNestedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -993,7 +1045,9 @@ namespace N
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -1045,7 +1099,9 @@ namespace N
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnOverloadedMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -1141,7 +1197,9 @@ namespace N
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnGenericMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -1193,7 +1251,9 @@ namespace N
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -1245,7 +1305,9 @@ namespace N
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -1280,7 +1342,9 @@ class Class
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
                 [WorkItem(6379, "https://github.com/dotnet/roslyn/issues/6379")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnTriviaBetweenFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -1324,7 +1388,9 @@ enum E
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnField2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -1358,7 +1424,9 @@ class Class
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionOnEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     await TestAsync(
             @"
@@ -1420,7 +1488,9 @@ class Class
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionWithExistingGlobalSuppressionsDocument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     var initialMarkup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -1459,7 +1529,9 @@ class Class { }
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionWithExistingGlobalSuppressionsDocument2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     // Own custom file named GlobalSuppressions.cs
                     var initialMarkup = @"<Workspace>
@@ -1495,7 +1567,9 @@ class Class { }
                 }
 
                 [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestSuppressionWithExistingGlobalSuppressionsDocument3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     // Own custom file named GlobalSuppressions.cs + existing GlobalSuppressions2.cs with global suppressions
                     var initialMarkup = @"<Workspace>
@@ -1588,7 +1662,9 @@ class Class { }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
             [WorkItem(1073825, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1073825")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestDiagnosticWithoutLocationCanBeSuppressed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 await TestAsync(
         @"[||]

@@ -13,7 +13,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeGeneration
         public class Shared
         {
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGenerationSortDeclarations)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestSorting()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var initial = "namespace [|N|] { }";
                 var generationSource = @"
@@ -511,7 +513,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGenerationSortDeclarations)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestSortingDefaultTypeMemberAccessibility1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var generationSource = "public class [|C|] { private string B; public string C; }";
                 var initial = "public class [|C|] { string A; }";
@@ -556,7 +560,9 @@ End Structure";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGenerationSortDeclarations)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestDefaultTypeMemberAccessibility2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var generationSource = "public class [|C|] { private void B(){} public void C(){}  }";
                 var initial = "public interface [|I|] { void A(); }";
@@ -602,7 +608,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGenerationSortDeclarations)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestDefaultNamespaceMemberAccessibility1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var generationSource = "internal class [|B|]{}";
                 var initial = "namespace [|N|] { class A{} }";
@@ -626,7 +634,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGenerationSortDeclarations)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestDefaultNamespaceMemberAccessibility2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var generationSource = "public class [|C|]{}";
                 var initial = "namespace [|N|] { class A{} }";
@@ -645,7 +655,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestDocumentationComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var generationSource = @"
 public class [|C|]
@@ -669,7 +681,9 @@ public class [|C|]
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestModifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var generationSource = @"
 namespace [|N|]

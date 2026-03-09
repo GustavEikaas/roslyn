@@ -72,7 +72,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Interactive
             var contentTypeRegistryService = _exportProvider.GetExport<IContentTypeRegistryService>().Value;
             Evaluator = new TestInteractiveEvaluator();
             Window = _exportProvider.GetExport<IInteractiveWindowFactoryService>().Value.CreateWindow(Evaluator);
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             Window.InitializeAsync().Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
 
         public void Dispose()

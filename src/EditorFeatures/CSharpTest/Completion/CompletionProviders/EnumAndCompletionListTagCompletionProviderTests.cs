@@ -20,7 +20,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
             => new EnumAndCompletionListTagCompletionProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NullableEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class Program
 {
@@ -44,7 +46,9 @@ enum Colors
         [Fact]
         [WorkItem(545678, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545678")]
         [Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_EnumMemberAlways()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -74,7 +78,9 @@ public enum Goo
         [Fact]
         [WorkItem(545678, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545678")]
         [Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_EnumMemberNever()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -104,7 +110,9 @@ public enum Goo
         [Fact]
         [WorkItem(545678, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545678")]
         [Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_EnumMemberAdvanced()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -144,7 +152,9 @@ public enum Goo
 
         [WorkItem(854099, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/854099")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class Program
 {
@@ -166,7 +176,9 @@ enum Colors
 
         [WorkItem(827897, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/827897")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InYieldReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -184,7 +196,9 @@ class Program
 
         [WorkItem(827897, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/827897")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InAsyncMethodReturnStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -202,7 +216,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoCompletionListTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -224,7 +240,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CompletionList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -247,7 +265,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CompletionListCrefToString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -270,7 +290,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CompletionListEmptyCref()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -293,7 +315,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CompletionListInaccessibleType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -318,7 +342,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CompletionListNotAType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -344,7 +370,9 @@ class Program
 
         [WorkItem(828196, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/828196")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestAlias()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using D = System.Globalization.DigitShapes; 
@@ -360,7 +388,9 @@ class Program
 
         [WorkItem(828196, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/828196")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestAlias2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 namespace N
@@ -381,7 +411,9 @@ class Program
 
         [WorkItem(828196, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/828196")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestAlias3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 namespace N
@@ -406,7 +438,9 @@ class Program
 
         [WorkItem(828196, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/828196")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInParameterNameContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 enum E
@@ -427,7 +461,9 @@ class C
 
         [WorkItem(4310, "https://github.com/dotnet/roslyn/issues/4310")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InExpressionBodiedProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"class C
@@ -447,7 +483,9 @@ enum Colors
 
         [WorkItem(4310, "https://github.com/dotnet/roslyn/issues/4310")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InExpressionBodiedMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"class C
@@ -466,7 +504,9 @@ enum Colors
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAfterDot()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"namespace ConsoleApplication253
@@ -493,7 +533,9 @@ enum Colors
 
         [WorkItem(18359, "https://github.com/dotnet/roslyn/issues/18359")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAfterDotWithTextTyped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"namespace ConsoleApplication253
@@ -520,7 +562,9 @@ enum Colors
 
         [WorkItem(5419, "https://github.com/dotnet/roslyn/issues/5419")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInEnumInitializer1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -540,7 +584,9 @@ internal enum ProjectTreeWriterOptions
 
         [WorkItem(5419, "https://github.com/dotnet/roslyn/issues/5419")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInEnumInitializer2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -560,7 +606,9 @@ internal enum ProjectTreeWriterOptions
 
         [WorkItem(5419, "https://github.com/dotnet/roslyn/issues/5419")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInEnumInitializer3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -580,7 +628,9 @@ internal enum ProjectTreeWriterOptions
 
         [WorkItem(5419, "https://github.com/dotnet/roslyn/issues/5419")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInEnumInitializer4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;
@@ -600,7 +650,9 @@ internal enum ProjectTreeWriterOptions
 
         [WorkItem(5419, "https://github.com/dotnet/roslyn/issues/5419")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInEnumInitializer5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using System;

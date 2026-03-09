@@ -24,7 +24,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ChangeSignature
             => TestWorkspace.CreateCSharp(initialMarkup, parameters.parseOptions, parameters.compilationOptions);
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_ImplicitInvokeCalls()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -53,7 +55,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_ExplicitInvokeCalls()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -82,7 +86,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_BeginInvokeCalls()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -111,7 +117,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_AnonymousMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -142,7 +150,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_Lambdas()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -171,7 +181,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_Lambdas_RemovingOnlyParameterIntroducesParentheses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x);
@@ -204,7 +216,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_CascadeThroughMethodGroups_AssignedToVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -243,7 +257,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_CascadeThroughMethodGroups_DelegateConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -280,7 +296,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_CascadeThroughMethodGroups_PassedAsArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -321,7 +339,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_CascadeThroughMethodGroups_ReturnValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -366,7 +386,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_CascadeThroughMethodGroups_YieldReturnValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections.Generic;
@@ -413,7 +435,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_ReferencingLambdas_MethodArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -444,7 +468,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_ReferencingLambdas_YieldReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Collections.Generic;
@@ -473,7 +499,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_Recursive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate RecursiveDelegate $$RecursiveDelegate(int x, string y, bool z);
@@ -502,7 +530,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_DocComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 /// <summary>
@@ -561,7 +591,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_CascadeThroughEventAdd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 delegate void $$MyDelegate(int x, string y, bool z);
@@ -594,7 +626,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_Generics1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class DP16a
@@ -637,7 +671,9 @@ public class DP16a
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_Generics2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class D17<T>
@@ -664,7 +700,9 @@ public class D17Test
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_GenericParams()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class DA
@@ -715,7 +753,9 @@ public class DP20<T>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegates_Generic_RemoveArgumentAtReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"public class CD<T>
 {
@@ -744,7 +784,9 @@ class Test
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ChangeSignature_Delegate_Generics_RemoveStaticArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class C2<T>

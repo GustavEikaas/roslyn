@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.Iterator
             => (null, new CSharpChangeToIEnumerableCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableObjectMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -45,7 +47,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableTupleMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -74,7 +78,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableListMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -103,7 +109,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableGenericIEnumerableMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -120,7 +128,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableGenericIEnumeratorMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -137,7 +147,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableIEnumeratorMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -154,7 +166,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableIEnumerableMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -171,7 +185,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableVoidMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -189,7 +205,9 @@ class Program
 
         [WorkItem(7087, @"https://github.com/dotnet/roslyn/issues/7087")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -268,7 +286,9 @@ namespace Asdf
 
         [WorkItem(7087, @"https://github.com/dotnet/roslyn/issues/7087")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -303,7 +323,9 @@ namespace Asdf
 
         [WorkItem(7087, @"https://github.com/dotnet/roslyn/issues/7087")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToIEnumerable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeToIEnumerableIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;

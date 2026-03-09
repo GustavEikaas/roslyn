@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         internal override AbstractSyntaxStructureProvider CreateProvider() => new TypeDeclarationStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint:$$class C{|textspan:
@@ -26,7 +28,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClassWithLeadingComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span1:// Goo
@@ -41,7 +45,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClassWithNestedComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint1:$$class C{|textspan1:
@@ -56,7 +62,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint:$$interface I{|textspan:
@@ -68,7 +76,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInterfaceWithLeadingComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span1:// Goo
@@ -83,7 +93,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInterfaceWithNestedComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint1:$$interface I{|textspan1:
@@ -98,7 +110,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint:$$struct S{|textspan:
@@ -110,7 +124,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStructWithLeadingComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span1:// Goo
@@ -125,7 +141,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStructWithNestedComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint1:$$struct S{|textspan1:

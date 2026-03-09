@@ -15,7 +15,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.MetadataAsSource
     public partial class MetadataAsSourceTests : AbstractMetadataAsSourceTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public class C {}";
             var symbolName = "C";
@@ -39,7 +41,9 @@ End Class");
 
         [WorkItem(546241, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546241")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public interface I {}";
             var symbolName = "I";
@@ -60,7 +64,9 @@ End Interface");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public class C {}";
             var symbolName = "C..ctor";
@@ -83,7 +89,9 @@ End Class");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public class C { public void Goo() {} }";
             var symbolName = "C.Goo";
@@ -110,7 +118,9 @@ End Class");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public class C { public string S; }";
             var symbolName = "C.S";
@@ -138,7 +148,9 @@ End Class");
 
         [WorkItem(546240, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546240")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public class C { public string S { get; protected set; } }";
             var symbolName = "C.S";
@@ -167,7 +179,9 @@ End Class");
         [WorkItem(546194, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546194")]
         [WorkItem(546291, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546291")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "using System; public class C { public event Action E; }";
             var symbolName = "C.E";
@@ -198,7 +212,9 @@ End Class");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public class C { protected class D { } }";
             var symbolName = "C+D";
@@ -231,7 +247,9 @@ End Class");
 
         [WorkItem(546195, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546195"), WorkItem(546269, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546269")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public enum E { A, B, C }";
             var symbolName = "E";
@@ -259,7 +277,9 @@ End Enum");
 
         [WorkItem(546195, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546195"), WorkItem(546269, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546269")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnumFromField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public enum E { A, B, C }";
             var symbolName = "E.C";
@@ -287,7 +307,9 @@ End Enum");
 
         [WorkItem(546273, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546273")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnumWithUnderlyingType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public enum E : short { A = 0, B = 1, C = 2 }";
             var symbolName = "E.C";
@@ -315,7 +337,9 @@ End Enum");
 
         [WorkItem(650741, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/650741")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnumWithOverflowingUnderlyingType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public enum E : ulong { A = 9223372036854775808 }";
             var symbolName = "E.A";
@@ -338,7 +362,9 @@ End Enum");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnumWithDifferentValues()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public enum E : short { A = 1, B = 2, C = 3 }";
             var symbolName = "E.C";
@@ -366,7 +392,9 @@ End Enum");
 
         [WorkItem(546198, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546198")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeInNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "namespace N { public class C {} }";
             var symbolName = "N.C";
@@ -395,7 +423,9 @@ End Namespace");
 
         [WorkItem(546223, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546223")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInlineConstant()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = @"public class C { public const string S = ""Hello mas""; }";
             var symbolName = "C.S";
@@ -423,7 +453,9 @@ End Class");
 
         [WorkItem(546221, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546221")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInlineTypeOf()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = @"
 using System;
@@ -459,7 +491,9 @@ End Class");
 
         [WorkItem(546231, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546231")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoDefaultConstructorInStructs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public struct S {}";
             var symbolName = "S";
@@ -480,7 +514,9 @@ End Structure");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReferenceDefinedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public class C { public static C Create() { return new C(); } }";
             var symbolName = "C";
@@ -508,7 +544,9 @@ End Class");
 
         [WorkItem(546227, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546227")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public class G<SomeType> { public SomeType S; }";
             var symbolName = "G`1";
@@ -536,7 +574,9 @@ End Class");
 
         [WorkItem(546227, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546227")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public class C { public delegate void D<SomeType>(SomeType s); }";
             var symbolName = "C+D`1";
@@ -563,7 +603,9 @@ End Class");
 
         [WorkItem(546200, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546200")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = @"
 using System;
@@ -605,21 +647,27 @@ End Class");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSymbolIdMatchesMetadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestSymbolIdMatchesMetadataAsync(LanguageNames.CSharp);
             await TestSymbolIdMatchesMetadataAsync(LanguageNames.VisualBasic);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotReusedOnAssemblyDiffers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestNotReusedOnAssemblyDiffersAsync(LanguageNames.CSharp);
             await TestNotReusedOnAssemblyDiffersAsync(LanguageNames.VisualBasic);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestThrowsOnGenerateNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var namespaceSymbol = CodeGenerationSymbolFactory.CreateNamespaceSymbol("Outerspace");
 
@@ -633,7 +681,9 @@ End Class");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReuseGenerateMemberOfGeneratedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = "public class C { public bool Is; }";
 
@@ -646,7 +696,9 @@ End Class");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReuseRepeatGeneration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var context = TestContext.Create())
             {
@@ -657,7 +709,9 @@ End Class");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWorkspaceContextHasReasonableProjectName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var context = TestContext.Create())
             {
@@ -671,7 +725,9 @@ End Class");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReuseGenerateFromDifferentProject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var context = TestContext.Create())
             {
@@ -687,7 +743,9 @@ End Class");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotReusedGeneratingForDifferentLanguage()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var context = TestContext.Create(LanguageNames.CSharp))
             {
@@ -704,7 +762,9 @@ End Class");
 
         [WorkItem(546311, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546311")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FormatMetadataAsSource()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var context = TestContext.Create(LanguageNames.CSharp))
             {
@@ -716,7 +776,9 @@ End Class");
 
         [WorkItem(530829, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530829")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IndexedProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = @"
 Public Class C
@@ -746,7 +808,9 @@ public class C
 
         [WorkItem(566688, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/566688")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeReferencingInternalNestedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = @"using System;
 [My(typeof(D))]
@@ -777,7 +841,9 @@ public class [|C|]
 
         [WorkItem(530978, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530978")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributesOnMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = @"using System;
 
@@ -905,7 +971,9 @@ End Class";
 
         [WorkItem(530923, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530923")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyLineBetweenMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = @"using System;
 
@@ -995,7 +1063,9 @@ End Class";
 
         [WorkItem(728644, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/728644")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyLineBetweenMembers2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = @"
 using System;
@@ -1058,7 +1128,9 @@ End Interface";
 
         [WorkItem(679114, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/679114"), WorkItem(715013, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/715013")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDefaultValueEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = @"
 using System.IO;
@@ -1099,7 +1171,9 @@ End Class";
 
         [WorkItem(651261, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/651261")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = @"
 using System;
@@ -1142,7 +1216,9 @@ End Class";
 
         [WorkItem(897006, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/897006")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNavigationViaReducedExtensionMethodCS()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadata = @"using System;
 public static class ObjectExtensions
@@ -1180,7 +1256,9 @@ public static class ObjectExtensions
 
         [WorkItem(897006, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/897006")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNavigationViaReducedExtensionMethodVB()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadata = @"Imports System.Runtime.CompilerServices
 Namespace NS
@@ -1224,7 +1302,9 @@ End Namespace";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIndexersAndOperators()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = @"public class Program
 {
@@ -1280,7 +1360,9 @@ End Class");
 
         [WorkItem(15387, "https://github.com/dotnet/roslyn/issues/15387")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComImport1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = @"
 using System.Runtime.InteropServices;
@@ -1314,7 +1396,9 @@ public interface [|IComImport|]
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOptionalParameterWithDefaultLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadataSource = @"
 using System.Threading;
@@ -1340,7 +1424,9 @@ public class [|C|]
 
         [WorkItem(446567, "https://devdiv.visualstudio.com/DevDiv/_workitems?id=446567")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocCommentsWithUnixNewLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = @"
 using System;
@@ -1402,7 +1488,9 @@ End Interface";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnmanagedCSharpConstraint_Type()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadata = @"using System;
 public class TestType<T> where T : unmanaged
@@ -1439,7 +1527,9 @@ public class [|TestType|]<T> where T : unmanaged
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnmanagedCSharpConstraint_Method()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadata = @"using System;
 public class TestType
@@ -1481,7 +1571,9 @@ public class TestType
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnmanagedCSharpConstraint_Delegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var metadata = @"using System;
 public delegate void D<T>() where T : unmanaged;";

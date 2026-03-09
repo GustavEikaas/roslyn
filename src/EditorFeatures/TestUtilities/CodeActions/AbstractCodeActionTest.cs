@@ -74,7 +74,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeActions
             return result;
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected async Task TestActionOnLinkedFiles(
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             TestWorkspace workspace,
             string expectedText,
             CodeAction action,
@@ -95,7 +97,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeActions
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private static async Task VerifyPreviewContents(
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             TestWorkspace workspace, string expectedPreviewContents,
             ImmutableArray<CodeActionOperation> operations)
         {

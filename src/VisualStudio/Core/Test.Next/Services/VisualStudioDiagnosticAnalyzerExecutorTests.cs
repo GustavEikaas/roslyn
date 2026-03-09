@@ -33,7 +33,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
     public class VisualStudioDiagnosticAnalyzerExecutorTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCSharpAnalyzerOptions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test
 {
@@ -63,7 +65,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVisualBasicAnalyzerOptions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"Class Test
     Sub Method()
@@ -92,7 +96,9 @@ End Class";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCancellation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test { void Method() { } }";
 
@@ -129,7 +135,9 @@ End Class";
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
         [WorkItem(26178, "https://github.com/dotnet/roslyn/pull/26178")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCancellationOnSessionWithSolution()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test { void Method() { } }";
 
@@ -151,7 +159,9 @@ End Class";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHostAnalyzers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test
 {
@@ -200,7 +210,9 @@ End Class";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDuplicatedAnalyzers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test
 {

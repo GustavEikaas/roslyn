@@ -18,7 +18,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseDeconstruction
             => (new CSharpUseDeconstructionDiagnosticAnalyzer(), new CSharpUseDeconstructionCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -42,7 +44,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseDeconstruction
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfNameInInnerScope()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -60,7 +64,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseDeconstruction
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfNameInOuterScope()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -77,7 +83,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseDeconstruction
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -103,7 +111,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseDeconstruction
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTupleType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -129,7 +139,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseDeconstruction
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVarInForEach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -159,7 +171,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTupleTypeInForEach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -189,7 +203,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -215,7 +231,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -249,7 +267,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -275,7 +295,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -301,7 +323,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfDefaultTupleNameWithVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -316,7 +340,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithUserNamesThatMatchDefaultTupleNameWithVar1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -340,7 +366,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithUserNamesThatMatchDefaultTupleNameWithVar2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -366,7 +394,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfDefaultTupleNameWithTupleType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -381,7 +411,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfTupleIsUsed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -397,7 +429,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfTupleMethodIsUsed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -413,7 +447,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfTupleDefaultElementNameUsed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -429,7 +465,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfTupleRandomNameUsed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -445,7 +483,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -472,7 +512,9 @@ class C
 
         [WorkItem(25260, "https://github.com/dotnet/roslyn/issues/25260")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotWithDefaultLiteralInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -486,7 +528,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDefaultExpressionInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -508,7 +552,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotWithImplicitConversionFromNonTuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -527,7 +573,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithExplicitImplicitConversionFromNonTuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -559,7 +607,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotWithImplicitConversionFromNonTupleInForEach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -578,7 +628,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithExplicitImplicitConversionFromNonTupleInForEach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Linq;
@@ -612,7 +664,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithTupleLiteralConversion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -634,7 +688,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithImplicitTupleConversion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -660,7 +716,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseDeconstruction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithImplicitTupleConversionInForEach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;

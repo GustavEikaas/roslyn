@@ -28,7 +28,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertForEachToFor
             SingleOption(CSharpCodeStyleOptions.UseImplicitTypeForIntrinsicTypes, onWithSilent));
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmptyBlockBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -58,7 +60,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmptyBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -84,7 +88,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Body()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -114,7 +120,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BlockBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -147,7 +155,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Comment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -179,7 +189,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Comment2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -211,7 +223,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Comment3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -237,7 +251,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Comment4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -267,7 +283,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Comment5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -297,7 +315,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Comment6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -329,7 +349,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Comment7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -360,7 +382,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommentNotSupported()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -376,7 +400,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommentNotSupported2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -392,7 +418,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommentNotSupported3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -408,7 +436,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CollectionStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -440,7 +470,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CollectionConflict()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -476,7 +508,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IndexConflict()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -509,7 +543,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task VariableWritten()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -528,7 +564,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WrongCaretPosition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -547,7 +585,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WrongCaretPosition1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -565,7 +605,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WrongCaretPosition2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -583,7 +625,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Field()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -615,7 +659,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayElement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -648,7 +694,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Parameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -676,7 +724,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Property()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -708,7 +758,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Interface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System.Collections.Generic;
@@ -745,7 +797,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IListOfT()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System.Collections.Generic;
@@ -782,7 +836,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IReadOnlyListOfT()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System.Collections;
@@ -839,7 +895,9 @@ class ReadOnly<T> : IReadOnlyList<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -918,7 +976,9 @@ class List : IList
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ImmutableArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 <Workspace>
@@ -962,7 +1022,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -1021,7 +1083,9 @@ class Explicit : IReadOnlyList<int>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoubleExplicitInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -1056,7 +1120,9 @@ class Explicit : IReadOnlyList<int>, IReadOnlyList<string>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoubleExplicitInterfaceWithExplicitType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -1123,7 +1189,9 @@ class Explicit : IReadOnlyList<int>, IReadOnlyList<string>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MixedInterfaceImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -1189,7 +1257,9 @@ class Mixed : IReadOnlyList<int>, IReadOnlyList<string>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MixedInterfaceImplementationWithExplicitType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -1256,7 +1326,9 @@ class Mixed : IReadOnlyList<int>, IReadOnlyList<string>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PreserveUserExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -1327,7 +1399,9 @@ namespace NS
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmbededStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1343,7 +1417,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmbededStatement2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1375,7 +1451,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IndexConflict2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1408,7 +1486,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UseTypeAsUsedInForeach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1441,7 +1521,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task String()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1474,7 +1556,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StringLocalConst()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1507,7 +1591,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StringConst()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1542,7 +1628,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ElementExplicitCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1575,7 +1663,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAssignable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1594,7 +1684,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ElementMissing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1613,7 +1705,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ElementMissing2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1631,7 +1725,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StringExplicitType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -1664,7 +1760,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Var()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -1723,7 +1821,9 @@ class Explicit : IReadOnlyList<int>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForEachToFor)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayRank2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test

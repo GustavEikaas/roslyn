@@ -18,7 +18,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
     public class TodoCommentTests
     {
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_Colon()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"// [|TODO:test|]";
 
@@ -26,7 +28,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_Space()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"// [|TODO test|]";
 
@@ -34,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_Underscore()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"// TODO_test";
 
@@ -42,7 +48,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_Number()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"// TODO1 test";
 
@@ -50,7 +58,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_Quote()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"// ""TODO test""";
 
@@ -58,7 +68,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_Middle()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"// Hello TODO test";
 
@@ -66,7 +78,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_Document()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"///    [|TODO test|]";
 
@@ -74,7 +88,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_Preprocessor1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#if DEBUG // [|TODO test|]";
 
@@ -82,7 +98,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_Preprocessor2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#if DEBUG ///    [|TODO test|]";
 
@@ -90,7 +108,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_Region()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#region // TODO test";
 
@@ -98,7 +118,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_EndRegion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#endregion // [|TODO test|]";
 
@@ -106,7 +128,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleLineTodoComment_TrailingSpan()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"// [|TODO test                        |]";
 
@@ -114,7 +138,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultilineTodoComment_Singleline()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"/* [|TODO: hello    |]*/";
 
@@ -122,7 +148,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultilineTodoComment_Singleline_Document()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"/** [|TODO: hello    |]*/";
 
@@ -130,7 +158,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultilineTodoComment_Multiline()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 /* [|TODO: hello    |]
@@ -143,7 +173,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultilineTodoComment_Multiline_DocComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 /** [|TODO: hello    |]
@@ -156,7 +188,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TodoComment
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SinglelineDocumentComment_Multiline()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
         /// <summary>

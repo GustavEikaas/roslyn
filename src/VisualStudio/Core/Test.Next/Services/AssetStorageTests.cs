@@ -38,7 +38,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCleanup()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var storage = new AssetStorage(cleanupInterval: TimeSpan.FromMilliseconds(1), purgeAfter: TimeSpan.FromMilliseconds(2), gcAfter: TimeSpan.FromMilliseconds(5));
 

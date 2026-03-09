@@ -43,7 +43,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IsCommitCharacterTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var commitCharacters = PathUtilities.IsUnixLikePlatform ? new[] { '"', '/' } : new[] { '"', '\\', '/', ',' };
             await VerifyCommitCharactersAsync("#r \"$$", textTypedSoFar: "", validChars: commitCharacters);
@@ -69,7 +71,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [ConditionalFact(typeof(WindowsOnly))]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SendEnterThroughToEditorTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifySendEnterThroughToEnterAsync("#r \"System$$", "System", sendThroughEnterOption: EnterKeyRule.Never, expected: false);
             await VerifySendEnterThroughToEnterAsync("#r \"System$$", "System", sendThroughEnterOption: EnterKeyRule.AfterFullyTypedWord, expected: false);
@@ -77,13 +81,17 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [ConditionalFact(typeof(WindowsOnly))]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GacReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync("#r \"$$", "System.Windows.Forms", expectedDescriptionOrNull: null, sourceCodeKind: SourceCodeKind.Script);
         }
 
         [ConditionalFact(typeof(WindowsOnly))]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GacReferenceFullyQualified()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(
                 "#r \"System.Windows.Forms,$$", 
@@ -91,7 +99,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [ConditionalFact(typeof(WindowsOnly))]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FileSystemReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var systemDir = Path.GetFullPath(Environment.SystemDirectory);
             var windowsDir = Directory.GetParent(systemDir);

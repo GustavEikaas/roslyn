@@ -10,7 +10,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseThrowExpression
     public partial class UseThrowExpressionTests : AbstractCSharpDiagnosticProviderBasedUserDiagnosticTest
     {
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseThrowExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllInDocument1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -46,7 +48,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseThrowExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllInDocument2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -82,7 +86,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseThrowExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllInDocument3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -118,7 +124,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseThrowExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllInDocument4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -154,7 +162,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseThrowExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllInDocumentDoNotTouchOtherDocuments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"<Workspace>
@@ -227,7 +237,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseThrowExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllInProject1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"<Workspace>

@@ -59,7 +59,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeFixes
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetCodeFixWithExceptionInRegisterMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await GetFirstDiagnosticWithFixAsync(new ErrorCases.ExceptionInRegisterMethod());
             await GetAddedFixesAsync(new ErrorCases.ExceptionInRegisterMethod());
@@ -73,21 +75,27 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeFixes
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetCodeFixWithExceptionInFixableDiagnosticIds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await GetDefaultFixesAsync(new ErrorCases.ExceptionInFixableDiagnosticIds());
             await GetAddedFixesAsync(new ErrorCases.ExceptionInFixableDiagnosticIds());
         }
 
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/21533")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetCodeFixWithExceptionInFixableDiagnosticIds2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await GetDefaultFixesAsync(new ErrorCases.ExceptionInFixableDiagnosticIds2());
             await GetAddedFixesAsync(new ErrorCases.ExceptionInFixableDiagnosticIds2());
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetCodeFixWithExceptionInGetFixAllProvider()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await GetAddedFixesAsync(new ErrorCases.ExceptionInGetFixAllProvider());
         }

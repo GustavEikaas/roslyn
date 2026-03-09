@@ -19,7 +19,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ExtractInterface
     public class ExtractInterfaceTests : AbstractExtractInterfaceTests
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_Invocation_CaretInMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -35,7 +37,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_Invocation_CaretAfterClassClosingBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -51,7 +55,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_Invocation_CaretBeforeClassKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -67,7 +73,9 @@ $$class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_Invocation_FromInnerClass1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -90,7 +98,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_Invocation_FromInnerClass2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -113,7 +123,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_Invocation_FromOuterClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -136,7 +148,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_Invocation_FromInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -149,7 +163,9 @@ interface IMyInterface
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_Invocation_FromStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -162,7 +178,9 @@ struct SomeStruct
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_Invocation_FromNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -179,7 +197,9 @@ namespace Ns$$
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_DoesNotIncludeFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -196,7 +216,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_IncludesPublicProperty_WithGetAndSet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -209,7 +231,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_IncludesPublicProperty_WithGetAndPrivateSet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -222,7 +246,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_IncludesPublicProperty_WithGet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -235,7 +261,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_ExcludesPublicProperty_WithPrivateGetAndPrivateSet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -248,7 +276,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_IncludesPublicIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -261,7 +291,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_ExcludesInternalIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -274,7 +306,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_IncludesPublicMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -289,7 +323,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_ExcludesInternalMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -304,7 +340,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_IncludesAbstractMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -317,7 +355,9 @@ abstract class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_IncludesPublicEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -330,7 +370,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_ExtractableMembers_ExcludesPrivateEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -343,7 +385,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_DefaultInterfaceName_DoesNotConflictWithOtherTypeNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -360,7 +404,9 @@ class IMyClass2 { }";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_NamespaceName_NoNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -373,7 +419,9 @@ class MyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_NamespaceName_SingleNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -389,7 +437,9 @@ namespace MyNamespace
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_NamespaceName_NestedNamespaces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -408,7 +458,9 @@ namespace OuterNamespace
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_ClassesImplementExtractedInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System;
 
@@ -428,7 +480,9 @@ class MyClass : IMyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_StructsImplementExtractedInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -450,7 +504,9 @@ struct MyStruct : IMyStruct
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_InterfacesDoNotImplementExtractedInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -472,7 +528,9 @@ interface MyInterface
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_Methods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -501,7 +559,9 @@ interface IMyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_Events()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -524,7 +584,9 @@ internal interface IMyClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_Properties()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -560,7 +622,9 @@ abstract class MyClass$$
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_Indexers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -585,7 +649,9 @@ abstract class MyClass$$
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_Imports()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class Class
@@ -612,7 +678,9 @@ public interface IClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_TypeParameters1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 public class Class<A, B, C, D, E, F, G, H, NO1> where E : F
@@ -648,7 +716,9 @@ public class Class<A, B, C, D, E, F, G, H, NO1> where E : F
 
         [WorkItem(706894, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/706894")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_TypeParameters2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System.Collections.Generic;
 
@@ -670,7 +740,9 @@ interface IProgram<A, B, D, E>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_TypeParameters3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class $$Class1<A, B>
@@ -693,7 +765,9 @@ class $$Class1<A, B>
 
         [WorkItem(706894, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/706894")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_TypeParameters4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C1<A>
@@ -729,7 +803,9 @@ public interface IC4<A, B, C>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_BaseList_NewBaseListNonGeneric()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -747,7 +823,9 @@ class Program : IProgram
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_BaseList_NewBaseListGeneric()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program<T>
@@ -765,7 +843,9 @@ class Program<T> : IProgram<T>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_BaseList_NewBaseListWithWhereClause()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program<T, U> where T : U
@@ -783,7 +863,9 @@ class Program<T, U> : IProgram<T, U> where T : U
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_BaseList_LargerBaseList1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program : ISomeInterface
@@ -805,7 +887,9 @@ interface ISomeInterface {}";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_BaseList_LargerBaseList2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program<T, U> : ISomeInterface<T>
@@ -827,7 +911,9 @@ interface ISomeInterface<T> {}";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_BaseList_LargerBaseList3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program<T, U> : ISomeInterface<T>, ISomeInterface2<T, U>
@@ -851,7 +937,9 @@ interface ISomeInterface2<T, U> {}";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_CodeGen_BaseList_LargerBaseList4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program<T, U> : ISomeInterface<T>, ISomeInterface2<T, U> where T : U
@@ -875,7 +963,9 @@ interface ISomeInterface2<T, U> {}";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_TypeDiscovery_NameOnly1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface ISomeInterface<T> {}
@@ -888,7 +978,9 @@ class Program<T, U> : ISomeInterface<T> where T : U
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_TypeDiscovery_NameOnly2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface ISomeInterface<T> {}
@@ -901,7 +993,9 @@ class Program<T, U> $$: ISomeInterface<T> where T : U
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_TypeDiscovery_NameOnly3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface ISomeInterface<T> {}
@@ -914,7 +1008,9 @@ class$$ Program<T, U> : ISomeInterface<T> where T : U
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_TypeDiscovery_NameOnly4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface ISomeInterface<T> {}
@@ -927,7 +1023,9 @@ class Program<T, U>$$ : ISomeInterface<T> where T : U
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_TypeDiscovery_NameOnly5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface ISomeInterface<T> {}
@@ -940,7 +1038,9 @@ class Program  $$ <T, U> : ISomeInterface<T> where T : U
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_TypeDiscovery_NameOnly6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface ISomeInterface<T> {}
@@ -953,7 +1053,9 @@ class $$Program   <T, U> : ISomeInterface<T> where T : U
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_TypeDiscovery_NameOnly7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface ISomeInterface<T> {}
@@ -966,7 +1068,9 @@ class $$Program : ISomeInterface<object>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_TypeDiscovery_NameOnly8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface ISomeInterface<T> {}
@@ -979,7 +1083,9 @@ class Program$$ : ISomeInterface<object>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_TypeDiscovery_NameOnly9()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface ISomeInterface<T> {}
@@ -992,7 +1098,9 @@ class$$ Program : ISomeInterface<object>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_TypeDiscovery_NameOnly10()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface ISomeInterface<T> {}
@@ -1017,7 +1125,9 @@ class Program $$: ISomeInterface<object>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_GeneratedNameTypeParameterSuffix1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class $$Test<T>
@@ -1030,7 +1140,9 @@ class $$Test<T>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_GeneratedNameTypeParameterSuffix2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class $$Test<T, U>
@@ -1043,7 +1155,9 @@ class $$Test<T, U>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtractInterface_GeneratedNameTypeParameterSuffix3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class $$Test<T, U>
@@ -1089,7 +1203,9 @@ class $$Test<T, U>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInWithMethod_Parameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -1108,7 +1224,9 @@ class $$TestClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefReadOnlyWithMethod_ReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -1125,7 +1243,9 @@ class $$TestClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefReadOnlyWithProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -1142,7 +1262,9 @@ class $$TestClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInWithIndexer_Parameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -1159,7 +1281,9 @@ class $$TestClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefReadOnlyWithIndexer_ReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -1176,7 +1300,9 @@ class $$TestClass
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnmanagedConstraint_Type()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class $$TestClass<T> where T : unmanaged
@@ -1192,7 +1318,9 @@ class $$TestClass<T> where T : unmanaged
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ExtractInterface)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnmanagedConstraint_Method()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class $$TestClass

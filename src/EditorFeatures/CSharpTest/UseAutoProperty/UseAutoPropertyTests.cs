@@ -18,7 +18,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
             => (new CSharpUseAutoPropertyAnalyzer(), new CSharpUseAutoPropertyCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleGetterFromField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -40,7 +42,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCSharp5_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Class
@@ -63,7 +67,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCSharp5_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class Class
@@ -81,7 +87,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -103,7 +111,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInitializer_CSharp5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class Class
@@ -121,7 +131,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleGetterFromProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -143,7 +155,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -161,7 +175,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetterAndSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -188,7 +204,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleGetterWithThis()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -210,7 +228,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleSetterWithThis()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -228,7 +248,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetterAndSetterWithThis()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -255,7 +277,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetterWithMutipleStatements()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -274,7 +298,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSetterWithMutipleStatements()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -293,7 +319,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSetterWithMultipleStatementsAndGetterWithSingleStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -317,7 +345,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetterAndSetterUseDifferentFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -341,7 +371,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldAndPropertyHaveDifferentStaticInstance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -359,7 +391,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfFieldUsedInRefArgument1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -382,7 +416,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfFieldUsedInRefArgument2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -405,7 +441,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfFieldUsedInOutArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -428,7 +466,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfFieldUsedInInArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -452,7 +492,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
 
         [WorkItem(25429, "https://github.com/dotnet/roslyn/issues/25429")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfFieldUsedInRefExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -475,7 +517,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfFieldUsedInRefExpression_AsCandidateSymbol()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -500,7 +544,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfUnrelatedSymbolUsedInRefExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -539,7 +585,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotWithVirtualProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -557,7 +605,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotWithConstField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -576,7 +626,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
 
         [WorkItem(25379, "https://github.com/dotnet/roslyn/issues/25379")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotWithVolatileField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -594,7 +646,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldWithMultipleDeclarators1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -618,7 +672,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldWithMultipleDeclarators2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -642,7 +698,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldWithMultipleDeclarators3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -666,7 +724,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseAutoProperty
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldAndPropertyInDifferentParts()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"partial class Class
@@ -695,7 +755,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotWithFieldWithAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -714,7 +776,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateReferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -746,7 +810,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateReferencesConflictResolution()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -778,7 +844,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWriteInConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -810,7 +878,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWriteInNotInConstructor1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -842,7 +912,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWriteInNotInConstructor2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -874,7 +946,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAlreadyAutoPropertyWithGetterWithNoBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -884,7 +958,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAlreadyAutoPropertyWithGetterAndSetterWithNoBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -894,7 +970,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -909,7 +987,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -927,7 +1007,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -946,7 +1028,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Tuple_SingleGetterFromField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -968,7 +1052,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleWithNames_SingleGetterFromField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -990,7 +1076,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleWithDifferentNames_SingleGetterFromField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Class
@@ -1008,7 +1096,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleWithOneName_SingleGetterFromField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1030,7 +1120,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Tuple_Initializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1052,7 +1144,9 @@ partial class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Tuple_GetterAndSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1081,7 +1175,9 @@ partial class Class
         [WorkItem(23215, "https://github.com/dotnet/roslyn/issues/23215")]
         [WorkItem(23216, "https://github.com/dotnet/roslyn/issues/23216")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1116,7 +1212,9 @@ partial class Class
 
         [WorkItem(23735, "https://github.com/dotnet/roslyn/issues/23735")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitInterfaceImplementationGetterOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(@"
 namespace RoslynSandbox
@@ -1145,7 +1243,9 @@ namespace RoslynSandbox
 
         [WorkItem(23735, "https://github.com/dotnet/roslyn/issues/23735")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitInterfaceImplementationGetterAndSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(@"
 namespace RoslynSandbox
@@ -1174,7 +1274,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedMemberGetOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1192,7 +1294,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedMemberGetOnlyWithInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1210,7 +1314,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedMemberGetOnlyWithInitializerAndNeedsSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1230,7 +1336,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedMemberGetterAndSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1249,7 +1357,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedMemberGetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1264,7 +1374,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedMemberGetterWithSetterNeeded()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1281,7 +1393,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedMemberGetterWithInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1296,7 +1410,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedGetterAndSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1314,7 +1430,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedGetterAndSetterWithInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1333,7 +1451,9 @@ namespace RoslynSandbox
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
         [WorkItem(25401, "https://github.com/dotnet/roslyn/issues/25401")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetterAccessibilityDiffers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1361,7 +1481,9 @@ namespace RoslynSandbox
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
         [WorkItem(25401, "https://github.com/dotnet/roslyn/issues/25401")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSetterAccessibilityDiffers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1389,7 +1511,9 @@ namespace RoslynSandbox
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
         [WorkItem(26858, "https://github.com/dotnet/roslyn/issues/26858")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreserveTrailingTrivia1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Goo
@@ -1408,7 +1532,9 @@ namespace RoslynSandbox
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
         [WorkItem(26858, "https://github.com/dotnet/roslyn/issues/26858")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreserveTrailingTrivia2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Goo
@@ -1427,7 +1553,9 @@ namespace RoslynSandbox
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
         [WorkItem(26858, "https://github.com/dotnet/roslyn/issues/26858")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreserveTrailingTrivia3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Goo
@@ -1448,7 +1576,9 @@ namespace RoslynSandbox
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
         [WorkItem(26858, "https://github.com/dotnet/roslyn/issues/26858")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestKeepLeadingBlank()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Goo
@@ -1470,7 +1600,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleFieldsAbove1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1495,7 +1627,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleFieldsAbove2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1520,7 +1654,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleFieldsAbove3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1546,7 +1682,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleFieldsAbove4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1572,7 +1710,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleFieldsBelow1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1597,7 +1737,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleFieldsBelow2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1622,7 +1764,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleFieldsBelow3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -1648,7 +1792,9 @@ namespace RoslynSandbox
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseAutoProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleFieldsBelow4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class

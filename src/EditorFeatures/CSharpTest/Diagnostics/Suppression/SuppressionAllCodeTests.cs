@@ -27,13 +27,17 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.Suppression
         [WorkItem(956453, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/956453")]
         [WorkItem(1007071, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1007071")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPragmaWarningOnEveryNodes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestPragmaAsync(TestResource.AllInOneCSharpCode, CSharpParseOptions.Default, verifier: t => t.IndexOf("#pragma warning disable", StringComparison.Ordinal) >= 0);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSuppressionWithAttributeOnEveryNodes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestSuppressionWithAttributeAsync(
                 TestResource.AllInOneCSharpCode,

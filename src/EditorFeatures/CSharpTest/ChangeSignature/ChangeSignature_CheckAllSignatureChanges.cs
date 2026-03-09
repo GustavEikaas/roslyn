@@ -11,7 +11,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ChangeSignature
     public partial class ChangeSignatureTests : AbstractChangeSignatureTests
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAllSignatureChanges_1This_3Regular_2Default_1Params()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 static class Ext
@@ -59,7 +61,9 @@ static class Ext
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAllSignatureChanges_OnDelegate_3Regular()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;

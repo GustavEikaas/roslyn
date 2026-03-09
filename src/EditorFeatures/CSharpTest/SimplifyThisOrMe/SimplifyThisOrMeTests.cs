@@ -18,7 +18,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.SimplifyThisOrMe
             => (new CSharpSimplifyThisOrMeDiagnosticAnalyzer(), new CSharpSimplifyThisOrMeCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSimplifyThisOrMe)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimplifyDiagnosticId()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -47,7 +49,9 @@ class C
 
         [WorkItem(6682, "https://github.com/dotnet/roslyn/issues/6682")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSimplifyThisOrMe)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestThisWithNoType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -71,7 +75,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSimplifyThisOrMe)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAppropriateDiagnosticOnMissingQualifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(
 @"class C
@@ -91,7 +97,9 @@ class C
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsSimplifyThisOrMe)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInSolution_RemoveThis()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>
@@ -343,7 +351,9 @@ class ProgramB3
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsSimplifyThisOrMe)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInSolution_RemoveMemberAccessQualification()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>

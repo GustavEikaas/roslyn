@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.GenerateEnu
             => (null, new GenerateEnumMemberCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -45,7 +47,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithSingleMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -76,7 +80,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithExistingComma()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -107,7 +113,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithMultipleMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -140,7 +148,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithZero()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -171,7 +181,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithIntegralValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -202,7 +214,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithSingleBitIntegral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -233,7 +247,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateIntoGeometricSequence()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -268,7 +284,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithSimpleSequence1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -301,7 +319,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithSimpleSequence2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -336,7 +356,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNonZeroInteger()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -367,7 +389,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithLeftShift0()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -398,7 +422,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithLeftShift5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -429,7 +455,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDifferentStyles()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -462,7 +490,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBinary()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -493,7 +523,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHex1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -524,7 +556,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHex9()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -555,7 +589,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHexF()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -586,7 +622,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateAfterEnumWithIntegerMaxValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -617,7 +655,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnsigned16BitEnums()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -648,7 +688,9 @@ enum Color : ushort
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateEnumMemberOfTypeLong()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -679,7 +721,9 @@ enum Color : long
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateAfterEnumWithLongMaxValueInBinary()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -710,7 +754,9 @@ enum Color : long
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateAfterEnumWithLongMaxValueInHex()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -742,7 +788,9 @@ enum Color : long
 
         [WorkItem(528312, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/528312")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateAfterEnumWithLongMinValueInHex()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -774,7 +822,9 @@ enum Color : long
 
         [WorkItem(528312, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/528312")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateAfterPositiveLongInHex()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -807,7 +857,9 @@ enum Color : long
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateAfterPositiveLongExprInHex()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -838,7 +890,9 @@ enum Color : long
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateAfterEnumWithULongMaxValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -869,7 +923,9 @@ enum Color : ulong
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNegativeRangeIn64BitSignedEnums()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -900,7 +956,9 @@ enum Color : long
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateWithImplicitValues()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -935,7 +993,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateWithImplicitValues2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -970,7 +1030,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoExtraneousStatementTerminatorBeforeCommentedMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1003,7 +1065,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoExtraneousStatementTerminatorBeforeCommentedMember2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1036,7 +1100,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateAfterEnumWithMinValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1067,7 +1133,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateAfterEnumWithMinValuePlusConstant()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1098,7 +1166,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateAfterEnumWithByteMaxValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1129,7 +1199,9 @@ enum Color : byte
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateIntoBitshiftEnum1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1162,7 +1234,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateIntoBitshiftEnum2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1193,7 +1267,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStandaloneReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1226,7 +1302,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCircularEnumsForErrorTolerance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1259,7 +1337,9 @@ enum Circular
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnumWithIncorrectValueForErrorTolerance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1290,7 +1370,9 @@ enum Circular : byte
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateIntoNewEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class B : A
@@ -1339,7 +1421,9 @@ class A
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateIntoDerivedEnumMissingNewKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class B : A
@@ -1388,7 +1472,9 @@ class A
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateIntoBaseEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class B : A
@@ -1427,7 +1513,9 @@ class A
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerationWhenMembersShareValues()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1462,7 +1550,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvokeFromAddAssignmentStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1499,7 +1589,9 @@ enum Color
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFormatting()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1529,7 +1621,9 @@ enum Weekday
 
         [WorkItem(540919, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/540919")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -1561,7 +1655,9 @@ enum Color
 
         [WorkItem(544333, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544333")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterPointer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"struct MyStruct
@@ -1581,7 +1677,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnHiddenEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1602,7 +1700,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnPartiallyHiddenEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1627,7 +1727,9 @@ class Program
 
         [WorkItem(545903, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545903")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoOctal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"enum E
@@ -1653,7 +1755,9 @@ class C
 
         [WorkItem(546654, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546654")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEnumMember)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLastValueDoesNotHaveInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"enum E

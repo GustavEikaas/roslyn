@@ -20,7 +20,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Introd
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsIntroduceVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodFix1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"void Goo()
@@ -38,7 +40,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Introd
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsIntroduceVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodFix2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"void Goo()
@@ -56,7 +60,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Introd
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsIntroduceVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldFix1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"int i = ([|1 + 1|]) + (1 + 1);";
@@ -69,7 +75,9 @@ int i = V + (1 + 1);";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsIntroduceVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldFix2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"int i = ([|1 + 1|]) + (1 + 1);";
@@ -82,7 +90,9 @@ int i = V + V;";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsIntroduceVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestParameterFix1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"void Bar(int i = [|1 + 1|], int j = 1 + 1)
@@ -97,7 +107,9 @@ void Bar(int i = V, int j = 1 + 1)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsIntroduceVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestParameterFix2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"void Bar(int i = [|1 + 1|], int j = 1 + 1)
@@ -112,7 +124,9 @@ void Bar(int i = V, int j = V)
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeFix1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"[Goo([|1 + 1|], 1 + 1)]
@@ -129,7 +143,9 @@ void Bar()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsIntroduceVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeFix2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"[Goo([|1 + 1|], 1 + 1)]
@@ -147,7 +163,9 @@ void Bar()
 
         [WorkItem(541287, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/541287")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsIntroduceVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBlockFormatting()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -180,7 +198,9 @@ index: 1);
 
         [WorkItem(546465, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546465")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsIntroduceVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreserveTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C

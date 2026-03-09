@@ -27,7 +27,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.SignatureHelp
         #region "Regular tests"
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationWithoutParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -46,7 +48,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationWithoutParametersMethodXmlComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -67,7 +71,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationWithParametersOn1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -87,7 +93,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationWithParametersXmlCommentsOn1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -112,7 +120,9 @@ class SomethingAttribute : System.Attribute
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationWithParametersOn2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -131,7 +141,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationWithParametersXmlComentsOn2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -156,7 +168,9 @@ class SomethingAttribute : System.Attribute
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationWithClosingParen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -174,7 +188,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationSpan1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -189,7 +205,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationSpan2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -204,7 +222,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationSpan3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -225,7 +245,9 @@ $$|]]
         #region "Current Parameter Name"
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCurrentParameterName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -250,7 +272,9 @@ class C
         [WorkItem(545425, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545425")]
         [WorkItem(544139, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544139")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithValidField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -270,7 +294,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithInvalidFieldReadonly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -290,7 +316,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithInvalidFieldStatic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -310,7 +338,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithInvalidFieldConst()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -336,7 +366,9 @@ class D
         [WorkItem(545425, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545425")]
         [WorkItem(544139, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544139")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithValidProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -357,7 +389,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithInvalidPropertyStatic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -377,7 +411,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithInvalidPropertyNoSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -397,7 +433,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithInvalidPropertyNoGetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -417,7 +455,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithInvalidPropertyPrivateGetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -437,7 +477,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithInvalidPropertyPrivateSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -463,7 +505,9 @@ class D
         [WorkItem(545425, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545425")]
         [WorkItem(544139, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544139")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithArgumentsAndNamedParameters1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -490,7 +534,9 @@ class D
         [WorkItem(545425, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545425")]
         [WorkItem(544139, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544139")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithArgumentsAndNamedParameters2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -517,7 +563,9 @@ class D
         [WorkItem(545425, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545425")]
         [WorkItem(544139, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544139")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithArgumentsAndNamedParameters3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -544,7 +592,9 @@ class D
         [WorkItem(545425, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545425")]
         [WorkItem(544139, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544139")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithOptionalArgumentAndNamedParameterWithSameName1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -569,7 +619,9 @@ class D
         [WorkItem(545425, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545425")]
         [WorkItem(544139, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544139")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAttributeWithOptionalArgumentAndNamedParameterWithSameName2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute
@@ -596,7 +648,9 @@ class D
         #region "Trigger tests"
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationOnTriggerParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -618,7 +672,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationOnTriggerComma()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -640,7 +696,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoInvocationOnSpace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -673,7 +731,9 @@ class C
         #region "EditorBrowsable tests"
         [WorkItem(7336, "DevDiv_Projects/Roslyn")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_Attribute_BrowsableAlways()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 [MyAttribute($$
@@ -704,7 +764,9 @@ public class MyAttribute
 
         [WorkItem(7336, "DevDiv_Projects/Roslyn")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_Attribute_BrowsableNever()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 [MyAttribute($$
@@ -735,7 +797,9 @@ public class MyAttribute
 
         [WorkItem(7336, "DevDiv_Projects/Roslyn")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_Attribute_BrowsableAdvanced()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 [MyAttribute($$
@@ -775,7 +839,9 @@ public class MyAttribute
 
         [WorkItem(7336, "DevDiv_Projects/Roslyn")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_Attribute_BrowsableMixed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 [MyAttribute($$
@@ -816,7 +882,9 @@ public class MyAttribute
         #endregion
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldUnavailableInOneLinkedFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"" PreprocessorSymbols=""GOO"">
@@ -845,7 +913,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExcludeFilesWithInactiveRegions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"" PreprocessorSymbols=""GOO,BAR"">
@@ -882,7 +952,9 @@ class C
 
         [WorkItem(1067933, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1067933")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InvokedWithNoToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 // [goo($$";
@@ -892,7 +964,9 @@ class C
 
         [WorkItem(1081535, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1081535")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationWithBadParameterList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class SomethingAttribute : System.Attribute

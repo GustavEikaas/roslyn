@@ -23,7 +23,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeGeneration
         public class VisualBasic
         {
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N1|]\n End Namespace";
                 var expected = @"Namespace N1
@@ -35,7 +37,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -46,7 +50,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddSharedField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -59,7 +65,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddArrayField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -70,7 +78,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -82,7 +92,9 @@ End Class";
 
             [WorkItem(530785, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530785")]
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddConstructorWithXmlComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Public Class [|C|]
@@ -106,7 +118,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddConstructorWithoutBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -117,7 +131,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddConstructorResolveNamespaceImport()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Imports System.Text
@@ -131,7 +147,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddSharedConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -143,7 +161,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddChainedConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n Public Sub New(i As Integer)\n End Sub\n End Class";
                 var expected = @"Class C
@@ -159,7 +179,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration), WorkItem(544476, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544476")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N|]\n End Namespace";
                 var expected = @"Namespace N
@@ -170,7 +192,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddClassEscapeName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N|]\n End Namespace";
                 var expected = @"Namespace N
@@ -182,7 +206,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddClassUnicodeName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N|]\n End Namespace";
                 var expected = @"Namespace N
@@ -194,7 +220,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration), WorkItem(544477, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544477")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddNotInheritableClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N|]\n End Namespace";
                 var expected = @"Namespace N
@@ -206,7 +234,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration), WorkItem(544477, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544477")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddMustInheritClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N|]\n End Namespace";
                 var expected = @"Namespace N
@@ -219,7 +249,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddStructure()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N|]\n End Namespace";
                 var expected = @"Namespace N
@@ -233,7 +265,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration), WorkItem(546224, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546224")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddSealedStructure()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N|]\n End Namespace";
                 var expected = @"Namespace N
@@ -248,7 +282,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N|]\n End Namespace";
                 var expected = @"Namespace N
@@ -261,7 +297,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration), WorkItem(544528, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544528")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N|]\n End Namespace";
                 var expected = @"Namespace N
@@ -275,7 +313,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration), WorkItem(544527, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544527")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddEnumWithValues()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Namespace [|N|]\n End Namespace";
                 var expected = @"Namespace N
@@ -290,7 +330,9 @@ End Namespace";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddEnumMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Public Enum [|E|]\n F1 = 1\n F2 = 2\n End Enum";
                 var expected = @"Public Enum E
@@ -303,7 +345,9 @@ End Enum";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddEnumMemberWithValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Public Enum [|E|]\n F1 = 1\n F2\n End Enum";
                 var expected = @"Public Enum E
@@ -316,7 +360,9 @@ End Enum";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration), WorkItem(544529, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544529")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddDelegateType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -328,7 +374,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration), WorkItem(546224, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546224")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddSealedDelegateType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -341,7 +389,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class [|C|]
@@ -355,7 +405,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddEventWithAccessorAndImplementsClause()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|] \n End Class";
                 var expected = @"Class C
@@ -391,7 +443,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddEventWithAddAccessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class [|C|]
@@ -413,7 +467,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddEventWithAccessors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class [|C|]
@@ -446,7 +502,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddMethodToClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -458,7 +516,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddMethodToClassEscapedName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -472,7 +532,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration), WorkItem(544477, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544477")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddSharedMethodToStructure()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Structure [|S|]\n End Structure";
                 var expected = @"Structure S
@@ -487,7 +549,9 @@ End Structure";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddNotOverridableOverridesMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -503,7 +567,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddMustOverrideMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "MustInherit Class [|C|]\n End Class";
                 var expected = "MustInherit Class C\n    Public MustOverride Sub M()\nEnd Class";
@@ -513,7 +579,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddMethodWithoutBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -525,7 +593,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddGenericMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -540,7 +610,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddVirtualMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -556,7 +628,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddShadowsMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -573,7 +647,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddExplicitImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Interface I\n Sub M(i As Integer)\n End Interface\n Class [|C|]\n Implements I\n End Class";
                 var expected = @"Interface I
@@ -593,7 +669,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddTrueFalseOperators()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class [|C|]
@@ -618,7 +696,9 @@ End Class
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddUnaryOperators()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class [|C|]
@@ -652,7 +732,9 @@ End Class
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddBinaryOperators()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class [|C|]
@@ -741,7 +823,9 @@ End Class
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddComparisonOperators()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class [|C|]
@@ -790,7 +874,9 @@ End Class
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddUnsupportedOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 await TestAddUnsupportedOperatorAsync(input,
@@ -801,7 +887,9 @@ End Class
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddExplicitConversion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -816,7 +904,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddImplicitConversion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -832,7 +922,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddStatementsToSub()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C\n [|Public Sub M\n Console.WriteLine(1)\n End Sub|]\n End Class";
                 var expected = @"Class C
@@ -844,7 +936,9 @@ $$ End Sub
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddStatementsToOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C\n [|Shared Operator +(arg As C) As C\n Return arg\n End Operator|]\n End Class";
                 var expected = @"Class C
@@ -856,7 +950,9 @@ $$ End Operator
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddStatementsToPropertySetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Imports System\n Class C\n WriteOnly Property P As String\n [|Set\n End Set|]\n End Property\n End Class";
                 var expected = @"Imports System
@@ -870,7 +966,9 @@ $$ End Set
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddParametersToMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C\n Public [|Sub M()\n End Sub|]\n End Class";
                 var expected = @"Class C
@@ -883,7 +981,9 @@ $$ End Set
 
             [WorkItem(844460, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/844460")]
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddParametersToPropertyBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C\n [|Public Property P As String\n Get\n Return String.Empty\n End Get\n Set(value As String)\n End Set\n End Property|]\n End Class";
                 var expected = @"Class C
@@ -901,7 +1001,9 @@ $$ End Set
 
             [WorkItem(844460, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/844460")]
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddParametersToPropertyStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C\n [|Public Property P As String|]\n Get\n Return String.Empty\n End Get\n Set(value As String)\n End Set\n End Property\n End Class";
                 var expected = @"Class C
@@ -919,7 +1021,9 @@ $$ End Set
 
             [WorkItem(844460, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/844460")]
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddParametersToPropertyGetter_ShouldNotSucceed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C\n Public Property P As String\n [|Get\n Return String.Empty\n End Get|]\n Set(value As String)\n End Set\n End Property\n End Class";
                 var expected = "Class C\n Public Property P As String\n Get\n Return String.Empty\n End Get\n Set(value As String)\n End Set\n End Property\n End Class";
@@ -929,7 +1033,9 @@ $$ End Set
 
             [WorkItem(844460, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/844460")]
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddParametersToPropertySetter_ShouldNotSucceed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C\n Public Property P As String\n Get\n Return String.Empty\n End Get\n [|Set(value As String)\n End Set|]\n End Property\n End Class";
                 var expected = "Class C\n Public Property P As String\n Get\n Return String.Empty\n End Get\n Set(value As String)\n End Set\n End Property\n End Class";
@@ -938,7 +1044,9 @@ $$ End Set
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddParametersToOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C\n [|Shared Operator +(a As C) As C\n Return a\n End Operator|]\n End Class";
                 var expected = @"Class C
@@ -951,7 +1059,9 @@ $$ End Set
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAutoProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -962,7 +1072,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddPropertyWithoutAccessorBodies()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -976,7 +1088,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"Class C
@@ -995,7 +1109,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class [|C|]\n End Class";
                 var expected = @"<Serializable>
@@ -1005,7 +1121,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 <Serializable>
@@ -1018,7 +1136,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C\n Public Sub [|M()|] \n End Sub \n End Class";
                 var expected = @"Class C
@@ -1030,7 +1150,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class C
@@ -1047,7 +1169,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C\n [|Public F As Integer|]\n End Class";
                 var expected = @"Class C
@@ -1058,7 +1182,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class C
@@ -1073,7 +1199,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToProperties()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C \n Public Property [|P|] As Integer \n End Class";
                 var expected = @"Class C
@@ -1084,7 +1212,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromProperties()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class C
@@ -1099,7 +1229,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToPropertyAccessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C \n Public ReadOnly Property P As Integer \n [|Get|] \n Return 10 \n End Get \n End Property \n  End Class";
                 var expected = @"Class C 
@@ -1114,7 +1246,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromPropertyAccessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class C
@@ -1135,7 +1269,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToEnums()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Module M \n [|Enum C|] \n One \n Two \n End Enum\n End Module";
                 var expected = @"Module M
@@ -1149,7 +1285,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromEnums()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Module M
@@ -1170,7 +1308,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToEnumMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Module M \n Enum C \n [|One|] \n Two \n End Enum\n End Module";
                 var expected = @"Module M 
@@ -1184,7 +1324,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromEnumMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Module M
@@ -1205,7 +1347,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToModule()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Module [|M|] \n End Module";
                 var expected = @"<Serializable>
@@ -1215,7 +1359,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromModule()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 <Serializable>
@@ -1228,7 +1374,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C \n Public Shared Operator [|+|] (x As C, y As C) As C \n Return New C() \n End Operator \n End Class";
                 var expected = @"Class C
@@ -1241,7 +1389,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Module M
@@ -1264,7 +1414,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Module M \n Delegate Sub [|D()|]\n End Module";
                 var expected = "Module M\n    <Serializable>\n    Delegate Sub D()\nEnd Module";
@@ -1272,7 +1424,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Module M
@@ -1287,7 +1441,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "Class C \n Public Sub M([|x As Integer|]) \n End Sub \n End Class";
                 var expected = "Class C \n Public Sub M(<Serializable> x As Integer) \n End Sub \n End Class";
@@ -1295,7 +1451,9 @@ End Module";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeFromParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Class C
@@ -1311,7 +1469,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeToCompilationUnit()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "[|Class C \n End Class \n Class D \n End Class|]";
                 var expected = "<Assembly: Serializable>\nClass C\nEnd Class\nClass D\nEnd Class";
@@ -1319,7 +1479,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AddAttributeWithWrongTarget()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = "[|Class C \n End Class \n Class D \n End Class|]";
                 var expected = "<Assembly: Serializable> Class C \n End Class \n Class D \n End Class";
@@ -1328,7 +1490,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeWithTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 // With trivia.
                 var input = @"' Comment 1
@@ -1342,7 +1506,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeWithTrivia_NewLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 // With trivia, redundant newline at end of attribute removed.
                 var input = @"' Comment 1
@@ -1356,7 +1522,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeWithMultipleAttributes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 // Multiple attributes.
                 var input = @"' Comment 1
@@ -1371,7 +1539,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task RemoveAttributeWithMultipleAttributeLists()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 // Multiple attribute lists.
                 var input = @"' Comment 1
@@ -1389,7 +1559,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestUpdateModifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"Public Shared Class [|C|] ' Comment 1
     ' Comment 2
@@ -1405,7 +1577,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestUpdateAccessibility()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"' Comment 0
 Public Shared Class [|C|] ' Comment 1
@@ -1419,7 +1593,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestUpdateDeclarationType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Public Shared Class C
@@ -1439,7 +1615,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestUpdateDeclarationMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var input = @"
 Public Shared Class [|C|]
@@ -1463,7 +1641,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGenerationSortDeclarations)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SortModules()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var generationSource = "Public Class [|C|] \n End Class";
                 var initial = "Namespace [|N|] \n Module M \n End Module \n End Namespace";
@@ -1478,7 +1658,9 @@ End Class";
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGenerationSortDeclarations)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SortOperators()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var generationSource = @"
 Namespace N
@@ -1604,7 +1786,9 @@ End Namespace";
 
             [WorkItem(848357, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/848357")]
             [Fact, Trait(Traits.Feature, Traits.Features.CodeGeneration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestConstraints()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var generationSource = @"
 Namespace N

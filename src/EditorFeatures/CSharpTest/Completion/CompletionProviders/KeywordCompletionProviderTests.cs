@@ -23,7 +23,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.IntelliSense.Completion
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IsCommitCharacterTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyCommonCommitCharactersAsync("$$", textTypedSoFar: "");
         }
@@ -35,7 +37,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.IntelliSense.Completion
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SendEnterThroughToEditorTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifySendEnterThroughToEnterAsync("$$", "class", sendThroughEnterOption: EnterKeyRule.Never, expected: false);
             await VerifySendEnterThroughToEnterAsync("$$", "class", sendThroughEnterOption: EnterKeyRule.AfterFullyTypedWord, expected: true);
@@ -43,7 +47,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.IntelliSense.Completion
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InEmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = "$$";
 
@@ -51,7 +57,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.IntelliSense.Completion
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInInactiveCode()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -64,7 +72,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInCharLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -77,7 +87,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInUnterminatedCharLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -89,7 +101,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInUnterminatedCharLiteralAtEndOfFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -101,7 +115,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -114,7 +130,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInStringInDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = "#r \"$$\"";
 
@@ -122,7 +140,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInUnterminatedString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -134,7 +154,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInUnterminatedStringInDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = "#r \"$$\"";
 
@@ -142,7 +164,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInUnterminatedStringAtEndOfFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -154,7 +178,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInVerbatimString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -169,7 +195,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInUnterminatedVerbatimString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -183,7 +211,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInUnterminatedVerbatimStringAtEndOfFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -195,7 +225,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInSingleLineComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -208,7 +240,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInSingleLineCommentAtEndOfFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"namespace A
 {
@@ -218,7 +252,9 @@ $$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInMutliLineComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -234,7 +270,9 @@ $$
 
         [WorkItem(968256, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/968256")]
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnionOfItemsFromBothContexts()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"" PreprocessorSymbols=""GOO"">
@@ -265,7 +303,9 @@ $$
         [WorkItem(7768, "https://github.com/dotnet/roslyn/issues/7768")]
         [WorkItem(8228, "https://github.com/dotnet/roslyn/issues/8228")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FormattingAfterCompletionCommit_AfterGetAccessorInSingleLineIncompleteProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Program
 {
@@ -284,7 +324,9 @@ $$
         [WorkItem(7768, "https://github.com/dotnet/roslyn/issues/7768")]
         [WorkItem(8228, "https://github.com/dotnet/roslyn/issues/8228")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FormattingAfterCompletionCommit_AfterBothAccessorsInSingleLineIncompleteProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Program
 {
@@ -303,7 +345,9 @@ $$
         [WorkItem(7768, "https://github.com/dotnet/roslyn/issues/7768")]
         [WorkItem(8228, "https://github.com/dotnet/roslyn/issues/8228")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FormattingAfterCompletionCommit_InSingleLineMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class Program
 {
@@ -321,7 +365,9 @@ $$
 
         [WorkItem(14218, "https://github.com/dotnet/roslyn/issues/14218")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PredefinedTypeKeywordsShouldBeRecommendedAfterCaseInASwitch()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Program
@@ -343,7 +389,9 @@ class Program
         }
     
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PrivateOrProtectedModifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -356,7 +404,9 @@ $$
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PrivateProtectedModifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -368,7 +418,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ProtectedPrivateModifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C

@@ -51,10 +51,18 @@ namespace Microsoft.CodeAnalysis.EditAndContinue.UnitTests
             workspace.AddTestProject(projC);
             workspace.AddTestProject(projD);
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             var treeC1 = workspace.CurrentSolution.GetDocument(docC1.Id).GetSyntaxTreeAsync().Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             var treeC2 = workspace.CurrentSolution.GetDocument(docC2.Id).GetSyntaxTreeAsync().Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             var treeD1 = workspace.CurrentSolution.GetDocument(docD1.Id).GetSyntaxTreeAsync().Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             var treeD2 = workspace.CurrentSolution.GetDocument(docD2.Id).GetSyntaxTreeAsync().Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
             var diagnostics = new[]
             {

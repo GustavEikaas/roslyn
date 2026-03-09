@@ -10,14 +10,18 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Recommendations
     public class BaseKeywordRecommenderTests : KeywordRecommenderTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAtRoot_Interactive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(SourceCodeKind.Script,
 @"$$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInTopLevelMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(SourceCodeKind.Script,
 @"void Goo()
@@ -27,7 +31,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Recommendations
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterClass_Interactive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(SourceCodeKind.Script,
 @"class C { }
@@ -35,7 +41,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterGlobalStatement_Interactive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(SourceCodeKind.Script,
 @"System.Console.WriteLine();
@@ -43,7 +51,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterGlobalVariableDeclaration_Interactive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(SourceCodeKind.Script,
 @"int i = 0;
@@ -51,14 +61,18 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInUsingAlias()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(
 @"using Goo = $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInClassConstructorInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyKeywordAsync(
 @"class C {
@@ -66,7 +80,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInStaticClassConstructorInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(
 @"class C {
@@ -74,7 +90,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInStructConstructorInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(
 @"struct C {
@@ -82,7 +100,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyKeywordAsync(
 @"struct C {
@@ -90,7 +110,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInEmptyMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyKeywordAsync(
                 SourceCodeKind.Regular,
@@ -100,7 +122,9 @@ $$");
 
         [WorkItem(538264, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538264")]
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInEnumMemberInitializer1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(
 @"enum E {
@@ -110,7 +134,9 @@ $$");
 
         [WorkItem(544219, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544219")]
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInObjectInitializerMemberContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(@"
 class C
@@ -123,7 +149,9 @@ class C
 
         [WorkItem(16335, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/16335")]
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InExpressionBodyAccessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyKeywordAsync(@"
 class B
@@ -133,7 +161,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterRefExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyKeywordAsync(AddInsideMethod(
 @"ref int x = ref $$"));

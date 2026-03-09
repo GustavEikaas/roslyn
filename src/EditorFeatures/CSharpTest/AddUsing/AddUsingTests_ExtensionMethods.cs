@@ -10,7 +10,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddUsing
     public partial class AddUsingTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhereExtension()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -35,7 +37,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSelectExtension()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -60,7 +64,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGroupByExtension()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -85,7 +91,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestJoinExtension()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -110,7 +118,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RegressionFor8455()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -124,7 +134,9 @@ class Program
 
         [WorkItem(772321, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/772321")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExtensionWithThePresenceOfTheSameNameNonExtensionMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace NS1
@@ -188,7 +200,9 @@ namespace NS2
         [WorkItem(772321, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/772321")]
         [WorkItem(920398, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/920398")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExtensionWithThePresenceOfTheSameNameNonExtensionPrivateMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace NS1
@@ -252,7 +266,9 @@ namespace NS2
         [WorkItem(772321, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/772321")]
         [WorkItem(920398, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/920398")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExtensionWithThePresenceOfTheSameNameExtensionPrivateMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using NS2;
@@ -332,7 +348,9 @@ namespace NS3
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -383,7 +401,9 @@ parseOptions: null);
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -434,7 +454,9 @@ parseOptions: null);
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -485,7 +507,9 @@ parseOptions: null);
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -536,7 +560,9 @@ parseOptions: null);
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -587,7 +613,9 @@ parseOptions: null);
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -638,7 +666,9 @@ parseOptions: null);
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -689,7 +719,9 @@ parseOptions: null);
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -740,7 +772,9 @@ parseOptions: null);
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod9()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -791,7 +825,9 @@ parseOptions: null);
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod10()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -862,7 +898,9 @@ parseOptions: null);
 
         [WorkItem(269, "https://github.com/dotnet/roslyn/issues/269")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethod11()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -934,7 +972,9 @@ parseOptions: null);
 
         [WorkItem(3818, "https://github.com/dotnet/roslyn/issues/3818")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InExtensionMethodUnderConditionalAccessExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initialText =
 @"<Workspace>
@@ -988,7 +1028,9 @@ namespace Sample
 
         [WorkItem(3818, "https://github.com/dotnet/roslyn/issues/3818")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InExtensionMethodUnderMultipleConditionalAccessExpressions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initialText =
   @"<Workspace>
@@ -1034,7 +1076,9 @@ public class C
 
         [WorkItem(3818, "https://github.com/dotnet/roslyn/issues/3818")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InExtensionMethodUnderMultipleConditionalAccessExpressions2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initialText =
   @"<Workspace>
@@ -1079,7 +1123,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDeconstructExtension()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -1121,7 +1167,9 @@ parseOptions: null);
 
         [WorkItem(16547, "https://github.com/dotnet/roslyn/issues/16547")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddImport)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddUsingForAddExtentionMethodWithSameNameAsProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"

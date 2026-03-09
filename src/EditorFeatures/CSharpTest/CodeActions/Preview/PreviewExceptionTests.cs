@@ -19,7 +19,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings
     public partial class PreviewTests
     {
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExceptionInComputePreview()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspaceFromFile("class D {}", new TestParameters()))
             {
@@ -37,7 +39,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings
         }
 
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExceptionInActionSets()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspaceFromFile("class D {}", new TestParameters()))
             {
@@ -45,7 +49,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task GetPreview(TestWorkspace workspace, CodeRefactoringProvider provider)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var codeActions = new List<CodeAction>();
             RefactoringSetup(workspace, provider, codeActions, out var extensionManager, out var textBuffer);
@@ -69,7 +75,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings
             Assert.False(extensionManager.IsIgnored(provider));
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task ActionSets(TestWorkspace workspace, CodeRefactoringProvider provider)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var codeActions = new List<CodeAction>();
             RefactoringSetup(workspace, provider, codeActions, out var extensionManager, out var textBuffer);
@@ -87,12 +95,18 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings
             out VisualStudio.Text.ITextBuffer textBuffer)
         {
             var document = GetDocument(workspace);
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             var span = document.GetSyntaxRootAsync().Result.Span;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             var context = new CodeRefactoringContext(document, span, (a) => codeActions.Add(a), CancellationToken.None);
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             provider.ComputeRefactoringsAsync(context).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             var action = codeActions.Single();
             extensionManager = document.Project.Solution.Workspace.Services.GetService<IExtensionManager>() as EditorLayerExtensionManager.ExtensionManager;
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             textBuffer = document.GetTextAsync().Result.Container.GetTextBuffer();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
     }
 }

@@ -38,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PreferFrame
             SingleOption(CodeStyleOptions.PreferIntrinsicPredefinedTypeKeywordInMemberAccess, offWithInfo, GetLanguage()));
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotWhenOptionsAreNotSet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -53,7 +55,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnDynamic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -68,7 +72,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnSystemVoid()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -82,7 +88,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnUserdefinedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -97,7 +105,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnFrameworkType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -112,7 +122,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnQualifiedTypeSyntax()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -125,7 +137,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnFrameworkTypeWithNoPredefinedKeywordEquivalent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -140,7 +154,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnIdentifierThatIsNotTypeSyntax()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -155,7 +171,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifiedReplacementWhenNoUsingFound()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"class Program
@@ -172,7 +190,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = 
 @"using System;
@@ -191,7 +211,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldDeclarationWithInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -210,7 +232,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DelegateDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -229,7 +253,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PropertyDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -248,7 +274,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericPropertyDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -269,7 +297,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifiedReplacementInGenericTypeParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System.Collections.Generic;
@@ -288,7 +318,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodDeclarationReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -307,7 +339,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodDeclarationParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -326,7 +360,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericMethodInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -347,7 +383,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LocalDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -372,7 +410,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MemberAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -397,7 +437,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MemberAccess2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -422,7 +464,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DocCommentTriviaCrefExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -447,7 +491,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DefaultExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -472,7 +518,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypeOfExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -497,7 +545,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NameOfExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -522,7 +572,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FormalParametersWithinLambdaExression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -547,7 +599,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DelegateMethodExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -572,7 +626,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ObjectCreationExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -597,7 +653,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -622,7 +680,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -647,7 +707,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultiDimentionalArrayAsGenericTypeParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -674,7 +736,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ForStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -699,7 +763,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ForeachStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -724,7 +790,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LeadingTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -751,7 +819,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TrailingTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;

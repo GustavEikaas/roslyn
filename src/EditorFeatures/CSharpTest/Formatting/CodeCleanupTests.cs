@@ -27,7 +27,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting
     {
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeCleanup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public Task RemoveUsings()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 using System.Collections.Generic;
@@ -57,7 +59,9 @@ class Program
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeCleanup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public Task SortUsings()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System.Collections.Generic;
 using System;
@@ -91,7 +95,9 @@ class Program
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeCleanup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public Task FixAddRemoveBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -123,7 +129,9 @@ class Program
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeCleanup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public Task RemoveUnusedVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -148,7 +156,9 @@ class Program
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeCleanup)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public Task FixAccessibilityModifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -171,7 +181,9 @@ class Program
                 (CodeCleanupOptions.AddAccessibilityModifiers, enabled: true));
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected static async Task AssertCodeCleanupResult(string expected, string code, params (PerLanguageOption<bool> option, bool enabled)[] options)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var exportProvider = ExportProviderCache
                 .GetOrCreateExportProviderFactory(

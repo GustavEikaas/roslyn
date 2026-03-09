@@ -17,7 +17,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.GenerateOverrides
             => new GenerateOverridesCodeRefactoringProvider((IPickMembersService)parameters.fixProviderData);
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateOverrides)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -47,7 +49,9 @@ class C
 
         [WorkItem(17698, "https://github.com/dotnet/roslyn/issues/17698")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateOverrides)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefReturns()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -93,7 +97,9 @@ class Derived : Base
 
         [WorkItem(21601, "https://github.com/dotnet/roslyn/issues/21601")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateOverrides)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingInStaticClass1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -105,7 +111,9 @@ static class C
 
         [WorkItem(21601, "https://github.com/dotnet/roslyn/issues/21601")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateOverrides)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingInStaticClass2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"

@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure.MetadataAsSou
         internal override AbstractSyntaxStructureProvider CreateProvider() => new MetadataDelegateDeclarationStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoCommentsOrAttributes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 public delegate TResult $$Blah<in T, out TResult>(T arg);";
@@ -25,7 +27,9 @@ public delegate TResult $$Blah<in T, out TResult>(T arg);";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithAttributes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint:{|textspan:[Goo]
@@ -36,7 +40,9 @@ public delegate TResult $$Blah<in T, out TResult>(T arg);";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithCommentsAndAttributes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint:{|textspan:// Summary:
@@ -49,7 +55,9 @@ public delegate TResult $$Blah<in T, out TResult>(T arg);";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithCommentsAttributesAndModifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|hint:{|textspan:// Summary:

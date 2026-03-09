@@ -176,7 +176,9 @@ namespace Microsoft.VisualStudio.IntegrationTest.Utilities
                 catch (COMException)
                 {
                     // Devenv can throw COMExceptions if it's busy when we make DTE calls.
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                     Task.Delay(delay, cancellationToken).GetAwaiter().GetResult();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
                     continue;
                 }
 
@@ -186,7 +188,9 @@ namespace Microsoft.VisualStudio.IntegrationTest.Utilities
                 }
                 else
                 {
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                     Task.Delay(delay, cancellationToken).GetAwaiter().GetResult();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
                 }
             }
             while (true);

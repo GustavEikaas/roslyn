@@ -47,7 +47,9 @@ namespace Roslyn.VisualStudio.DiagnosticsWindow.OptionsPages
             SetRoslynLogger(loggerTypes, () => new TraceLogger(options));
 
             // second set RemoteHost options
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             var client = _remoteHostClientService.TryGetRemoteHostClientAsync(CancellationToken.None).Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             if (client == null)
             {
                 // Remote host is disabled
@@ -59,7 +61,9 @@ namespace Roslyn.VisualStudio.DiagnosticsWindow.OptionsPages
                 WellKnownRemoteHostServices.RemoteHostService,
                 nameof(IRemoteHostService.SetLoggingFunctionIds),
                 new object[] { loggerTypes, functionIds },
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                 CancellationToken.None).Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
 
         private static IEnumerable<string> GetFunctionIds(Func<FunctionId, bool> options)

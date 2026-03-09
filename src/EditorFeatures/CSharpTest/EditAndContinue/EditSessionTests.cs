@@ -86,7 +86,9 @@ namespace Microsoft.CodeAnalysis.CSharp.EditAndContinue.UnitTests
             return Enumerate().ToImmutableArray();
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         internal static async Task<(ActiveStatementsMap, ImmutableArray<ActiveStatementExceptionRegions>, ImmutableArray<DocumentId>)> GetBaseActiveStatementsAndExceptionRegions(
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             string[] markedSource,
             ImmutableArray<ActiveStatementDebugInfo> activeStatements,
             ImmutableDictionary<ActiveMethodId, ImmutableArray<NonRemappableRegion>> nonRemappableRegions = null,
@@ -185,7 +187,9 @@ namespace Microsoft.CodeAnalysis.CSharp.EditAndContinue.UnitTests
             => text.Lines[span.Start.Line].ToString().Trim();
 
         [Fact, UseExportProvider]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BaseActiveStatementsAndExceptionRegions1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markedSource = new[]
             {
@@ -366,7 +370,9 @@ namespace Microsoft.CodeAnalysis.CSharp.EditAndContinue.UnitTests
         }
 
         [Fact, UseExportProvider, WorkItem(24439, "https://github.com/dotnet/roslyn/issues/24439")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BaseActiveStatementsAndExceptionRegions2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var baseSource =
 @"class Test
@@ -466,7 +472,9 @@ namespace Microsoft.CodeAnalysis.CSharp.EditAndContinue.UnitTests
         }
 
         [Fact, UseExportProvider]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BaseActiveStatementsAndExceptionRegions_WithInitialNonRemappableRegions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markedSourceV1 =
 @"class Test
@@ -655,7 +663,9 @@ namespace Microsoft.CodeAnalysis.CSharp.EditAndContinue.UnitTests
         }
 
         [Fact, UseExportProvider]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BaseActiveStatementsAndExceptionRegions_Recursion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markedSource = new[]
             {
@@ -736,7 +746,9 @@ namespace Microsoft.CodeAnalysis.CSharp.EditAndContinue.UnitTests
         }
 
         [Fact, UseExportProvider, WorkItem(24320, "https://github.com/dotnet/roslyn/issues/24320")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BaseActiveStatementsAndExceptionRegions_LinkedDocuments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markedSource = new[]
             {

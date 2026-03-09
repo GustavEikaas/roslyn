@@ -22,7 +22,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.QuickInfo
     public class SyntacticQuickInfoSourceTests : AbstractQuickInfoSourceTests
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Brackets_0()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"
@@ -35,25 +37,33 @@ switch (true)
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Brackets_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync("int Property { get; }$$ ", "int Property {");
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Brackets_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync("void M()\r\n{ }$$ ", "void M()\r\n{");
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Brackets_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync("var a = new int[] { }$$ ", "new int[] {");
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Brackets_4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"
@@ -67,7 +77,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_0()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"if (true)
@@ -80,7 +92,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"while (true)
@@ -97,7 +111,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"do
@@ -113,7 +129,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"if (true)
@@ -133,7 +151,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"using (var x = new X())
@@ -148,7 +168,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"foreach (var x in xs)
@@ -164,7 +186,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"for (;;)
@@ -187,7 +211,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"try
@@ -211,7 +237,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"
@@ -233,7 +261,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_9()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"int Property
@@ -249,7 +279,9 @@ if (true)
 
         [WorkItem(325, "https://github.com/dotnet/roslyn/issues/325")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ScopeBrackets_10()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAndScriptAsync(
 @"switch (true)

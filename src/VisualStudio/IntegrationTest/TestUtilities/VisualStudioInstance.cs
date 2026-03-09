@@ -147,7 +147,9 @@ namespace Microsoft.VisualStudio.IntegrationTest.Utilities
         public void WaitForApplicationIdle(CancellationToken cancellationToken)
         {
             var task = Task.Factory.StartNew(() => _inProc.WaitForApplicationIdle(), cancellationToken, TaskCreationOptions.LongRunning, TaskScheduler.Default);
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             task.Wait(cancellationToken);
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
 
         public void ExecuteCommand(string commandName, string argument = "")

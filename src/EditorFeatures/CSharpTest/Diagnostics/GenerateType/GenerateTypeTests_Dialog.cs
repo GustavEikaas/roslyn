@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.GenerateTyp
         #region SameProject
         #region SameProject_SameFile 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeDefaultValues()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -41,7 +43,9 @@ isNewFile: false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInsideNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -75,7 +79,9 @@ isNewFile: false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInsideQualifiedNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -107,7 +113,9 @@ isNewFile: false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithinQualifiedNestedNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -145,7 +153,9 @@ isNewFile: false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithinNestedQualifiedNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -183,7 +193,9 @@ isNewFile: false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithConstructorMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -218,7 +230,9 @@ isNewFile: false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithBaseTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"using System.Collections.Generic;
@@ -247,7 +261,9 @@ isNewFile: false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithPublicInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -287,7 +303,9 @@ isNewFile: false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithInternalStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -327,7 +345,9 @@ isNewFile: false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithDefaultEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -368,7 +388,9 @@ isNewFile: false);
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithDefaultEnum_DefaultNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -404,7 +426,9 @@ isNewFile: false);
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithDefaultEnum_DefaultNamespace_NotSimpleName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -448,7 +472,9 @@ isNewFile: false);
         // Working is very similar to the adding to the same file
         #region SameProject_ExistingFile
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInExistingEmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -486,7 +512,9 @@ existingFilename: "Test2.cs");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInExistingEmptyFile_Usings_Folders()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -531,7 +559,9 @@ existingFilename: "Test2.cs");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInExistingEmptyFile_Usings_DefaultNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -577,7 +607,9 @@ existingFilename: "Test2.cs");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInExistingEmptyFile_Usings_Folders_DefaultNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -623,7 +655,9 @@ existingFilename: "Test2.cs");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInExistingEmptyFile_NoUsings_Folders_NotSimpleName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -663,7 +697,9 @@ existingFilename: "Test2.cs");
 
         #region SameProject_NewFile
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInNewFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -699,7 +735,9 @@ newFileName: "Test2.cs");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_UsingsNotNeeded_InNewFile_InFolder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -739,7 +777,9 @@ newFileName: "Test2.cs");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_UsingsNeeded_InNewFile_InFolder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -782,7 +822,9 @@ newFileName: "Test2.cs");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_UsingsNotNeeded_InNewFile_InFolder_NotSimpleName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -819,7 +861,9 @@ newFileName: "Test2.cs");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_UsingsNeeded_InNewFile_InFolder_DefaultNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -863,7 +907,9 @@ newFileName: "Test2.cs");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_UsingsNotNeeded_InNewFile_InFolder_DefaultNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -911,7 +957,9 @@ newFileName: "Test2.cs");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_UsingsNotNeeded_InNewFile_InFolder_DefaultNamespace_NotSimpleName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -961,7 +1009,9 @@ newFileName: "Test2.cs");
 
         [WorkItem(898452, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/898452")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_InValidFolderNameNotMadeNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1022,7 +1072,9 @@ newFileName: "Test2.cs");
         #region SameLanguageDifferentProject
         #region SameLanguageDifferentProject_ExistingFile
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoSameLanguageDifferentProjectEmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1062,7 +1114,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoSameLanguageDifferentProjectExistingFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1112,7 +1166,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoSameLanguageDifferentProjectExistingFile_Usings_Folders()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1173,7 +1229,9 @@ projectName: "Assembly2");
         #endregion
         #region SameLanguageDifferentProject_NewFile
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoSameLanguageDifferentProjectNewFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1212,7 +1270,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoSameLanguageDifferentProjectNewFile_Folders_Usings()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1258,7 +1318,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoSameLanguageDifferentProjectNewFile_Folders_NoUsings_NotSimpleName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1298,7 +1360,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoSameLanguageDifferentProjectNewFile_Folders_Usings_DefaultNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1345,7 +1409,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoSameLanguageDifferentProjectNewFile_Folders_NoUsings_NotSimpleName_DefaultNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1387,7 +1453,9 @@ projectName: "Assembly2");
         #endregion
         #region DifferentLanguage
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageNewFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1425,7 +1493,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageNewFile_Folders_Usings()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1470,7 +1540,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageNewFile_Folders_NoUsings_NotSimpleName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1509,7 +1581,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageNewFile_Folders_Usings_RootNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1555,7 +1629,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageNewFile_Folders_NoUsings_NotSimpleName_RootNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1595,7 +1671,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageNewFile_Folders_NoUsings_NotSimpleName_RootNamespace_ProjectReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1641,7 +1719,9 @@ projectName: "Assembly2");
 
         [WorkItem(858826, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/858826")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageNewFileAdjustFileExtension()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1679,7 +1759,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageExistingEmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1719,7 +1801,9 @@ projectName: "Assembly2");
 
         [WorkItem(850101, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/850101")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageExistingEmptyFile_Usings_Folder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1764,7 +1848,9 @@ projectName: "Assembly2");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageExistingNonEmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1808,7 +1894,9 @@ projectName: "Assembly2");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeIntoDifferentLanguageExistingNonEmptyTargetFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1861,7 +1949,9 @@ projectName: "Assembly2");
         [WorkItem(861362, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861362")]
         [WorkItem(869593, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/869593")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateModuleFromCSharpToVisualBasicInTypeContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -1903,7 +1993,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         [WorkItem(861462, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861462")]
         [WorkItem(873066, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/873066")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithProperAccessibilityAndTypeKind_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -1927,7 +2019,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(true, TypeKindOpt
 
         [WorkItem(861462, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861462")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithProperAccessibilityAndTypeKind_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"public interface CCC : [|$$DDD|]
@@ -1950,7 +2044,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(true, TypeKindOpt
 
         [WorkItem(861462, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861462")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithProperAccessibilityAndTypeKind_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"public struct CCC : [|$$DDD|]
@@ -1973,7 +2069,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(true, TypeKindOpt
 
         [WorkItem(861362, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861362")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInMemberAccessExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2004,7 +2102,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
 
         [WorkItem(861362, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861362")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInMemberAccessExpressionInNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2042,7 +2142,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
 
         [WorkItem(861600, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861600")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithoutEnumForGenericsInMemberAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2081,7 +2183,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
 
         [WorkItem(861600, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861600")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithoutEnumForGenericsInNameContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2120,7 +2224,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
 
         [WorkItem(861600, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861600")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInMemberAccessWithNSForModule()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2158,7 +2264,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
 
         [WorkItem(861600, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861600")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInMemberAccessWithGlobalNSForModule()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2189,7 +2297,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
 
         [WorkItem(861600, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/861600")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeInMemberAccessWithoutNS()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2211,7 +2321,9 @@ isMissing: true);
         [WorkItem(876202, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/876202")]
         [WorkItem(883531, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/883531")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_NoParameterLessConstructorForStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2242,7 +2354,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         #endregion
         #region Delegates
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_ObjectCreationExpression_MethodGroup()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2277,7 +2391,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_ObjectCreationExpression_MethodGroup_Generics()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2312,7 +2428,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_ObjectCreationExpression_Delegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2345,7 +2463,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_ObjectCreationExpression_Action()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"using System;
@@ -2378,7 +2498,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_ObjectCreationExpression_Func()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"using System;
@@ -2411,7 +2533,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_ObjectCreationExpression_ParenLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2440,7 +2564,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_ObjectCreationExpression_SimpleLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2470,7 +2596,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
 
         [WorkItem(872935, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/872935")]
         [Fact(Skip = "872935"), Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_ObjectCreationExpression_SimpleLambdaEmpty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2499,7 +2627,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_VarDecl_MethodGroup()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2534,7 +2664,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_VarDecl_Delegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2569,7 +2701,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_VarDecl_Action()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"using System;
@@ -2602,7 +2736,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_VarDecl_Func()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"using System;
@@ -2635,7 +2771,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_VarDecl_ParenLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2665,7 +2803,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_VarDecl_SimpleLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2694,7 +2834,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_Cast_MethodGroup()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2729,7 +2871,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_Cast_Delegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2764,7 +2908,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_Cast_Action()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"using System;
@@ -2797,7 +2943,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_Cast_Func()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"using System;
@@ -2830,7 +2978,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_Cast_ParenLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2860,7 +3010,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_Cast_SimpleLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2889,7 +3041,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateTypeIntoDifferentLanguageNewFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"<Workspace>
@@ -2926,7 +3080,9 @@ projectName: "Assembly2");
 
         [WorkItem(860210, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/860210")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_NoInfo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2955,7 +3111,9 @@ isNewFile: false);
         #endregion 
         #region Dev12Filtering
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_NoEnum_InvocationExpression_0()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -2985,7 +3143,9 @@ assertTypeKindAbsent: new[] { TypeKindOptions.Enum });
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateDelegateType_NoEnum_InvocationExpression_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -3022,7 +3182,9 @@ assertTypeKindAbsent: new[] { TypeKindOptions.Enum });
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_TypeConstraint_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -3059,7 +3221,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(true, TypeKindOpt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_TypeConstraint_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -3102,7 +3266,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_TypeConstraint_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"class Program
@@ -3151,7 +3317,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(true, TypeKindOpt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithProperAccessibilityWithNesting_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -3180,7 +3348,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(true, TypeKindOpt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithProperAccessibilityWithNesting_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -3209,7 +3379,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateTypeWithProperAccessibilityWithNesting_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -3244,7 +3416,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_Event_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -3277,7 +3451,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_Event_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -3302,7 +3478,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_Event_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -3337,7 +3515,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_Event_4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -3364,7 +3544,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_Event_5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -3405,7 +3587,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_Event_6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -3438,7 +3622,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(false, TypeKindOp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_Event_7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"
@@ -3471,7 +3657,9 @@ assertGenerateTypeDialogOptions: new GenerateTypeDialogOptions(true, TypeKindOpt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenerateType_Event_8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithMockedGenerateTypeDialog(
 initial: @"

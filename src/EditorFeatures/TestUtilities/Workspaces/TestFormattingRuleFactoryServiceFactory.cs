@@ -41,7 +41,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Workspaces
                     return new NoOpFormattingRule();
                 }
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                 var root = document.GetSyntaxRootAsync().Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
                 return new BaseIndentationFormattingRule(root, TextSpan, BaseIndentation + 4);
             }
 

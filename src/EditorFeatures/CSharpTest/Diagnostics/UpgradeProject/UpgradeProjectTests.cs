@@ -45,7 +45,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.Async
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp6ToCSharp7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"
@@ -61,7 +63,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp5ToCSharp6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"
@@ -77,7 +81,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp4ToCSharp5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"
@@ -93,7 +99,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp7ToLatest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 $@"
@@ -106,7 +114,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp7To7_1_TriggeredByInferredTupleNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"
@@ -140,7 +150,9 @@ namespace System
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp7_1ToLatest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 $@"
@@ -153,7 +165,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp7ToCSharp7_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"
@@ -166,7 +180,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectWithNonTrailingNamedArgumentToCSharp7_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"
@@ -182,7 +198,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp7ToCSharp7_1_B()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"public class Base { }
@@ -201,7 +219,9 @@ public class Program
 
         #region C# 7.3
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp7_2ToLatest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 $@"
@@ -214,7 +234,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp7_2To7_3_TriggeredByAttributeOnBackingField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"
@@ -229,7 +251,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp7_2To7_3_EnumConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"public class X<T> where T : [|System.Enum|]
@@ -241,7 +265,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp7_2To7_3_DelegateConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"public class X<T> where T : [|System.Delegate|]
@@ -253,7 +279,9 @@ class Program
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectFromCSharp7_2To7_3_MulticastDelegateConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"public class X<T> where T : [|System.MulticastDelegate|]
@@ -266,7 +294,9 @@ class Program
         #endregion C# 7.3
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeAllProjectsToCSharp7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"<Workspace>
@@ -296,7 +326,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ListAllSuggestions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestExactActionSetOfferedAsync(
 
@@ -324,7 +356,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllProjectsNotOffered()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestExactActionSetOfferedAsync(
 
@@ -349,7 +383,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnlyOfferFixAllProjectsToCSharp7WhenApplicable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestExactActionSetOfferedAsync(
 
@@ -376,7 +412,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnlyOfferFixAllProjectsToDefaultWhenApplicable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestExactActionSetOfferedAsync(
 
@@ -404,7 +442,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectWithUnmanagedConstraintTo7_3_Type()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"
@@ -416,7 +456,9 @@ class Test<T> where T : [|unmanaged|]
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectWithUnmanagedConstraintTo7_3_Type_AlreadyDefined()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestExactActionSetOfferedAsync(
 @"<Workspace>
@@ -433,7 +475,9 @@ class Test&lt;T&gt; where T : [|unmanaged|]
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectWithUnmanagedConstraintTo7_3_Method()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"
@@ -446,7 +490,9 @@ class Test
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectWithUnmanagedConstraintTo7_3_Method_AlreadyDefined()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestExactActionSetOfferedAsync(
 @"<Workspace>
@@ -464,7 +510,9 @@ class Test
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectWithUnmanagedConstraintTo7_3_Delegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"delegate void D<T>() where T : [|unmanaged|];",
@@ -473,7 +521,9 @@ class Test
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectWithUnmanagedConstraintTo7_3_Delegate_AlreadyDefined()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestExactActionSetOfferedAsync(
 @"<Workspace>
@@ -488,7 +538,9 @@ delegate void D&lt;T&gt;() where T : [| unmanaged |];
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectWithUnmanagedConstraintTo7_3_LocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestLanguageVersionUpgradedAsync(
 @"
@@ -504,7 +556,9 @@ class Test
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UpgradeProjectWithUnmanagedConstraintTo7_3_LocalFunction_AlreadyDefined()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestExactActionSetOfferedAsync(
 @"<Workspace>

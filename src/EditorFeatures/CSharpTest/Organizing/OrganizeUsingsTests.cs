@@ -35,13 +35,17 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await CheckAsync(string.Empty, string.Empty);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SingleUsingStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial = @"using A;";
             var final = initial;
@@ -49,7 +53,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AliasesAtBottom()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using A = B;
@@ -68,7 +74,9 @@ using D = E;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UsingStaticsBetweenUsingsAndAliases()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using static System.Convert;
@@ -93,7 +101,9 @@ using D = E;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedStatements()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using B;
@@ -178,7 +188,9 @@ namespace N3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SpecialCaseSystem()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using M2;
@@ -196,7 +208,9 @@ using M2;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SpecialCaseSystemWithUsingStatic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using M2;
@@ -218,7 +232,9 @@ using static Microsoft.Win32.Registry;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotSpecialCaseSystem()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using M2;
@@ -237,7 +253,9 @@ using System.Linq;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotSpecialCaseSystemWithUsingStatics()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using M2;
@@ -258,7 +276,9 @@ using static System.BitConverter;";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IndentationAfterSorting()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"namespace A
@@ -292,7 +312,9 @@ namespace X.Y.Z { }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotTouchCommentsAtBeginningOfFile1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"// Copyright (c) Microsoft Corporation.  All rights reserved.
@@ -318,7 +340,9 @@ namespace B { }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotTouchCommentsAtBeginningOfFile2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"/* Copyright (c) Microsoft Corporation.  All rights reserved. */
@@ -344,7 +368,9 @@ namespace B { }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotTouchCommentsAtBeginningOfFile3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"// Copyright (c) Microsoft Corporation.  All rights reserved.
@@ -371,7 +397,9 @@ namespace B { }";
 
         [WorkItem(2480, "https://github.com/dotnet/roslyn/issues/2480")]
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoTouchCommentsAtBeginningOfFile1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"// Copyright (c) Microsoft Corporation.  All rights reserved.
@@ -396,7 +424,9 @@ namespace B { }";
 
         [WorkItem(2480, "https://github.com/dotnet/roslyn/issues/2480")]
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoTouchCommentsAtBeginningOfFile2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"/* Copyright (c) Microsoft Corporation.  All rights reserved. */
@@ -421,7 +451,9 @@ namespace B { }";
 
         [WorkItem(2480, "https://github.com/dotnet/roslyn/issues/2480")]
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoTouchCommentsAtBeginningOfFile3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"/// Copyright (c) Microsoft Corporation.  All rights reserved.
@@ -446,7 +478,9 @@ namespace B { }";
 
         [WorkItem(2480, "https://github.com/dotnet/roslyn/issues/2480")]
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommentsNotAtTheStartOfTheFile1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"namespace N
@@ -471,7 +505,9 @@ namespace B { }";
 
         [WorkItem(2480, "https://github.com/dotnet/roslyn/issues/2480")]
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommentsNotAtTheStartOfTheFile2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"namespace N
@@ -497,7 +533,9 @@ namespace B { }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotSortIfEndIfBlocks()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using D;
@@ -518,7 +556,9 @@ namespace D { }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExternAliases()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"extern alias Z;
@@ -598,7 +638,9 @@ namespace C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DuplicateUsings()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using A;
@@ -610,7 +652,9 @@ using A;";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InlineComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"/*00*/using/*01*/D/*02*/;/*03*/
@@ -630,7 +674,9 @@ using A;";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AllOnOneLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using C; using B; using A;";
@@ -644,7 +690,9 @@ using C; ";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideRegionBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"#region Using directives
@@ -671,7 +719,9 @@ class Class1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedRegionBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using C;
@@ -686,7 +736,9 @@ using B;";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleRegionBlocks()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"#region Using directives
@@ -703,7 +755,9 @@ using B;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InterleavedNewlines()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using B;
@@ -725,7 +779,9 @@ class D { }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideIfEndIfBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"#if !X
@@ -745,7 +801,9 @@ using C;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IfEndIfBlockAbove()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"#if !X
@@ -762,7 +820,9 @@ using E;";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IfEndIfBlockMiddle()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using D;
@@ -782,7 +842,9 @@ using G;";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IfEndIfBlockBelow()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using D;
@@ -799,7 +861,9 @@ using F;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Korean()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using 하;
@@ -838,7 +902,9 @@ using 하;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotSpecialCaseSystem1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using B;
@@ -867,7 +933,9 @@ using SystemZ;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotSpecialCaseSystem2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"extern alias S;
@@ -910,7 +978,9 @@ using Z = System.Int32;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CaseSensitivity1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using Bb;
@@ -1003,7 +1073,9 @@ using ああ;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CaseSensitivity2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using あ;
@@ -1039,7 +1111,9 @@ using ああ;
 
         [WorkItem(20988, "https://github.com/dotnet/roslyn/issues/20988")]
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGrouping()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"// Banner
@@ -1076,7 +1150,9 @@ using IntList = System.Collections.Generic.List<int>;
 
         [WorkItem(20988, "https://github.com/dotnet/roslyn/issues/20988")]
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGrouping2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Make sure we don't insert extra newlines if they're already there.
             var initial =

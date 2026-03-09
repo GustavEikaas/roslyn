@@ -13,14 +13,18 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
     public class DiagnosticDataTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticData_GetText()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = "";
             await VerifyTextSpanAsync(code, 10, 10, 20, 20, new TextSpan(0, 0));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticData_GetText1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 ";
@@ -29,7 +33,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticData_GetText2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 ";
@@ -38,7 +44,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticData_GetText3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 ";
@@ -47,7 +55,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticData_GetText4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 ";
@@ -56,7 +66,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticData_GetText5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 ";
@@ -65,7 +77,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticData_GetText6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 ";
@@ -74,7 +88,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact, Trait(Test.Utilities.Traits.Feature, Test.Utilities.Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticData_GetText7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 ";
@@ -83,7 +99,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticData_GetText8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 namespace B

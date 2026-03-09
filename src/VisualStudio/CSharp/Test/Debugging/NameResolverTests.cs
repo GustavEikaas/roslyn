@@ -25,7 +25,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCSharpLanguageDebugInfoCreateNameResolver()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp(" "))
             {
@@ -36,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleNameInClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"class C
@@ -57,7 +61,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleNameInNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"
@@ -85,7 +91,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleNameInGenericClassNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"
@@ -114,7 +122,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericNameInClassNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"
@@ -148,7 +158,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOverloadsInSingleClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"class C
@@ -174,7 +186,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsInMultipleClasses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"namespace N
@@ -210,7 +224,9 @@ namespace N1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodsWithDifferentArityInMultipleClasses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"namespace N
@@ -250,7 +266,9 @@ namespace N1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOverloadsWithMultipleParametersInSingleClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"class C
@@ -292,7 +310,9 @@ namespace N1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AccessorTests()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"class C
@@ -307,7 +327,9 @@ namespace N1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NegativeTests()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"using System.Runtime.CompilerServices;
@@ -357,7 +379,9 @@ abstract class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInstanceConstructors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"class C
@@ -398,7 +422,9 @@ class G<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStaticConstructors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"class C
@@ -421,7 +447,9 @@ class G<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAllConstructors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"class C
@@ -446,7 +474,9 @@ class G<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPartialMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"partial class C
@@ -473,7 +503,9 @@ class G<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLeadingAndTrailingText()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"class C
@@ -498,7 +530,9 @@ class G<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEscapedKeywords()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"struct @true { }
@@ -517,7 +551,9 @@ class @foreach
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAliasQualifiedNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"extern alias A
@@ -533,7 +569,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedTypesAndNamespaces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"namespace N1
@@ -580,7 +618,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingNameResolver)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInterfaces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"interface I1

@@ -15,7 +15,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
     public class SolutionSizeTests
     {
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test_SolutionSize()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var expected = 12345;
             var solution = CreateSolution(expected);
@@ -31,7 +33,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test_SolutionSize_Update()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var expected = 12345;
             var solution = CreateSolution(expected);
@@ -56,7 +60,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test_RemoveDocument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var expected = 12345;
             var solution = CreateSolution(expected);

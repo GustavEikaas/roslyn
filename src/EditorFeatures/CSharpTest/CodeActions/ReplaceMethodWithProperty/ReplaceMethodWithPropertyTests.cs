@@ -19,7 +19,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
             => new ReplaceMethodWithPropertyCodeRefactoringProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithGetName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -40,7 +42,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithoutGetName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -62,7 +66,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
         [WorkItem(6034, "https://github.com/dotnet/roslyn/issues/6034")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithArrowBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -82,7 +88,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithoutBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -96,7 +104,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithModifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -117,7 +127,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithAttributes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -140,7 +152,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithTrivia_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -163,7 +177,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIndentation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -197,7 +213,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
 
         [WorkItem(21460, "https://github.com/dotnet/roslyn/issues/21460")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfDefMethod1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -223,7 +241,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
 
         [WorkItem(21460, "https://github.com/dotnet/roslyn/issues/21460")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfDefMethod2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -257,7 +277,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
 
         [WorkItem(21460, "https://github.com/dotnet/roslyn/issues/21460")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfDefMethod3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -291,7 +313,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
 
         [WorkItem(21460, "https://github.com/dotnet/roslyn/issues/21460")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfDefMethod4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -325,7 +349,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
 
         [WorkItem(21460, "https://github.com/dotnet/roslyn/issues/21460")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfDefMethod5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -360,7 +386,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ReplaceMeth
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithTrivia_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -393,7 +421,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExplicitInterfaceMethod_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -414,7 +444,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExplicitInterfaceMethod_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"interface I
@@ -445,7 +477,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExplicitInterfaceMethod_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"interface I
@@ -476,7 +510,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -489,7 +525,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -502,7 +540,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVoidMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -514,7 +554,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAsyncMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -526,7 +568,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -538,7 +582,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExtensionMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"static class C
@@ -550,7 +596,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithParameters_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -562,7 +610,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithParameters_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -574,7 +624,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInSignature_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -587,7 +639,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInSignature_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -600,7 +654,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetReferenceNotInMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -631,7 +687,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetReferenceSimpleInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -662,7 +720,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetReferenceMemberAccessInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -693,7 +753,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetReferenceBindingMemberInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -726,7 +788,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetReferenceInMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -749,7 +813,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOverride()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -787,7 +853,9 @@ class D : C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetReference_NonInvoked()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -822,7 +890,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetReference_ImplicitReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System.Collections;
@@ -861,7 +931,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetSet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -895,7 +967,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetSetReference_NonInvoked()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -939,7 +1013,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetSet_SetterAccessibility()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -973,7 +1049,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetSet_ExpressionBodies()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -1004,7 +1082,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetSet_GetInSetReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -1048,7 +1128,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetSet_UpdateSetParameterName_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -1084,7 +1166,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetSet_UpdateSetParameterName_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -1120,7 +1204,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetSet_SetReferenceInSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -1156,7 +1242,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVirtualGetWithOverride_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -1195,7 +1283,9 @@ index: 0);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVirtualGetWithOverride_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -1236,7 +1326,9 @@ index: 0);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetWithInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"interface I
@@ -1268,7 +1360,9 @@ index: 0);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithPartialClasses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"partial class C
@@ -1305,7 +1399,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateGetSetCaseInsensitive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -1339,7 +1435,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Tuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -1360,7 +1458,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Tuple_GetAndSet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -1394,7 +1494,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleWithNames_GetAndSet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"using System;
@@ -1428,7 +1530,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleWithDifferentNames_GetAndSet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Cannot refactor tuples with different names together
             await TestActionCountAsync(
@@ -1448,7 +1552,9 @@ count: 1, new TestParameters(options: AllCodeStyleOff));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOutVarDeclaration_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -1491,7 +1597,9 @@ index: 0);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOutVarDeclaration_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C
@@ -1534,7 +1642,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOutVarDeclaration_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -1557,7 +1667,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOutVarDeclaration_4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -1581,7 +1693,9 @@ index: 1);
 
         [WorkItem(14327, "https://github.com/dotnet/roslyn/issues/14327")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateChainedGet1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"public class Goo
@@ -1615,7 +1729,9 @@ index: 1);
 
         [WorkItem(16980, "https://github.com/dotnet/roslyn/issues/16980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1633,7 +1749,9 @@ index: 1);
 
         [WorkItem(16980, "https://github.com/dotnet/roslyn/issues/16980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1651,7 +1769,9 @@ index: 1);
 
         [WorkItem(16980, "https://github.com/dotnet/roslyn/issues/16980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1669,7 +1789,9 @@ index: 1);
 
         [WorkItem(16980, "https://github.com/dotnet/roslyn/issues/16980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1694,7 +1816,9 @@ options: PreferExpressionBodiedAccessors);
 
         [WorkItem(16980, "https://github.com/dotnet/roslyn/issues/16980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1730,7 +1854,9 @@ options: PreferExpressionBodiedProperties);
 
         [WorkItem(16980, "https://github.com/dotnet/roslyn/issues/16980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1755,7 +1881,9 @@ options: PreferExpressionBodiedAccessorsAndProperties);
 
         [WorkItem(16980, "https://github.com/dotnet/roslyn/issues/16980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1770,7 +1898,9 @@ options: PreferExpressionBodiedAccessorsAndProperties);
 
         [WorkItem(16980, "https://github.com/dotnet/roslyn/issues/16980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1785,7 +1915,9 @@ options: PreferExpressionBodiedAccessorsAndProperties);
 
         [WorkItem(16980, "https://github.com/dotnet/roslyn/issues/16980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle9()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1800,7 +1932,9 @@ options: PreferExpressionBodiedAccessorsAndProperties);
 
         [WorkItem(16980, "https://github.com/dotnet/roslyn/issues/16980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeStyle10()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1814,7 +1948,9 @@ options: PreferExpressionBodiedAccessorsAndProperties);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseExpressionBodyWhenOnSingleLine_AndIsSingleLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1828,7 +1964,9 @@ options: PreferExpressionBodiedAccessorsAndProperties);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseExpressionBodyWhenOnSingleLine_AndIsNotSingleLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1852,7 +1990,9 @@ options: PreferExpressionBodiedAccessorsAndProperties);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExplicitInterfaceImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"interface IGoo
@@ -1886,7 +2026,9 @@ class C : IGoo
 
         [WorkItem(443523, "https://devdiv.visualstudio.com/DevDiv/_workitems?id=443523")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSystemObjectMetadataOverride()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -1899,7 +2041,9 @@ class C : IGoo
 
         [WorkItem(443523, "https://devdiv.visualstudio.com/DevDiv/_workitems?id=443523")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsReplaceMethodWithProperty)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMetadataOverride()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithAllCodeStyleOff(
 @"class C : System.Type
@@ -1919,7 +2063,9 @@ class C : IGoo
 }");
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task TestWithAllCodeStyleOff(
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             string initialMarkup, string expectedMarkup, 
             ParseOptions parseOptions = null, int index = 0)
         {

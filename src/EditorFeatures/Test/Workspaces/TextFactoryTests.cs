@@ -59,7 +59,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Workspaces
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCreateFromTemporaryStorage()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var textFactory = CreateMockTextFactoryService();
             var temporaryStorageService = new TemporaryStorageServiceFactory.TemporaryStorageService(textFactory);
@@ -82,7 +84,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Workspaces
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCreateFromTemporaryStorageWithEncoding()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var textFactory = CreateMockTextFactoryService();
             var temporaryStorageService = new TemporaryStorageServiceFactory.TemporaryStorageService(textFactory);

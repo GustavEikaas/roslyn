@@ -17,7 +17,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedVariable
             => (null, new CSharpRemoveUnusedVariableCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -36,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedVariable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedVariable1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -59,7 +63,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedVariable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedVariable3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -78,7 +84,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedVariable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedVariableMultipleOnLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -98,7 +106,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedVariable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedVariableMultipleOnLine1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -118,7 +128,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedVariable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedVariableFixAll()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -138,7 +150,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedVariable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedVariableFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -158,7 +172,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedVariable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedVariableFixAll2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -178,7 +194,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedVariable
 
         [WorkItem(20466, "https://github.com/dotnet/roslyn/issues/20466")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedCatchVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -209,7 +227,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedVariable
 
         [WorkItem(20987, "https://github.com/dotnet/roslyn/issues/20987")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LeadingDirectives()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -259,7 +279,9 @@ namespace ClassLibrary
 
         [WorkItem(20942, "https://github.com/dotnet/roslyn/issues/20942")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhitespaceBetweenStatements1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -287,7 +309,9 @@ class Test
 
         [WorkItem(20942, "https://github.com/dotnet/roslyn/issues/20942")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhitespaceBetweenStatements2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -311,7 +335,9 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveVariableAndComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -334,7 +360,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveVariableAndAssgnment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -358,7 +386,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task JointDeclarationRemoveFirst()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -384,7 +414,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task JointDeclarationRemoveSecond()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -410,7 +442,9 @@ class C
         }
 
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/23322"), Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task JointAssignmentRemoveFirst()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -439,7 +473,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task JointAssignmentRemoveSecond()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -468,7 +504,9 @@ class C
         }
 
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/22921"), Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedVariable)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -498,7 +536,9 @@ class C
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsSimplifyTypeNames)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task JointDeclarationRemoveBoth()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>
@@ -539,7 +579,9 @@ class C
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsSimplifyTypeNames)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task JointAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>

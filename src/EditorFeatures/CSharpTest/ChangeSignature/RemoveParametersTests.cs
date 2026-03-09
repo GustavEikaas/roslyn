@@ -21,7 +21,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ChangeSignature
     public partial class ChangeSignatureTests : AbstractChangeSignatureTests
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveParameters1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 static class Ext
@@ -111,7 +113,9 @@ static class Ext
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveParameters_GenericParameterType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class DA
@@ -183,7 +187,9 @@ public class DP20<T>
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
         [WorkItem(1102830, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1102830")]
         [WorkItem(784, "https://github.com/dotnet/roslyn/issues/784")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveParameters_ExtensionMethodInAnotherFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspaceXml = @"
 <Workspace>

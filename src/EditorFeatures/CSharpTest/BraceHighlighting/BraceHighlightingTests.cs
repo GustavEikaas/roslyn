@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
             => TestWorkspace.CreateCSharp(markup, parseOptions: options);
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCurlies()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync("public class C$$ {\r\n} ");
             await TestBraceHighlightingAsync("public class C $$[|{|]\r\n[|}|] ");
@@ -26,7 +28,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTouchingItems()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync("public class C $$[|{|]\r\n  public void Goo(){}\r\n[|}|] ");
             await TestBraceHighlightingAsync("public class C {$$\r\n  public void Goo(){}\r\n} ");
@@ -38,7 +42,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAngles()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync("/// $$<summary>Goo</summary>");
             await TestBraceHighlightingAsync("/// <$$summary>Goo</summary>");
@@ -106,7 +112,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSwitch()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 @"class C
@@ -207,14 +215,18 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEOF()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync("public class C [|{|]\r\n[|}|]$$");
             await TestBraceHighlightingAsync("public class C [|{|]\r\n void Goo(){}[|}|]$$");
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTuples()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 @"class C
@@ -229,7 +241,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedTuples()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 @"class C
@@ -244,7 +258,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTuplesWithGenerics()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 @"class C

@@ -25,7 +25,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.SignatureHelp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedGenericUnterminated()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class G<T> { };
@@ -46,7 +48,9 @@ class C
 
         [WorkItem(544088, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544088")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DeclaringGenericTypeWith1ParameterUnterminated()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class G<T> { };
@@ -66,7 +70,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CallingGenericAsyncMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Threading.Tasks;
@@ -95,7 +101,9 @@ class Program
 
         [WorkItem(7336, "DevDiv_Projects/Roslyn")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_GenericMethod_BrowsableAlways()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -128,7 +136,9 @@ public class C
 
         [WorkItem(7336, "DevDiv_Projects/Roslyn")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_GenericMethod_BrowsableNever()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -161,7 +171,9 @@ public class C
 
         [WorkItem(7336, "DevDiv_Projects/Roslyn")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_GenericMethod_BrowsableAdvanced()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -203,7 +215,9 @@ public class C
 
         [WorkItem(7336, "DevDiv_Projects/Roslyn")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EditorBrowsable_GenericMethod_BrowsableMixed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -242,7 +256,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericExtensionMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface IGoo
@@ -276,7 +292,9 @@ class Program
 
         [WorkItem(544088, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544088")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InvokingGenericMethodWith1ParameterUnterminated()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -301,7 +319,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationOnTriggerBracket()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class G<S, T> { };
@@ -321,7 +341,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationOnTriggerComma()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class G<S, T> { };
@@ -342,7 +364,9 @@ class C
 
         [WorkItem(1067933, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1067933")]
         [Fact, Trait(Traits.Feature, Traits.Features.SignatureHelp)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InvokedWithNoToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 // goo<$$";

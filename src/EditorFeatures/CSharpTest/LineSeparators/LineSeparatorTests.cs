@@ -17,13 +17,17 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
     public class LineSeparatorTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(contents: string.Empty);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -32,7 +36,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClassWithOneMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -44,7 +50,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClassWithTwoMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -60,7 +68,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClassWithTwoNonEmptyMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -78,7 +88,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClassWithMethodAndField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -92,7 +104,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"namespace N
 {
@@ -101,7 +115,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamespaceAndClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"namespace N
 {
@@ -113,7 +129,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamespaceAndTwoClasses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"namespace N
 {
@@ -129,7 +147,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamespaceAndTwoClassesAndDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"namespace N
 {
@@ -147,7 +167,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -159,7 +181,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTwoNestedClasses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -175,7 +199,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"struct S
 {
@@ -184,7 +210,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"interface I
 {
@@ -193,7 +221,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"enum E
 {
@@ -202,7 +232,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -221,7 +253,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPropertyAndField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -242,7 +276,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClassWithFieldAndMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -256,7 +292,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.LineSeparators
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UsingDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"using System;
 
@@ -267,7 +305,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UsingDirectiveInNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"namespace N
 {
@@ -281,7 +321,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PropertyStyleEventDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -297,7 +339,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IndexerDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -313,7 +357,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Constructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -327,7 +373,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Destructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -341,7 +389,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Operator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -355,7 +405,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ConversionOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class C
 {
@@ -369,7 +421,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Bug930292()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"class Program
 {
@@ -383,7 +437,9 @@ void D() { }
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Bug930289()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"namespace Roslyn.Compilers.CSharp
 {
@@ -399,7 +455,9 @@ public static implicit operator ArrayElement<T>(T value) { return new ArrayEleme
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConsoleApp()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var file = @"using System;
 using System.Collections.Generic;
@@ -416,7 +474,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
         [WorkItem(1297, "https://github.com/dotnet/roslyn/issues/1297")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(@"class C
 {
@@ -430,7 +490,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
         [WorkItem(1297, "https://github.com/dotnet/roslyn/issues/1297")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(@"class C
 {
@@ -444,7 +506,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
         [WorkItem(1297, "https://github.com/dotnet/roslyn/issues/1297")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // This is not valid code, and parses all wrong, but just in case a user writes it.  Note
             // the 3 is because there is a skipped } in the event declaration.
@@ -461,60 +525,78 @@ class Program
         #region Negative (incomplete) tests
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IncompleteClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(@"class C");
             await AssertTagsOnBracesOrSemicolonsAsync(@"class C {");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IncompleteEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(@"enum E");
             await AssertTagsOnBracesOrSemicolonsAsync(@"enum E {");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IncompleteMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(@"void goo() {");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IncompleteProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(@"class C { int P { get; set; void");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IncompleteEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(@"public event EventHandler");
             await AssertTagsOnBracesOrSemicolonsAsync(@"public event EventHandler {");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IncompleteIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(@"int this[int i]");
             await AssertTagsOnBracesOrSemicolonsAsync(@"int this[int i] {");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IncompleteOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // top level operators not supported in script code
             await AssertTagsOnBracesOrSemicolonsTokensAsync(@"C operator +(C lhs, C rhs) {", Array.Empty<int>(), Options.Regular);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IncompleteConversionOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(@"implicit operator C(int i) {");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.LineSeparators)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IncompleteMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await AssertTagsOnBracesOrSemicolonsAsync(@"class C { private !C(");
         }

@@ -15,7 +15,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
             => new ArrowExpressionClauseStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArrowExpressionClause_Method1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyBlockSpansAsync(
 @"
@@ -30,7 +32,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArrowExpressionClause_Property1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyBlockSpansAsync(
 @"
@@ -45,7 +49,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArrowExpressionClause_LocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyBlockSpansAsync(
 @"

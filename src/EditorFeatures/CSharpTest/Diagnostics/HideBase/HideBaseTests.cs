@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.HideBase
             => (null, new HideBaseCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddNew)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddNewToProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Application
@@ -40,7 +42,9 @@ class App : Application
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddNew)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddNewToMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Application
@@ -72,7 +76,9 @@ class App : Application
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddNew)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddNewToMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Application
@@ -97,7 +103,9 @@ class App : Application
 
         [WorkItem(18391, "https://github.com/dotnet/roslyn/issues/18391")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddNew)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddNewToConstant()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Application
@@ -122,7 +130,9 @@ class App : Application
 
         [WorkItem(14455, "https://github.com/dotnet/roslyn/issues/14455")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddNew)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddNewToConstantInternalFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class A { internal const int i = 0; }

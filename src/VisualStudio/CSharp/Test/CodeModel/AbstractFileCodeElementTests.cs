@@ -53,7 +53,9 @@ namespace Microsoft.VisualStudio.LanguageServices.CSharp.UnitTests.CodeModel
         protected Microsoft.CodeAnalysis.Document GetCurrentDocument()
             => GetCurrentProject().Documents.Single();
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         protected static Tuple<TestWorkspace, EnvDTE.FileCodeModel> CreateWorkspaceAndFileCodeModelAsync(string file)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             => FileCodeModelTestHelpers.CreateWorkspaceAndFileCodeModel(file);
 
         protected CodeElement GetCodeElement(params object[] path)

@@ -309,7 +309,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         internal async Task TestWithMockedGenerateTypeDialog(
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             string initial,
             string languageName,
             string typeName,

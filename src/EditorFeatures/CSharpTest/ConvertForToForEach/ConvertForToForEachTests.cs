@@ -26,7 +26,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertForToForEach
             SingleOption(CSharpCodeStyleOptions.UseImplicitTypeForIntrinsicTypes, onWithSilent));
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArray1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -56,7 +58,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWarnIfCrossesFunctionBoundary()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -92,7 +96,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWarnIfCollectionPotentiallyMutated1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -126,7 +132,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWarnIfCollectionPotentiallyMutated2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -160,7 +168,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoWarnIfCollectionPropertyAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -194,7 +204,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoWarnIfDoesNotCrossFunctionBoundary()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -230,7 +242,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleReferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -262,7 +276,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmbeddedStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -288,7 +304,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPostIncrement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -318,7 +336,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArrayPlusEqualsIncrementor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -348,7 +368,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOutsideKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -366,7 +388,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingAfterOpenParen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -384,7 +408,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingBeforeCloseParen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -402,7 +428,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAtEndOfFor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -432,7 +460,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForSelected()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -462,7 +492,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBeforeOpenParen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -492,7 +524,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterCloseParen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -522,7 +556,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithoutIncrementor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -540,7 +576,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithoutIncorrectIncrementor1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -558,7 +596,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithoutIncorrectIncrementor2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -576,7 +616,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithoutCondition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -594,7 +636,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithIncorrectCondition1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -612,7 +656,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithIncorrectCondition2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -630,7 +676,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithoutInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -648,7 +696,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithInitializerOfVariableOutsideLoop()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -667,7 +717,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithUninitializedVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -685,7 +737,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotStartingAtZero()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -703,7 +757,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithMultipleVariables()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -721,7 +777,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestList1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -753,7 +811,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChooseNameFromDeclarationStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -786,7 +846,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIgnoreFormattingForReferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -819,7 +881,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChooseNameFromDeclarationStatement_PreserveComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -856,7 +920,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChooseNameFromDeclarationStatement_PreserveDirectives()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -897,7 +963,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfVariableUsedNotForIndexing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -915,7 +983,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfVariableUsedForIndexingNonCollection()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -933,7 +1003,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWarningIfCollectionWrittenTo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -963,7 +1035,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UseVarIfPreferred1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -993,7 +1067,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDifferentIndexerAndEnumeratorType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1043,7 +1119,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSameIndexerAndEnumeratorType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1093,7 +1171,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1127,7 +1207,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotWithDeconstruction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1145,7 +1227,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultidimensionalArray1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1163,7 +1247,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultidimensionalArray2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1181,7 +1267,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestJaggedArray1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1211,7 +1299,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestJaggedArray2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1241,7 +1331,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestJaggedArray3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1278,7 +1370,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestJaggedArray4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1314,7 +1408,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestJaggedArray5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1350,7 +1446,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertForToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestJaggedArray6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;

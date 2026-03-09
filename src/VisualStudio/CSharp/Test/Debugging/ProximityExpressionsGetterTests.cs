@@ -29,7 +29,9 @@ namespace Microsoft.CodeAnalysis.CSharp.UnitTests.Debugging
             return SyntaxFactory.ParseSyntaxTree(code);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task GenerateBaseline()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             Console.WriteLine(typeof(FactAttribute));
 
@@ -159,56 +161,74 @@ namespace ConsoleApplication1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTryDo1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync("class Class { void Method() { string local;$$ } }", "local", "this");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoParentToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync("$$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsValid1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestIsValidAsync("class Class { void Method() { string local;$$ } }", "local", true);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsValidWithDiagnostics()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // local doesn't exist in this context
             await TestIsValidAsync("class Class { void Method() { string local; } $$}", "local", false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsValidReferencingLocalBeforeDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestIsValidAsync("class Class { void Method() { $$int i; int j; } }", "j", false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsValidReferencingUndefinedVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestIsValidAsync("class Class { void Method() { $$int i; int j; } }", "k", false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsValidNoTypeSymbol()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestIsValidAsync("namespace Namespace$$ { }", "goo", false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsValidLocalAfterPosition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestIsValidAsync("class Class { void Method() { $$ int i; string local; } }", "local", false);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestThis()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -222,7 +242,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArrayCreationExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -235,7 +257,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPostfixUnaryExpressionSyntax()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -249,7 +273,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLabeledStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -263,7 +289,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestThrowStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -277,7 +305,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDoStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -290,7 +320,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLockStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -303,7 +335,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhileStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -316,7 +350,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForStatementWithDeclarators()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -329,7 +365,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForStatementWithInitializers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -343,7 +381,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUsingStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -357,7 +397,9 @@ class Class
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
         [WorkItem(538879, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538879")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestValueInPropertySetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -371,7 +413,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestValueInEventAdd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -385,7 +429,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestValueInEventRemove()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -400,7 +446,9 @@ class Class
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
         [WorkItem(538880, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538880")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestValueInIndexerSetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -415,7 +463,9 @@ class Class
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
         [WorkItem(538881, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538881")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCatchBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -430,7 +480,9 @@ class Class
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
         [WorkItem(538881, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538881")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCatchBlockEmpty_OpenBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -444,7 +496,9 @@ class Class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCatchBlockEmpty_CloseBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -459,7 +513,9 @@ class Class
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
         [WorkItem(538874, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538874")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestObjectCreation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -473,7 +529,9 @@ class Class
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
         [WorkItem(538874, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538874")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestIsValidAsync(@"
 class D
@@ -492,7 +550,9 @@ class Class
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
         [WorkItem(538890, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538890")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArrayCreation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Class 
@@ -507,7 +567,9 @@ class Class
 
         [WorkItem(751141, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/751141")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Bug751141()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"
 class Program
@@ -528,7 +590,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ForLoopExpressionsInFirstStatementOfLoop1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -544,7 +608,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ForLoopExpressionsInFirstStatementOfLoop2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -563,7 +629,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ForLoopExpressionsInFirstStatementOfLoop3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -582,7 +650,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ForLoopExpressionsInFirstStatementOfLoop4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -598,7 +668,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ForEachLoopExpressionsInFirstStatementOfLoop1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -614,7 +686,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ForEachLoopExpressionsInFirstStatementOfLoop2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -628,7 +702,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterForLoop1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -649,7 +725,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterForLoop2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -670,7 +748,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterForEachLoop()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -691,7 +771,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterNestedForLoop()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -717,7 +799,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterCheckedStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -738,7 +822,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterUncheckedStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -759,7 +845,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterIfStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -780,7 +868,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterIfStatementWithElse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -806,7 +896,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterLockStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -827,7 +919,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterSwitchStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -858,7 +952,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterTryStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -889,7 +985,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterTryStatementWithFinally()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -924,7 +1022,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterUsingStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -945,7 +1045,9 @@ class Program
 
         [WorkItem(775161, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775161")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsAfterWhileStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {
@@ -966,7 +1068,9 @@ class Program
 
         [WorkItem(778215, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/778215")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionsInParenthesizedExpressions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestTryDoAsync(@"class Program
 {

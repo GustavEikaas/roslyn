@@ -92,7 +92,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseExpressionBody1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -109,7 +111,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseExpressionBody2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -126,7 +130,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseExpressionBody3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -143,7 +149,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseExpressionBody4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -160,7 +168,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseBlockBody1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -177,7 +187,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseBlockBody2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -194,7 +206,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseBlockBody3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -211,7 +225,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseBlockBody4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -228,7 +244,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComments1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -248,7 +266,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComments2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -268,7 +288,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComments3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -288,7 +310,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComments4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -305,7 +329,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComments5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -322,7 +348,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComments6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -340,7 +368,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseExpressionBody
 
         [WorkItem(17120, "https://github.com/dotnet/roslyn/issues/17120")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDirectives1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -372,7 +402,9 @@ class Program
 
         [WorkItem(17120, "https://github.com/dotnet/roslyn/issues/17120")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDirectives2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -408,7 +440,9 @@ class Program
 
         [WorkItem(20362, "https://github.com/dotnet/roslyn/issues/20362")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOfferToConvertToBlockEvenIfExpressionBodyPreferredIfPriorToCSharp6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -430,7 +464,9 @@ class C
 
         [WorkItem(20352, "https://github.com/dotnet/roslyn/issues/20352")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDoNotOfferToConvertToBlockIfExpressionBodyPreferredIfCSharp6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -443,7 +479,9 @@ class C
 
         [WorkItem(20352, "https://github.com/dotnet/roslyn/issues/20352")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOfferToConvertToExpressionIfCSharp6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -462,7 +500,9 @@ class C
 
         [WorkItem(20352, "https://github.com/dotnet/roslyn/issues/20352")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDoNotOfferToConvertToExpressionInCSharp6IfThrowExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -476,7 +516,9 @@ class C
 
         [WorkItem(20362, "https://github.com/dotnet/roslyn/issues/20362")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExpressionBody)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOfferToConvertToBlockEvenIfExpressionBodyPreferredIfPriorToCSharp6_FixAll()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"

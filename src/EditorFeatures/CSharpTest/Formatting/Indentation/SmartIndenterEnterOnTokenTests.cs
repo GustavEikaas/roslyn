@@ -19,7 +19,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
         [WorkItem(537808, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537808")]
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodBody1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Class1
 {
@@ -36,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Preprocessor1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class A
 {
@@ -52,7 +56,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Preprocessor2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class A
 {
@@ -68,7 +74,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Preprocessor3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#region stuff
 #endregion
@@ -81,7 +89,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Comments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -98,7 +108,9 @@ class Class
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UsingDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 using System.Linq;
@@ -112,7 +124,9 @@ using System.Linq;
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterTopOfFileComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"// comment
 
@@ -126,7 +140,9 @@ class
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DottedName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System.
 Collection;
@@ -139,7 +155,9 @@ Collection;
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Namespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -155,7 +173,9 @@ namespace NS
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NamespaceDottedName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -170,7 +190,9 @@ NS2
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NamespaceBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -187,7 +209,9 @@ class
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NamespaceCloseBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -204,7 +228,9 @@ namespace NS
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Class()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -222,7 +248,9 @@ namespace NS
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ClassBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -241,7 +269,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ClassCloseBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -260,7 +290,9 @@ namespace NS
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -281,7 +313,9 @@ namespace NS
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -303,7 +337,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodCloseBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -325,7 +361,9 @@ namespace NS
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Statement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -348,7 +386,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodCall()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class c
 {
@@ -368,7 +408,9 @@ a: 1,
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Switch()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -391,7 +433,9 @@ namespace NS
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SwitchBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -415,7 +459,9 @@ case
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SwitchCase()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -440,7 +486,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SwitchCaseBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -465,7 +513,9 @@ namespace NS
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Block()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -491,7 +541,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultilineStatement1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -513,7 +565,9 @@ namespace NS
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultilineStatement2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 
@@ -537,7 +591,9 @@ namespace NS
         // Bug number 902477
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Comments2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Class
 {
@@ -557,7 +613,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterCompletedBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -578,7 +636,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterTopLevelAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -597,7 +657,9 @@ int
         [WorkItem(537802, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537802")]
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmbededStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -620,7 +682,9 @@ int
         [WorkItem(537808, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537808")]
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodBraces1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Class1
 {
@@ -638,7 +702,9 @@ int
         [WorkItem(537808, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537808")]
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodBraces2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Class1
 {
@@ -657,7 +723,9 @@ int
         [WorkItem(537795, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537795")]
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Property1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -678,7 +746,9 @@ int
         [WorkItem(537563, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537563")]
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Class1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -694,7 +764,9 @@ int
         [WpfFact]
         [WorkItem(1070773, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070773")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayInitializer1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -710,7 +782,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayInitializer2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -730,7 +804,9 @@ int
         [WpfFact]
         [WorkItem(1070773, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070773")]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayInitializer3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -750,7 +826,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryExpression2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -770,7 +848,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryExpression3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -790,7 +870,9 @@ int
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryExpression4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -811,7 +893,9 @@ int
         [WpfFact]
         [WorkItem(853748, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/853748")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -833,7 +917,9 @@ int
         [WorkItem(939305, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/939305")]
         [WorkItem(1070773, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070773")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -854,7 +940,9 @@ int
         [WpfFact]
         [WorkItem(1070773, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070773")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CollectionExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -876,7 +964,9 @@ int
         [WpfFact]
         [WorkItem(1070773, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070773")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ObjectInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -902,7 +992,9 @@ class What
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Preprocessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 #line 1 """"Bar""""class Goo : [|IComparable|]#line default#line hidden";
@@ -916,7 +1008,9 @@ class What
         [WpfFact]
         [WorkItem(1070774, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070774")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInitializerWithTypeBody_Implicit()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class X {
     int[] a = {
@@ -933,7 +1027,9 @@ class What
         [WpfFact]
         [WorkItem(1070774, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070774")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInitializerWithTypeBody_ImplicitNew()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class X {
     int[] a = new[] {
@@ -950,7 +1046,9 @@ class What
         [WpfFact]
         [WorkItem(1070774, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070774")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInitializerWithTypeBody_Explicit()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class X {
     int[] a = new int[] {
@@ -967,7 +1065,9 @@ class What
         [WpfFact]
         [WorkItem(1070774, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070774")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInitializerWithTypeBody_Collection()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System.Collections.Generic;
 class X {
@@ -985,7 +1085,9 @@ class X {
         [WpfFact]
         [WorkItem(1070774, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1070774")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInitializerWithTypeBody_ObjectInitializers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -1010,7 +1112,9 @@ class What
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationString_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1031,7 +1135,9 @@ class What
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationString_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1052,7 +1158,9 @@ class What
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationString_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1073,7 +1181,9 @@ class What
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationString_4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1094,7 +1204,9 @@ class What
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OutsideInterpolationString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1115,7 +1227,9 @@ class What
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationSyntax_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1136,7 +1250,9 @@ Program.number}"";
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationSyntax_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1158,7 +1274,9 @@ Program.number}"";
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationSyntax_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1179,7 +1297,9 @@ Program.number}"";
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationSyntax_4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1200,7 +1320,9 @@ Program.number}"";
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationSyntax_5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1221,7 +1343,9 @@ Program.number}"";
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationSyntax_6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1242,7 +1366,9 @@ Program.number}"";
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InsideInterpolationSyntax_7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1263,7 +1389,9 @@ Program.number}"";
         [WpfFact]
         [WorkItem(872, "https://github.com/dotnet/roslyn/issues/872")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IndentLambdaBodyOneIndentationToFirstTokenOfTheStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1284,7 +1412,9 @@ Program.number}"";
         [WpfFact]
         [WorkItem(1339, "https://github.com/dotnet/roslyn/issues/1339")]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IndentAutoPropertyInitializerAsPartOfTheDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Program
 {
@@ -1302,7 +1432,9 @@ Program.number}"";
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IndentPatternPropertyFirst()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -1323,7 +1455,9 @@ class C
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.SmartIndent)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IndentPatternPropertySecond()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C

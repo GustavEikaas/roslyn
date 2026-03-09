@@ -30,7 +30,9 @@ namespace Roslyn.Hosting.Diagnostics.Waiters
             {
                 // at least wait for the workspace to finish processing everything.
                 var task = workspaceWaiter.CreateWaitTask();
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                 task.Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             }
 
             var waitTask = featureWaiter.CreateWaitTask();
@@ -48,7 +50,9 @@ namespace Roslyn.Hosting.Diagnostics.Waiters
         {
             var task = _provider.WaitAllAsync(
                 featureNames,
+#pragma warning disable VSTHRD001 // Avoid legacy thread switching APIs
                 eventProcessingAction: () => Dispatcher.CurrentDispatcher.Invoke(() => { }, DispatcherPriority.ApplicationIdle));
+#pragma warning restore VSTHRD001 // Avoid legacy thread switching APIs
 
             WaitForTask(task);
         }
@@ -65,7 +69,9 @@ namespace Roslyn.Hosting.Diagnostics.Waiters
 
         private void WaitForTask(System.Threading.Tasks.Task task)
         {
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             while (!task.Wait(100))
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             {
                 // set breakpoint here when debugging
                 var tokens = _provider.GetTokens();
@@ -73,7 +79,9 @@ namespace Roslyn.Hosting.Diagnostics.Waiters
                 GC.KeepAlive(tokens);
 
                 // make sure pending task that require UI threads to finish as well.
+#pragma warning disable VSTHRD001 // Avoid legacy thread switching APIs
                 Dispatcher.CurrentDispatcher.Invoke(() => { }, DispatcherPriority.ApplicationIdle);
+#pragma warning restore VSTHRD001 // Avoid legacy thread switching APIs
             }
         }
     }

@@ -263,7 +263,9 @@ using System.Linq;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamespaceInUsingDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using $$System;",
@@ -271,7 +273,9 @@ using System.Linq;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamespaceInUsingDirective2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Coll$$ections.Generic;",
@@ -279,7 +283,9 @@ using System.Linq;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamespaceInUsingDirective3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.L$$inq;",
@@ -287,7 +293,9 @@ using System.Linq;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamespaceInUsingDirectiveWithAlias()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using Goo = Sys$$tem.Console;",
@@ -295,7 +303,9 @@ using System.Linq;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeInUsingDirectiveWithAlias()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using Goo = System.Con$$sole;",
@@ -304,7 +314,9 @@ using System.Linq;
 
         [WorkItem(991466, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/991466")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocumentationInUsingDirectiveWithAlias()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using I$$ = IGoo;
@@ -318,7 +330,9 @@ interface IGoo {  }";
 
         [WorkItem(991466, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/991466")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocumentationInUsingDirectiveWithAlias2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using I = IGoo;
@@ -333,7 +347,9 @@ class C : I$$ { }";
 
         [WorkItem(991466, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/991466")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocumentationInUsingDirectiveWithAlias3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"using I = IGoo;
@@ -350,7 +366,9 @@ class C : I$$ { }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestThis()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"
@@ -363,7 +381,9 @@ class C { string M() {  return thi$$s.ToString(); } }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClassWithDocComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"
@@ -376,7 +396,9 @@ class C { void M() { $$C obj; } }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLineDocComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Tests chosen to maximize code coverage in DocumentationCommentCompiler.WriteFormattedSingleLineComment
 
@@ -441,7 +463,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiLineDocComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Tests chosen to maximize code coverage in DocumentationCommentCompiler.WriteFormattedMultiLineComment
 
@@ -543,7 +567,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodWithDocComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"
@@ -556,7 +582,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInt32()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$Int32 i;",
@@ -564,7 +592,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBuiltInInt()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$int i;",
@@ -572,7 +602,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$String s;",
@@ -580,7 +612,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBuiltInString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$string s;",
@@ -588,7 +622,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBuiltInStringAtEndOfToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"string$$ s;",
@@ -596,7 +632,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBoolean()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$Boolean b;",
@@ -604,7 +642,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBuiltInBool()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$bool b;",
@@ -612,7 +652,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingle()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$Single s;",
@@ -620,7 +662,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBuiltInFloat()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$float f;",
@@ -628,7 +672,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVoidIsInvalid()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInvalidTypeInClassAsync(
 @"$$void M()
@@ -637,28 +683,36 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvalidPointer1_931958()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInvalidTypeInClassAsync(
 @"$$T* i;");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvalidPointer2_931958()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInvalidTypeInClassAsync(
 @"T$$* i;");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvalidPointer3_931958()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInvalidTypeInClassAsync(
 @"T*$$ i;");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestListOfString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$List<string> l;",
@@ -667,7 +721,9 @@ void M() { M$$() }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestListOfSomethingFromSource()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"
@@ -681,7 +737,9 @@ public class GenericList<T> { Generic$$List<int> t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestListOfT()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"class C<T>
@@ -692,7 +750,9 @@ public class GenericList<T> { Generic$$List<int> t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDictionaryOfIntAndString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$Dictionary<int, string> d;",
@@ -703,7 +763,9 @@ public class GenericList<T> { Generic$$List<int> t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDictionaryOfTAndU()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"class C<T, U>
@@ -717,7 +779,9 @@ public class GenericList<T> { Generic$$List<int> t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIEnumerableOfInt()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"$$IEnumerable<int> M()
@@ -729,7 +793,9 @@ public class GenericList<T> { Generic$$List<int> t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEventHandler()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"event $$EventHandler e;",
@@ -737,7 +803,9 @@ public class GenericList<T> { Generic$$List<int> t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<T>
@@ -749,7 +817,9 @@ public class GenericList<T> { Generic$$List<int> t; }";
 
         [WorkItem(538636, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538636")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeParameterWithDocComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"
@@ -763,7 +833,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeParameter1_Bug931949()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class T1<T11>
@@ -774,7 +846,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeParameter2_Bug931949()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class T1<T11>
@@ -785,7 +859,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeParameter3_Bug931949()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class T1<T11>
@@ -796,7 +872,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeParameter4_Bug931949()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class T1<T11>
@@ -807,7 +885,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullableOfInt()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(@"$$Nullable<int> i; }",
                 MainDescription("struct System.Nullable<T> where T : struct"),
@@ -815,7 +895,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericTypeDeclaredOnMethod1_Bug1946()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -829,7 +911,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericTypeDeclaredOnMethod2_Bug1946()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -843,7 +927,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericTypeDeclaredOnMethod3_Bug1946()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -857,7 +943,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericTypeParameterConstraint_Class()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<T> where $$T : class
@@ -867,7 +955,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericTypeParameterConstraint_Struct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"struct S<T> where $$T : class
@@ -877,7 +967,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericTypeParameterConstraint_Interface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"interface I<T> where $$T : class
@@ -887,7 +979,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericTypeParameterConstraint_Delegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"delegate void D<T>() where $$T : class;",
@@ -895,21 +989,27 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMinimallyQualifiedConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"class C<T> where $$T : IEnumerable<int>",
                 MainDescription($"T {FeaturesResources.in_} C<T> where T : IEnumerable<int>"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FullyQualifiedConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"class C<T> where $$T : System.Collections.Generic.IEnumerable<int>",
                 MainDescription($"T {FeaturesResources.in_} C<T> where T : System.Collections.Generic.IEnumerable<int>"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodReferenceInSameMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -923,7 +1023,9 @@ class C<T> { $$T t; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodReferenceInSameMethodWithDocComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"
@@ -936,7 +1038,9 @@ void M() { M$$(); }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldInMethodBuiltIn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"int field;
@@ -951,7 +1055,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldInMethodBuiltIn2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"int field;
@@ -964,7 +1070,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldInMethodBuiltInWithFieldInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"int field = 1;
@@ -976,7 +1084,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperatorBuiltIn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"int x;
@@ -986,7 +1096,9 @@ x = x$$+1;",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperatorBuiltIn1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"int x;
@@ -996,7 +1108,9 @@ x = x$$ + 1;",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperatorBuiltIn2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"int x;
@@ -1006,7 +1120,9 @@ x = x+$$x;",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperatorBuiltIn3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"int x;
@@ -1016,7 +1132,9 @@ x = x +$$ x;",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperatorBuiltIn4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"int x;
@@ -1026,7 +1144,9 @@ x = x + $$x;",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperatorCustomTypeBuiltIn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"class C
@@ -1038,7 +1158,9 @@ x = x + $$x;",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperatorCustomTypeOverload()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"class C
@@ -1052,7 +1174,9 @@ x = x + $$x;",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldInMethodMinimal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"DateTime field;
@@ -1067,7 +1191,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldInMethodQualified()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"System.IO.FileInfo file;
@@ -1082,7 +1208,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMemberOfStructFromSource()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"struct MyStruct {
@@ -1095,7 +1223,9 @@ static class Test { int a = MyStruct.Some$$Field; }";
 
         [WorkItem(538638, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538638")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMemberOfStructFromSourceWithDocComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"struct MyStruct {
@@ -1109,7 +1239,9 @@ static class Test { int a = MyStruct.Some$$Field; }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMemberOfStructInsideMethodFromSource()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"struct MyStruct {
@@ -1122,7 +1254,9 @@ static class Test { static void Method() { int a = MyStruct.Some$$Field; } }";
 
         [WorkItem(538638, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538638")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMemberOfStructInsideMethodFromSourceWithDocComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup =
 @"struct MyStruct {
@@ -1136,14 +1270,18 @@ static class Test { static void Method() { int a = MyStruct.Some$$Field; } }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMetadataFieldMinimal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"DateTime dt = DateTime.MaxValue$$",
                 MainDescription($"({FeaturesResources.field}) DateTime DateTime.MaxValue"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMetadataFieldQualified1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // NOTE: we qualify the field type, but not the type that contains the field in Dev10
             var markup =
@@ -1158,7 +1296,9 @@ static class Test { static void Method() { int a = MyStruct.Some$$Field; } }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMetadataFieldQualified2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -1172,7 +1312,9 @@ static class Test { static void Method() { int a = MyStruct.Some$$Field; } }";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMetadataFieldQualified3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -1188,7 +1330,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ConstructedGenericField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<T>
@@ -1207,7 +1351,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnconstructedGenericField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<T>
@@ -1223,21 +1369,27 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIntegerLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"int f = 37$$",
                 MainDescription("struct System.Int32"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrueKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"bool f = true$$",
                 MainDescription("struct System.Boolean"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFalseKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"bool f = false$$",
                 MainDescription("struct System.Boolean"));
@@ -1261,7 +1413,9 @@ class C
 
         [WorkItem(756226, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/756226")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAwaitKeywordInDeclarationStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System.Threading.Tasks;
 class C
@@ -1292,7 +1446,9 @@ class C
 
         [WorkItem(756226, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/756226"), WorkItem(756337, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/756337")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedAwaitKeywords1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System;
 using System.Threading.Tasks;
@@ -1328,7 +1484,9 @@ class AsyncExample2
 
         [WorkItem(756226, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/756226")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedAwaitKeywords2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System;
 using System.Threading.Tasks;
@@ -1363,7 +1521,9 @@ class AsyncExample2
 
         [WorkItem(756226, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/756226"), WorkItem(756337, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/756337")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAwaitablePrefixOnCustomAwaiter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System;
 using System.Runtime.CompilerServices;
@@ -1390,7 +1550,9 @@ class MyAwaiter : INotifyCompletion
 
         [WorkItem(756226, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/756226"), WorkItem(756337, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/756337")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTaskType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System.Threading.Tasks;
 class C
@@ -1405,7 +1567,9 @@ class C
 
         [WorkItem(756226, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/756226"), WorkItem(756337, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/756337")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTaskOfTType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System;
 using System.Threading.Tasks;
@@ -1422,7 +1586,9 @@ class C
 
         [WorkItem(7100, "https://github.com/dotnet/roslyn/issues/7100")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDynamicIsntAwaitable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -1438,7 +1604,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStringLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"string f = ""Goo""$$",
                 MainDescription("class System.String"));
@@ -1446,7 +1614,9 @@ class C
 
         [WorkItem(1280, "https://github.com/dotnet/roslyn/issues/1280")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVerbatimStringLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"string f = @""cat""$$",
                 MainDescription("class System.String"));
@@ -1454,7 +1624,9 @@ class C
 
         [WorkItem(1280, "https://github.com/dotnet/roslyn/issues/1280")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInterpolatedStringLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"string f = $""cat""$$", MainDescription("class System.String"));
             await TestInMethodAsync(@"string f = $""c$$at""", MainDescription("class System.String"));
@@ -1464,7 +1636,9 @@ class C
 
         [WorkItem(1280, "https://github.com/dotnet/roslyn/issues/1280")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVerbatimInterpolatedStringLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"string f = $@""cat""$$", MainDescription("class System.String"));
             await TestInMethodAsync(@"string f = $@""c$$at""", MainDescription("class System.String"));
@@ -1473,14 +1647,18 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCharLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"string f = 'x'$$",
                 MainDescription("struct System.Char"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"dyn$$amic dyn;",
@@ -1489,7 +1667,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"dynamic dyn;
@@ -1502,7 +1682,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LocalProperty_Minimal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"DateTime Prop { get; set; }
@@ -1515,7 +1697,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LocalProperty_Minimal_PrivateSet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"public DateTime Prop { get; private set; }
@@ -1528,7 +1712,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LocalProperty_Minimal_PrivateSet1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"protected internal int Prop { get; private set; }
@@ -1541,7 +1727,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LocalProperty_Qualified()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"System.IO.FileInfo Prop { get; set; }
@@ -1554,14 +1742,18 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NonLocalProperty_Minimal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"DateTime.No$$w.ToString();",
                 MainDescription("DateTime DateTime.Now { get; }"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NonLocalProperty_Qualified()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"System.IO.FileInfo f;
@@ -1571,7 +1763,9 @@ f.Att$$ributes.ToString();",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ConstructedGenericProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<T>
@@ -1590,7 +1784,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnconstructedGenericProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<T>
@@ -1606,7 +1802,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ValueInProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"public DateTime Property
@@ -1620,35 +1818,45 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EnumTypeName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"Consol$$eColor c",
                 MainDescription("enum System.ConsoleColor"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EnumMemberNameFromMetadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"ConsoleColor c = ConsoleColor.Bla$$ck",
                 MainDescription("ConsoleColor.Black = 0"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FlagsEnumMemberNameFromMetadata1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"AttributeTargets a = AttributeTargets.Cl$$ass",
                 MainDescription("AttributeTargets.Class = 4"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FlagsEnumMemberNameFromMetadata2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"AttributeTargets a = AttributeTargets.A$$ll",
                 MainDescription("AttributeTargets.All = AttributeTargets.Assembly | AttributeTargets.Module | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Enum | AttributeTargets.Constructor | AttributeTargets.Method | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Parameter | AttributeTargets.Delegate | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EnumMemberNameFromSource1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"enum E
@@ -1669,7 +1877,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EnumMemberNameFromSource2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"enum E
@@ -1690,7 +1900,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Parameter_InMethod_Minimal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void M(DateTime dt)
@@ -1700,7 +1912,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Parameter_InMethod_Qualified()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void M(System.IO.FileInfo fileInfo)
@@ -1710,14 +1924,18 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Parameter_FromReferenceToNamedParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"Console.WriteLine(va$$lue: ""Hi"");",
                 MainDescription($"({FeaturesResources.parameter}) string value"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Parameter_DefaultValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // NOTE: Dev10 doesn't show the default value, but it would be nice if we did.
             // NOTE: The "DefaultValue" property isn't implemented yet.
@@ -1730,7 +1948,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Parameter_Params()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void M(params DateTime[] arg)
@@ -1741,7 +1961,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Parameter_Ref()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void M(ref DateTime arg)
@@ -1752,7 +1974,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Parameter_Out()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void M(out DateTime arg)
@@ -1763,7 +1987,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Local_Minimal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"DateTime dt;
@@ -1773,7 +1999,9 @@ d$$t.ToString();",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Local_Qualified()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"System.IO.FileInfo fileInfo;
@@ -1783,14 +2011,18 @@ file$$Info.ToString();",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_MetadataOverload()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync("Console.Write$$Line();",
                 MainDescription($"void Console.WriteLine() (+ 18 {FeaturesResources.overloads_})"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_SimpleWithOverload()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void Method()
@@ -1805,7 +2037,9 @@ void Method(int i)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_MoreOverloads()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void Method()
@@ -1828,7 +2062,9 @@ void Method(System.IO.FileInfo fileInfo)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_SimpleInSameClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"DateTime GetDate(System.IO.FileInfo ft)
@@ -1839,7 +2075,9 @@ void Method(System.IO.FileInfo fileInfo)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_OptionalParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void M()
@@ -1854,7 +2092,9 @@ void Method(int i = 0)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_OptionalDecimalParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void Goo(decimal x$$yz = 10)
@@ -1864,7 +2104,9 @@ void Method(int i = 0)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_Generic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Generic method don't get the instantiation info yet.  NOTE: We don't display
             // constraint info in Dev10. Should we?
@@ -1878,7 +2120,9 @@ void Method(int i = 0)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_UnconstructedGeneric()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"TOut Goo<TIn, TOut>(TIn arg)
@@ -1890,7 +2134,9 @@ void Method(int i = 0)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_Inferred()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void Goo<TIn>(TIn arg)
@@ -1901,7 +2147,9 @@ void Method(int i = 0)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_MultipleParams()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void Goo(DateTime dt, System.IO.FileInfo fi, int number)
@@ -1912,7 +2160,9 @@ void Method(int i = 0)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_OptionalParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // NOTE - Default values aren't actually returned by symbols yet.
             await TestInClassAsync(
@@ -1924,7 +2174,9 @@ void Method(int i = 0)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method_ParameterModifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // NOTE - Default values aren't actually returned by symbols yet.
             await TestInClassAsync(
@@ -1936,7 +2188,9 @@ void Method(int i = 0)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Constructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"public C()
@@ -1951,7 +2205,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Constructor_Overloads()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"public C()
@@ -1977,7 +2233,9 @@ void M()
         /// Regression for 3923
         /// </summary>
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Constructor_OverloadFromStringLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"new InvalidOperatio$$nException("""");",
@@ -1988,7 +2246,9 @@ void M()
         /// Regression for 3923
         /// </summary>
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Constructor_UnknownType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInvalidTypeInClassAsync(
 @"void M()
@@ -2001,7 +2261,9 @@ void M()
         /// Regression for 3923
         /// </summary>
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Constructor_OverloadFromProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"new InvalidOperatio$$nException(this.GetType().Name);",
@@ -2009,7 +2271,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Constructor_Metadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"new Argument$$NullException();",
@@ -2017,14 +2281,18 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Constructor_MetadataQualified()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"new System.IO.File$$Info(null);",
                 MainDescription("System.IO.FileInfo.FileInfo(string fileName)"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InterfaceProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"interface I
@@ -2035,7 +2303,9 @@ void M()
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitInterfacePropertyImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"interface I
@@ -2061,7 +2331,9 @@ class C : I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Operator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"public static C operator +(C left, C right)
@@ -2080,7 +2352,9 @@ void M(C left, C right)
         [WorkItem(792629, "generic type parameter constraints for methods in quick info")]
 #pragma warning restore CA2243 // Attribute string literals should parse correctly
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericMethodWithConstraintsAtDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"TOut G$$oo<TIn, TOut>(TIn arg) where TIn : IEquatable<TIn>
@@ -2094,7 +2368,9 @@ void M(C left, C right)
         [WorkItem(792629, "generic type parameter constraints for methods in quick info")]
 #pragma warning restore CA2243 // Attribute string literals should parse correctly
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericMethodWithMultipleConstraintsAtDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"TOut Goo<TIn, TOut>(TIn arg) where TIn : Employee, new()
@@ -2109,7 +2385,9 @@ void M(C left, C right)
         [WorkItem(792629, "generic type parameter constraints for methods in quick info")]
 #pragma warning restore CA2243 // Attribute string literals should parse correctly
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnConstructedGenericMethodWithConstraintsAtInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"TOut Goo<TIn, TOut>(TIn arg) where TIn : Employee
@@ -2121,7 +2399,9 @@ void M(C left, C right)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericTypeWithConstraintsAtDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class Employee : IComparable<Employee>
@@ -2140,7 +2420,9 @@ class Emplo$$yeeList<T> : IEnumerable<T> where T : Employee, System.IComparable<
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class T1<T11>
@@ -2151,7 +2433,9 @@ class Emplo$$yeeList<T> : IEnumerable<T> where T : Employee, System.IComparable<
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"static void Meth1<T1>(T1 i) where T1 : struct
@@ -2162,7 +2446,9 @@ class Emplo$$yeeList<T> : IEnumerable<T> where T : Employee, System.IComparable<
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Var()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"var x = new Exception();
@@ -2171,7 +2457,9 @@ var y = $$x;",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedInGeneric()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"List<int>.Enu$$merator e;",
@@ -2180,7 +2468,9 @@ var y = $$x;",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedGenericInGeneric()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Outer<T>
@@ -2201,7 +2491,9 @@ var y = $$x;",
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ObjectInitializer1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void M()
@@ -2217,7 +2509,9 @@ class test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ObjectInitializer2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"class C
@@ -2237,7 +2531,9 @@ class test
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(537880, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537880")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypeArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<T, Y>
@@ -2252,7 +2548,9 @@ class test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ForEachLoop_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"int bb = 555;
@@ -2266,7 +2564,9 @@ bb = bb + 21;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TryCatchFinally_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"try
@@ -2285,7 +2585,9 @@ a$$a = aa + 1;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TryCatchFinally_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"try
@@ -2303,7 +2605,9 @@ var z = y;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TryCatchFinally_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"try
@@ -2322,7 +2626,9 @@ aa = a$$a + 1;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TryCatchFinally_4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"try
@@ -2341,7 +2647,9 @@ aa = a$$a + 1;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<T, Y>
@@ -2356,7 +2664,9 @@ aa = a$$a + 1;
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInstantiation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -2372,7 +2682,9 @@ class Program<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUsingAlias_Bug4141()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using X = A.C;
@@ -2391,7 +2703,9 @@ class D : X$$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldOnDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"DateTime fie$$ld;",
@@ -2400,7 +2714,9 @@ class D : X$$
 
         [WorkItem(538767, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538767")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericErrorFieldOnDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"NonExistentType<int> fi$$eld;",
@@ -2409,7 +2725,9 @@ class D : X$$
 
         [WorkItem(538822, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538822")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDelegateType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"Fun$$c<int, string> field;",
@@ -2421,7 +2739,9 @@ class D : X$$
 
         [WorkItem(538824, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538824")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnDelegateInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -2439,7 +2759,9 @@ class D : X$$
 
         [WorkItem(539240, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/539240")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnArrayCreation1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -2453,7 +2775,9 @@ class D : X$$
 
         [WorkItem(539240, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/539240")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnArrayCreation2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -2468,7 +2792,9 @@ class D : X$$
 
         [WorkItem(539841, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/539841")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsNamedTypeAccessibleForErrorTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"sealed class B<T1, T2> : A<B<T1, T2>>
@@ -2486,7 +2812,9 @@ internal class A<T>
 
         [WorkItem(540075, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/540075")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using Goo = Goo;
@@ -2503,7 +2831,9 @@ class C
 
         [WorkItem(16662, "https://github.com/dotnet/roslyn/issues/16662")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestShortDiscardInAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -2518,7 +2848,9 @@ class C
 
         [WorkItem(16662, "https://github.com/dotnet/roslyn/issues/16662")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnderscoreLocalInAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -2533,7 +2865,9 @@ class C
 
         [WorkItem(16662, "https://github.com/dotnet/roslyn/issues/16662")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestShortDiscardInOutVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -2549,7 +2883,9 @@ class C
 
         [WorkItem(16667, "https://github.com/dotnet/roslyn/issues/16667")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDiscardInOutVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -2564,7 +2900,9 @@ class C
 
         [WorkItem(16667, "https://github.com/dotnet/roslyn/issues/16667")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDiscardInIsPattern()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -2578,7 +2916,9 @@ class C
 
         [WorkItem(16667, "https://github.com/dotnet/roslyn/issues/16667")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDiscardInSwitchPattern()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -2596,7 +2936,9 @@ class C
 
         [WorkItem(540871, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/540871")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLiterals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class MyClass
@@ -2622,7 +2964,9 @@ class C
 
         [WorkItem(541444, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/541444")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorInForeach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -2640,7 +2984,9 @@ class C
 
         [WorkItem(541678, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/541678")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestQuickInfoOnEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -2672,7 +3018,9 @@ public class Publisher
 
         [WorkItem(542157, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/542157")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"System.Console.CancelKeyPres$$s += null;",
                 MainDescription("ConsoleCancelEventHandler Console.CancelKeyPress"));
@@ -2680,7 +3028,9 @@ public class Publisher
 
         [WorkItem(542157, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/542157")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEventPlusEqualsOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"System.Console.CancelKeyPress +$$= null;",
                 MainDescription("void Console.CancelKeyPress.add"));
@@ -2688,7 +3038,9 @@ public class Publisher
 
         [WorkItem(542157, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/542157")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEventMinusEqualsOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"System.Console.CancelKeyPress -$$= null;",
                 MainDescription("void Console.CancelKeyPress.remove"));
@@ -2696,7 +3048,9 @@ public class Publisher
 
         [WorkItem(541885, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/541885")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestQuickInfoOnExtensionMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithOptionsAsync(Options.Regular,
 @"using System;
@@ -2725,7 +3079,9 @@ public static class MyExtensions
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestQuickInfoOnExtensionMethodOverloads()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithOptionsAsync(Options.Regular,
 @"using System;
@@ -2757,7 +3113,9 @@ public static class Ex
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestQuickInfoOnExtensionMethodOverloads2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithOptionsAsync(Options.Regular,
 @"using System;
@@ -2789,7 +3147,9 @@ public static class Ex
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Linq;
@@ -2807,7 +3167,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Linq;
@@ -2825,7 +3187,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -2841,7 +3205,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -2857,7 +3223,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -2875,7 +3243,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -2893,7 +3263,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -2911,7 +3283,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -2929,7 +3303,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query9()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -2948,7 +3324,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query10()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -2967,7 +3345,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query11()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -2986,7 +3366,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Query12()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -3006,7 +3388,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoSelectMappedEnumerable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3018,7 +3402,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoSelectMappedQueryable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3030,7 +3416,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoSelectMappedCustom()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -3058,7 +3446,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoSelectNotMapped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3070,7 +3460,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoLet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3086,7 +3478,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoWhere()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3099,7 +3493,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByOneProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3112,7 +3508,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByOnePropertyWithOrdering1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3125,7 +3523,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByOnePropertyWithOrdering2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3137,7 +3537,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByTwoPropertiesWithComma1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3150,7 +3552,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByTwoPropertiesWithComma2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3163,7 +3567,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByTwoPropertiesWithOrdering1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3176,7 +3582,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByTwoPropertiesWithOrdering2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3188,7 +3596,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByTwoPropertiesWithOrdering3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3201,7 +3611,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByTwoPropertiesWithOrderingOnEach1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3213,7 +3625,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByTwoPropertiesWithOrderingOnEach2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3226,7 +3640,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByTwoPropertiesWithOrderingOnEach3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3238,7 +3654,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByTwoPropertiesWithOrderingOnEach4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3251,7 +3669,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoOrderByIncomplete()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3264,7 +3684,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoSelectMany1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3277,7 +3699,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoSelectMany2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3290,7 +3714,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoGroupBy1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3302,7 +3728,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoGroupBy2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3314,7 +3742,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoGroupByInto()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3327,7 +3757,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoJoin1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3340,7 +3772,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoJoin2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3353,7 +3787,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoJoin3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3366,7 +3802,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoJoin4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3379,7 +3817,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoJoinInto1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3392,7 +3832,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoJoinInto2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3404,7 +3846,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoFromMissing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3415,7 +3859,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoRangeVariableSimple1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3427,7 +3873,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoRangeVariableSimple2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3439,7 +3887,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoRangeVariableSelectMany1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3452,7 +3902,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoRangeVariableSelectMany2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3465,7 +3917,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoRangeVariableJoin1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3478,7 +3932,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoRangeVariableJoin2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3491,7 +3947,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoRangeVariableJoin3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3504,7 +3962,9 @@ namespace N {
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23394, "https://github.com/dotnet/roslyn/issues/23394")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryMethodinfoRangeVariableJoin4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -3517,7 +3977,9 @@ namespace N {
 
         [WorkItem(543205, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543205")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorGlobal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"extern alias global;
@@ -3534,7 +3996,9 @@ class myClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveAttributeSuffixAndProduceInvalidIdentifier1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -3548,7 +4012,9 @@ class classAttribute : Attribute
 
         [WorkItem(544026, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544026")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveAttributeSuffix2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -3562,7 +4028,9 @@ class class1Attribute : Attribute
 
         [WorkItem(1696, "https://github.com/dotnet/roslyn/issues/1696")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeQuickInfoBindsToClassTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -3585,7 +4053,9 @@ class SomeAttribute : Attribute
 
         [WorkItem(1696, "https://github.com/dotnet/roslyn/issues/1696")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeConstructorQuickInfo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -3607,7 +4077,9 @@ class SomeAttribute : Attribute
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLabel()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void M()
@@ -3621,7 +4093,9 @@ Goo:
 
         [WorkItem(542613, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/542613")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnboundGeneric()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -3640,7 +4114,9 @@ class C
 
         [WorkItem(543113, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543113")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAnonymousTypeNew1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -3660,7 +4136,9 @@ $@"
 
         [WorkItem(543873, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543873")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedAnonymousType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // verify nested anonymous types are listed in the same order for different properties
             // verify first property
@@ -3692,7 +4170,9 @@ $@"
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(543183, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543183")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAssignmentOperatorInAnonymousType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -3706,7 +4186,9 @@ $@"
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(10731, "DevDiv_Projects/Roslyn")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorAnonymousTypeDoesntShow()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"var a = new { new { N = 0 }.N, new { } }.$$N;",
@@ -3720,7 +4202,9 @@ $@"
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(543553, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543553")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArrayAssignedToVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -3735,7 +4219,9 @@ $@"
 
         [WorkItem(529139, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529139")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ColorColorRangeVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -3760,7 +4246,9 @@ namespace N1
 
         [WorkItem(543550, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543550")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoOnOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -3787,7 +4275,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstantField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -3797,7 +4287,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleConstantFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -3807,7 +4299,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstantDependencies()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class A
@@ -3824,7 +4318,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstantCircularDependencies()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class A
@@ -3841,7 +4337,9 @@ class B
 
         [WorkItem(544620, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544620")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstantOverflow()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class B
@@ -3853,7 +4351,9 @@ class B
 
         [WorkItem(544620, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544620")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstantOverflowInUncheckedContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class B
@@ -3864,7 +4364,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEnumInConstantField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class EnumTest
@@ -3889,7 +4391,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstantInDefaultExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class EnumTest
@@ -3914,7 +4418,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstantParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -3925,7 +4431,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstantLocal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -3939,7 +4447,9 @@ class B
 
         [WorkItem(544416, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544416")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorType1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"var $$v1 = new Goo();",
@@ -3948,7 +4458,9 @@ class B
 
         [WorkItem(544416, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544416")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorType2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"var $$v1 = v1;",
@@ -3957,7 +4469,9 @@ class B
 
         [WorkItem(544416, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544416")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorType3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"var $$v1 = new Goo<Bar>();",
@@ -3966,7 +4480,9 @@ class B
 
         [WorkItem(544416, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544416")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorType4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"var $$v1 = &(x => x);",
@@ -3975,7 +4491,9 @@ class B
 
         [WorkItem(544416, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544416")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorType5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync("var $$v1 = &v1",
                 MainDescription($"({FeaturesResources.local_variable}) var* v1"));
@@ -3983,7 +4501,9 @@ class B
 
         [WorkItem(544416, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544416")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorType6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync("var $$v1 = new Goo[1]",
                 MainDescription($"({FeaturesResources.local_variable}) Goo[] v1"));
@@ -3991,7 +4511,9 @@ class B
 
         [WorkItem(544416, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544416")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorType7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"class C
@@ -4010,7 +4532,9 @@ class B
 
         [WorkItem(544416, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544416")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestErrorType8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync("var $$v1 = Unknown",
                 MainDescription($"({FeaturesResources.local_variable}) ? v1"));
@@ -4018,7 +4542,9 @@ class B
 
         [WorkItem(545072, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545072")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDelegateSpecialTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"delegate void $$F(int x);",
@@ -4027,7 +4553,9 @@ class B
 
         [WorkItem(545108, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545108")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullPointerParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -4041,7 +4569,9 @@ class B
 
         [WorkItem(545098, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545098")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLetIdentifier1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync("var q = from e in \"\" let $$y = 1 let a = new { y } select a;",
                 MainDescription($"({FeaturesResources.range_variable}) int y"));
@@ -4049,7 +4579,9 @@ class B
 
         [WorkItem(545295, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545295")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullableDefaultValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Test
@@ -4063,7 +4595,9 @@ class B
 
         [WorkItem(529586, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529586")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvalidParameterInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -4079,7 +4613,9 @@ class B
 
         [WorkItem(545230, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545230")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComplexConstLocal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -4096,7 +4632,9 @@ class B
 
         [WorkItem(545230, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545230")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComplexConstField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -4114,7 +4652,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypeParameterCrefDoesNotHaveQuickInfo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<T>
@@ -4127,7 +4667,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCref1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -4141,7 +4683,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCref2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -4155,7 +4699,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCref3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -4168,7 +4714,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCref4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -4181,7 +4729,9 @@ class B
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCref5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -4195,7 +4745,9 @@ class B
 
         [WorkItem(546849, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546849")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIndexedProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class Program
 {
@@ -4242,7 +4794,9 @@ End Class";
 
         [WorkItem(546918, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546918")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnconstructedGeneric()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class A<T>
@@ -4264,7 +4818,9 @@ End Class";
 
         [WorkItem(546970, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/546970")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnconstructedGenericInCRef()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// <see cref=""$$C{T}"" />
@@ -4275,7 +4831,9 @@ class C<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAwaitableMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"using System.Threading.Tasks;
 class C
@@ -4295,7 +4853,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ObsoleteItem()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System;
@@ -4313,7 +4873,9 @@ class Program
 
         [WorkItem(751070, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/751070")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 
@@ -4333,7 +4895,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TextOnlyDocComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// <summary>
@@ -4345,7 +4909,9 @@ class C$$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrimConcatMultiLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// <summary>
@@ -4358,7 +4924,9 @@ class C$$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCref()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// <summary>
@@ -4371,7 +4939,9 @@ class C$$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExcludeTextOutsideSummaryBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// red
@@ -4385,7 +4955,9 @@ class C$$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NewlineAfterPara()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// <summary>
@@ -4397,7 +4969,9 @@ class C$$
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TextOnlyDocComment_Metadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var referenced = @"
 /// <summary>
@@ -4419,7 +4993,9 @@ class G
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrimConcatMultiLine_Metadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var referenced = @"
 /// <summary>
@@ -4442,7 +5018,9 @@ class G
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCref_Metadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class G
@@ -4464,7 +5042,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExcludeTextOutsideSummaryBlock_Metadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class G
@@ -4488,7 +5068,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Param()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// <summary></summary>
@@ -4504,7 +5086,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Param_Metadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class G
@@ -4530,7 +5114,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Param2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// <summary></summary>
@@ -4546,7 +5132,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Param2_Metadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class G
@@ -4572,7 +5160,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypeParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// <summary></summary>
@@ -4588,7 +5178,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnboundCref()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// <summary></summary>
@@ -4604,7 +5196,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefInConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class TestClass
@@ -4619,7 +5213,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefInConstructorOverloaded()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class TestClass
@@ -4641,7 +5237,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefInGenericMethod1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class TestClass
@@ -4658,7 +5256,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefInGenericMethod2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class TestClass
@@ -4676,7 +5276,9 @@ public class C
 
         [WorkItem(813350, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/813350")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefInMethodOverloading1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class TestClass
@@ -4706,7 +5308,9 @@ public class C
 
         [WorkItem(813350, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/813350")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefInMethodOverloading2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class TestClass
@@ -4735,7 +5339,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefInGenericType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"/// <summary> 
@@ -4758,7 +5364,9 @@ class Generic$$Class<T>
 
         [WorkItem(812720, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/812720")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ClassificationOfCrefsFromMetadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class G
@@ -4795,7 +5403,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAvailableInBothLinkedFiles()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -4820,7 +5430,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldUnavailableInOneLinkedFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"" PreprocessorSymbols=""GOO"">
@@ -4848,7 +5460,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BindSymbolInOtherFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -4876,7 +5490,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldUnavailableInTwoLinkedFiles()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"" PreprocessorSymbols=""GOO"">
@@ -4909,7 +5525,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExcludeFilesWithInactiveRegions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"" PreprocessorSymbols=""GOO,BAR"">
@@ -4943,7 +5561,9 @@ class C
 
         [WorkItem(962353, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/962353")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoValidSymbolsInLinkedDocuments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -4971,7 +5591,9 @@ class C
 
         [WorkItem(1020944, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1020944")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LocalsValidInLinkedDocuments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -4996,7 +5618,9 @@ class C
 
         [WorkItem(1020944, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1020944")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LocalWarningInLinkedDocuments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"" PreprocessorSymbols=""PROJ1"">
@@ -5025,7 +5649,9 @@ class C
 
         [WorkItem(1020944, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1020944")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LabelsValidInLinkedDocuments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -5050,7 +5676,9 @@ class C
 
         [WorkItem(1020944, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1020944")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RangeVariablesValidInLinkedDocuments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -5076,7 +5704,9 @@ class C
 
         [WorkItem(1019766, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1019766")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PointerAccessibility()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"class C
 {
@@ -5093,7 +5723,9 @@ class C
 
         [WorkItem(1114300, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1114300")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AwaitingTaskOfArrayType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Threading.Tasks;
@@ -5110,7 +5742,9 @@ class Program
 
         [WorkItem(1114300, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1114300")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AwaitingTaskOfDynamic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 using System.Threading.Tasks;
@@ -5126,7 +5760,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodOverloadDifferencesIgnored()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"" PreprocessorSymbols=""ONE"">
@@ -5156,7 +5792,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodOverloadDifferencesIgnored_ContainingType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"" PreprocessorSymbols=""ONE"">
@@ -5210,7 +5848,9 @@ public class Methods2
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(4868, "https://github.com/dotnet/roslyn/issues/4868")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoExceptions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -5243,7 +5883,9 @@ namespace MyNs
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23307, "https://github.com/dotnet/roslyn/issues/23307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5261,7 +5903,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23307, "https://github.com/dotnet/roslyn/issues/23307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLocalFunction2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5279,7 +5923,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23307, "https://github.com/dotnet/roslyn/issues/23307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLocalFunction3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5302,7 +5948,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(26101, "https://github.com/dotnet/roslyn/issues/26101")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLocalFunction4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5326,7 +5974,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(26101, "https://github.com/dotnet/roslyn/issues/26101")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLocalFunction5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5350,7 +6000,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(26101, "https://github.com/dotnet/roslyn/issues/26101")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLocalFunction6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5376,7 +6028,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(26101, "https://github.com/dotnet/roslyn/issues/26101")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLocalFunction7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5402,7 +6056,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23307, "https://github.com/dotnet/roslyn/issues/23307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5418,7 +6074,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23307, "https://github.com/dotnet/roslyn/issues/23307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLambda2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5434,7 +6092,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23307, "https://github.com/dotnet/roslyn/issues/23307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLambda2_DifferentOrder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5450,7 +6110,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23307, "https://github.com/dotnet/roslyn/issues/23307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLambda3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5468,7 +6130,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23307, "https://github.com/dotnet/roslyn/issues/23307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLambda4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5485,7 +6149,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(26101, "https://github.com/dotnet/roslyn/issues/26101")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLambda5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5509,7 +6175,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(26101, "https://github.com/dotnet/roslyn/issues/26101")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLambda6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5533,7 +6201,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(26101, "https://github.com/dotnet/roslyn/issues/26101")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLambda7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5559,7 +6229,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(26101, "https://github.com/dotnet/roslyn/issues/26101")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnLambda8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5585,7 +6257,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(23307, "https://github.com/dotnet/roslyn/issues/23307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoCapturesOnDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"
 class C
@@ -5601,7 +6275,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(1516, "https://github.com/dotnet/roslyn/issues/1516")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QuickInfoWithNonStandardSeeAttributesAppear()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -5622,7 +6298,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(6657, "https://github.com/dotnet/roslyn/issues/6657")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OptionalParameterFromPreviousSubmission()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string workspaceDefinition = @"
 <Workspace>
@@ -5641,7 +6319,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"interface I
@@ -5668,7 +6348,9 @@ class C : I
 
         [WorkItem(18311, "https://github.com/dotnet/roslyn/issues/18311")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ValueTupleWithArity0VariableName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -5686,7 +6368,9 @@ public class C
 
         [WorkItem(18311, "https://github.com/dotnet/roslyn/issues/18311")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ValueTupleWithArity0ImplicitVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -5704,7 +6388,9 @@ public class C
 
         [WorkItem(18311, "https://github.com/dotnet/roslyn/issues/18311")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ValueTupleWithArity1VariableName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -5722,7 +6408,9 @@ public class C
 
         [WorkItem(18311, "https://github.com/dotnet/roslyn/issues/18311")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ValueTupleWithArity1ImplicitVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -5740,7 +6428,9 @@ public class C
 
         [WorkItem(18311, "https://github.com/dotnet/roslyn/issues/18311")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ValueTupleWithArity2VariableName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -5758,7 +6448,9 @@ public class C
 
         [WorkItem(18311, "https://github.com/dotnet/roslyn/issues/18311")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ValueTupleWithArity2ImplicitVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -5775,7 +6467,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"using System;
@@ -5796,7 +6490,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefLocal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"using System;
@@ -5818,7 +6514,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(410932, "https://devdiv.visualstudio.com/DefaultCollection/DevDiv/_workitems?id=410932")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericMethodInDocComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -5841,7 +6539,9 @@ class Test
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
         [WorkItem(403665, "https://devdiv.visualstudio.com/DevDiv/_workitems?id=403665&_a=edit")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExceptionWithCrefToConstructorDoesNotCrash()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -5857,14 +6557,18 @@ class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = "ref struct X$$ {}";
             await TestAsync(markup, MainDescription("ref struct X"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefStruct_Nested()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 namespace Nested
@@ -5875,14 +6579,18 @@ namespace Nested
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReadOnlyStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = "readonly struct X$$ {}";
             await TestAsync(markup, MainDescription("readonly struct X"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReadOnlyStruct_Nested()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 namespace Nested
@@ -5893,14 +6601,18 @@ namespace Nested
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReadOnlyRefStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = "readonly ref struct X$$ {}";
             await TestAsync(markup, MainDescription("readonly ref struct X"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReadOnlyRefStruct_Nested()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 namespace Nested
@@ -5912,7 +6624,9 @@ namespace Nested
 
         [WorkItem(22450, "https://github.com/dotnet/roslyn/issues/22450")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefLikeTypesNoDeprecated()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var xmlString = @"
 <Workspace>
@@ -5939,7 +6653,9 @@ ref struct Test
 
         [WorkItem(2644, "https://github.com/dotnet/roslyn/issues/2644")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PropertyWithSameNameAsOtherType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace ConsoleApplication1
@@ -5965,7 +6681,9 @@ ref struct Test
 
         [WorkItem(2644, "https://github.com/dotnet/roslyn/issues/2644")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PropertyWithSameNameAsOtherType2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -5993,7 +6711,9 @@ namespace ConsoleApplication1
 
         [WorkItem(23883, "https://github.com/dotnet/roslyn/issues/23883")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InMalformedEmbeddedStatement_01()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -6012,7 +6732,9 @@ class Program
 
         [WorkItem(23883, "https://github.com/dotnet/roslyn/issues/23883")]
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InMalformedEmbeddedStatement_02()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -6031,7 +6753,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EnumConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -6043,7 +6767,9 @@ class X<T> where T : System.Enum
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DelegateConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -6055,7 +6781,9 @@ class X<T> where T : System.Delegate
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MulticastDelegateConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"
@@ -6067,7 +6795,9 @@ class X<T> where T : System.MulticastDelegate
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnmanagedConstraint_Type()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -6078,7 +6808,9 @@ class $$X<T> where T : unmanaged
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnmanagedConstraint_Method()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -6090,7 +6822,9 @@ class X
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnmanagedConstraint_Delegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
                 "delegate void $$D<T>() where T : unmanaged;",
@@ -6098,7 +6832,9 @@ class X
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.QuickInfo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnmanagedConstraint_LocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"

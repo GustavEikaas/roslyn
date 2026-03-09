@@ -24,7 +24,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.GenerateEqualsAndGetHas
             => new CSharpGenerateEqualsAndGetHashCodeFromMembersCodeRefactoringProvider((IPickMembersService)parameters.fixProviderData);
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsSingleField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -49,7 +51,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReferenceIEquatable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -82,7 +86,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestValueIEquatable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -115,7 +121,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsLongName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -140,7 +148,9 @@ class ReallyLongName
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsKeywordName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -165,7 +175,9 @@ class ReallyLongLong
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -195,7 +207,9 @@ class ReallyLongName
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsBaseTypeWithNoEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Base
@@ -224,7 +238,9 @@ class Program : Base
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsBaseWithOverriddenEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -270,7 +286,9 @@ index: 0);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsOverriddenDeepBase()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -323,7 +341,9 @@ class Program : Middle
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -357,7 +377,9 @@ struct ReallyLongName
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsGenericType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 using System.Collections.Generic;
@@ -386,7 +408,9 @@ class Program<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeSingleField1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -417,7 +441,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeSingleField2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -448,7 +474,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeWithBaseHashCode1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -490,7 +518,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeWithBaseHashCode2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"using System.Collections.Generic;
@@ -530,7 +560,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeSingleField_CodeStyle1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -559,7 +591,9 @@ options: Option(CSharpCodeStyleOptions.PreferExpressionBodiedMethods, CSharpCode
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeTypeParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -590,7 +624,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeGenericType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -621,7 +657,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeMultipleMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -660,7 +698,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSmartTagText1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestSmartTagTextAsync(
 @"using System.Collections.Generic;
@@ -679,7 +719,9 @@ FeaturesResources.Generate_Equals_object);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSmartTagText2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestSmartTagTextAsync(
 @"using System.Collections.Generic;
@@ -699,7 +741,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSmartTagText3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestSmartTagTextAsync(
 @"using System.Collections.Generic;
@@ -719,7 +763,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Tuple_Disabled()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections.Generic;
@@ -746,7 +792,9 @@ index: 0,
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Tuples_Equals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -771,7 +819,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleWithNames_Equals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -796,7 +846,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Tuple_HashCode()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -827,7 +879,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleWithNames_HashCode()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -858,7 +912,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDialog1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"using System.Collections.Generic;
@@ -888,7 +944,9 @@ chosenSymbols: new[] { "a", "b" });
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDialog2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"using System.Collections.Generic;
@@ -920,7 +978,9 @@ chosenSymbols: new[] { "c", "b" });
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDialog3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"using System.Collections.Generic;
@@ -951,7 +1011,9 @@ chosenSymbols: new string[] { });
 
         [WorkItem(17643, "https://github.com/dotnet/roslyn/issues/17643")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDialogNoBackingField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -977,7 +1039,9 @@ chosenSymbols: null);
 
         [WorkItem(25690, "https://github.com/dotnet/roslyn/issues/25690")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDialogNoIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -1005,7 +1069,9 @@ chosenSymbols: null);
 
         [WorkItem(25707, "https://github.com/dotnet/roslyn/issues/25707")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDialogNoSetterOnlyProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -1032,7 +1098,9 @@ chosenSymbols: null);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateOperators1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -1072,7 +1140,9 @@ optionsCallback: options => EnableOption(options, GenerateOperatorsId));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateOperators2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -1107,7 +1177,9 @@ parameters: new TestParameters(
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateOperators3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -1141,7 +1213,9 @@ optionsCallback: options => Assert.Null(options.FirstOrDefault(i => i.Id == Gene
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateOperators4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -1185,7 +1259,9 @@ optionsCallback: options => EnableOption(options, GenerateOperatorsId));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestImplementIEquatableOnStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -1219,7 +1295,9 @@ optionsCallback: options => EnableOption(options, ImplementIEquatableId));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestImplementIEquatableOnClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -1254,7 +1332,9 @@ optionsCallback: options => EnableOption(options, ImplementIEquatableId));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDoNotOfferIEquatableIfTypeAlreadyImplementsIt()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -1284,7 +1364,9 @@ optionsCallback: options => Assert.Null(options.FirstOrDefault(i => i.Id == Impl
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingReferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -1329,7 +1411,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeInCheckedContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -1372,7 +1456,9 @@ index: 1, compilationOptions: new CSharpCompilationOptions(
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -1407,7 +1493,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeSystemHashCodeOneMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -1443,7 +1531,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeSystemHashCodeEightMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -1486,7 +1576,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetHashCodeSystemHashCodeNineMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;

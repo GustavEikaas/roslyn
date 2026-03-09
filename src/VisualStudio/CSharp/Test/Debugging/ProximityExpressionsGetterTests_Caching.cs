@@ -68,7 +68,9 @@ namespace Microsoft.CodeAnalysis.CSharp.UnitTests.Debugging
         //
         // We should figure out some better way to test the feature.
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCaching1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 class Class
@@ -86,7 +88,9 @@ class Class
 
         [WorkItem(538259, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538259")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCaching2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 class Program
@@ -111,7 +115,9 @@ class Program
 
         [WorkItem(538259, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538259")]
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingProximityExpressions)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCaching3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 class Program

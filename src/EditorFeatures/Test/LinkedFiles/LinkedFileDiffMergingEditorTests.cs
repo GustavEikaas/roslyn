@@ -31,7 +31,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.LinkedFiles
             => new TestCodeRefactoringProvider();
 
         [WpfFact(Skip = "https://github.com/dotnet/roslyn/issues/20370")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeActionPreviewAndApply()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.Create(WorkspaceXml))
             {
@@ -48,7 +50,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.LinkedFiles
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWorkspaceTryApplyChangesDirectCall()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.Create(WorkspaceXml))
             {

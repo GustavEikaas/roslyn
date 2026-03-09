@@ -30,7 +30,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure.MetadataAsSou
 
         [WorkItem(1174405, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1174405")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PrependedDollarSign()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $$class C
@@ -43,7 +45,9 @@ $$class C
 
         [WorkItem(1174405, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1174405")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SymbolsAndPunctuation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $$class C
@@ -56,7 +60,9 @@ $$class C
 
         [WorkItem(1174405, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1174405")]
         [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IdentifierThatLooksLikeCode()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $$class C

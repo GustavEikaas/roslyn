@@ -32,14 +32,18 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("class G$$oo { }", "Goo", 0);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
         [WorkItem(527668, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/527668"), WorkItem(538415, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538415")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Class
@@ -53,7 +57,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
         [WorkItem(527668, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/527668")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace Namespace
@@ -69,7 +75,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
         [WorkItem(527668, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/527668")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDottedNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace Namespace.Another
@@ -84,7 +92,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace Namespace
@@ -103,7 +113,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
         [WorkItem(527668, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/527668")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Outer
@@ -119,7 +131,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
         [WorkItem(527668, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/527668")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPropertyGetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Class
@@ -136,7 +150,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
         [WorkItem(527668, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/527668")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPropertySetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Class
@@ -158,7 +174,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
         [WorkItem(538415, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/538415")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Class
@@ -169,7 +187,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
         [WorkItem(543494, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543494")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLambdaInFieldInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Class
@@ -180,7 +200,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
         [WorkItem(543494, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543494")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Class
@@ -190,7 +212,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1
@@ -204,7 +228,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDestructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1
@@ -217,7 +243,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace N1
@@ -234,7 +262,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConversionOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace N1
@@ -254,7 +284,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1
@@ -266,7 +298,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Debugging
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TextExplicitInterfaceImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"interface I1
@@ -283,7 +317,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TextIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1
@@ -300,7 +336,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestParamsParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1
@@ -311,7 +349,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArglistParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1
@@ -322,7 +362,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefAndOutParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1
@@ -336,7 +378,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOptionalParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1
@@ -350,7 +394,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExtensionMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"static class C1
@@ -363,7 +409,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1<T, U>
@@ -374,7 +422,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1<T, U>
@@ -385,7 +435,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1<T, U>
@@ -396,7 +448,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"{
@@ -408,7 +462,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingNamespaceName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace
@@ -423,7 +479,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingClassName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace N1
@@ -437,7 +495,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingMethodName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace N1
@@ -452,7 +512,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingParameterList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace N1
@@ -467,7 +529,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TopLevelField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"$$int f1;
@@ -475,7 +539,9 @@ class C1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TopLevelMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"int M1(int x)
@@ -485,7 +551,9 @@ $$}
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.DebuggingLocationName)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TopLevelStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"

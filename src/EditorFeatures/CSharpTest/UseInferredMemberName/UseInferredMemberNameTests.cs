@@ -22,7 +22,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.InferredMemberName
             CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInferredTupleName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -47,7 +49,9 @@ class C
 
         [Fact]
         [WorkItem(24480, "https://github.com/dotnet/roslyn/issues/24480")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInferredTupleName_WithAmbiguity()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -62,7 +66,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInferredTupleNameAfterCommaWithCSharp6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestActionCountAsync(
 @"
@@ -77,7 +83,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInferredTupleNameAfterCommaWithCSharp7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestActionCountAsync(
 @"
@@ -92,7 +100,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInferredTupleNameWithTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -118,7 +128,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInferredAnonymousTypeMemberName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -143,7 +155,9 @@ class C
 
         [Fact]
         [WorkItem(24480, "https://github.com/dotnet/roslyn/issues/24480")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInferredAnonymousTypeMemberName_WithAmbiguity()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -158,7 +172,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInferredAnonymousTypeMemberNameWithTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"

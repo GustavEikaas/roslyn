@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertToInterpolatedSt
             => new CSharpConvertConcatenationToInterpolatedStringRefactoringProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnSimpleString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class C
@@ -29,7 +31,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertToInterpolatedSt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnConcatenatedStrings1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class C
@@ -42,7 +46,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertToInterpolatedSt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnConcatenatedStrings2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class C
@@ -55,7 +61,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertToInterpolatedSt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithStringOnLeft()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C
@@ -75,7 +83,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertToInterpolatedSt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRightSideOfString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C
@@ -95,7 +105,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertToInterpolatedSt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithStringOnRight()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C
@@ -115,7 +127,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertToInterpolatedSt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithComplexExpressionOnLeft()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C
@@ -135,7 +149,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConvertToInterpolatedSt
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithTrivia1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -161,7 +177,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithComplexExpressions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C
@@ -181,7 +199,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithEscapes1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -203,7 +223,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithEscapes2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -225,7 +247,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithVerbatimString1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C
@@ -245,7 +269,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithMixedStringTypes1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class C
@@ -258,7 +284,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithMixedStringTypes2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class C
@@ -271,7 +299,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithOverloadedOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class D
@@ -305,7 +335,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithOverloadedOperator2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class D
@@ -326,7 +358,9 @@ public class C
 
         [WorkItem(16820, "https://github.com/dotnet/roslyn/issues/16820")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithMultipleStringConcatinations()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C
@@ -347,7 +381,9 @@ public class C
 
         [WorkItem(16820, "https://github.com/dotnet/roslyn/issues/16820")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithMultipleStringConcatinations2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C
@@ -368,7 +404,9 @@ public class C
 
         [WorkItem(16820, "https://github.com/dotnet/roslyn/issues/16820")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithMultipleStringConcatinations3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C
@@ -389,7 +427,9 @@ public class C
 
         [WorkItem(16820, "https://github.com/dotnet/roslyn/issues/16820")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithMultipleStringConcatinations4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class C
@@ -403,7 +443,9 @@ public class C
 
         [WorkItem(20943, "https://github.com/dotnet/roslyn/issues/20943")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithDynamic1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -418,7 +460,9 @@ public class C
 
         [WorkItem(20943, "https://github.com/dotnet/roslyn/issues/20943")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithDynamic2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -433,7 +477,9 @@ public class C
 
         [WorkItem(23536, "https://github.com/dotnet/roslyn/issues/23536")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithStringLiteralWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             {
                 await TestInRegularAndScriptAsync(
@@ -456,7 +502,9 @@ public class C
 
         [WorkItem(23536, "https://github.com/dotnet/roslyn/issues/23536")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithStringLiteralWithDoubleBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             {
                 await TestInRegularAndScriptAsync(
@@ -479,7 +527,9 @@ public class C
 
         [WorkItem(23536, "https://github.com/dotnet/roslyn/issues/23536")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithMultipleStringLiteralsWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             {
                 await TestInRegularAndScriptAsync(
@@ -502,7 +552,9 @@ public class C
 
         [WorkItem(23536, "https://github.com/dotnet/roslyn/issues/23536")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithVerbatimStringWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C
@@ -523,7 +575,9 @@ public class C
 
         [WorkItem(23536, "https://github.com/dotnet/roslyn/issues/23536")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertToInterpolatedString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithMultipleVerbatimStringsWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class C

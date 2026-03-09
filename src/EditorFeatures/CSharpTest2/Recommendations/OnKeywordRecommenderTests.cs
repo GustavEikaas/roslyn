@@ -9,14 +9,18 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Recommendations
     public class OnKeywordRecommenderTests : KeywordRecommenderTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAtRoot_Interactive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(SourceCodeKind.Script,
 @"$$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterClass_Interactive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(SourceCodeKind.Script,
 @"class C { }
@@ -24,7 +28,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterGlobalStatement_Interactive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(SourceCodeKind.Script,
 @"System.Console.WriteLine();
@@ -32,7 +38,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterGlobalVariableDeclaration_Interactive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(SourceCodeKind.Script,
 @"int i = 0;
@@ -40,21 +48,27 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInUsingAlias()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(
 @"using Goo = $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInEmptyStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(AddInsideMethod(
 @"$$"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterJoinInExpr1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyKeywordAsync(AddInsideMethod(
 @"var q = from x in y
@@ -62,7 +76,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterJoinInExpr2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyKeywordAsync(AddInsideMethod(
 @"var q = from x in y
@@ -70,7 +86,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterOn1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(AddInsideMethod(
 @"var q = from x in y
@@ -78,7 +96,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterOn2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(AddInsideMethod(
 @"var q = from x in y
@@ -86,7 +106,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterOn3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(AddInsideMethod(
 @"var q = from x in y
@@ -94,7 +116,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterOn4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(AddInsideMethod(
 @"var q = from x in y
@@ -102,7 +126,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterOn5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(AddInsideMethod(
 @"var q = from x in y
@@ -110,7 +136,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterOn6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(AddInsideMethod(
 @"var q = from x in y
@@ -118,7 +146,9 @@ $$");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordRecommending)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterIn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyAbsenceAsync(AddInsideMethod(
 @"var q = from x in y

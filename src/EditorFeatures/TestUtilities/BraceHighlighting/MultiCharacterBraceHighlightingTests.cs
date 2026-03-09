@@ -90,7 +90,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "$$ <@    @>");
@@ -98,7 +100,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnLeftOfStartBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "$$[|<@|]    [|@>|]");
@@ -106,7 +110,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsideStartBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "[|<$$@|]    [|@>|]");
@@ -114,7 +120,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnRightOfStartBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@$$    @>");
@@ -122,7 +130,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnLeftOfCloseBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@    $$@>");
@@ -130,7 +140,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsideCloseBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "[|<@|]    [|@$$>|]");
@@ -138,7 +150,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnRightOfCloseBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "[|<@|]    [|@>$$|]");
@@ -146,7 +160,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterBrace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@    @> $$");
@@ -156,7 +172,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnBrace2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "$$ <@    @><@    @>");
@@ -164,7 +182,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnLeftOfStartBrace2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "$$[|<@|]    [|@>|]<@    @>");
@@ -172,7 +192,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsideStartBrace2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "[|<$$@|]    [|@>|]<@    @>");
@@ -180,7 +202,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnRightOfStartBrace2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@$$    @><@    @>");
@@ -188,7 +212,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnLeftOfCloseBrace2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@    $$@><@    @>");
@@ -196,7 +222,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsideCloseBrace3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "[|<@|]    [|@$$>|]<@    @>");
@@ -204,7 +232,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnRightOfCloseBrace2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "[|<@|]    [|@>|]$$[|<@|]    [|@>|]");
@@ -212,7 +242,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInSecondBracePair()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@    @>[|<$$@|]    [|@>|]");
@@ -220,7 +252,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterSecondBracePairStart()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@    @><@$$    @>");
@@ -228,7 +262,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotBeforeSecondBracePairEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@    @><@    $$@>");
@@ -236,7 +272,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInSecondBracePairEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@    @>[|<@|]    [|@$$>|]");
@@ -244,7 +282,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAtSecondBracePairEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@    @>[|<@|]    [|@>|]$$");
@@ -252,7 +292,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.BraceHighlighting
 
         [WorkItem(18050, "https://github.com/dotnet/roslyn/issues/18050")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAfterSecondBracePairEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestBraceHighlightingAsync(
 "<@    @><@    @>  $$");

@@ -17,7 +17,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.GenerateFromMembers.Add
 
         [WorkItem(308077, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/308077")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAdd1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -49,7 +51,9 @@ class Program
 
         [WorkItem(308077, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/308077")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddOptional1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -82,7 +86,9 @@ index: 1);
 
         [WorkItem(308077, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/308077")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddToConstructorWithMostMatchingParameters1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -126,7 +132,9 @@ class Program
 
         [WorkItem(308077, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/308077")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddOptionalToConstructorWithMostMatchingParameters1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -170,7 +178,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSmartTagDisplayText1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestSmartTagTextAsync(
 @"using System.Collections.Generic;
@@ -189,7 +199,9 @@ string.Format(FeaturesResources.Add_parameters_to_0, "Program(bool)"));
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSmartTagDisplayText2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestSmartTagTextAsync(
 @"using System.Collections.Generic;
@@ -209,7 +221,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -236,7 +250,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTupleWithNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -263,7 +279,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTupleWithDifferentNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -279,7 +297,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTupleOptional()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -307,7 +327,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTupleOptionalWithNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -335,7 +357,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTupleOptionalWithDifferentNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -351,7 +375,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTupleWithNullable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -378,7 +404,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddConstructorParametersFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTupleWithGenericss()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program

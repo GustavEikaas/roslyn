@@ -152,7 +152,9 @@ namespace Microsoft.VisualStudio.IntegrationTest.Utilities
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private static async Task<T> RetryAsyncHelper<T>(Func<Task<T>> action, TimeSpan delay)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             while (true)
             {

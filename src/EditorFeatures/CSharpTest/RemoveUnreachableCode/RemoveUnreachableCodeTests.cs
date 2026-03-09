@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnreachableCode
             => (new CSharpRemoveUnreachableCodeDiagnosticAnalyzer(), new CSharpRemoveUnreachableCodeCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleUnreachableStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -39,7 +41,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInUnreachableIfBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -66,7 +70,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInIfWithNoBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -81,7 +87,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveSubsequentStatements()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -105,7 +113,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFromSubsequentStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -129,7 +139,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveSubsequentStatementsExcludingLocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -158,7 +170,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveSubsequentStatementsExcludingMultipleLocalFunctions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -189,7 +203,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveSubsequentStatementsInterspersedWithMultipleLocalFunctions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -224,7 +240,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveSubsequentStatementsInterspersedWithMultipleLocalFunctions2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -260,7 +278,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveSubsequentStatementsUpToNextLabel()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -293,7 +313,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnUnreachableLabel()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -322,7 +344,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnReachableLabel()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -347,7 +371,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -381,7 +407,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInLambdaInExpressionBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -411,7 +439,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleRemovalDoesNotTouchCodeInUnrelatedLocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -446,7 +476,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -480,7 +512,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -522,7 +556,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -575,7 +611,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -620,7 +658,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -649,7 +689,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInUnreachableInSwitchSection1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -681,7 +723,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDirectives1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -710,7 +754,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDirectives2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -737,7 +783,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDirectives3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -765,7 +813,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForLoop1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -801,7 +851,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnreachableCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInfiniteForLoop()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"

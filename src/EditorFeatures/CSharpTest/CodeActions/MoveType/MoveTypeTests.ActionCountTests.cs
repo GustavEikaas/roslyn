@@ -10,7 +10,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
     public partial class MoveTypeTests : CSharpMoveTypeTestsBase
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveType_ActionCounts_RenameOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -24,7 +26,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveType_MissingNotOnHeader1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -38,7 +42,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveType_MissingNotOnHeader2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -52,7 +58,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveType_MissingNotOnHeader3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -65,7 +73,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveType_ActionCounts_MoveOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -83,7 +93,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveType_ActionCounts_RenameAndMove()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1
@@ -101,7 +113,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.MoveType
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsMoveType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MoveType_ActionCounts_All()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"namespace N1

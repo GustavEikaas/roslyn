@@ -123,7 +123,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
             _registrationService.Unregister(_workspace);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WaitForTags()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             if (_solutionCrawlerService != null)
             {

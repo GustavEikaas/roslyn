@@ -11,7 +11,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PreferFrame
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocument_DeclarationContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>
@@ -119,7 +121,9 @@ class Program2
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInProject_DeclarationContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>
@@ -227,7 +231,9 @@ class Program2
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInSolution_DeclarationContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>
@@ -335,7 +341,9 @@ class Program2
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsUseFrameworkType)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInSolution_MemberAccessContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>

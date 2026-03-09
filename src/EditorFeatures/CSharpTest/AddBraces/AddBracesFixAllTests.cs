@@ -9,7 +9,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddBraces
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocument1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 class Program1
@@ -42,7 +44,9 @@ class Program1
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocument2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 class Program1
@@ -76,7 +80,9 @@ class Program1
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>
@@ -163,7 +169,9 @@ class Program3
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInProject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>
@@ -247,7 +255,9 @@ class Program3
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInSolution()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var input = @"
 <Workspace>

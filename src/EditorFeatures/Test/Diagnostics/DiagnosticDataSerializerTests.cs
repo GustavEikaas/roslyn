@@ -27,7 +27,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
     public class DiagnosticDataSerializerTests : TestBase
     {
         [Fact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SerializationTest_Document()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new TestWorkspace(EditorServicesUtil.ExportProvider, workspaceKind: "DiagnosticDataSerializerTest"))
             {
@@ -70,7 +72,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SerializationTest_Project()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new TestWorkspace(EditorServicesUtil.ExportProvider, workspaceKind: "DiagnosticDataSerializerTest"))
             {
@@ -257,7 +261,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
                     public Task<bool> WriteStreamAsync(string name, Stream stream, CancellationToken cancellationToken = default)
                     {
                         _map[name] = new MemoryStream();
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                         stream.CopyTo(_map[name]);
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
 
                         return SpecializedTasks.True;
                     }
@@ -265,7 +271,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
                     public Task<bool> WriteStreamAsync(Project project, string name, Stream stream, CancellationToken cancellationToken = default)
                     {
                         _map[Tuple.Create(project, name)] = new MemoryStream();
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                         stream.CopyTo(_map[Tuple.Create(project, name)]);
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
 
                         return SpecializedTasks.True;
                     }
@@ -273,7 +281,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
                     public Task<bool> WriteStreamAsync(Document document, string name, Stream stream, CancellationToken cancellationToken = default)
                     {
                         _map[Tuple.Create(document, name)] = new MemoryStream();
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                         stream.CopyTo(_map[Tuple.Create(document, name)]);
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
 
                         return SpecializedTasks.True;
                     }

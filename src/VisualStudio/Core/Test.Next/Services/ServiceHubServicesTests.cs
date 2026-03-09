@@ -57,7 +57,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoteHostSynchronize()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test { void Method() { } }";
 
@@ -77,7 +79,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoteHostTextSynchronize()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test { void Method() { } }";
 
@@ -114,7 +118,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTodoComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"// TODO: Test";
 
@@ -135,7 +141,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDesignerAttributes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"[System.ComponentModel.DesignerCategory(""Form"")]
                 class Test { }";
@@ -157,7 +165,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoteHostSynchronizeGlobalAssets()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test { void Method() { } }";
 
@@ -177,7 +187,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnknownProject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace(TestHostServices.CreateHostServices());
             var solution = workspace.CurrentSolution.AddProject("unknown", "unknown", NoCompilationConstants.LanguageName).Solution;
@@ -193,7 +205,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoteHostSynchronizeIncrementalUpdate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp(Array.Empty<string>(), metadataReferences: null))
             {
@@ -361,7 +375,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
             return (project, document);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private static async Task UpdatePrimaryWorkspace(InProcRemoteHostClient client, Solution solution)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await client.TryRunRemoteAsync(
                 WellKnownRemoteHostServices.RemoteHostService, solution,
@@ -443,7 +459,7 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
 
         private static RemoteHostService CreateService()
         {
-            var tuple = FullDuplexStream.CreateStreams();
+            var tuple = Nerdbank.Streams.FullDuplexStream.CreatePair();
             return new RemoteHostService(tuple.Item1, new InProcRemoteHostClient.ServiceProvider(runCacheCleanup: false));
         }
 

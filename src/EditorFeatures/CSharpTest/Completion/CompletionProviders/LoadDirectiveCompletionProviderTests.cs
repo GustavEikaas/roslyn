@@ -39,7 +39,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IsCommitCharacterTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var commitCharacters = new[] { '"', '\\' };
             await VerifyCommitCharactersAsync("#load \"$$", textTypedSoFar: "", validChars: commitCharacters);

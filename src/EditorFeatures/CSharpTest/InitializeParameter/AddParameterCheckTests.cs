@@ -19,14 +19,18 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.InitializeParameter
             => new CSharpAddParameterCheckCodeRefactoringProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"[||]");
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleReferenceType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -54,7 +58,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -82,7 +88,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnValueType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -97,7 +105,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnInterfaceParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -110,7 +120,9 @@ interface I
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnAbstractParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -123,7 +135,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnExternParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -136,7 +150,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnPartialMethodDefinition1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -153,7 +169,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnPartialMethodDefinition2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -170,7 +188,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnPartialMethodImplementation1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -202,7 +222,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnPartialMethodImplementation2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -234,7 +256,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnExternMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -247,7 +271,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateExistingFieldAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -277,7 +303,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateExistingPropertyAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -307,7 +335,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotUseThrowExpressionBeforeCSharp7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"
@@ -342,7 +372,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RespectUseThrowExpressionOption()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -378,7 +410,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateExpressionBody1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -404,7 +438,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateExpressionBody2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -433,7 +469,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateExpressionBody3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -464,7 +502,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateLocalFunctionExpressionBody_NonVoid()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -499,7 +539,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateLocalFunctionExpressionBody_Void()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -534,7 +576,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateLambdaExpressionBody_NonVoid()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -573,7 +617,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUpdateLambdaExpressionBody_Void()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -611,7 +657,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsertAfterExistingNullCheck1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -646,7 +694,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsertBeforeExistingNullCheck1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -681,7 +731,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithExistingNullCheck1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -700,7 +752,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithExistingNullCheck2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -716,7 +770,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithExistingNullCheck3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -734,7 +790,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithExistingNullCheck4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -752,7 +810,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithExistingNullCheck5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -771,7 +831,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithExistingNullCheck6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -791,7 +853,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithExistingNullCheckInLocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -814,7 +878,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithExistingNullCheckInLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -830,7 +896,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithoutParameterName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -845,7 +913,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -873,7 +943,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -902,7 +974,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnSimpleLambdaParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -937,7 +1011,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnSimpleLambdaParameter_EmptyBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -970,7 +1046,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnParenthesizedLambdaParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -1005,7 +1083,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnAnonymousMethodParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -1040,7 +1120,9 @@ class C
 
         [WorkItem(20983, "https://github.com/dotnet/roslyn/issues/20983")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnLocalFunctionParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -1074,7 +1156,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnIndexerParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -1091,7 +1175,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSpecialStringCheck1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -1119,7 +1205,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSpecialStringCheck2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -1148,7 +1236,9 @@ class C
 
         [WorkItem(19173, "https://github.com/dotnet/roslyn/issues/19173")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnUnboundTypeWithExistingNullCheck()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -1166,7 +1256,9 @@ class C
 
         [WorkItem(19174, "https://github.com/dotnet/roslyn/issues/19174")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRespectPredefinedTypePreferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -1199,7 +1291,9 @@ class Program
 
         [WorkItem(19172, "https://github.com/dotnet/roslyn/issues/19172")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreferNoBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -1228,7 +1322,9 @@ class C
 
         [WorkItem(19956, "https://github.com/dotnet/roslyn/issues/19956")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -1255,7 +1351,9 @@ class C
 
         [WorkItem(21501, "https://github.com/dotnet/roslyn/issues/21501")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInArrowExpression1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -1291,7 +1389,9 @@ class C
 
         [WorkItem(21501, "https://github.com/dotnet/roslyn/issues/21501")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInArrowExpression2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -1327,7 +1427,9 @@ class C
 
         [WorkItem(21501, "https://github.com/dotnet/roslyn/issues/21501")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingInArrowExpression1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -1347,7 +1449,9 @@ class C
 
         [WorkItem(21501, "https://github.com/dotnet/roslyn/issues/21501")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingInArrowExpression2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -1371,7 +1475,9 @@ class C
 
         [WorkItem(21501, "https://github.com/dotnet/roslyn/issues/21501")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInitializeParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInArrowExpression3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"

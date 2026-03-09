@@ -18,7 +18,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
             => (new CSharpUseObjectInitializerDiagnosticAnalyzer(), new CSharpUseObjectInitializerCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnVariableDeclarator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -141,7 +143,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnAssignmentExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -171,7 +175,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStopOnDuplicateMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -201,7 +207,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComplexInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -235,7 +243,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnCompoundAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -267,7 +277,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithExistingInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -284,7 +296,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingBeforeCSharp3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -301,7 +315,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocument1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -340,7 +356,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocument2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -379,7 +397,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocument3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -421,7 +441,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseObjectInitializer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -454,7 +476,9 @@ class C
 
         [WorkItem(15459, "https://github.com/dotnet/roslyn/issues/15459")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingInNonTopLevelObjectInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C {
@@ -469,7 +493,9 @@ class C
 
         [WorkItem(17853, "https://github.com/dotnet/roslyn/issues/17853")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingForDynamic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System.Dynamic;
@@ -486,7 +512,9 @@ class C
 
         [WorkItem(17953, "https://github.com/dotnet/roslyn/issues/17953")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingAcrossPreprocessorDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -506,7 +534,9 @@ public class Goo
 
         [WorkItem(17953, "https://github.com/dotnet/roslyn/issues/17953")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAvailableInsidePreprocessorDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -541,7 +571,9 @@ public class Goo
 
         [WorkItem(19253, "https://github.com/dotnet/roslyn/issues/19253")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestKeepBlankLinesAfter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -582,7 +614,9 @@ class MyClass
 
         [WorkItem(23368, "https://github.com/dotnet/roslyn/issues/23368")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithExplicitImplementedInterfaceMembers1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -606,7 +640,9 @@ class MyClass
 
         [WorkItem(23368, "https://github.com/dotnet/roslyn/issues/23368")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithExplicitImplementedInterfaceMembers2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -633,7 +669,9 @@ class MyClass
 
         [WorkItem(23368, "https://github.com/dotnet/roslyn/issues/23368")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseObjectInitializer)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithExplicitImplementedInterfaceMembers3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"

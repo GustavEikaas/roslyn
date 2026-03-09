@@ -19,7 +19,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.GenerateConstructorFrom
             => new GenerateConstructorFromMembersCodeRefactoringProvider((IPickMembersService)parameters.fixProviderData);
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -42,7 +44,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleFieldWithCodeStyle()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -63,7 +67,9 @@ options: Option(CSharpCodeStyleOptions.PreferExpressionBodiedConstructors, CShar
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseExpressionBodyWhenOnSingleLine_AndIsSingleLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -84,7 +90,9 @@ options: Option(CSharpCodeStyleOptions.PreferExpressionBodiedConstructors, CShar
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUseExpressionBodyWhenOnSingleLine_AndIsNotSingleLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -111,7 +119,9 @@ options: Option(CSharpCodeStyleOptions.PreferExpressionBodiedConstructors, CShar
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleFields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -137,7 +147,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSecondField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -172,7 +184,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldAssigningConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -208,7 +222,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFieldAssigningConstructor2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -244,7 +260,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDelegatingConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -280,7 +298,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithExistingConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -304,7 +324,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultipleProperties()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Z
@@ -326,7 +348,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiplePropertiesWithQualification()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Z
@@ -348,7 +372,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -371,7 +397,9 @@ struct S
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStruct1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -394,7 +422,9 @@ struct S
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStruct2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -421,7 +451,9 @@ struct S
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestStruct3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -448,7 +480,9 @@ struct S
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -471,7 +505,9 @@ class Program<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSmartTagText1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestSmartTagTextAsync(
 @"using System.Collections.Generic;
@@ -485,7 +521,9 @@ string.Format(FeaturesResources.Generate_constructor_0_1, "Program", "bool, Hash
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSmartTagText2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestSmartTagTextAsync(
 @"using System.Collections.Generic;
@@ -504,7 +542,9 @@ string.Format(FeaturesResources.Generate_field_assigning_constructor_0_1, "Progr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSmartTagText3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestSmartTagTextAsync(
 @"using System.Collections.Generic;
@@ -524,7 +564,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestContextualKeywordName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -543,7 +585,9 @@ index: 1);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenerateConstructorNotOfferedForDuplicate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -563,7 +607,9 @@ class X
 
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Tuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -587,7 +633,9 @@ class Z
 
         [WorkItem(14219, "https://github.com/dotnet/roslyn/issues/14219")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnderscoreInName1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -607,7 +655,9 @@ class Z
 
         [WorkItem(14219, "https://github.com/dotnet/roslyn/issues/14219")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnderscoreInName_PreferThis()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -628,7 +678,9 @@ options: Option(CodeStyleOptions.QualifyFieldAccess, CodeStyleOptions.TrueWithSu
 
         [WorkItem(13944, "https://github.com/dotnet/roslyn/issues/13944")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetter_Only_Auto_Props()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"abstract class Contribution
@@ -652,7 +704,9 @@ options: Option(CodeStyleOptions.QualifyFieldAccess, CodeStyleOptions.TrueWithSu
 
         [WorkItem(13944, "https://github.com/dotnet/roslyn/issues/13944")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAbstract_Getter_Only_Auto_Props()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"abstract class Contribution
@@ -664,7 +718,9 @@ new TestParameters(options: Option(CodeStyleOptions.QualifyFieldAccess, CodeStyl
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleFieldWithDialog()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"using System.Collections.Generic;
@@ -689,7 +745,9 @@ chosenSymbols: new[] { "a" });
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleFieldWithDialog2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"using System.Collections.Generic;
@@ -713,7 +771,9 @@ chosenSymbols: new[] { "a" });
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnClassAttributes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -726,7 +786,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPickNoFieldWithDialog()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"using System.Collections.Generic;
@@ -750,7 +812,9 @@ chosenSymbols: new string[] { });
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReorderFieldsWithDialog()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"using System.Collections.Generic;
@@ -778,7 +842,9 @@ chosenSymbols: new string[] { "b", "a" });
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddNullChecks1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -811,7 +877,9 @@ optionsCallback: options => options[0].Value = true);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddNullChecks2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -851,7 +919,9 @@ parameters: new TestParameters(options:
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnMember1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -865,7 +935,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnMember2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -883,7 +955,9 @@ class Z
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnMember3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -903,7 +977,9 @@ class Z
 
         [WorkItem(21067, "https://github.com/dotnet/roslyn/pull/21067")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFinalCaretPosition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -927,7 +1003,9 @@ class Z
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
         [WorkItem(20595, "https://github.com/dotnet/roslyn/issues/20595")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ProtectedConstructorShouldBeGeneratedForAbstractClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"abstract class C 
@@ -948,7 +1026,9 @@ options: Option(CodeStyleOptions.QualifyFieldAccess, CodeStyleOptions.TrueWithSu
 
         [WorkItem(17643, "https://github.com/dotnet/roslyn/issues/17643")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDialogNoBackingField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -972,7 +1052,9 @@ chosenSymbols: null);
 
         [WorkItem(25690, "https://github.com/dotnet/roslyn/issues/25690")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateConstructorFromMembers)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDialogNoIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"
@@ -997,7 +1079,9 @@ chosenSymbols: null);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsGenerateEqualsAndGetHashCode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDialogSetterOnlyProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestWithPickMembersDialogAsync(
 @"

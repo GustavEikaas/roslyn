@@ -24,7 +24,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Threading
         }
 
         [ConditionalWpfFact(typeof(x86))]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test_Enqueue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var asyncToken = EmptyAsyncToken.Instance;
             var ran = false;
@@ -41,7 +43,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Threading
         }
 
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test_Cancellation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var waitEvent = new AutoResetEvent(initialState: false))
             {
@@ -64,7 +68,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Threading
         }
 
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test_Delay()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // NOTE: Don't be tempted to use DateTime or Stopwatch to measure this
             // Switched to Environment.TickCount use the same clock as the notification
@@ -89,7 +95,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Threading
         }
 
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test_HeavyMultipleCall()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var asyncToken = EmptyAsyncToken.Instance;
             var count = 0;
@@ -141,7 +149,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Threading
             Assert.True(_service.IsEmpty_TestOnly);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task PumpWait()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             while (!_done)
             {

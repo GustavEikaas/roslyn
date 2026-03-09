@@ -26,7 +26,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
             => TestInRegularAndScript1Async(initialMarkup, expected, parameters: new TestParameters(options: options));
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArithmeticPrecedence()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -46,7 +48,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoArithmeticOnLowerPrecedence()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -59,7 +63,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfArithmeticPrecedenceStaysTheSame()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -72,7 +78,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfArithmeticPrecedenceIsNotEnforced1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -85,7 +93,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfArithmeticPrecedenceIsNotEnforced2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -98,7 +108,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRelationalPrecedence()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -118,7 +130,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLogicalPrecedence()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -138,7 +152,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoLogicalOnLowerPrecedence()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -151,7 +167,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfLogicalPrecedenceStaysTheSame()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -164,7 +182,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfLogicalPrecedenceIsNotEnforced()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -177,7 +197,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMixedArithmeticAndLogical()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -190,7 +212,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLogicalPrecedenceMultipleEqualPrecedenceParts1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -210,7 +234,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLogicalPrecedenceMultipleEqualPrecedenceParts2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -230,7 +256,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestShiftPrecedence1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -250,7 +278,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestShiftPrecedence2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -270,7 +300,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestShiftPrecedence3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -283,7 +315,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfShiftPrecedenceStaysTheSame1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -296,7 +330,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotIfShiftPrecedenceStaysTheSame2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -309,7 +345,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualityPrecedence1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -322,7 +360,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualityPrecedence2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -335,7 +375,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualityPrecedence3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -348,7 +390,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualityPrecedence4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -361,7 +405,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCoalescePrecedence1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -374,7 +420,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCoalescePrecedence2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -387,7 +435,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCoalescePrecedence3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -400,7 +450,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBitwisePrecedence1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -420,7 +472,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBitwisePrecedence2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -433,7 +487,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBitwisePrecedence3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -453,7 +509,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestBitwisePrecedence4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -466,7 +524,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotForEqualityAfterEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -479,7 +539,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotForAssignmentEqualsAfterLocal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -492,7 +554,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForAssignmentAndEquality1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -505,7 +569,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingForAssignmentAndEquality2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -518,7 +584,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnclearCast1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -531,7 +599,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnclearCast_NotOfferedWithIgnore()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -544,7 +614,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnclearCast_NotOfferedWithRemoveForClarity()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -557,7 +629,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnclearCast2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -570,7 +644,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnclearCast3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -583,7 +659,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnclearCast4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -596,7 +674,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotForPrimary()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -609,7 +689,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotForMemberAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -622,7 +704,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotForCastOfCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -635,7 +719,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotForNonAmbiguousUnary()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -648,7 +734,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -663,7 +751,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -687,7 +777,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -702,7 +794,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddRequiredParentheses
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddRequiredParentheses)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSeams1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C

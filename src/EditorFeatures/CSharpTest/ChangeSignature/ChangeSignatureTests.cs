@@ -12,7 +12,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ChangeSignature
     {
         [WorkItem(8333, "https://github.com/dotnet/roslyn/issues/8333")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInExpressionBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Ext
@@ -25,7 +27,9 @@ class Ext
 
         [WorkItem(1905, "https://github.com/dotnet/roslyn/issues/1905")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterSemicolonForInvocationInExpressionStatement_ViaCommand()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -62,7 +66,9 @@ class Program
         }
         
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterSemicolonForInvocationInExpressionStatement_ViaCodeAction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Program
@@ -83,7 +89,9 @@ class Program
 
         [WorkItem(17309, "https://github.com/dotnet/roslyn/issues/17309")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInLeadingWhitespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Ext
@@ -99,7 +107,9 @@ class Ext
 
         [WorkItem(17309, "https://github.com/dotnet/roslyn/issues/17309")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInLeadingTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Ext
@@ -115,7 +125,9 @@ class Ext
 
         [WorkItem(17309, "https://github.com/dotnet/roslyn/issues/17309")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInLeadingTrivia2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Ext
@@ -131,7 +143,9 @@ class Ext
 
         [WorkItem(17309, "https://github.com/dotnet/roslyn/issues/17309")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInLeadingDocComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Ext
@@ -147,7 +161,9 @@ class Ext
 
         [WorkItem(17309, "https://github.com/dotnet/roslyn/issues/17309")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInLeadingDocComment2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Ext
@@ -163,7 +179,9 @@ class Ext
 
         [WorkItem(17309, "https://github.com/dotnet/roslyn/issues/17309")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInLeadingAttributes1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Ext
@@ -179,7 +197,9 @@ class Ext
 
         [WorkItem(17309, "https://github.com/dotnet/roslyn/issues/17309")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInLeadingAttributes2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Ext
@@ -195,7 +215,9 @@ class Ext
 
         [WorkItem(17309, "https://github.com/dotnet/roslyn/issues/17309")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInLeadingAttributes3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Ext
@@ -211,7 +233,9 @@ class Ext
 
         [WorkItem(17309, "https://github.com/dotnet/roslyn/issues/17309")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.ChangeSignature)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInConstraints()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class Ext

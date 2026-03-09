@@ -27,7 +27,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.NavigateTo
             => TestWorkspace.CreateCSharp(content, exportProvider: exportProvider);
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoItemsForEmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("", async w =>
             {
@@ -36,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.NavigateTo
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -49,7 +53,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.NavigateTo
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindVerbatimClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class @static
@@ -66,7 +72,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.NavigateTo
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindNestedClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -85,7 +93,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.NavigateTo
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindMemberInANestedClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -107,7 +117,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.NavigateTo
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindGenericClassWithConstraints()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System.Collections;
@@ -122,7 +134,9 @@ class Goo<T> where T : IEnumerable
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindGenericMethodWithConstraints()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -140,7 +154,9 @@ class Goo<U>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindPartialClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public partial class Goo
@@ -163,7 +179,9 @@ partial class Goo
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindTypesInMetadata()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -176,7 +194,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindClassInNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace Bar
@@ -192,7 +212,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"struct Bar
@@ -205,7 +227,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"enum Colors
@@ -221,7 +245,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindEnumMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"enum Colors
@@ -237,7 +263,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindField1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -251,7 +279,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindField2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -265,7 +295,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindField3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -278,7 +310,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindVerbatimField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -296,7 +330,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindPtrField1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -309,7 +345,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindPtrField2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -323,7 +361,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindConstField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -337,7 +377,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var program = @"class Goo { int[] arr; public int this[int i] { get { return arr[i]; } set { arr[i] = value; } } }";
             await TestAsync(program, async w =>
@@ -348,7 +390,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var program = "class Goo { public event EventHandler ChangedEventHandler; }";
             await TestAsync(program, async w =>
@@ -359,7 +403,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindAutoProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -373,7 +419,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -387,7 +435,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindVerbatimMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -405,7 +455,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindParameterizedMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -421,7 +473,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -437,7 +491,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindParameterizedConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -453,7 +509,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindStaticConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -469,7 +527,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindPartialMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("partial class Goo { partial void Bar(); } partial class Goo { partial void Bar() { Console.Write(\"hello\"); } }", async w =>
             {
@@ -483,7 +543,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindPartialMethodDefinitionOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"partial class Goo
@@ -497,7 +559,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindPartialMethodImplementationOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"partial class Goo
@@ -513,7 +577,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindOverriddenMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var program = "class Goo { public virtual string Name { get; set; } } class DogBed : Goo { public override string Name { get { return base.Name; } set {} } }";
             await TestAsync(program, async w =>
@@ -542,7 +608,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public interface IGoo
@@ -555,7 +623,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindDelegateInNamespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace Goo
@@ -569,7 +639,9 @@ Class Program { FileStyleUriParser f; }", async w =>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindLambdaExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -585,7 +657,9 @@ class Goo
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -599,7 +673,9 @@ class Goo
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindClassAndMethodWithSameName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Goo
@@ -624,7 +700,9 @@ class Test
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindMethodNestedInGenericTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class A<T>
@@ -646,7 +724,9 @@ class Test
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OrderingOfConstructorsAndTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C1
@@ -682,7 +762,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NavigateToMethodWithNullableParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -698,7 +780,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StartStopSanity()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Verify that multiple calls to start/stop and dispose don't blow up
             await TestAsync(
@@ -720,7 +804,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DescriptionItems()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("public\r\nclass\r\nGoo\r\n{ }", async w =>
             {
@@ -742,7 +828,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TermSplittingTest1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "class SyllableBreaking {int GetKeyWord; int get_key_word; string get_keyword; int getkeyword; int wake;}";
             await TestAsync(source, async w =>
@@ -761,7 +849,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TermSplittingTest2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "class SyllableBreaking {int GetKeyWord; int get_key_word; string get_keyword; int getkeyword; int wake;}";
             await TestAsync(source, async w =>
@@ -777,7 +867,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TermSplittingTest3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "class SyllableBreaking {int GetKeyWord; int get_key_word; string get_keyword; int getkeyword; int wake;}";
             await TestAsync(source, async w =>
@@ -793,7 +885,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TermSplittingTest4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "class SyllableBreaking {int GetKeyWord; int get_key_word; string get_keyword; int getkeyword; int wake;}";
             await TestAsync(source, async w =>
@@ -804,7 +898,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TermSplittingTest5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "class SyllableBreaking {int GetKeyWord; int get_key_word; string get_keyword; int getkeyword; int wake;}";
             await TestAsync(source, async w =>
@@ -815,7 +911,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TermSplittingTest6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "class SyllableBreaking {int GetKeyWord; int get_key_word; string get_keyword; int getkeyword; int wake;}";
             await TestAsync(source, async w =>
@@ -833,7 +931,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TermSplittingTest7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "class SyllableBreaking {int GetKeyWord; int get_key_word; string get_keyword; int getkeyword; int wake;}";
             await TestAsync(source, async w =>
@@ -844,7 +944,9 @@ class C2
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIndexer1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source =
 @"class C
@@ -874,7 +976,9 @@ class D
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DottedPattern1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "namespace Goo { namespace Bar { class Baz { void Quux() { } } } }";
             await TestAsync(source, async w =>
@@ -891,7 +995,9 @@ class D
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DottedPattern2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "namespace Goo { namespace Bar { class Baz { void Quux() { } } } }";
             await TestAsync(source, async w =>
@@ -907,7 +1013,9 @@ class D
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DottedPattern3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "namespace Goo { namespace Bar { class Baz { void Quux() { } } } }";
             await TestAsync(source, async w =>
@@ -924,7 +1032,9 @@ class D
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DottedPattern4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "namespace Goo { namespace Bar { class Baz { void Quux() { } } } }";
             await TestAsync(source, async w =>
@@ -941,7 +1051,9 @@ class D
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DottedPattern5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "namespace Goo { namespace Bar { class Baz { void Quux() { } } } }";
             await TestAsync(source, async w =>
@@ -958,7 +1070,9 @@ class D
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DottedPattern6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "namespace Goo { namespace Bar { class Baz { void Quux() { } } } }";
             await TestAsync(source, async w =>
@@ -975,7 +1089,9 @@ class D
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
         [WorkItem(7855, "https://github.com/dotnet/Roslyn/issues/7855")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DottedPattern7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = "namespace Goo { namespace Bar { class Baz<X,Y,Z> { void Quux() { } } } }";
             await TestAsync(source, async w =>
@@ -994,7 +1110,9 @@ class D
         [WorkItem(1174255, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1174255")]
         [WorkItem(8009, "https://github.com/dotnet/roslyn/issues/8009")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NavigateToGeneratedFiles()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.Create(@"
 <Workspace>
@@ -1039,7 +1157,9 @@ class D
 
         [WorkItem(11474, "https://github.com/dotnet/roslyn/pull/11474")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FindFuzzy1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -1056,7 +1176,9 @@ class D
 
         [WorkItem(18843, "https://github.com/dotnet/roslyn/issues/18843")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.NavigateTo)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test__arglist()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C

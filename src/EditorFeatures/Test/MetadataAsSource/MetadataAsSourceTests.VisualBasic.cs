@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.MetadataAsSource
         public class VisualBasic
         {
             [Fact, WorkItem(530123, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530123"), Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task TestGenerateTypeInModule()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var metadataSource = @"
 Module M
@@ -36,7 +38,9 @@ End Module");
             // change in the future
             [WorkItem(530526, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530526")]
             [Fact, Trait(Traits.Feature, Traits.Features.MetadataAsSource)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task BracketedIdentifierSimplificationTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var expected = $@"#Region ""{FeaturesResources.Assembly} mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089""
 ' mscorlib.v4_6_1038_0.dll

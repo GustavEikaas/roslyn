@@ -18,7 +18,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseNullPropagation
             => (new CSharpUseNullPropagationDiagnosticAnalyzer(), new CSharpUseNullPropagationCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLeft_Equals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -42,7 +44,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnCSharp5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -57,7 +61,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRight_Equals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -81,7 +87,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLeft_NotEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -105,7 +113,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -129,7 +139,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndObjectCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -153,7 +165,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRight_NotEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -177,7 +191,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -201,7 +217,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConditionalAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -225,7 +243,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMemberAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -249,7 +269,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnSimpleMatch()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -264,7 +286,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestParenthesizedCondition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -288,7 +312,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -314,7 +340,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -339,7 +367,9 @@ class C
 
         [WorkItem(15505, "https://github.com/dotnet/roslyn/issues/15505")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOtherValueIsNotNull1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -355,7 +385,9 @@ class C
 
         [WorkItem(15505, "https://github.com/dotnet/roslyn/issues/15505")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOtherValueIsNotNull2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -371,7 +403,9 @@ class C
 
         [WorkItem(16287, "https://github.com/dotnet/roslyn/issues/16287")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodGroup()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -390,7 +424,9 @@ class C { public void M(string s) { } }");
 
         [WorkItem(17623, "https://github.com/dotnet/roslyn/issues/17623")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInExpressionTree()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -412,7 +448,9 @@ class Program
 
         [WorkItem(19774, "https://github.com/dotnet/roslyn/issues/19774")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullableMemberAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -442,7 +480,9 @@ class C
 
         [WorkItem(19774, "https://github.com/dotnet/roslyn/issues/19774")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullableElementAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -482,7 +522,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndIsNull()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -507,7 +549,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndIsType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -523,7 +567,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIsOtherConstant()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -538,7 +584,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndReferenceEquals1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -563,7 +611,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndReferenceEquals2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -588,7 +638,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndReferenceEqualsOtherValue1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -604,7 +656,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndReferenceEqualsOtherValue2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -620,7 +674,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndReferenceEqualsWithObject1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -645,7 +701,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndReferenceEqualsWithObject2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -670,7 +728,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndReferenceEqualsOtherValueWithObject1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -686,7 +746,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndReferenceEqualsOtherValueWithObject2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -702,7 +764,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndNotIsNull()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -727,7 +791,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndNotIsType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -743,7 +809,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndNotIsOtherConstant()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -758,7 +826,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndLogicalNotReferenceEquals1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -783,7 +853,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndLogicalNotReferenceEquals2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -808,7 +880,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndLogicalNotReferenceEqualsOtherValue1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -824,7 +898,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndLogicalNotReferenceEqualsOtherValue2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -840,7 +916,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndLogicalNotReferenceEqualsWithObject1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -865,7 +943,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndLogicalNotReferenceEqualsWithObject2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -890,7 +970,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndLogicalNotReferenceEqualsOtherValueWithObject1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -906,7 +988,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNullableTypeAndLogicalNotReferenceEqualsOtherValueWithObject2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -922,7 +1006,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsWithLogicalNot()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -947,7 +1033,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotEqualsWithLogicalNot()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -972,7 +1060,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEqualsOtherValueWithLogicalNot()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -988,7 +1078,9 @@ class C
 
         [WorkItem(23043, "https://github.com/dotnet/roslyn/issues/23043")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseNullPropagation)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotEqualsOtherValueWithLogicalNot()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"

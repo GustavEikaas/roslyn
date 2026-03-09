@@ -18,27 +18,37 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.QualifyMemberAccess
         internal override (DiagnosticAnalyzer, CodeFixProvider) CreateDiagnosticProviderAndFixer(Workspace workspace)
             => (new CSharpQualifyMemberAccessDiagnosticAnalyzer(), new CSharpQualifyMemberAccessCodeFixProvider());
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private Task TestAsyncWithOption(string code, string expected, PerLanguageOption<CodeStyleOption<bool>> option)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             return TestAsyncWithOptionAndNotificationOption(code, expected, option, NotificationOption.Error);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private Task TestAsyncWithOptionAndNotificationOption(string code, string expected, PerLanguageOption<CodeStyleOption<bool>> option, NotificationOption notification)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             return TestInRegularAndScriptAsync(code, expected, options: Option(option, true, notification));
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private Task TestMissingAsyncWithOption(string code, PerLanguageOption<CodeStyleOption<bool>> option)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             return TestMissingAsyncWithOptionAndNotificationOption(code, option, NotificationOption.Error);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private Task TestMissingAsyncWithOptionAndNotificationOption(string code, PerLanguageOption<CodeStyleOption<bool>> option, NotificationOption notification)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             => TestMissingInRegularAndScriptAsync(code, new TestParameters(options: Option(option, true, notification)));
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_LHS()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -64,7 +74,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_RHS()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -90,7 +102,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_MethodArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -116,7 +130,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_ChainedAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -142,7 +158,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_ConditionalAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -168,7 +186,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_OnBase()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Base
@@ -200,7 +220,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(28509, "https://github.com/dotnet/roslyn/issues/28509")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_InCollectionInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class C
@@ -224,7 +246,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_NotSuggestedOnInstance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Class
@@ -242,7 +266,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_NotSuggestedOnStatic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class C
@@ -259,7 +285,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(28509, "https://github.com/dotnet/roslyn/issues/28509")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_NotSuggestedOnLocalVarInCollectionInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class C
@@ -276,7 +304,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(28091, "https://github.com/dotnet/roslyn/issues/28091")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyFieldAccess_NotSuggestedOnLocalVarInDictionaryInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class C
@@ -293,7 +323,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_LHS()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -319,7 +351,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_RHS()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -345,7 +379,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_MethodArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -371,7 +407,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_ChainedAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -397,7 +435,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_ConditionalAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -423,7 +463,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_OnBase()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Base
@@ -455,7 +497,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_NotSuggestedOnInstance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Class
@@ -472,7 +516,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_NotSuggestedOnStatic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class C
@@ -489,7 +535,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMethodAccess_VoidCallWithArguments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -511,7 +559,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMethodAccess_AsReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -531,7 +581,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMethodAccess_ChainedAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -551,7 +603,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMethodAccess_ConditionalAccess()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Class
@@ -571,7 +625,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMethodAccess_EventSubscription1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"using System;
@@ -601,7 +657,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMethodAccess_EventSubscription2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"using System;
@@ -631,7 +689,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMethodAccess_OnBase()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class Base
@@ -667,7 +727,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMethodAccess_NotSuggestedOnInstance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Class
@@ -682,7 +744,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMethodAccess_NotSuggestedOnStatic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class C
@@ -701,7 +765,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(28509, "https://github.com/dotnet/roslyn/issues/28509")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMethodAccess_NotSuggestedOnCollectionInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class C
@@ -717,7 +783,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(28509, "https://github.com/dotnet/roslyn/issues/28509")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyLocalMethodAccess_NotSuggestedOnCollectionInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class C
@@ -733,7 +801,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(28509, "https://github.com/dotnet/roslyn/issues/28509")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyLocalMethodAccess_NotSuggestedInMethodCall()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class C
@@ -749,7 +819,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/7587"), Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyEventAccess_EventSubscription()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"using System;
@@ -779,7 +851,9 @@ CodeStyleOptions.QualifyEventAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/7587"), Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyEventAccessAsProperty_EventSubscription()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"using System;
@@ -827,7 +901,9 @@ CodeStyleOptions.QualifyEventAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/7587"), Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyEventAccess_InvokeEvent1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"using System;
@@ -857,7 +933,9 @@ CodeStyleOptions.QualifyEventAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/7587"), Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyEventAccess_InvokeEvent2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"using System;
@@ -887,7 +965,9 @@ CodeStyleOptions.QualifyEventAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/7587"), Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyEventAccess_InvokeEvent3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"using System;
@@ -917,7 +997,9 @@ CodeStyleOptions.QualifyEventAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/7587"), Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyEventAccess_OnBase()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"using System;
@@ -953,7 +1035,9 @@ CodeStyleOptions.QualifyEventAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyEventAccess_NotSuggestedOnInstance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"using System;
@@ -976,7 +1060,9 @@ CodeStyleOptions.QualifyEventAccess);
 
         [WorkItem(7065, "https://github.com/dotnet/roslyn/issues/7065")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyEventAccess_NotSuggestedOnStatic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"using System;
@@ -994,7 +1080,9 @@ CodeStyleOptions.QualifyEventAccess);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMemberAccessOnNotificationOptionSilent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOptionAndNotificationOption(
 @"class Class
@@ -1019,7 +1107,9 @@ CodeStyleOptions.QualifyPropertyAccess, NotificationOption.Silent);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMemberAccessOnNotificationOptionInfo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOptionAndNotificationOption(
 @"class Class
@@ -1044,7 +1134,9 @@ CodeStyleOptions.QualifyPropertyAccess, NotificationOption.Suggestion);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMemberAccessOnNotificationOptionWarning()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOptionAndNotificationOption(
 @"class Class
@@ -1069,7 +1161,9 @@ CodeStyleOptions.QualifyPropertyAccess, NotificationOption.Warning);
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyMemberAccessOnNotificationOptionError()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOptionAndNotificationOption(
 @"class Class
@@ -1095,7 +1189,9 @@ CodeStyleOptions.QualifyPropertyAccess, NotificationOption.Error);
 
         [WorkItem(15325, "https://github.com/dotnet/roslyn/issues/15325")]
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/18839"), Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyInstanceMethodInDelegateCreation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"using System;
@@ -1127,7 +1223,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(15325, "https://github.com/dotnet/roslyn/issues/15325")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotQualifyStaticMethodInDelegateCreation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"using System;
@@ -1147,7 +1245,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(17711, "https://github.com/dotnet/roslyn/issues/17711")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_IfBaseQualificationOnField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Base
@@ -1163,7 +1263,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(17711, "https://github.com/dotnet/roslyn/issues/17711")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_IfBaseQualificationOnProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Base
@@ -1179,7 +1281,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(17711, "https://github.com/dotnet/roslyn/issues/17711")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_IfBaseQualificationOnMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Base
@@ -1195,7 +1299,9 @@ CodeStyleOptions.QualifyMethodAccess);
 
         [WorkItem(17711, "https://github.com/dotnet/roslyn/issues/17711")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_IfBaseQualificationOnEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Base
@@ -1215,7 +1321,9 @@ CodeStyleOptions.QualifyEventAccess);
 
         [WorkItem(21519, "https://github.com/dotnet/roslyn/issues/21519")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_IfInStaticContext1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Program
@@ -1228,7 +1336,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(21519, "https://github.com/dotnet/roslyn/issues/21519")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_IfInStaticContext2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Program
@@ -1241,7 +1351,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(21519, "https://github.com/dotnet/roslyn/issues/21519")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_IfInStaticContext3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Program
@@ -1257,7 +1369,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(21519, "https://github.com/dotnet/roslyn/issues/21519")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_IfInStaticContext4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Program
@@ -1273,7 +1387,9 @@ CodeStyleOptions.QualifyFieldAccess);
 
         [WorkItem(21519, "https://github.com/dotnet/roslyn/issues/21519")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_IfInStaticContext5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"class Program
@@ -1291,7 +1407,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(21519, "https://github.com/dotnet/roslyn/issues/21519")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_IfInStaticContext6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"public class Foo
@@ -1305,7 +1423,9 @@ CodeStyleOptions.QualifyEventAccess);
 
         [WorkItem(21519, "https://github.com/dotnet/roslyn/issues/21519")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_InAccessorExpressionBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"public class C
@@ -1323,7 +1443,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(21519, "https://github.com/dotnet/roslyn/issues/21519")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_InAccessorWithBodyAndExpressionBody1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"public class C
@@ -1341,7 +1463,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(21519, "https://github.com/dotnet/roslyn/issues/21519")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_InAccessorWithBodyAndExpressionBody2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"public class C
@@ -1359,7 +1483,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(28509, "https://github.com/dotnet/roslyn/issues/28509")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifyPropertyAccess_InCollectionInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsyncWithOption(
 @"class C
@@ -1383,7 +1509,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(22776, "https://github.com/dotnet/roslyn/issues/22776")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_InObjectInitializer1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"public class C
@@ -1402,7 +1530,9 @@ CodeStyleOptions.QualifyPropertyAccess);
 
         [WorkItem(22776, "https://github.com/dotnet/roslyn/issues/22776")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsQualifyMemberAccess)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotReportToQualify_InObjectInitializer2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsyncWithOption(
 @"public class C

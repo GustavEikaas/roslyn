@@ -22,7 +22,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.MakeFieldReadonly
         [InlineData("protected")]
         [InlineData("protected internal")]
         [InlineData("private protected")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NonPrivateField(string accessibility)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 $@"class MyClass
@@ -32,7 +34,9 @@ $@"class MyClass
         }
         
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldIsEvent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -42,7 +46,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldIsReadonly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -52,7 +58,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldIsConst()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -62,7 +70,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldNotAssigned()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -76,7 +86,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldNotAssigned_Struct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"struct MyStruct
@@ -90,7 +102,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInline()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -104,7 +118,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleFieldsAssignedInline_AllCanBeReadonly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -119,7 +135,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ThreeFieldsAssignedInline_AllCanBeReadonly_SeparatesAllAndKeepsThemInOrder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -135,7 +153,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleFieldsAssignedInline_OneIsAssignedInMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -159,7 +179,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleFieldsAssignedInline_NoInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -174,7 +196,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -196,7 +220,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInSimpleLambdaInCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class MyClass
@@ -212,7 +238,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInLambdaInCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class MyClass
@@ -228,7 +256,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInLambdaWithBlockInCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class MyClass
@@ -244,7 +274,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInAnonymousFunctionInCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class MyClass
@@ -260,7 +292,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInLocalFunctionExpressionBodyInCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class MyClass
@@ -274,7 +308,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInLocalFunctionBlockBodyInCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"public class MyClass
@@ -288,7 +324,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInCtor_DifferentInstance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -303,7 +341,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInCtor_DifferentInstance_ObjectInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -317,7 +357,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInCtor_QualifiedWithThis()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -339,7 +381,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldReturnedInProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -361,7 +405,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -376,7 +422,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -390,7 +438,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInNestedTypeConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -408,7 +458,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInNestedTypeMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -426,7 +478,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task VariableAssignedToFieldInMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -448,7 +502,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInMethodWithCompoundOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -462,7 +518,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldUsedWithPostfixIncrement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -476,7 +534,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldUsedWithPrefixDecrement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -490,7 +550,9 @@ $@"class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssignedInPartialClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"partial class MyClass
@@ -507,7 +569,9 @@ partial class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PassedAsParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -535,7 +599,9 @@ partial class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PassedAsOutParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -549,7 +615,9 @@ partial class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PassedAsRefParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -566,7 +634,9 @@ partial class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PassedAsOutParameterInCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -588,7 +658,9 @@ partial class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PassedAsRefParameterInCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -616,7 +688,9 @@ partial class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StaticFieldAssignedInStaticCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -638,7 +712,9 @@ partial class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StaticFieldAssignedInNonStaticCtor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class MyClass
@@ -652,7 +728,9 @@ partial class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldTypeIsMutableStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"struct MyStruct
@@ -666,7 +744,9 @@ class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldTypeIsCustomImmutableStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"struct MyStruct
@@ -692,7 +772,9 @@ class MyClass
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAll()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -718,7 +800,9 @@ class MyClass
         // Remove this test when https://github.com/dotnet/roslyn/issues/25652 is fixed
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllDoesNotSupportPartial()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"  partial struct MyClass
@@ -742,7 +826,9 @@ class MyClass
 
         [Fact(Skip = "Partial types not yet supported: https://github.com/dotnet/roslyn/issues/25652")]
         [Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAll2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"  partial struct MyClass
@@ -783,7 +869,9 @@ class MyClass
 
         [WorkItem(26262, "https://github.com/dotnet/roslyn/issues/26262")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInCtor_InParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -806,7 +894,9 @@ class MyClass
 
         [WorkItem(26262, "https://github.com/dotnet/roslyn/issues/26262")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInCtor_QualifiedWithThis_InParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class MyClass
@@ -829,7 +919,9 @@ class MyClass
 
         [WorkItem(26264, "https://github.com/dotnet/roslyn/issues/26264")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInMethod_InDeconstruction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -846,7 +938,9 @@ class MyClass
 
         [WorkItem(26264, "https://github.com/dotnet/roslyn/issues/26264")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInMethod_InDeconstruction_InParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -863,7 +957,9 @@ class MyClass
 
         [WorkItem(26264, "https://github.com/dotnet/roslyn/issues/26264")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldAssignedInMethod_InDeconstruction_WithThis_InParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -880,7 +976,9 @@ class MyClass
 
         [WorkItem(26264, "https://github.com/dotnet/roslyn/issues/26264")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeFieldReadonly)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FieldUsedInTupleExpressionOnRight()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C

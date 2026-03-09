@@ -19,7 +19,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeRefactoringService
     public class CodeRefactoringServiceTest
     {
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExceptionInComputeRefactorings()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyRefactoringDisabledAsync(new ErrorCases.ExceptionInCodeActions());
         }

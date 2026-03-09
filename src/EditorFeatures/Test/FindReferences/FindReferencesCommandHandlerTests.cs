@@ -55,7 +55,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.FindReferences
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.FindReferences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFindReferencesAsynchronousCall()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp("class C { C() { new C(); } }"))
             {

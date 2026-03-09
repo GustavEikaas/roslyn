@@ -47,7 +47,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCurlies()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = "public class C {\r\n}";
             using (var workspace = TestWorkspace.CreateCSharp(code, parseOptions: Options.Script))
@@ -77,7 +79,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTouchingItems()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = "public class C {\r\n  public void Goo(){}\r\n}";
             using (var workspace = TestWorkspace.CreateCSharp(code, Options.Script))
@@ -108,7 +112,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAngles()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = "/// <summary>Goo</summary>\r\npublic class C<T> {\r\n  void Goo() {\r\n    bool a = b < c;\r\n    bool d = e > f;\r\n  }\r\n} ";
             using (var workspace = TestWorkspace.CreateCSharp(code, parseOptions: Options.Script))
@@ -155,7 +161,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.BraceHighlighting
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.BraceHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSwitch()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C

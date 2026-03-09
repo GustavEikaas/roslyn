@@ -22,7 +22,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddParameter
             => FlattenActions(actions);
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithImplicitConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -40,7 +42,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnEmptyConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -72,7 +76,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNamedArg()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -104,7 +110,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithConstructorWithSameNumberOfParams()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -123,7 +131,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddBeforeMatchingArg()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -155,7 +165,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddAfterMatchingConstructorParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -187,7 +199,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestParams1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -219,7 +233,9 @@ class D
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestParams2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -239,7 +255,9 @@ class D
 
         [WorkItem(20708, "https://github.com/dotnet/roslyn/issues/20708")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiLineParameters1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -275,7 +293,9 @@ class C
 
         [WorkItem(20708, "https://github.com/dotnet/roslyn/issues/20708")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiLineParameters2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -311,7 +331,9 @@ class C
 
         [WorkItem(20708, "https://github.com/dotnet/roslyn/issues/20708")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiLineParameters3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -347,7 +369,9 @@ class C
 
         [WorkItem(20708, "https://github.com/dotnet/roslyn/issues/20708")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiLineParameters4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -385,7 +409,9 @@ class C
 
         [WorkItem(20708, "https://github.com/dotnet/roslyn/issues/20708")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiLineParameters5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -423,7 +449,9 @@ class C
 
         [WorkItem(20708, "https://github.com/dotnet/roslyn/issues/20708")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiLineParameters6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -461,7 +489,9 @@ class C
 
         [WorkItem(20973, "https://github.com/dotnet/roslyn/issues/20973")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullArg1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -494,7 +524,9 @@ class D
 
         [WorkItem(20973, "https://github.com/dotnet/roslyn/issues/20973")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullArg2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -527,7 +559,9 @@ class D
 
         [WorkItem(20973, "https://github.com/dotnet/roslyn/issues/20973")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDefaultArg1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -560,7 +594,9 @@ class D
 
         [WorkItem(20973, "https://github.com/dotnet/roslyn/issues/20973")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDefaultArg2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -593,7 +629,9 @@ class D
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationInstanceMethod1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -626,7 +664,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationInheritedMethodGetFixed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -663,7 +703,9 @@ class C1 : Base
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationInheritedMethodInMetadatGetsNotFixed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
     @"
@@ -679,7 +721,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationLocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -705,7 +749,9 @@ class C1
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
         [Trait("TODO", "Fix broken")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationLambda1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -723,7 +769,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationStaticMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -752,7 +800,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationExtensionMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -791,7 +841,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationExtensionMethod_StaticInvocationStyle()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'ExtensionM1' takes 2 arguments
             var code =
@@ -831,7 +883,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationOverride()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class Base
@@ -878,7 +932,9 @@ class C1 : Base
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationExplicitInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 interface I1
@@ -925,7 +981,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationImplicitInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -973,7 +1031,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationImplicitInterfaces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1034,7 +1094,9 @@ class C1 : I1, I2
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
         [Trait("TODO", "Fix broken")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationGenericMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -1060,7 +1122,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationRecursion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -1083,7 +1147,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationOverloads1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1124,7 +1190,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationOverloads2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1168,7 +1236,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationTuple1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1199,7 +1269,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationTuple2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1232,7 +1304,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationTuple3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1265,7 +1339,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Missing_TypeArguments_AddingTypeArgumentAndParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS0305: Using the generic method 'C1.M1<T>(T)' requires 1 type arguments
             var code =
@@ -1284,7 +1360,9 @@ class C1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Missing_TypeArguments_AddingTypeArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS0308: The non-generic method 'C1.M1(int)' cannot be used with type arguments
             var code =
@@ -1304,7 +1382,9 @@ class C1
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
         [Trait("TODO", "Fix missing")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Missing_ExplicitInterfaceImplementation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS0539: 'C1.M1(int)' in explicit interface declaration is not a member of interface
             var code =
@@ -1324,7 +1404,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_OverloadResolutionFailure()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1503: Argument 1: cannot convert from 'double' to 'int'
             var code =
@@ -1356,7 +1438,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_LambdaExpressionParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1660: Cannot convert lambda expression to type 'int' because it is not a delegate type
             var code =
@@ -1388,7 +1472,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_NamedParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1739: The best overload for 'M1' does not have a parameter named 'i2'
             var code =
@@ -1418,7 +1504,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationAddTypeParameter_AddTypeParameterIfUserSpecifiesOne_OnlyTypeArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1437,7 +1525,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocationAddTypeParameter_AddTypeParameterIfUserSpecifiesOne_TypeArgumentAndParameterArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1456,7 +1546,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_ExisitingTypeArgumentIsNotGeneralized()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1485,7 +1577,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_AddParameterToMethodWithParams()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1503: Argument 1: cannot convert from 'bool' to 'int'
             var code =
@@ -1515,7 +1609,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Cascading_FixingVirtualFixesOverrideToo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M1' takes 1 arguments
             var code =
@@ -1578,7 +1674,9 @@ class C1 : I1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Cascading_PartialMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1641,7 +1739,9 @@ namespace N1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Cascading_PartialMethodsInSameDocument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -1682,7 +1782,9 @@ namespace N1
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Cascading_BaseNotInSource()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M' takes 1 arguments
             var code =
@@ -1719,7 +1821,9 @@ namespace N
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Cascading_RootNotInSource()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M' takes 1 arguments
             var code =
@@ -1793,7 +1897,9 @@ namespace N
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Cascading_ManyReferencesInManyProjects()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M' takes 1 arguments
             var code =
@@ -1907,7 +2013,9 @@ namespace N
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Cascading_OfferFixCascadingForImplicitInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M1' takes 1 arguments
             var code =
@@ -1961,7 +2069,9 @@ namespace N
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Cascading_CrossLanguage()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -2032,7 +2142,9 @@ namespace N
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_Positional_MoreThanOneArgumentToMuch()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"
@@ -2060,7 +2172,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_Positional_WithOptionalParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M' takes 2 arguments
             var code =
@@ -2088,7 +2202,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_Named_WithOptionalParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1739: The best overload for 'M' does not have a parameter named 'i3'
             var code =
@@ -2116,7 +2232,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_Positional_WithParams()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1503: Argument 1: cannot convert from 'string' to 'int'
             var code =
@@ -2144,7 +2262,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_Named_WithTypemissmatch()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1503: Argument 1: cannot convert from 'string' to 'int'
             var code =
@@ -2162,7 +2282,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_NamedAndPositional1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1739: The best overload for 'M' does not have a parameter named 'i2'
             var code =
@@ -2190,7 +2312,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_NamedAndPositional2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // CS1744 is not yet a supported diagnostic (just declaring the diagnostic as supported does not work)
             // error CS1744: Named argument 's' specifies a parameter for which a positional argument has already been given
@@ -2209,7 +2333,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_Incomplete_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M' takes 1 arguments
             var code =
@@ -2237,7 +2363,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_Incomplete_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1503: Argument 1: cannot convert from 'string' to 'int'
             var code =
@@ -2263,7 +2391,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_RefParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M' takes 1 arguments            
             var code =
@@ -2295,7 +2425,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_OutParameter_WithTypeDeclarationOutsideArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M' takes 1 arguments            
             var code =
@@ -2327,7 +2459,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_OutParameter_WithTypeDeclarationInArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M' takes 1 arguments            
             var code =
@@ -2357,7 +2491,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_InvocationStyles_OutParameter_WithVarTypeDeclarationInArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // error CS1501: No overload for method 'M' takes 1 arguments            
             var code =
@@ -2387,7 +2523,9 @@ class C
 
         [WorkItem(21446, "https://github.com/dotnet/roslyn/issues/21446")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddParameter)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvocation_Indexer_NotSupported()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Could be fixed by allowing ElementAccessExpression next to InvocationExpression
             // in AbstractAddParameterCodeFixProvider.RegisterCodeFixesAsync.

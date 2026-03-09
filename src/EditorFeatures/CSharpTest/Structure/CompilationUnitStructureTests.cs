@@ -15,7 +15,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         internal override AbstractSyntaxStructureProvider CreateProvider() => new CompilationUnitStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUsings()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $${|hint:using {|textspan:System;
@@ -26,7 +28,9 @@ using System.Core;|}|}";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUsingAliases()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $${|hint:using {|textspan:System;
@@ -39,7 +43,9 @@ using linq = System.Linq;|}|}";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExternAliases()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $${|hint:extern {|textspan:alias Goo;
@@ -50,7 +56,9 @@ extern alias Bar;|}|}";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExternAliasesAndUsings()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $${|hint:extern {|textspan:alias Goo;
@@ -63,7 +71,9 @@ using System.Core;|}|}";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExternAliasesAndUsingsWithLeadingTrailingAndNestedComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $${|span1:// Goo
@@ -84,7 +94,9 @@ using System.Core;|}|}
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUsingsWithComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $${|span1:// Goo
@@ -98,7 +110,9 @@ using System.Core;|}|}";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExternAliasesWithComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $${|span1:// Goo
@@ -112,7 +126,9 @@ extern alias Bar;|}|}";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $${|span1:// Goo
@@ -123,7 +139,9 @@ $${|span1:// Goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithCommentsAtEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $${|hint1:using {|textspan1:System;|}|}
@@ -137,7 +155,9 @@ $${|hint1:using {|textspan1:System;|}|}
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
         [WorkItem(539359, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/539359")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUsingKeywordWithSpace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 $${|hint:using|} {|textspan:|}";
@@ -148,7 +168,9 @@ $${|hint:using|} {|textspan:|}";
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
         [WorkItem(16186, "https://github.com/dotnet/roslyn/issues/16186")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvalidComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"$${|span:/*/|}";
 

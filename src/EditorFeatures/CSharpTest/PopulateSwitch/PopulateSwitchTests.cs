@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
             => (new PopulateSwitchDiagnosticAnalyzer(), new PopulateSwitchCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnlyOnFirstToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -46,7 +48,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AllMembersAndDefaultExist()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -77,7 +81,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AllMembersExist_NotDefault()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -133,7 +139,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAllMembersExist_NotDefault()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -189,7 +197,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAllMembersExist_WithDefault()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -247,7 +257,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAllMembersExist_NotDefault_EnumHasExplicitType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -303,7 +315,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAllMembersExist_WithMembersAndDefaultInSection_NewValuesAboveDefaultSection()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -359,7 +373,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAllMembersExist_WithMembersAndDefaultInSection_AssumesDefaultIsInLastSection()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -417,7 +433,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoMembersExist0()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -469,7 +487,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoMembersExist1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -517,7 +537,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoMembersExist2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -571,7 +593,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.PopulateSwi
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UsingStaticEnum_AllMembersExist()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using static System.IO.FileMode;
@@ -606,7 +630,9 @@ namespace ConsoleApplication1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UsingStaticEnum_AllMembersExist_OutOfDefaultOrder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using static System.IO.FileMode;
@@ -641,7 +667,9 @@ namespace ConsoleApplication1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UsingStaticEnum_MembersExist()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using static System.IO.FileMode;
@@ -701,7 +729,9 @@ namespace ConsoleApplication1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UsingStaticEnum_NoMembersExist()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using static System.IO.FileMode;
@@ -751,7 +781,9 @@ namespace ConsoleApplication1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAllMembersExist_NotDefault_EnumHasNonFlagsAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -809,7 +841,9 @@ namespace ConsoleApplication1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAllMembersExist_NotDefault_EnumIsNested()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"namespace ConsoleApplication1
@@ -865,7 +899,9 @@ namespace ConsoleApplication1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAllMembersExist_SwitchIsNotEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -890,7 +926,9 @@ namespace ConsoleApplication1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotAllMembersExist_NotDefault_UsingConstants()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"enum MyEnum
@@ -941,7 +979,9 @@ class MyClass
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsPopulateSwitch)]
         [WorkItem(13455, "https://github.com/dotnet/roslyn/issues/13455")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AllMissingTokens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"

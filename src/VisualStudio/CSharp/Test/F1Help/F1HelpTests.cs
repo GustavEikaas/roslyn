@@ -33,7 +33,9 @@ namespace Microsoft.VisualStudio.LanguageServices.CSharp.UnitTests.F1Help
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVoid()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await Test_KeywordAsync(
 @"class C
@@ -45,7 +47,9 @@ namespace Microsoft.VisualStudio.LanguageServices.CSharp.UnitTests.F1Help
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await Test_KeywordAsync(
 @"class C
@@ -58,7 +62,9 @@ namespace Microsoft.VisualStudio.LanguageServices.CSharp.UnitTests.F1Help
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPartialType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await Test_KeywordAsync(
 @"part[||]ial class C
@@ -68,7 +74,9 @@ namespace Microsoft.VisualStudio.LanguageServices.CSharp.UnitTests.F1Help
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPartialMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await Test_KeywordAsync(
 @"partial class C
@@ -78,7 +86,9 @@ namespace Microsoft.VisualStudio.LanguageServices.CSharp.UnitTests.F1Help
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhereClause()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await Test_KeywordAsync(
 @"using System.Linq;
@@ -95,7 +105,9 @@ class Program<T> where T : class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhereConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await Test_KeywordAsync(
 @"using System.Linq;
@@ -112,7 +124,9 @@ class Program<T> wh[||]ere T : class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreprocessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"#regi[||]on
@@ -120,7 +134,9 @@ class Program<T> wh[||]ere T : class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace N
@@ -136,7 +152,9 @@ class Program<T> wh[||]ere T : class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace N
@@ -152,7 +170,9 @@ class Program<T> wh[||]ere T : class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace N
@@ -169,7 +189,9 @@ class Program<T> wh[||]ere T : class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace N
@@ -184,7 +206,9 @@ class Program<T> wh[||]ere T : class
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -202,7 +226,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -220,7 +246,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFromIn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -241,7 +269,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -259,7 +289,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForeachIn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -280,7 +312,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRegionDescription()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -294,7 +328,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericAngle()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -307,7 +343,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLocalReferenceIsType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -327,7 +365,9 @@ class Program
 
         [WorkItem(864266, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/864266")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstantField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -341,7 +381,9 @@ class Program
 
         [WorkItem(862420, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/862420")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Class2
@@ -360,7 +402,9 @@ class Program
 
         [WorkItem(862420, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/862420")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArgumentType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Class2
@@ -379,7 +423,9 @@ class Program
 
         [WorkItem(862396, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/862396")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -392,7 +438,9 @@ class Program
 
         [WorkItem(862328, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/862328")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -406,7 +454,9 @@ class Program
 
         [WorkItem(862478, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/862478")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestColonColon()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -425,7 +475,9 @@ class Program
 
         [WorkItem(864658, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/864658")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -445,7 +497,9 @@ class Program
 
         [WorkItem(863517, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/863517")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterLastToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;
@@ -465,7 +519,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConditional()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class Program
@@ -478,7 +534,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLocalVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -493,7 +551,9 @@ class Program
 
         [WorkItem(867574, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/867574")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFatArrow()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -508,7 +568,9 @@ class Program
 
         [WorkItem(867572, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/867572")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSubscription()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class CCC
@@ -525,14 +587,18 @@ class Program
 
         [WorkItem(867554, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/867554")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"// some comm[||]ents here", "comments");
         }
 
         [WorkItem(867529, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/867529")]
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDynamic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -545,7 +611,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.F1Help)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRangeVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using System;

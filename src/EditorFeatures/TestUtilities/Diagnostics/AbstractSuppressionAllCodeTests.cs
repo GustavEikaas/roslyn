@@ -63,7 +63,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
             using (var workspace = CreateWorkspaceFromFile(code, options))
             {
                 var document = workspace.CurrentSolution.Projects.Single().Documents.Single();
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 var root = document.GetSyntaxRootAsync().GetAwaiter().GetResult();
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                 var existingDiagnostics = root.GetDiagnostics().ToArray();
 
                 var analyzerAndFixer = CreateDiagnosticProviderAndFixer(workspace);
@@ -80,7 +82,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
                         continue;
                     }
 
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                     var fixes = fixer.GetSuppressionsAsync(document, diagnostic.Location.SourceSpan, SpecializedCollections.SingletonEnumerable(diagnostic), CancellationToken.None).GetAwaiter().GetResult();
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                     if (fixes == null || fixes.Count() <= 0)
                     {
                         continue;
@@ -98,13 +102,19 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
                         continue;
                     }
 
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                     var operations = fix.GetOperationsAsync(CancellationToken.None).GetAwaiter().GetResult();
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
 
                     var applyChangesOperation = operations.OfType<ApplyChangesOperation>().Single();
                     var newDocument = applyChangesOperation.ChangedSolution.Projects.Single().Documents.Single();
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                     var newTree = newDocument.GetSyntaxTreeAsync().GetAwaiter().GetResult();
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
 
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                     var newText = newTree.GetText().ToString();
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                     Assert.True(verifier(newText));
 
                     var newDiagnostics = newTree.GetDiagnostics();

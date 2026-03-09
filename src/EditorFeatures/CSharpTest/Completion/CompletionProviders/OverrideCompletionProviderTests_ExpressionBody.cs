@@ -32,7 +32,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
 
         [WorkItem(16331, "https://github.com/dotnet/roslyn/issues/16334")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitProducesExpressionBodyProperties()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class B
 {
@@ -57,7 +59,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
 
         [WorkItem(16331, "https://github.com/dotnet/roslyn/issues/16334")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitProducesExpressionBodyGetterOnlyProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class B
 {
@@ -83,7 +87,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
 
         [WorkItem(16331, "https://github.com/dotnet/roslyn/issues/16334")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitProducesExpressionBodyMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"class B
 {

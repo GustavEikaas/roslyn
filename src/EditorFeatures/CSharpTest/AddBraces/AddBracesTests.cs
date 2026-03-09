@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddBraces
             => (new CSharpAddBracesDiagnosticAnalyzer(), new CSharpAddBracesCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForIfWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -32,7 +34,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddBraces
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForElseWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -52,7 +56,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddBraces
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForElseWithChildIf()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -68,7 +74,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddBraces
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForForWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -84,7 +92,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddBraces
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForForEachWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -100,7 +110,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddBraces
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForWhileWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -116,7 +128,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddBraces
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForDoWhileWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -133,7 +147,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.AddBraces
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForUsingWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -157,7 +173,9 @@ class Fizz : IDisposable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForUsingWithChildUsing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -188,7 +206,9 @@ class Buzz : IDisposable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForLockWithBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -205,7 +225,9 @@ class Buzz : IDisposable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForLockWithChildLock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -222,7 +244,9 @@ class Buzz : IDisposable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotFireForFixedWithChildFixed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -238,7 +262,9 @@ class Buzz : IDisposable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForFixedWithoutBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -264,7 +290,9 @@ class Buzz : IDisposable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForIfWithoutBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
    @"
@@ -290,7 +318,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForElseWithoutBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -318,7 +348,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForIfNestedInElseWithoutBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -346,7 +378,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForForWithoutBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -372,7 +406,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForForEachWithoutBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -398,7 +434,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForWhileWithoutBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -424,7 +462,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForDoWhileWithoutBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -451,7 +491,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForUsingWithoutBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -494,7 +536,9 @@ class Fizz : IDisposable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForUsingWithoutBracesNestedInUsing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -555,7 +599,9 @@ class Buzz : IDisposable
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForLockWithoutBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -584,7 +630,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsAddBraces)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FireForLockWithoutBracesNestedInLock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"

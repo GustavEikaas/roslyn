@@ -56,7 +56,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysVisibleAtAnyLevelItems1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo
@@ -67,7 +69,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysVisibleAtAnyLevelItems2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo
@@ -78,7 +82,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysVisibleNotTopLevelItems1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo
@@ -89,7 +95,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysVisibleNotTopLevelItems2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsAbsentAsync(@"
 public class goo
@@ -100,7 +108,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysVisibleTopLevelOnlyItems1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo
@@ -111,7 +121,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AlwaysVisibleTopLevelOnlyItems2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsAbsentAsync(@"
 public class goo
@@ -122,7 +134,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TopLevelSingleUseItems1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo
@@ -133,7 +147,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TopLevelSingleUseItems2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsAbsentAsync(@"
 public class goo
@@ -144,7 +160,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TopLevelSingleUseItems3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsAbsentAsync(@"
 public class goo
@@ -158,7 +176,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnlyInListItems()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsAbsentAsync(@"
 public class goo
@@ -172,7 +192,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnlyInListItems2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsAbsentAsync(@"
 public class goo
@@ -184,7 +206,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnlyInListItems3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo
@@ -196,7 +220,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnlyInListItems4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo
@@ -208,7 +234,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ListHeaderItems()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo
@@ -224,7 +252,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task VoidMethodDeclarationItems()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"
 public class goo
@@ -236,7 +266,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodReturns()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 public class goo
@@ -249,7 +281,9 @@ public class goo
 
         [WorkItem(8627, "https://github.com/dotnet/roslyn/issues/8627")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReadWritePropertyNoReturns()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"
 public class goo
@@ -262,7 +296,9 @@ public class goo
 
         [WorkItem(8627, "https://github.com/dotnet/roslyn/issues/8627")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReadWritePropertyValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 public class goo
@@ -275,7 +311,9 @@ public class goo
 
         [WorkItem(8627, "https://github.com/dotnet/roslyn/issues/8627")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReadOnlyPropertyNoReturns()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"
 public class goo
@@ -288,7 +326,9 @@ public class goo
 
         [WorkItem(8627, "https://github.com/dotnet/roslyn/issues/8627")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReadOnlyPropertyValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 public class goo
@@ -301,7 +341,9 @@ public class goo
 
         [WorkItem(8627, "https://github.com/dotnet/roslyn/issues/8627")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WriteOnlyPropertyNoReturns()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemIsAbsentAsync(@"
 public class goo
@@ -314,7 +356,9 @@ public class goo
 
         [WorkItem(8627, "https://github.com/dotnet/roslyn/issues/8627")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WriteOnlyPropertyValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 public class goo
@@ -326,7 +370,9 @@ public class goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodParamTypeParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 public class goo<TGoo>
@@ -341,7 +387,9 @@ public class goo<TGoo>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IndexerParamTypeParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo<T>
@@ -354,7 +402,9 @@ public class goo<T>
 
         [WorkItem(17872, "https://github.com/dotnet/roslyn/issues/17872")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodParamRefName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 public class Outer<TOuter>
@@ -376,7 +426,9 @@ public class Outer<TOuter>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ClassTypeParamRefName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 /// <summary>
@@ -389,7 +441,9 @@ public class goo<T>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ClassTypeParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 /// $$
@@ -401,7 +455,9 @@ public class goo<T>
 
         [WorkItem(638802, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/638802")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TagsAfterSameLineClosedTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"/// <summary>
 /// <goo></goo>$$
@@ -414,7 +470,9 @@ public class goo<T>
 
         [WorkItem(734825, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/734825")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EnumMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"public enum z
 {
@@ -431,7 +489,9 @@ public class goo<T>
 
         [WorkItem(954679, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/954679")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CompletionList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 /// $$
@@ -442,7 +502,9 @@ public class goo
 
         [WorkItem(775091, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/775091")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ParamRefNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 /// <summary>
@@ -455,7 +517,9 @@ static void Main(string[] args)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ParamNamesInEmptyAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 /// <param name=""$$""/>
@@ -467,7 +531,9 @@ static void Goo(string str)
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
         [WorkItem(26713, "https://github.com/dotnet/roslyn/issues/26713")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DelegateParams()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemExistsAsync(@"
 /// $$
@@ -477,7 +543,9 @@ delegate void D(object o);
 
         [WorkItem(17872, "https://github.com/dotnet/roslyn/issues/17872")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypeParamRefNamesInEmptyAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 public class Outer<TOuter>
@@ -496,7 +564,9 @@ public class Outer<TOuter>
 
         [WorkItem(17872, "https://github.com/dotnet/roslyn/issues/17872")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypeParamRefNamesPartiallyTyped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 public class Outer<TOuter>
@@ -514,7 +584,9 @@ public class Outer<TOuter>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypeParamNamesInEmptyAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 public class Outer<TOuter>
@@ -531,7 +603,9 @@ public class Outer<TOuter>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypeParamNamesInWrongScope()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 public class Outer<TOuter>
@@ -550,7 +624,9 @@ public class Outer<TOuter>
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypeParamNamesPartiallyTyped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 public class Outer<TOuter>
@@ -568,7 +644,9 @@ public class Outer<TOuter>
 
         [WorkItem(8322, "https://github.com/dotnet/roslyn/issues/8322")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PartialTagCompletion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo
@@ -580,7 +658,9 @@ public class goo
 
         [WorkItem(8322, "https://github.com/dotnet/roslyn/issues/8322")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PartialTagCompletionNestedTags()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 public class goo
@@ -594,7 +674,9 @@ public class goo
 
         [WorkItem(11487, "https://github.com/dotnet/roslyn/issues/11487")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TypeParamAtTopLevelOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsAbsentAsync(@"
 /// <summary>
@@ -607,7 +689,9 @@ public class Goo<T>
 
         [WorkItem(11487, "https://github.com/dotnet/roslyn/issues/11487")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ParamAtTopLevelOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsAbsentAsync(@"
 /// <summary>
@@ -619,7 +703,9 @@ static void Goo(string str)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ListAttributeNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 class C
@@ -634,7 +720,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ListTypeAttributeValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 class C
@@ -650,7 +738,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11490")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SeeAttributeNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 class C
@@ -666,7 +756,9 @@ class C
 
         [WorkItem(22789, "https://github.com/dotnet/roslyn/issues/22789")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LangwordCompletionInPlainText()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 class C
@@ -682,7 +774,9 @@ class C
 
         [WorkItem(22789, "https://github.com/dotnet/roslyn/issues/22789")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LangwordCompletionAfterAngleBracket1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsAbsentAsync(@"
 class C
@@ -698,7 +792,9 @@ class C
 
         [WorkItem(22789, "https://github.com/dotnet/roslyn/issues/22789")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LangwordCompletionAfterAngleBracket2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsAbsentAsync(@"
 class C
@@ -714,7 +810,9 @@ class C
 
         [WorkItem(22789, "https://github.com/dotnet/roslyn/issues/22789")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LangwordCompletionAfterAngleBracket3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 class C
@@ -730,7 +828,9 @@ class C
 
         [WorkItem(11490, "https://github.com/dotnet/roslyn/issues/11490")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SeeLangwordAttributeValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyItemsExistAsync(@"
 class C
@@ -746,7 +846,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11489")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeNameAfterTagNameInIncompleteTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -761,7 +863,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11489")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeNameAfterTagNameInElementStartTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -775,7 +879,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11489")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeNameAfterTagNameInEmptyElement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -789,7 +895,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11489")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeNameAfterTagNamePartiallyTyped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -803,7 +911,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11489")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeNameAfterSpecialCrefAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -819,7 +929,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11489")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeNameAfterSpecialNameAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -835,7 +947,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11489")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeNameAfterTextAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -851,7 +965,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11489")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeNameInWrongTagTypeEmptyElement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -867,7 +983,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11489")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeNameInWrongTagTypeElementStartTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -883,7 +1001,9 @@ class C
 
         [WorkItem(11489, "https://github.com/dotnet/roslyn/issues/11489")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AttributeValueOnQuote()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C
@@ -900,7 +1020,9 @@ class C
 
         [WorkItem(757, "https://github.com/dotnet/roslyn/issues/757")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TermAndDescriptionInsideItem()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class C

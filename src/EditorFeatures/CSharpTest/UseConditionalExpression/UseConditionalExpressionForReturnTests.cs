@@ -18,7 +18,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseConditionalExpressio
                 new CSharpUseConditionalExpressionForReturnCodeRefactoringProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnSimpleReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -47,7 +49,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnSimpleReturnNoBlocks()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -72,7 +76,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnSimpleReturnNoBlocks_NotInBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -99,7 +105,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingReturnValue1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -120,7 +128,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingReturnValue2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -141,7 +151,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingReturnValue3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -162,7 +174,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNoElseBlockButFollowingReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -189,7 +203,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingWithoutElse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -206,7 +222,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConversion1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -235,7 +253,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConversion2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -264,7 +284,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConversion3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -293,7 +315,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestKeepTriviaAroundIf()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -324,7 +348,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -362,7 +388,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiLine1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -395,7 +423,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiLine2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -428,7 +458,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiLine3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -463,7 +495,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestElseIfWithBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -501,7 +535,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestElseIfWithoutBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -526,7 +562,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefReturns1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -556,7 +594,9 @@ class C
 
         [WorkItem(27960, "https://github.com/dotnet/roslyn/issues/27960")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnYieldReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -586,7 +626,9 @@ class C
 
         [WorkItem(27960, "https://github.com/dotnet/roslyn/issues/27960")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnYieldReturn_IEnumerableReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -620,7 +662,9 @@ class C
 
         [WorkItem(27960, "https://github.com/dotnet/roslyn/issues/27960")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnMixedYields()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -642,7 +686,9 @@ class C
 
         [WorkItem(27960, "https://github.com/dotnet/roslyn/issues/27960")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotOnMixedYields_IEnumerableReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -666,7 +712,9 @@ class C
 
         [WorkItem(27960, "https://github.com/dotnet/roslyn/issues/27960")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotWithNoElseBlockButFollowingYieldReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"
@@ -686,7 +734,9 @@ class C
 
         [WorkItem(27960, "https://github.com/dotnet/roslyn/issues/27960")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseConditionalExpression)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotWithNoElseBlockButFollowingYieldReturn_IEnumerableReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"

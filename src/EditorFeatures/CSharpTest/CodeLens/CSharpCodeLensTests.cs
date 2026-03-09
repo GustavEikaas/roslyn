@@ -10,7 +10,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeLens
     public sealed class CSharpCodeLensTests : AbstractCodeLensTest
     {
         [Fact, Trait(Traits.Feature, Traits.Features.CodeLens)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCount()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string input = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -40,7 +42,9 @@ public class A
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeLens)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCapping()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string input = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -71,7 +75,9 @@ public class A
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeLens)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLinkedFiles()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string input = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -117,7 +123,9 @@ class E
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeLens)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDisplay()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string input = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -148,7 +156,9 @@ public class A
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeLens)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodReferences()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string input = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -178,7 +188,9 @@ public class A
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeLens)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMethodReferencesWithDocstrings()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string input = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">
@@ -211,7 +223,9 @@ public class A
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeLens)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFullyQualifiedName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string input = @"<Workspace>
     <Project Language=""C#"" CommonReferences=""true"" AssemblyName=""Proj1"">

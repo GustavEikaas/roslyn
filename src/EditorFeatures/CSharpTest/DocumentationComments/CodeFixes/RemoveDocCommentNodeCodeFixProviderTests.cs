@@ -23,7 +23,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesDuplicateParamTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial = 
 @"class Program
@@ -51,7 +53,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesDuplicateParamTag_OnlyParamTags()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -73,7 +77,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesDuplicateParamTag_TagBelowOffendingParamTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -97,7 +103,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesDuplicateParamTag_BothParamTagsOnSameLine_DocCommentTagBetweenThem()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -124,7 +132,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesDuplicateParamTag_BothParamTagsOnSameLine_WhitespaceBetweenThem()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -151,7 +161,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesDuplicateParamTag_BothParamTagsOnSameLine_NothingBetweenThem1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -179,7 +191,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
 
         [WorkItem(13436, "https://github.com/dotnet/roslyn/issues/13436")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesTag_BothParamTagsOnSameLine_NothingBetweenThem2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -207,7 +221,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
 
         [WorkItem(13436, "https://github.com/dotnet/roslyn/issues/13436")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesTag_TrailingTextAfterTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -234,7 +250,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesDuplicateParamTag_RawTextBeforeAndAfterNode()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -263,7 +281,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesDuplicateTypeparamTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -291,7 +311,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesParamTagWithNoMatchingParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -317,7 +339,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesParamTag_NestedInSummaryTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -343,7 +367,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemovesParamTag_NestedInSummaryTag_WithChildren()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"class Program
@@ -373,7 +399,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.DocumentationComments.C
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllTypeparamInDocument_DoesNotFixDuplicateParamTags()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial = @"
 <Workspace>
@@ -495,7 +523,9 @@ class Program3
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInDocument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial = @"
 <Workspace>
@@ -605,7 +635,9 @@ class Program3
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInProject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial = @"
 <Workspace>
@@ -699,7 +731,9 @@ class Program3
         [Fact]
         [Trait(Traits.Feature, Traits.Features.CodeActionsRemoveDocCommentNode)]
         [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAllInSolution()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial = @"
 <Workspace>

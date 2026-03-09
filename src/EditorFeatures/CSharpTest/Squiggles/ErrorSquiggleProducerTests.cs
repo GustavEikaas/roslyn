@@ -33,7 +33,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Squiggles
         private readonly DiagnosticTagProducer<DiagnosticsSquiggleTaggerProvider> _producer = new DiagnosticTagProducer<DiagnosticsSquiggleTaggerProvider>();
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ErrorSquiggles)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ErrorTagGeneratedForError()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var spans = await GetTagSpansAsync("class C {");
             Assert.Equal(1, spans.Count());
@@ -43,7 +45,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Squiggles
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ErrorSquiggles)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ErrorTagGeneratedForWarning()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var spans = await GetTagSpansAsync("class C { long x = 5l; }");
             Assert.Equal(1, spans.Count());
@@ -51,7 +55,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Squiggles
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ErrorSquiggles)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ErrorTagGeneratedForWarningAsError()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspaceXml =
 @"<Workspace>
@@ -79,7 +85,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Squiggles
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ErrorSquiggles)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CustomizableTagsForUnnecessaryCode()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspaceXml =
 @"<Workspace>
@@ -152,14 +160,18 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ErrorSquiggles)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ErrorDoesNotCrashPastEOF()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var spans = await GetTagSpansAsync("class C { int x =");
             Assert.Equal(3, spans.Count());
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ErrorSquiggles)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SemanticErrorReported()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var spans = await GetTagSpansAsync("class C : Bar { }");
             Assert.Equal(1, spans.Count());
@@ -170,7 +182,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ErrorSquiggles)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoErrorsAfterDocumentRemoved()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp("class"))
             using (var wrapper = new DiagnosticTaggerWrapper<DiagnosticsSquiggleTaggerProvider>(workspace))
@@ -200,7 +214,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ErrorSquiggles)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoErrorsAfterProjectRemoved()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp("class"))
             using (var wrapper = new DiagnosticTaggerWrapper<DiagnosticsSquiggleTaggerProvider>(workspace))
@@ -231,7 +247,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ErrorSquiggles)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BuildErrorZeroLengthSpan()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspaceXml =
 @"<Workspace>
@@ -264,7 +282,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.ErrorSquiggles)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LiveErrorZeroLengthSpan()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspaceXml =
 @"<Workspace>

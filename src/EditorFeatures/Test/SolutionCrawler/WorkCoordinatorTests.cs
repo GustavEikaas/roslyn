@@ -28,7 +28,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         private const string SolutionCrawler = nameof(SolutionCrawler);
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RegisterService()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -48,7 +50,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicallyAddAnalyzer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -80,7 +84,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact, WorkItem(747226, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/747226")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SolutionAdded_Simple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -103,7 +109,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SolutionAdded_Complex()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -115,7 +123,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Solution_Remove()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -129,7 +139,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Solution_Clear()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -143,7 +155,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Solution_Reload()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -157,7 +171,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Solution_Change()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -177,7 +193,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Project_Add()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -200,7 +218,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Project_Remove()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -217,7 +237,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Project_Change()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -236,7 +258,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Project_AssemblyName_Change()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -253,7 +277,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Project_AnalyzerOptions_Change()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -270,7 +296,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test_NeedsReanalysisOnOptionChanged()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -287,7 +315,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Project_Reload()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -302,7 +332,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_Add()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -320,7 +352,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_Remove()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -339,7 +373,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_Reload()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -355,7 +391,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_Reanalyze()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -388,7 +426,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact, WorkItem(670335, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/670335")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_Change()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -405,7 +445,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_AdditionalFileChange()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -433,7 +475,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact, WorkItem(670335, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/670335")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_Cancellation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -463,7 +507,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact, WorkItem(670335, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/670335")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_Cancellation_MultipleTimes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -497,7 +543,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/21082"), WorkItem(670335, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/670335")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_InvocationReasons()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = new WorkCoordinatorWorkspace(SolutionCrawler))
             {
@@ -542,7 +590,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_TopLevelType_Whitespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C { $$ }";
             var textToInsert = " ";
@@ -551,7 +601,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_TopLevelType_Character()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C { $$ }";
             var textToInsert = "int";
@@ -560,7 +612,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_TopLevelType_NewLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C { $$ }";
             var textToInsert = "\r\n";
@@ -569,7 +623,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_TopLevelType_NewLine2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C { $$";
             var textToInsert = "\r\n";
@@ -578,7 +634,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_EmptyFile()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"$$";
             var textToInsert = "class";
@@ -587,7 +645,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_TopLevel1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -598,7 +658,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_TopLevel2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -609,7 +671,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_TopLevel3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -620,7 +684,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_InteriorNode1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -632,7 +698,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_InteriorNode2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -646,7 +714,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_InteriorNode_Field()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -658,7 +728,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_InteriorNode_Field1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -670,7 +742,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_InteriorNode_Accessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -688,7 +762,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_TopLevelWhitespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -703,7 +779,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.SolutionCrawler
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_TopLevelWhitespace2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"/// $$
 class C
@@ -718,7 +796,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Document_InteriorNode_Malformed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class C
 {
@@ -752,7 +832,9 @@ End Class";
         }
 
         [Fact, WorkItem(739943, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/739943")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SemanticChange_Propagation_Transitive()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = GetInitialSolutionInfoWithP2P();
 
@@ -774,7 +856,9 @@ End Class";
         }
 
         [Fact, WorkItem(739943, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/739943")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SemanticChange_Propagation_Direct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = GetInitialSolutionInfoWithP2P();
 
@@ -796,7 +880,9 @@ End Class";
         }
 
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/23657")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ProgressReporterTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = GetInitialSolutionInfoWithP2P();
 
@@ -853,7 +939,9 @@ End Class";
 
         [Fact]
         [WorkItem(26244, "https://github.com/dotnet/roslyn/issues/26244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FileFromSameProjectTogetherTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var projectId1 = ProjectId.CreateNewId();
             var projectId2 = ProjectId.CreateNewId();
@@ -941,7 +1029,9 @@ End Class";
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task InsertText(string code, string text, bool expectDocumentAnalysis, string language = LanguageNames.CSharp)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.Create(
                 SolutionCrawler, language, compilationOptions: null, parseOptions: null, content: code, exportProvider: EditorServicesUtil.ExportProvider))
@@ -974,7 +1064,9 @@ End Class";
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task<Analyzer> ExecuteOperation(TestWorkspace workspace, Action<TestWorkspace> operation)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var worker = new Analyzer();
             var lazyWorker = new Lazy<IIncrementalAnalyzerProvider, IncrementalAnalyzerProviderMetadata>(() => new AnalyzerProvider(worker), Metadata.Crawler);
@@ -994,7 +1086,9 @@ End Class";
             return worker;
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task TouchEverything(Solution solution)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             foreach (var project in solution.Projects)
             {

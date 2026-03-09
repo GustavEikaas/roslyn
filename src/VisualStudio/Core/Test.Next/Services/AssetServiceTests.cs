@@ -22,7 +22,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
     public class AssetServiceTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAssets()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var sessionId = 0;
             var checksum = Checksum.Create(WellKnownSynchronizationKind.Null, ImmutableArray.CreateRange(Guid.NewGuid().ToByteArray()));
@@ -43,7 +45,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAssetSynchronization()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test { void Method() { } }";
 
@@ -71,7 +75,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSolutionSynchronization()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test { void Method() { } }";
 
@@ -99,7 +105,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Remote
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.RemoteHost)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestProjectSynchronization()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test { void Method() { } }";
 

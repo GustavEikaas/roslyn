@@ -21,7 +21,9 @@ namespace Roslyn.Hosting.Diagnostics
         public static void Install()
         {
             // make sure TPL installs its own event source
+#pragma warning disable VSTHRD110 // Observe result of async calls
             Task.Factory.StartNew(() => { }, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default);
+#pragma warning restore VSTHRD110 // Observe result of async calls
 
             var local = new TPLListener();
             Interlocked.CompareExchange(ref s_listener, local, null);

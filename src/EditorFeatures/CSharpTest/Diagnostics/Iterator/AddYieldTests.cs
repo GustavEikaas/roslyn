@@ -15,7 +15,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.Iterator
             => (null, new CSharpAddYieldCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldIEnumerableReturnNull()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -32,7 +34,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldIEnumerableReturnObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -60,7 +64,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldIEnumeratorReturnObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -88,7 +94,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldIEnumeratorReturnGenericList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -118,7 +126,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldGenericIEnumeratorReturnObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -148,7 +158,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldGenericIEnumerableReturnObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -178,7 +190,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldIEnumerableReturnGenericList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -196,7 +210,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldGenericIEnumeratorReturnDefault()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -226,7 +242,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldGenericIEnumerableReturnConvertibleToObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -256,7 +274,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldGenericIEnumerableReturnConvertibleToFloat()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -286,7 +306,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldGenericIEnumeratorNonConvertableType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -304,7 +326,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldGenericIEnumeratorConvertableTypeDateTime()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;
@@ -334,7 +358,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsChangeToYield)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddYieldNoTypeArguments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"using System;

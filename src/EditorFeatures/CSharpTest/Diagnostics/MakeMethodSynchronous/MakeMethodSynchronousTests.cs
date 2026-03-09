@@ -17,7 +17,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.MakeMethodS
             => (null, new CSharpMakeMethodSynchronousCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTaskReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -41,7 +43,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTaskOfTReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -65,7 +69,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSecondModifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -89,7 +95,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFirstModifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -113,7 +121,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrailingTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -138,7 +148,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRenameMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -162,7 +174,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRenameMethod1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -196,7 +210,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestParenthesizedLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -224,7 +240,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -252,7 +270,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLambdaWithExpressionBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -280,7 +300,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAnonymousMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -308,7 +330,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Threading.Tasks;
@@ -343,7 +367,9 @@ public class Class1
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
         [WorkItem(13961, "https://github.com/dotnet/roslyn/issues/13961")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveAwaitFromCaller1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Threading.Tasks;
@@ -376,7 +402,9 @@ public class Class1
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
         [WorkItem(13961, "https://github.com/dotnet/roslyn/issues/13961")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveAwaitFromCaller2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Threading.Tasks;
@@ -409,7 +437,9 @@ public class Class1
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
         [WorkItem(13961, "https://github.com/dotnet/roslyn/issues/13961")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveAwaitFromCaller3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Threading.Tasks;
@@ -442,7 +472,9 @@ public class Class1
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
         [WorkItem(13961, "https://github.com/dotnet/roslyn/issues/13961")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveAwaitFromCaller4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Threading.Tasks;
@@ -475,7 +507,9 @@ public class Class1
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
         [WorkItem(13961, "https://github.com/dotnet/roslyn/issues/13961")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveAwaitFromCallerNested1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Threading.Tasks;
@@ -508,7 +542,9 @@ public class Class1
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodSynchronous)]
         [WorkItem(13961, "https://github.com/dotnet/roslyn/issues/13961")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRemoveAwaitFromCallerNested()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Threading.Tasks;
@@ -541,7 +577,9 @@ public class Class1
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodAsynchronous)]
         [WorkItem(14133, "https://github.com/dotnet/roslyn/issues/14133")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveAsyncInLocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Threading.Tasks;
@@ -575,7 +613,9 @@ class C
         [InlineData("void", "void")]
         [Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodAsynchronous)]
         [WorkItem(18307, "https://github.com/dotnet/roslyn/issues/18307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveAsyncInLocalFunctionKeepsTrivia(string asyncReturn, string expectedReturn)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 $@"using System;
@@ -620,7 +660,9 @@ class C
         [InlineData("public", "void", " void")]
         [Trait(Traits.Feature, Traits.Features.CodeActionsMakeMethodAsynchronous)]
         [WorkItem(18307, "https://github.com/dotnet/roslyn/issues/18307")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveAsyncKeepsTrivia(string modifiers, string asyncReturn, string expectedReturn)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 $@"using System;

@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeActions.ConvertLinq
         #region Query Expressions
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Select()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -54,7 +56,9 @@ class Query
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GroupBy01()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -74,7 +78,9 @@ class Query
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GroupBy02()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -94,7 +100,9 @@ class Query
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FromJoinSelect01()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -142,7 +150,9 @@ class Query
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FromJoinSelect02()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Linq;
@@ -190,7 +200,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FromJoinSelect03()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Linq;
@@ -246,7 +258,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OrderBy()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -268,7 +282,9 @@ class Query
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Let()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -313,7 +329,9 @@ class Query
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GroupJoin()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -338,7 +356,9 @@ class Query
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SelectFromType01()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"using System;
 using System.Collections.Generic;
@@ -376,7 +396,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SelectFromType02()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"using System;
 using System.Collections.Generic;
@@ -414,7 +436,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task JoinClause()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -469,7 +493,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WhereClause()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -526,7 +552,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WhereDefinedInType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -556,7 +584,9 @@ class P
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryContinuation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -596,7 +626,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SelectInto()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -636,7 +668,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ComputeQueryVariableType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Linq;
@@ -672,7 +706,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task JoinIntoClause()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -692,7 +728,9 @@ static class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SemanticErrorInQuery()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Linq;
@@ -712,7 +750,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SelectFromVoid()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Linq;
@@ -737,7 +777,9 @@ class Test
         #region Assignments, Declarations, Returns
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssignExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -791,7 +833,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleAssignments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -831,7 +875,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PropertyAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -881,7 +927,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleDeclarationsFirst()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -919,7 +967,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleDeclarationsSecond()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -958,7 +1008,9 @@ public class Test
 
         // TODO support tuples in the test class, follow CodeGenTupleTests
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/25639"), Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -996,7 +1048,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssignAndReturnIEnumerable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1041,7 +1095,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BlockBodiedProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1066,7 +1122,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnonymousType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1084,7 +1142,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnonymousTypeInternally()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1103,7 +1163,9 @@ class C
 
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DuplicateIdentifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1121,7 +1183,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnIEnumerable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1161,7 +1225,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnIEnumerablePartialMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1209,7 +1275,9 @@ partial class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnIEnumerableWithOtherReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1266,7 +1334,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1309,7 +1379,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExtraParenthesis()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1344,7 +1416,9 @@ public class Test
 
         // TODO support tuples in the test class
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/25639"), Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InReturningTuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1382,7 +1456,9 @@ public class Test
 
         // TODO support tuples in the test class
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/25639"), Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InInvocationReturningInTuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1420,7 +1496,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RangeVariables()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -1472,7 +1550,9 @@ class Query
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CallingMethodWithIEnumerable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -1522,7 +1602,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnFirstOrDefault()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1565,7 +1647,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IncompleteQueryWithSyntaxErrors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Linq;
@@ -1586,7 +1670,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ErrorNameDoesNotExistsInContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1604,7 +1690,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InArrayInitialization()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1641,7 +1729,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InCollectionInitialization()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1678,7 +1768,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InStructInitialization()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1725,7 +1817,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InClassInitialization()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1772,7 +1866,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1809,7 +1905,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InInlineConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1826,7 +1924,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IninlineIf()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -1875,7 +1975,9 @@ public class Test
         #region In foreach
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UsageInForEach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -1928,7 +2030,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UsageInForEachSameVariableName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -1980,7 +2084,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryInForEach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -2024,7 +2130,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryInForEachSameVariableNameNoType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -2066,7 +2174,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryInForEachWithExpressionBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -2107,7 +2217,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryInForEachWithSameVariableNameAndDifferentType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -2160,7 +2272,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryInForEachWithSameVariableNameAndSameType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -2205,7 +2319,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryInForEachVariableUsedInBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -2258,7 +2374,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryInForEachWithConvertedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -2333,7 +2451,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QueryInForEachWithSelectIdentifierButNotVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -2402,7 +2522,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IQueryable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2420,7 +2542,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IQueryableConvertedToIEnumerableInReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2454,7 +2578,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IQueryableConvertedToIEnumerableInAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2492,7 +2618,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IQueryableInInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2530,7 +2658,9 @@ class C
         #region In ToList
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PropertyAssignmentInInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2578,7 +2708,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NullablePropertyAssignmentInInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2626,7 +2758,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssignList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2668,7 +2802,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssignToListToParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2710,7 +2846,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssignToListToArrayElement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2751,7 +2889,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssignListWithTypeArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2793,7 +2933,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssignListToObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2836,7 +2978,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssignListWithNullableToList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2881,7 +3025,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2922,7 +3068,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnListNameGeneration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -2965,7 +3113,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ToListTypeReplacement01()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -3023,7 +3173,9 @@ class Query
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ToListTypeReplacement02()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Linq;
@@ -3075,7 +3227,9 @@ class Query
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ToListOverloadAssignTo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3128,7 +3282,9 @@ namespace Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ToListRefOverload()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3185,7 +3341,9 @@ namespace Test
         #region In Count
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CountInMultipleDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3230,7 +3388,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CountInNonLocalDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -3281,7 +3441,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CountInDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3323,7 +3485,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnCount()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3364,7 +3528,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnCountExtraParethesis()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3405,7 +3571,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CountAsArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3450,7 +3618,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CountAsArgumentExpressionBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3469,7 +3639,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnCountNameGeneration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3512,7 +3684,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CountNameUsedAfter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3565,7 +3739,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ReturnCountNameUsedBefore()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3616,7 +3792,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CountOverload()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3660,7 +3838,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CountOverloadAssignTo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3713,7 +3893,9 @@ namespace Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CountRefOverload()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3770,7 +3952,9 @@ namespace Test
         #region Expression Bodied
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3786,7 +3970,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3801,7 +3987,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Field()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3816,7 +4004,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3832,7 +4022,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedMethodUnderInvocation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3848,7 +4040,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedenumerable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3867,7 +4061,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodiedAccessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -3883,7 +4079,9 @@ public class Test
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InInlineLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -3922,7 +4120,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InParameterLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -3969,7 +4169,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InParenthesizedLambdaWithBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -4010,7 +4212,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InSimplifiedLambdaWithBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -4052,7 +4256,9 @@ class C
 
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InAnonymousMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System;
@@ -4093,7 +4299,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InWhen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -4121,7 +4329,9 @@ class C
         #region Comments and Preprocessor directives
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InlineComments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -4140,7 +4350,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Comments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             string source = @"
 using System.Collections.Generic;
@@ -4159,7 +4371,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsConvertQueryToForEach)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PreprocessorDirectives()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
 
             string source = @"

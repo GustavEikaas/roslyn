@@ -44,7 +44,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NameCref()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"using System;
 namespace Goo
@@ -58,7 +60,9 @@ namespace Goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task QualifiedCref()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"using System;
 namespace Goo
@@ -74,7 +78,9 @@ namespace Goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefArgumentList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"using System;
 namespace Goo
@@ -91,7 +97,9 @@ namespace Goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefTypeParameterInArgumentList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"using System;
 namespace Goo
@@ -107,7 +115,9 @@ namespace Goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion), WorkItem(530887, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530887")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PrivateMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"using System;
 namespace Goo
@@ -127,7 +137,9 @@ namespace Goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AfterSingleQuote()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"using System;
 namespace Goo
@@ -142,7 +154,9 @@ namespace Goo
 
         [WorkItem(531315, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/531315")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EscapePredefinedTypeName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"using System;
 /// <see cref=""@vo$$""/>
@@ -154,7 +168,9 @@ class @void { }
         [WorkItem(531345, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/531345")]
         [WorkItem(598159, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/598159")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ShowParameterNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"/// <see cref=""C.$$""/>
 class C
@@ -172,7 +188,9 @@ class C
 
         [WorkItem(531345, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/531345")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ShowTypeParameterNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"/// <see cref=""C$$""/>
 class C<TGoo>
@@ -188,7 +206,9 @@ class C<TGoo>
 
         [WorkItem(531156, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/531156")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ShowConstructors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"using System;
 
@@ -210,7 +230,9 @@ class C<T>
 
         [WorkItem(598679, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/598679")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoParamsModifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"/// <summary>
 /// <see cref=""C.$$""/>
@@ -228,7 +250,9 @@ class C
 
         [WorkItem(607773, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/607773")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnqualifiedTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System.Collections.Generic;
@@ -240,7 +264,9 @@ class C { }
 
         [WorkItem(607773, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/607773")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitUnqualifiedTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System.Collections.Generic;
@@ -258,7 +284,9 @@ class C { }
 
         [WorkItem(642285, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/642285")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestOperators()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 class Test
@@ -290,7 +318,9 @@ class Test
 
         [WorkItem(641096, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/641096")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestIndexers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 /// <see cref=""thi$$""/>
@@ -309,7 +339,9 @@ class Program
 
         [WorkItem(531315, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/531315")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitEscapedPredefinedTypeName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"using System;
 /// <see cref=""@vo$$""/>
@@ -325,7 +357,9 @@ class @void { }
 
         [WorkItem(598159, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/598159")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RefOutModifiers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"/// <summary>
 /// <see cref=""C.$$""/>
@@ -343,7 +377,9 @@ class C
 
         [WorkItem(673587, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/673587")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NestedNamespaces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"namespace N
 {
@@ -373,7 +409,9 @@ class Program
 
         [WorkItem(730338, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/730338")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PermitTypingTypeParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System.Collections.Generic;
@@ -391,7 +429,9 @@ class C { }
 
         [WorkItem(730338, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/730338")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PermitTypingParameterTypes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System.Collections.Generic;
@@ -414,7 +454,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefCompletionSpeculatesOutsideTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 /// <see cref=""$$
@@ -447,7 +489,9 @@ class C
 
         [WorkItem(16060, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/16060")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SpecialTypeNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -463,7 +507,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoSuggestionAfterEmptyCref()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -479,7 +525,9 @@ class C
         
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
         [WorkItem(23957, "https://github.com/dotnet/roslyn/issues/23957")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CRef_InParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;

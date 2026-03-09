@@ -65,7 +65,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
 
                 _tasks.Add(task);
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                 task.Wait((int)timeToSleep.TotalMilliseconds);
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             }
         }
 
@@ -85,7 +87,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
                         sleepHelper.Sleep(TimeSpan.FromSeconds(1));
                         done = true;
                     });
+#pragma warning disable VSTHRD110 // Observe result of async calls
                 task.CompletesAsyncOperation(asyncToken);
+#pragma warning restore VSTHRD110 // Observe result of async calls
                 task.Start(TaskScheduler.Default);
 
                 Wait(listener, signal);
@@ -114,11 +118,15 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
                                 sleepHelper.Sleep(TimeSpan.FromMilliseconds(500));
                                 done = true;
                             });
+#pragma warning disable VSTHRD110 // Observe result of async calls
                         queuedTask.CompletesAsyncOperation(asyncToken2);
+#pragma warning restore VSTHRD110 // Observe result of async calls
                         queuedTask.Start(TaskScheduler.Default);
                     });
 
+#pragma warning disable VSTHRD110 // Observe result of async calls
                 task.CompletesAsyncOperation(asyncToken1);
+#pragma warning restore VSTHRD110 // Observe result of async calls
                 task.Start(TaskScheduler.Default);
 
                 Wait(listener, signal);
@@ -152,7 +160,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
                         queuedTask.Start(TaskScheduler.Default);
                         done = true;
                     });
+#pragma warning disable VSTHRD110 // Observe result of async calls
                 task.CompletesAsyncOperation(asyncToken1);
+#pragma warning restore VSTHRD110 // Observe result of async calls
                 task.Start(TaskScheduler.Default);
 
                 Wait(listener, signal);
@@ -187,7 +197,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
                         sleepHelper.Sleep(TimeSpan.FromMilliseconds(500));
                         outerDone = true;
                     });
+#pragma warning disable VSTHRD110 // Observe result of async calls
                 task.CompletesAsyncOperation(asyncToken1);
+#pragma warning restore VSTHRD110 // Observe result of async calls
                 task.Start(TaskScheduler.Default);
 
                 Wait(listener, signal);
@@ -225,15 +237,21 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
                                         sleepHelper.Sleep(TimeSpan.FromMilliseconds(500));
                                         secondQueuedDone = true;
                                     });
+#pragma warning disable VSTHRD110 // Observe result of async calls
                                 secondQueueTask.CompletesAsyncOperation(asyncToken3);
+#pragma warning restore VSTHRD110 // Observe result of async calls
                                 secondQueueTask.Start(TaskScheduler.Default);
                                 firstQueuedDone = true;
                             });
+#pragma warning disable VSTHRD110 // Observe result of async calls
                         firstQueueTask.CompletesAsyncOperation(asyncToken2);
+#pragma warning restore VSTHRD110 // Observe result of async calls
                         firstQueueTask.Start(TaskScheduler.Default);
                         outerDone = true;
                     });
+#pragma warning disable VSTHRD110 // Observe result of async calls
                 task.CompletesAsyncOperation(asyncToken1);
+#pragma warning restore VSTHRD110 // Observe result of async calls
                 task.Start(TaskScheduler.Default);
 
                 Wait(listener, signal);
@@ -279,11 +297,15 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
                             sleepHelper.Sleep(TimeSpan.FromSeconds(1));
                             queuedFinished = true;
                         });
+#pragma warning disable VSTHRD110 // Observe result of async calls
                     queuedTask.CompletesAsyncOperation(asyncToken2);
+#pragma warning restore VSTHRD110 // Observe result of async calls
                     queuedTask.Start(TaskScheduler.Default);
                     done = true;
                 });
+#pragma warning disable VSTHRD110 // Observe result of async calls
                 task.CompletesAsyncOperation(asyncToken1);
+#pragma warning restore VSTHRD110 // Observe result of async calls
                 task.Start(TaskScheduler.Default);
 
                 Wait(listener, signal);
@@ -313,8 +335,12 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
                         sleepHelper.Sleep(TimeSpan.FromMilliseconds(500));
                         firstDone = true;
                     }, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default);
+#pragma warning disable VSTHRD110 // Observe result of async calls
                 firstTask.CompletesAsyncOperation(asyncToken1);
+#pragma warning restore VSTHRD110 // Observe result of async calls
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                 firstTask.Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
                 var asyncToken2 = listener.BeginAsyncOperation("Test");
                 var secondTask = Task.Factory.StartNew(() =>
@@ -323,7 +349,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
                         sleepHelper.Sleep(TimeSpan.FromMilliseconds(500));
                         secondDone = true;
                     }, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default);
+#pragma warning disable VSTHRD110 // Observe result of async calls
                 secondTask.CompletesAsyncOperation(asyncToken2);
+#pragma warning restore VSTHRD110 // Observe result of async calls
 
                 // give it two signals since second one might not have started when WaitTask.Wait is called - race condition
                 Wait(listener, signal1, signal2);
@@ -341,7 +369,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
             // that, and then start waiting.
             Assert.True(signal.Wait(s_testTimeout), "Shouldn't have hit timeout waiting for task to begin");
             var waitTask = listener.CreateWaitTask();
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             Assert.True(waitTask.Wait(s_testTimeout), "Wait shouldn't have needed to timeout");
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
 
         private static void Wait(AsynchronousOperationListener listener, ManualResetEventSlim signal1, ManualResetEventSlim signal2)
@@ -354,7 +384,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Utilities
             Assert.True(signal2.Wait(s_testTimeout), "Shouldn't have hit timeout waiting for task to begin");
 
             var waitTask = listener.CreateWaitTask();
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             Assert.True(waitTask.Wait(s_testTimeout), "Wait shouldn't have needed to timeout");
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
     }
 }

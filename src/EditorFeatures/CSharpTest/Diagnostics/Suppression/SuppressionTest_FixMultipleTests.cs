@@ -60,7 +60,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.Suppression
                 [Trait(Traits.Feature, Traits.Features.CodeActionsSuppression)]
                 [Trait(Traits.Feature, Traits.Features.CodeActionsFixAllOccurrences)]
                 [WorkItem(6455, "https://github.com/dotnet/roslyn/issues/6455")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
                 public async Task TestFixMultipleInDocument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
                 {
                     var input = @"
 <Workspace>

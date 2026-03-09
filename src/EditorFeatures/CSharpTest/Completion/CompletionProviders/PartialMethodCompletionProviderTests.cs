@@ -24,7 +24,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoPartialMethods1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class c
 {
@@ -34,7 +36,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoPartialMethods2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class c
 {
@@ -46,7 +50,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PartialMethodInPartialClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -58,7 +64,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PartialMethodInPartialGenericClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c<T>
 {
@@ -70,7 +78,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PartialMethodInPartialStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial struct c
 {
@@ -82,7 +92,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CompletionOnPartial1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -94,7 +106,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CompletionOnPartial2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -106,7 +120,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StaticUnsafePartial()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -118,7 +134,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PartialCompletionWithPrivate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -130,7 +148,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotCompletionDespiteValidModifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -142,7 +162,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfPublic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -154,7 +176,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfInternal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -166,7 +190,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfProtected()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -178,7 +204,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfProtectedInternal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -190,7 +218,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfExtern()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -202,7 +232,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfVirtual()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -214,7 +246,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfNonVoidReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class c
 {
@@ -226,7 +260,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotInsideInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial interface i
 {
@@ -238,7 +274,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitInPartialClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"partial class c
 {
@@ -261,7 +299,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitGenericPartialMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"partial class c<T>
 {
@@ -284,7 +324,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitMethodErasesPrivate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"partial class c
 {
@@ -307,7 +349,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitInPartialClassPart()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"partial class c
 {
@@ -336,7 +380,9 @@ partial class c
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitInPartialStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"partial struct c
 {
@@ -359,7 +405,9 @@ partial class c
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfNoPartialKeyword()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"partial class C
     {
@@ -376,7 +424,9 @@ partial class c
 
         [WorkItem(578757, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/578757")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoNotConsiderFollowingDeclarationPartial()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program
 {
@@ -421,7 +471,9 @@ partial class Bar
 
         [WorkItem(578078, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/578078")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AmbiguityCommittingWithParen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markupBeforeCommit = @"using System;
 
@@ -449,7 +501,9 @@ partial class Bar
 
         [WorkItem(965677, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/965677")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoDefaultParameterValues()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"namespace PartialClass
 {
@@ -480,7 +534,9 @@ partial class Bar
 
         [WorkItem(26388, "https://github.com/dotnet/roslyn/issues/26388")]
         [WpfFact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExpressionBodyMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = WorkspaceFixture.GetWorkspace();
             var originalOptions = workspace.Options;

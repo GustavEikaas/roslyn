@@ -21,7 +21,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.UserDiagnos
     public class DiagnosticAnalyzerDriverTests
     {
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticAnalyzerDriverAllInOne()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = TestResource.AllInOneCSharpCode;
 
@@ -36,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.UserDiagnos
             {
                 var document = workspace.CurrentSolution.Projects.Single().Documents.Single();
                 AccessSupportedDiagnostics(analyzer);
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 await DiagnosticProviderTestUtilities.GetAllDiagnosticsAsync(analyzer, document, new Text.TextSpan(0, document.GetTextAsync().Result.Length));
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                 analyzer.VerifyAllAnalyzerMembersWereCalled();
                 analyzer.VerifyAnalyzeSymbolCalledForAllSymbolKinds();
                 analyzer.VerifyAnalyzeNodeCalledForAllSyntaxKinds(new HashSet<SyntaxKind>());
@@ -45,7 +49,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.UserDiagnos
         }
 
         [Fact, WorkItem(908658, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/908658")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticAnalyzerDriverVsAnalyzerDriverOnCodeBlock()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var methodNames = new string[] { "Initialize", "AnalyzeCodeBlock" };
             var source = @"
@@ -62,7 +68,9 @@ class C
             using (var ideEngineWorkspace = TestWorkspace.CreateCSharp(source))
             {
                 var ideEngineDocument = ideEngineWorkspace.CurrentSolution.Projects.Single().Documents.Single();
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 await DiagnosticProviderTestUtilities.GetAllDiagnosticsAsync(ideEngineAnalyzer, ideEngineDocument, new Text.TextSpan(0, ideEngineDocument.GetTextAsync().Result.Length));
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                 foreach (var method in methodNames)
                 {
                     Assert.False(ideEngineAnalyzer.CallLog.Any(e => e.CallerName == method && e.MethodKind == MethodKind.DelegateInvoke && e.ReturnsVoid));
@@ -75,7 +83,9 @@ class C
             var compilerEngineAnalyzer = new CSharpTrackingDiagnosticAnalyzer();
             using (var compilerEngineWorkspace = TestWorkspace.CreateCSharp(source))
             {
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 var compilerEngineCompilation = (CSharpCompilation)compilerEngineWorkspace.CurrentSolution.Projects.Single().GetCompilationAsync().Result;
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                 compilerEngineCompilation.GetAnalyzerDiagnostics(new[] { compilerEngineAnalyzer });
                 foreach (var method in methodNames)
                 {
@@ -89,14 +99,18 @@ class C
 
         [Fact]
         [WorkItem(759, "https://github.com/dotnet/roslyn/issues/759")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiagnosticAnalyzerDriverIsSafeAgainstAnalyzerExceptions()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = TestResource.AllInOneCSharpCode;
             using (var workspace = TestWorkspace.CreateCSharp(source, TestOptions.Regular))
             {
                 var document = workspace.CurrentSolution.Projects.Single().Documents.Single();
                 await ThrowingDiagnosticAnalyzer<SyntaxKind>.VerifyAnalyzerEngineIsSafeAgainstExceptionsAsync(async analyzer =>
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                     await DiagnosticProviderTestUtilities.GetAllDiagnosticsAsync(analyzer, document, new Text.TextSpan(0, document.GetTextAsync().Result.Length), logAnalyzerExceptionAsDiagnostics: true));
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
             }
         }
 
@@ -129,7 +143,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzerOptionsArePassedToAllAnalyzers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp(TestResource.AllInOneCSharpCode, TestOptions.Regular))
             {
@@ -144,7 +160,9 @@ class C
                 var analyzer = new OptionsDiagnosticAnalyzer<SyntaxKind>(expectedOptions: options);
 
                 var sourceDocument = currentProject.Documents.Single();
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 await DiagnosticProviderTestUtilities.GetAllDiagnosticsAsync(analyzer, sourceDocument, new Text.TextSpan(0, sourceDocument.GetTextAsync().Result.Length));
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                 analyzer.VerifyAnalyzerOptions();
             }
         }
@@ -166,7 +184,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AnalyzerCreatedAtCompilationLevelNeedNotBeCompilationAnalyzer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = @"x";
 
@@ -174,7 +194,9 @@ class C
             using (var ideEngineWorkspace = TestWorkspace.CreateCSharp(source))
             {
                 var ideEngineDocument = ideEngineWorkspace.CurrentSolution.Projects.Single().Documents.Single();
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 var diagnostics = await DiagnosticProviderTestUtilities.GetAllDiagnosticsAsync(analyzer, ideEngineDocument, new Text.TextSpan(0, ideEngineDocument.GetTextAsync().Result.Length));
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
 
                 var diagnosticsFromAnalyzer = diagnostics.Where(d => d.Id == "SyntaxDiagnostic");
 
@@ -217,7 +239,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CodeBlockAnalyzersOnlyAnalyzeExecutableCode()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = @"
 using System;
@@ -234,7 +258,9 @@ class C
             using (var ideEngineWorkspace = TestWorkspace.CreateCSharp(source))
             {
                 var ideEngineDocument = ideEngineWorkspace.CurrentSolution.Projects.Single().Documents.Single();
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 var diagnostics = await DiagnosticProviderTestUtilities.GetAllDiagnosticsAsync(analyzer, ideEngineDocument, new Text.TextSpan(0, ideEngineDocument.GetTextAsync().Result.Length));
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                 var diagnosticsFromAnalyzer = diagnostics.Where(d => d.Id == CodeBlockAnalyzerFactory.Descriptor.Id);
                 Assert.Equal(2, diagnosticsFromAnalyzer.Count());
             }
@@ -252,7 +278,9 @@ class C
 
             using (var compilerEngineWorkspace = TestWorkspace.CreateCSharp(source))
             {
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 var compilerEngineCompilation = (CSharpCompilation)compilerEngineWorkspace.CurrentSolution.Projects.Single().GetCompilationAsync().Result;
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
                 var diagnostics = compilerEngineCompilation.GetAnalyzerDiagnostics(new[] { analyzer });
                 var diagnosticsFromAnalyzer = diagnostics.Where(d => d.Id == CodeBlockAnalyzerFactory.Descriptor.Id);
                 Assert.Equal(4, diagnosticsFromAnalyzer.Count());
@@ -307,7 +335,9 @@ class C
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDiagnosticSpan()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = @"// empty code";
 

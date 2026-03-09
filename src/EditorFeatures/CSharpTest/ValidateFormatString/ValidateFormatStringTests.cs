@@ -35,7 +35,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ValidateFormatString
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnePlaceholder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -47,7 +49,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ValidateFormatString
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TwoPlaceholders()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -59,7 +63,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ValidateFormatString
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ThreePlaceholders()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -71,7 +77,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ValidateFormatString
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FourPlaceholders()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -84,7 +92,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ValidateFormatString
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ObjectArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -97,7 +107,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ValidateFormatString
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleObjectArrays()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -110,7 +122,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ValidateFormatString
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IntArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -123,7 +137,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ValidateFormatString
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StringArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -136,7 +152,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ValidateFormatString
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task StringArrayOutOfBounds_NoDiagnostic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -149,7 +167,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ValidateFormatString
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IFormatProviderAndOnePlaceholder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" using System.Globalization; 
 class Program
@@ -162,7 +182,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IFormatProviderAndTwoPlaceholders()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" using System.Globalization; 
 class Program
@@ -175,7 +197,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IFormatProviderAndThreePlaceholders()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" using System.Globalization; 
 class Program
@@ -189,7 +213,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IFormatProviderAndFourPlaceholders()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" using System.Globalization; 
 class Program
@@ -203,7 +229,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IFormatProviderAndObjectArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" using System.Globalization; 
 class Program
@@ -217,7 +245,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithComma()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -229,7 +259,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithColon()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -241,7 +273,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithCommaAndColon()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -253,7 +287,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithPlaceholderAtBeginning()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -265,7 +301,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithPlaceholderAtEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -277,7 +315,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithDoubleBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -289,7 +329,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithDoubleBracesAtBeginning()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -301,7 +343,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithDoubleBracesAtEnd()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -313,7 +357,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithTripleBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -325,7 +371,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NamedParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -337,7 +385,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NamedParametersWithIFormatProvider()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" using System.Globalization;
 class Program
@@ -350,7 +400,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NamespaceAliasForStringClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" using stringAlias = System.String;
 class Program
@@ -363,7 +415,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MethodCallAsAnArgumentToAnotherMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" using System.IO;
 class Program
@@ -376,7 +430,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task VerbatimMultipleLines()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -389,7 +445,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Interpolated()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -404,7 +462,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Empty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -416,7 +476,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task LeftParenOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -428,7 +490,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ParenthesesOnly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -440,7 +504,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmptyString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -452,7 +518,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FormatOnly_NoStringDot()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" using static System.String
 class Program
@@ -465,7 +533,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NamedParameters_BlankName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -477,7 +547,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DuplicateNamedArgs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -489,7 +561,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task GenericIdentifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@"using System;
 using System.Collections;
@@ -519,7 +593,9 @@ namespace Generics_CSharp
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ClassNamedString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@"using System;
 
@@ -542,7 +618,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WarningTurnedOff()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticMissingAsync(@" class Program
 {
@@ -555,7 +633,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WarningTurnedOn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -571,7 +651,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -587,7 +669,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TwoPlaceholdersWithOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -603,7 +687,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ThreePlaceholdersWithOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -619,7 +705,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FourPlaceholdersWithOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -636,7 +724,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task iFormatProviderAndOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" using System.Globalization; 
 class Program
@@ -653,7 +743,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task iFormatProviderAndTwoPlaceholdersWithOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" using System.Globalization; 
 class Program
@@ -670,7 +762,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IFormatProviderAndThreePlaceholdersWithOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" using System.Globalization; 
 class Program
@@ -688,7 +782,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IFormatProviderAndFourPlaceholdersWithOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" using System.Globalization; 
 class Program
@@ -706,7 +802,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PlaceholderAtBeginningWithOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -722,7 +820,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PlaceholderAtEndWithOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -738,7 +838,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoubleBracesAtBeginningWithOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -754,7 +856,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DoubleBracesAtEndWithOnePlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -770,7 +874,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NamedParametersOneOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" using System.Globalization; 
 class Program
@@ -787,7 +893,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NamedParametersWithIFormatProviderOneOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" using System.Globalization; 
 class Program
@@ -804,7 +912,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FormatOnly_NoStringDot_OneOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" using static System.String
 class Program
@@ -821,7 +931,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Net45TestOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
              var input = @" 
             < Workspace >
@@ -847,7 +959,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task VerbatimMultipleLinesPlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -864,7 +978,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task IntArrayOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -881,7 +997,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FirstPlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -898,7 +1016,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SecondPlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -915,7 +1035,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FirstOfMultipleSameNamedPlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -932,7 +1054,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SecondOfMultipleSameNamedPlaceholderOutOfBounds()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {
@@ -949,7 +1073,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.ValidateFormatString)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmptyPlaceholder()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestDiagnosticInfoAsync(@" class Program
 {

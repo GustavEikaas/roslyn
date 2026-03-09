@@ -26,7 +26,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
     public class DiagnosticAnalyzerServiceTests
     {
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHasSuccessfullyLoadedBeingFalse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace();
             var document = GetDocumentFromIncompleteProject(workspace);
@@ -48,7 +50,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHasSuccessfullyLoadedBeingFalseFSAOn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace();
             workspace.Options = workspace.Options.WithChangedOption(ServiceFeatureOnOffOptions.ClosedFileDiagnostic, LanguageNames.CSharp, true);
@@ -61,7 +65,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHasSuccessfullyLoadedBeingFalseWhenFileOpened()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace();
             var document = GetDocumentFromIncompleteProject(workspace);
@@ -73,7 +79,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHasSuccessfullyLoadedBeingFalseWhenFileOpenedWithCompilerAnalyzer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace();
             var document = GetDocumentFromIncompleteProject(workspace);
@@ -85,7 +93,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHasSuccessfullyLoadedBeingFalseWithCompilerAnalyzerFSAOn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace();
             workspace.Options = workspace.Options.WithChangedOption(ServiceFeatureOnOffOptions.ClosedFileDiagnostic, LanguageNames.CSharp, true);
@@ -127,7 +137,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOpenFileOnlyAnalyzerDiagnostics()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace();
 
@@ -182,7 +194,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSynchronizeWithBuild()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace(MefV1HostServices.Create(TestExportProvider.ExportProviderWithCSharpAndVisualBasic.AsExportProvider()));
 
@@ -284,7 +298,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHostAnalyzerErrorNotLeaking()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace();
 

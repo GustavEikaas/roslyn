@@ -18,7 +18,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.UseLocalFunction
             => (new CSharpUseLocalFunctionDiagnosticAnalyzer(), new CSharpUseLocalFunctionCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingBeforeCSharp7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -41,7 +43,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfWrittenAfter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -66,7 +70,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfWrittenInside()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -90,7 +96,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingForErrorType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"class C
@@ -112,7 +120,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingForMultipleVariables()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -135,7 +145,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingForField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -155,7 +167,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_SimpleLambda_Block()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -195,7 +209,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_ParenLambdaNoType_Block()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -235,7 +251,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_ParenLambdaWithType_Block()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -275,7 +293,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_AnonymousMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -315,7 +335,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_SimpleLambda_ExprBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -345,7 +367,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_ParenLambdaNoType_ExprBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -375,7 +399,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_ParenLambdaWithType_ExprBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -405,7 +431,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_SimpleLambda_Block()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -445,7 +473,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_SimpleLambda_Block_ExtraParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -485,7 +515,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_ParenLambdaNoType_Block()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -525,7 +557,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_ParenLambdaWithType_Block()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -565,7 +599,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_AnonymousMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -605,7 +641,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_SimpleLambda_ExprBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -635,7 +673,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_ParenLambdaNoType_ExprBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -665,7 +705,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_ParenLambdaWithType_ExprBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -695,7 +737,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_WrongName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -719,7 +763,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_InitializedToOtherValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -743,7 +789,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_SimpleLambda_Block()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -784,7 +832,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_SimpleLambda_Block_NoInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -825,7 +875,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_SimpleLambda_Block_DefaultLiteral()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -866,7 +918,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_SimpleLambda_Block_DefaultExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -907,7 +961,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_SimpleLambda_Block_DefaultExpression_var()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -948,7 +1004,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_ParenLambdaNoType_Block()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -989,7 +1047,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_ParenLambdaWithType_Block()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1030,7 +1090,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_AnonymousMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1071,7 +1133,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_SimpleLambda_ExprBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1102,7 +1166,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_ParenLambdaNoType_ExprBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1133,7 +1199,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_ParenLambdaWithType_ExprBody()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1164,7 +1232,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1198,7 +1268,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1232,7 +1304,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1267,7 +1341,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFixAll4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1302,7 +1378,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1344,7 +1422,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInWithParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -1368,7 +1448,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRefReadOnlyWithReturnType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -1393,7 +1475,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23118, "https://github.com/dotnet/roslyn/issues/23118")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfConvertedToNonDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -1414,7 +1498,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23118, "https://github.com/dotnet/roslyn/issues/23118")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAvailableIfConvertedToDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1449,7 +1535,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23118, "https://github.com/dotnet/roslyn/issues/23118")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAvailableIfConvertedToSystemDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1468,7 +1556,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23118, "https://github.com/dotnet/roslyn/issues/23118")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotAvailableIfConvertedToSystemMulticastDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1487,7 +1577,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23118, "https://github.com/dotnet/roslyn/issues/23118")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAvailableIfConvertedToCoContraVariantDelegate0()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1518,7 +1610,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23118, "https://github.com/dotnet/roslyn/issues/23118")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAvailableIfConvertedToCoContraVariantDelegate1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1549,7 +1643,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23118, "https://github.com/dotnet/roslyn/issues/23118")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAvailableIfConvertedToCoContraVariantDelegate2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1580,7 +1676,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23118, "https://github.com/dotnet/roslyn/issues/23118")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAvailableIfConvertedToCoContraVariantDelegate3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1611,7 +1709,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(22672, "https://github.com/dotnet/roslyn/issues/22672")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfAdded()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -1635,7 +1735,9 @@ class Enclosing<T> where T : class
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(22672, "https://github.com/dotnet/roslyn/issues/22672")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfUsedInMemberAccess1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -1658,7 +1760,9 @@ class Enclosing<T> where T : class
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23150, "https://github.com/dotnet/roslyn/issues/23150")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfUsedInMemberAccess2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -1684,7 +1788,9 @@ class Enclosing<T> where T : class
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(22672, "https://github.com/dotnet/roslyn/issues/22672")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfUsedInExpressionTree()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -1708,7 +1814,9 @@ class Enclosing<T> where T : class
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(24344, "https://github.com/dotnet/roslyn/issues/24344")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingIfUsedInExpressionTree2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingAsync(
 @"using System;
@@ -1729,7 +1837,9 @@ public class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23150, "https://github.com/dotnet/roslyn/issues/23150")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithInvokeMethod1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1768,7 +1878,9 @@ class Enclosing<T> where T : class
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23150, "https://github.com/dotnet/roslyn/issues/23150")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithInvokeMethod2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1807,7 +1919,9 @@ class Enclosing<T> where T : class
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23150, "https://github.com/dotnet/roslyn/issues/23150")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithInvokeMethod3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1852,7 +1966,9 @@ class Enclosing<T> where T : class
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(23150, "https://github.com/dotnet/roslyn/issues/23150")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithInvokeMethod4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -1897,7 +2013,9 @@ class Enclosing<T> where T : class
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(24760, "https://github.com/dotnet/roslyn/issues/24760#issuecomment-364807853")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithRecursiveInvokeMethod1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
  @"using System;
@@ -1923,7 +2041,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(24760, "https://github.com/dotnet/roslyn/issues/24760#issuecomment-364807853")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithRecursiveInvokeMethod2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
  @"using System;
@@ -1949,7 +2069,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(24760, "https://github.com/dotnet/roslyn/issues/24760#issuecomment-364935495")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNestedInvokeMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
  @"using System;
@@ -1975,7 +2097,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNestedRecursiveInvokeMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
  @"using System;
@@ -2000,7 +2124,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDefaultParameter1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
            await TestInRegularAndScript1Async(
 @"class C
@@ -2025,7 +2151,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(24760, "https://github.com/dotnet/roslyn/issues/24760#issuecomment-364655480")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDefaultParameter2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
  @"class C
@@ -2049,7 +2177,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithDefaultParameter3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
  @"class C
@@ -2074,7 +2204,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(24760, "https://github.com/dotnet/roslyn/issues/24760#issuecomment-364764542")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithUnmatchingParameterList1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
  @"using System;
@@ -2098,7 +2230,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithUnmatchingParameterList2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
  @"using System;
@@ -2122,7 +2256,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithAsyncLambdaExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
  @"using System;
@@ -2148,7 +2284,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithAsyncAnonymousMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
  @"using System;
@@ -2174,7 +2312,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithParameterlessAnonymousMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -2207,7 +2347,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(24764, "https://github.com/dotnet/roslyn/issues/24764")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNamedArguments1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -2238,7 +2380,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
         [WorkItem(24764, "https://github.com/dotnet/roslyn/issues/24764")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNamedArguments2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -2270,7 +2414,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNamedArgumentsAndBrokenCode1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -2302,7 +2448,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNamedArgumentsAndBrokenCode2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"using System;
@@ -2336,7 +2484,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNamedAndDefaultArguments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -2369,7 +2519,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithNamedAndDefaultArgumentsAndNestedRecursiveInvocations_FixAll()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"class C
@@ -2423,7 +2575,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_SingleLine1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2448,7 +2602,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_SingleLine2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2498,7 +2654,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_SingleLine2MultiToken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2546,7 +2704,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_SingleLine3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2571,7 +2731,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSimpleInitialization_SingleLine4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2621,7 +2783,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_SingleLine1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2646,7 +2810,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_SingleLine2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2696,7 +2862,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_SingleLine3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2721,7 +2889,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastInitialization_SingleLine4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2771,7 +2941,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_SingleLine1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2797,7 +2969,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_SingleLine2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2849,7 +3023,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_SingleLine3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -2875,7 +3051,9 @@ class C
 
         [WorkItem(23872, "https://github.com/dotnet/roslyn/issues/23872")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSplitInitialization_SingleLine4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;

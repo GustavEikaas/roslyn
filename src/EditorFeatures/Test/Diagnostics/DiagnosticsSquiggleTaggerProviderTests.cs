@@ -27,7 +27,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
     public class DiagnosticsSquiggleTaggerProviderTests
     {
         [WpfFact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Test_TagSourceDiffer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var analyzer = new Analyzer();
             var analyzerMap = new Dictionary<string, DiagnosticAnalyzer[]>
@@ -65,7 +67,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task MultipleTaggersAndDispose()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp(new string[] { "class A {" }, CSharpParseOptions.Default))
             using (var wrapper = new DiagnosticTaggerWrapper<DiagnosticsSquiggleTaggerProvider>(workspace))
@@ -89,7 +93,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Diagnostics)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TaggerProviderCreatedAfterInitialDiagnosticsReported()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp(new string[] { "class C {" }, CSharpParseOptions.Default))
             using (var wrapper = new DiagnosticTaggerWrapper<DiagnosticsSquiggleTaggerProvider>(workspace, analyzerMap: null, createTaggerProvider: false))
@@ -115,7 +121,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithMockDiagnosticService_TaggerProviderCreatedBeforeInitialDiagnosticsReported()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // This test produces diagnostics from a mock service so that we are disconnected from
             // all teh asynchrony of hte actual async analyzer engine.  If this fails, then the 
@@ -154,7 +162,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Diagnostics
         }
 
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWithMockDiagnosticService_TaggerProviderCreatedAfterInitialDiagnosticsReported()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // This test produces diagnostics from a mock service so that we are disconnected from
             // all teh asynchrony of hte actual async analyzer engine.  If this fails, then the 

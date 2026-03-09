@@ -530,7 +530,9 @@ public class Ref<T> where T : Entity
         [ConditionalWpfFact(typeof(x86))]
         [Trait(Traits.Feature, Traits.Features.CodeModel)]
         [WorkItem(530496, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530496")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeElementFromPoint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = await (GetCurrentDocument()).GetTextAsync();
             var tree = await (GetCurrentDocument()).GetSyntaxTreeAsync();
@@ -545,7 +547,9 @@ public class Ref<T> where T : Entity
         [ConditionalWpfFact(typeof(x86))]
         [Trait(Traits.Feature, Traits.Features.CodeModel)]
         [WorkItem(726710, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/726710")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCodeElementFromPointBetweenMembers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = await (GetCurrentDocument()).GetTextAsync();
             var tree = await (GetCurrentDocument()).GetSyntaxTreeAsync();

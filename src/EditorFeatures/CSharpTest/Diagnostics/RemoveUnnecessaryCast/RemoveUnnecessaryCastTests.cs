@@ -19,7 +19,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.RemoveUnnec
 
         [WorkItem(545979, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545979")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToErrorType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -36,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.RemoveUnnec
 
         [WorkItem(545137, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545137"), WorkItem(870550, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/870550")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ParenthesizeToKeepParseTheSame1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -68,7 +72,9 @@ class Program
 
         [WorkItem(545146, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545146")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ParenthesizeToKeepParseTheSame2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -98,7 +104,9 @@ class C
 
         [WorkItem(545160, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545160")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ParenthesizeToKeepParseTheSame3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -126,7 +134,9 @@ class Program
 
         [WorkItem(545138, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545138")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveTypeParameterCastToObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Ð¡
@@ -140,7 +150,9 @@ class Program
 
         [WorkItem(545139, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545139")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastInIsTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -158,7 +170,9 @@ class Ð¡
 
         [WorkItem(545142, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545142")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastNeedForUserDefinedOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class A
@@ -180,7 +194,9 @@ class Program
 
         [WorkItem(545143, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545143")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemovePointerCast1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"unsafe class C
@@ -194,7 +210,9 @@ class Program
 
         [WorkItem(545144, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545144")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToObjectFromDelegateComparison()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // The cast below can't be removed because it would result in the Delegate
             // op_Equality operator overload being used over reference equality.
@@ -215,7 +233,9 @@ class Program
 
         [WorkItem(545145, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545145")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToAnonymousMethodWhenOnLeftOfAsCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -234,7 +254,9 @@ class C
 
         [WorkItem(545147, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545147")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastInFloatingPointOperation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -249,7 +271,9 @@ class C
 
         [WorkItem(545157, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545157")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveIdentityCastWhichAffectsOverloadResolution1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -273,7 +297,9 @@ class Program
 
         [WorkItem(545158, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545158")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveIdentityCastWhichAffectsOverloadResolution2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -298,7 +324,9 @@ class Program
 
         [WorkItem(545158, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545158")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveIdentityCastWhichAffectsOverloadResolution3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -324,7 +352,9 @@ class Program
 
         [WorkItem(545747, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545747")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastWhichChangesTypeOfInferredLocal()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -339,7 +369,9 @@ class Program
 
         [WorkItem(545159, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545159")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNeededCastToIListOfObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -364,7 +396,9 @@ class C
 
         [WorkItem(545287, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545287"), WorkItem(880752, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/880752")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInParameterDefaultValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -386,7 +420,9 @@ class Program
 
         [WorkItem(545289, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545289")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInReturnStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -410,7 +446,9 @@ class Program
 
         [WorkItem(545288, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545288")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInLambda1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -436,7 +474,9 @@ class Program
 
         [WorkItem(545288, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545288")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInLambda2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -462,7 +502,9 @@ class Program
 
         [WorkItem(545288, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545288")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInLambda3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -488,7 +530,9 @@ class Program
 
         [WorkItem(545288, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545288")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInLambda4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -514,7 +558,9 @@ class Program
 
         [WorkItem(545291, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545291")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInConditionalExpression1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -542,7 +588,9 @@ class Test
 
         [WorkItem(545291, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545291")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInConditionalExpression2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -570,7 +618,9 @@ class Test
 
         [WorkItem(545291, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545291")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInConditionalExpression3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -598,7 +648,9 @@ class Test
 
         [WorkItem(545291, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545291")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNeededCastInConditionalExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Test
@@ -613,7 +665,9 @@ class Test
 
         [WorkItem(545291, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545291")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInConditionalExpression4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -641,7 +695,9 @@ class Test
 
         [WorkItem(545459, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545459")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInsideADelegateConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -675,7 +731,9 @@ class Test
 
         [WorkItem(545419, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545419")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveTriviaWhenRemovingCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -707,7 +765,9 @@ class Test
 
         [WorkItem(545422, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545422")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInsideCaseLabel()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -739,7 +799,9 @@ class Test
 
         [WorkItem(545578, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545578")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInsideGotoCaseStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -773,7 +835,9 @@ class Test
 
         [WorkItem(545595, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545595")]
         [WpfFact(Skip = "529787"), Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInCollectionInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -801,7 +865,9 @@ class Program
 
         [WorkItem(529787, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529787")]
         [WpfFact(Skip = "529787"), Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastWhichInCollectionInitializer1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -828,7 +894,9 @@ class X : List<int>
 
         [WorkItem(529787, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529787")]
         [WpfFact(Skip = "529787"), Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastWhichInCollectionInitializer2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -855,7 +923,9 @@ class X : List<int>
 
         [WorkItem(545607, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545607")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastInArrayInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -881,7 +951,9 @@ class X
 
         [WorkItem(545616, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545616")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnneededCastWithOverloadedBinaryOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -919,7 +991,9 @@ class MyAction
 
         [WorkItem(545822, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545822")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnnecessaryCastShouldInsertWhitespaceWhereNeededToKeepCorrectParsing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -949,7 +1023,9 @@ class Program
 
         [WorkItem(545560, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545560")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastWithExplicitUserDefinedConversion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -979,7 +1055,9 @@ class A
 
         [WorkItem(545608, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545608")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastWithImplicitUserDefinedConversion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class X
@@ -999,7 +1077,9 @@ class A
 
         [WorkItem(545941, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545941")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastWithImplicitConversionInThrow()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // The cast below can't be removed because the throw statement expects
             // an expression of type Exception -- not an expression convertible to
@@ -1024,7 +1104,9 @@ class E
 
         [WorkItem(545981, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545981")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInThrow()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // The cast below can't be removed because the throw statement expects
             // an expression of type Exception -- not an expression convertible to
@@ -1045,7 +1127,9 @@ class C
 
         [WorkItem(545941, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545941")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnnecessaryCastInThrow()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -1075,7 +1159,9 @@ class E
 
         [WorkItem(545945, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545945")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryDowncast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -1089,7 +1175,9 @@ class E
 
         [WorkItem(545591, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545591")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastWithinLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1127,7 +1215,9 @@ class Program
 
         [WorkItem(545606, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545606")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastFromNullToTypeParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class X
@@ -1141,7 +1231,9 @@ class Program
 
         [WorkItem(545744, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545744")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInImplicitlyTypedArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class X
@@ -1157,7 +1249,9 @@ class Program
 
         [WorkItem(545750, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545750")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnnecessaryCastToBaseType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -1191,7 +1285,9 @@ class X
 
         [WorkItem(545855, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545855")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnnecessaryLambdaToDelegateCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
             @"
@@ -1248,7 +1344,9 @@ static class Program
 
         [WorkItem(529816, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529816")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnnecessaryCastInQueryExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -1280,7 +1378,9 @@ class A
 
         [WorkItem(529816, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529816")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInQueryExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1307,7 +1407,9 @@ class A
 
         [WorkItem(545848, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545848")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInConstructorInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1345,7 +1447,9 @@ class C
 
         [WorkItem(529831, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529831")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastFromTypeParameterToInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1399,7 +1503,9 @@ static class Program
 
         [WorkItem(529831, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529831")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnnecessaryCastFromTypeParameterToInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -1486,7 +1592,9 @@ static class Program
 
         [WorkItem(545877, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545877")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontCrashOnIncompleteMethodDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1507,7 +1615,9 @@ class A
 
         [WorkItem(545777, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545777")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveImportantTrailingTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -1541,7 +1651,9 @@ class Program
 
         [WorkItem(529791, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529791")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnnecessaryCastToNullable1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -1569,7 +1681,9 @@ class X
 
         [WorkItem(545842, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545842")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnnecessaryCastToNullable2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -1599,7 +1713,9 @@ static class C
 
         [WorkItem(545850, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545850")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveSurroundingParentheses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -1627,7 +1743,9 @@ class Program
 
         [WorkItem(529846, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529846")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastFromTypeParameterToObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -1643,7 +1761,9 @@ class Program
 
         [WorkItem(545858, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545858")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastFromDelegateTypeToMulticastDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1661,7 +1781,9 @@ class C
 
         [WorkItem(545857, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545857")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInSizeOfArrayCreationExpression1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // The cast below can't be removed because it would result in the implicit
             // conversion to int being called instead.
@@ -1690,7 +1812,9 @@ class C
 
         [WorkItem(545980, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545980")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInSizeOfArrayCreationExpression2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Array bounds must be an int, so the cast below can't be removed.
 
@@ -1706,7 +1830,9 @@ class C
 
         [WorkItem(529842, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529842")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInTernaryExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1729,7 +1855,9 @@ class X
 
         [WorkItem(545882, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545882"), WorkItem(880752, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/880752")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastInConstructorInitializer1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -1751,7 +1879,9 @@ class C
 
         [WorkItem(545958, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545958"), WorkItem(880752, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/880752")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastInConstructorInitializer2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -1779,7 +1909,9 @@ class C
 
         [WorkItem(545957, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545957")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastInConstructorInitializer3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -1796,7 +1928,9 @@ class C
 
         [WorkItem(545842, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545842")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToNullableInArithmeticExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -1826,7 +1960,9 @@ static class C
 
         [WorkItem(545942, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545942")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastFromValueTypeToObjectInReferenceEquality()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed because it would result in an
             // illegal reference equality test between object and a value type.
@@ -1846,7 +1982,9 @@ class Program
 
         [WorkItem(545962, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545962")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastWhenExpressionDoesntBind()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed because its expression doesn't bind.
 
@@ -1864,7 +2002,9 @@ class Program
 
         [WorkItem(545944, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545944")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastBeforePointerDereference1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed because it would result in *null,
             // which is illegal.
@@ -1878,7 +2018,9 @@ class Program
 
         [WorkItem(545978, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545978")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastBeforePointerDereference2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed because it would result in dereferencing
             // void*, which is illegal.
@@ -1897,7 +2039,9 @@ class Program
         [WorkItem(2691, "https://github.com/dotnet/roslyn/issues/2691")]
         [WorkItem(2987, "https://github.com/dotnet/roslyn/issues/2987")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastBeforePointerDereference3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Conservatively disable cast simplifications for casts involving pointer conversions.
             // https://github.com/dotnet/roslyn/issues/2987 tracks improving cast simplification for this scenario.
@@ -1915,7 +2059,9 @@ class Program
         [WorkItem(2691, "https://github.com/dotnet/roslyn/issues/2691")]
         [WorkItem(2987, "https://github.com/dotnet/roslyn/issues/2987")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNumericCastInUncheckedExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Conservatively disable cast simplifications within explicit checked/unchecked expressions.
             // https://github.com/dotnet/roslyn/issues/2987 tracks improving cast simplification for this scenario.
@@ -1938,7 +2084,9 @@ class Program
         [WorkItem(2691, "https://github.com/dotnet/roslyn/issues/2691")]
         [WorkItem(2987, "https://github.com/dotnet/roslyn/issues/2987")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNumericCastInUncheckedStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Conservatively disable cast simplifications within explicit checked/unchecked statements.
             // https://github.com/dotnet/roslyn/issues/2987 tracks improving cast simplification for this scenario.
@@ -1964,7 +2112,9 @@ class Program
         [WorkItem(2691, "https://github.com/dotnet/roslyn/issues/2691")]
         [WorkItem(2987, "https://github.com/dotnet/roslyn/issues/2987")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNumericCastInCheckedExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Conservatively disable cast simplifications within explicit checked/unchecked expressions.
             // https://github.com/dotnet/roslyn/issues/2987 tracks improving cast simplification for this scenario.
@@ -1987,7 +2137,9 @@ class Program
         [WorkItem(2691, "https://github.com/dotnet/roslyn/issues/2691")]
         [WorkItem(2987, "https://github.com/dotnet/roslyn/issues/2987")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNumericCastInCheckedStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Conservatively disable cast simplifications within explicit checked/unchecked statements.
             // https://github.com/dotnet/roslyn/issues/2987 tracks improving cast simplification for this scenario.
@@ -2012,7 +2164,9 @@ class Program
 
         [WorkItem(545894, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545894")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInAttribute()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -2030,7 +2184,9 @@ class A : Attribute
 
         [WorkItem(545889, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545889")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToInterfaceForUnsealedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed because X is not sealed.
 
@@ -2062,7 +2218,9 @@ class Y : X, IDisposable
 
         [WorkItem(545890, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545890")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToInterfaceForSealedType1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can be removed because C is sealed and the
             // unspecified optional parameters of I.Goo() and C.Goo() have the
@@ -2116,7 +2274,9 @@ sealed class C : I
 
         [WorkItem(545890, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545890")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToInterfaceForSealedType2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can be removed because C is sealed and the
             // interface member has no parameters.
@@ -2175,7 +2335,9 @@ sealed class C : I
 
         [WorkItem(545890, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545890")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToInterfaceForSealedType3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can be removed because C is sealed and the
             // interface member has no parameters.
@@ -2238,7 +2400,9 @@ sealed class C : I
 
         [WorkItem(545890, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545890")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToInterfaceForSealedType4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed (even though C is sealed)
             // because the unspecified optional parameter default values differ.
@@ -2267,7 +2431,9 @@ sealed class C : I
 
         [WorkItem(545890, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545890")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToInterfaceForSealedType5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can be removed (even though C is sealed)
             // because the optional parameters whose default values differ are
@@ -2321,7 +2487,9 @@ sealed class C : I
 
         [WorkItem(545888, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545888")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToInterfaceForSealedType6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed (even though C is sealed)
             // because the specified named arguments refer to parameters that
@@ -2351,7 +2519,9 @@ sealed class C : I
 
         [WorkItem(545888, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545888")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToInterfaceForSealedType7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -2407,7 +2577,9 @@ sealed class C : I
 
         [WorkItem(545888, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545888")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToInterfaceForSealedType8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed (even though C is sealed)
             // because the specified named arguments refer to parameters that
@@ -2440,7 +2612,9 @@ sealed class C : I
 
         [WorkItem(545883, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545883")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToInterfaceForSealedType9()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed (even though C is sealed)
             // because it would result in binding to a Dispose method that doesn't
@@ -2467,7 +2641,9 @@ sealed class C : MemoryStream
 
         [WorkItem(545887, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545887")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToInterfaceForStruct1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed because the cast boxes 's' and
             // unboxing would change program behavior.
@@ -2502,7 +2678,9 @@ struct S : IIncrementable
 
         [WorkItem(545834, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545834")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToInterfaceForStruct2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can be removed because we are sure to have
             // a fresh copy of the struct from the GetEnumerator() method.
@@ -2549,7 +2727,9 @@ class Program
 
         [WorkItem(544655, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544655")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToICloneableForDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can be removed because delegates are implicitly
             // sealed.
@@ -2584,7 +2764,9 @@ class C
 
         [WorkItem(545926, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545926")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToICloneableForArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can be removed because arrays are implicitly
             // sealed.
@@ -2619,7 +2801,9 @@ class C
 
         [WorkItem(529897, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529897")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToIConvertibleForEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can be removed because enums are implicitly
             // sealed.
@@ -2658,7 +2842,9 @@ class Program
 
         [WorkItem(545141, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545141")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToObjectInParamArrayArg1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -2679,7 +2865,9 @@ class C
 
         [WorkItem(529911, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529911")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToIntArrayInParamArrayArg2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -2700,7 +2888,9 @@ class C
 
         [WorkItem(529911, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529911")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToObjectArrayInParamArrayArg3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -2721,7 +2911,9 @@ class C
 
         [WorkItem(529911, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529911")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToObjectArrayInParamArrayArg1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -2751,7 +2943,9 @@ class C
 
         [WorkItem(529911, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529911")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToStringArrayInParamArrayArg2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -2781,7 +2975,9 @@ class C
 
         [WorkItem(529911, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529911")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToIntArrayInParamArrayArg3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -2811,7 +3007,9 @@ class C
 
         [WorkItem(529911, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529911")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToObjectArrayInParamArrayArg4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -2841,7 +3039,9 @@ class C
 
         [WorkItem(529911, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529911")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToObjectInParamArrayArg5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
             @"
@@ -2870,7 +3070,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastToObjectArrayInParamArrayWithNamedArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
                 @"
@@ -2903,7 +3105,9 @@ class C
 
         [WorkItem(545961, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545961")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInForEach1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // The cast below can't be removed because it would result an error
             // in the foreach statement.
@@ -2925,7 +3129,9 @@ class Program
 
         [WorkItem(545961, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545961")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInForEach2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // The cast below can't be removed because it would result an error
             // in the foreach statement.
@@ -2947,7 +3153,9 @@ class Program
 
         [WorkItem(545961, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545961")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInForEach3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // The cast below can't be removed because it would result an error
             // in the foreach statement since C doesn't contain a GetEnumerator()
@@ -2983,7 +3191,9 @@ class C
 
         [WorkItem(545961, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545961")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInForEach4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // The cast below can't be removed because it would result in
             // C.GetEnumerator() being called rather than D.GetEnumerator().
@@ -3025,7 +3235,9 @@ class C
 
         [WorkItem(545961, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545961")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInForEach5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // The cast below can't be removed because it would change the
             // type of 'x'.
@@ -3053,7 +3265,9 @@ class Program
 
         [WorkItem(545925, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545925")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastIfOverriddenMethodHasIncompatibleParameterList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can't be removed because the parameter list
             // of Goo and its override have different default values.
@@ -3082,7 +3296,9 @@ class X : Y
 
         [WorkItem(545925, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545925")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastIfOverriddenMethodHaveCompatibleParameterList()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can be removed because the parameter list
             // of Goo and its override have the same default values.
@@ -3135,7 +3351,9 @@ class X : Y
 
         [WorkItem(529916, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529916")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastInReceiverForMethodGroup()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below can be removed because the it results in
             // the same method group.
@@ -3172,7 +3390,9 @@ static class Program
 
         [WorkItem(609497, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/609497")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Bugfix_609497()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -3195,7 +3415,9 @@ class Program
 
         [WorkItem(545995, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545995")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToDifferentTypeWithSameName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below cannot be removed because the it results in
             // a different overload being picked.
@@ -3236,7 +3458,9 @@ class A
 
         [WorkItem(545921, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545921")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastWhichWouldChangeAttributeOverloadResolution1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below cannot be removed because it would result in
             // a different attribute constructor being picked
@@ -3280,7 +3504,9 @@ class MyAttributeAttribute : Attribute
         [WorkItem(608180, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/608180")]
         [WorkItem(624252, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/624252")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastIfArgumentIsRestricted_TypedReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -3305,7 +3531,9 @@ class Program
 
         [WorkItem(627107, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/627107")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnArgumentsWithOtherDynamicArguments()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -3338,7 +3566,9 @@ class C<T>
 
         [WorkItem(627107, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/627107")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnArgumentsWithOtherDynamicArguments_Bracketed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C<T>
@@ -3376,7 +3606,9 @@ class C<T>
 
         [WorkItem(627107, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/627107")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnArgumentsWithDynamicReceiverOpt()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -3391,7 +3623,9 @@ class C<T>
 
         [WorkItem(627107, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/627107")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnArgumentsWithDynamicReceiverOpt_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -3406,7 +3640,9 @@ class C<T>
 
         [WorkItem(627107, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/627107")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnArgumentsWithDynamicReceiverOpt_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -3421,7 +3657,9 @@ class C<T>
 
         [WorkItem(627107, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/627107")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnArgumentsWithDynamicReceiverOpt_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -3436,7 +3674,9 @@ class C<T>
 
         [WorkItem(627107, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/627107")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnArgumentsWithOtherDynamicArguments_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -3469,7 +3709,9 @@ class C<T>
 
         [WorkItem(545998, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545998")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastWhichWouldChangeAttributeOverloadResolution2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // Note: The cast below cannot be removed because it would result in
             // a different attribute constructor being picked
@@ -3488,7 +3730,9 @@ class A : Attribute
 
         [WorkItem(529894, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529894")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontUnnecessaryCastFromEnumToUint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -3510,7 +3754,9 @@ class C
 
         [WorkItem(529846, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/529846")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontUnnecessaryCastFromTypeParameterToObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -3526,7 +3772,9 @@ class C
 
         [WorkItem(640136, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/640136")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnnecessaryCastAndParseCorrect()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -3558,7 +3806,9 @@ class C
 
         [WorkItem(626026, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/626026")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastIfUserDefinedExplicitCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -3585,7 +3835,9 @@ public struct B
 
         [WorkItem(768895, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/768895")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInTernary()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -3600,7 +3852,9 @@ public struct B
 
         [WorkItem(770187, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/770187")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveNecessaryCastInSwitchExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"namespace ConsoleApplication23
@@ -3631,7 +3885,9 @@ public struct B
         [WorkItem(844482, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/844482")]
         [WorkItem(2761, "https://github.com/dotnet/roslyn/issues/2761")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastFromBaseToDerivedWithExplicitReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -3655,7 +3911,9 @@ class D : C
 
         [WorkItem(3254, "https://github.com/dotnet/roslyn/issues/3254")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToTypeParameterWithExceptionConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -3674,7 +3932,9 @@ class Program
 
         [WorkItem(3254, "https://github.com/dotnet/roslyn/issues/3254")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastToTypeParameterWithExceptionSubTypeConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -3693,7 +3953,9 @@ class Program
 
         [WorkItem(8111, "https://github.com/dotnet/roslyn/issues/8111")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastThatChangesShapeOfAnonymousTypeObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class Program
@@ -3715,7 +3977,9 @@ class Program
 
         [WorkItem(8111, "https://github.com/dotnet/roslyn/issues/8111")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastThatDoesntChangeShapeOfAnonymousTypeObject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Program
@@ -3752,7 +4016,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Tuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -3772,7 +4038,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TupleWithDifferentNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -3793,7 +4061,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
         [WorkItem(24791, "https://github.com/dotnet/roslyn/issues/24791")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SimpleBoolCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -3816,7 +4086,9 @@ class Program
 
         [WorkItem(12572, "https://github.com/dotnet/roslyn/issues/12572")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastThatUnboxes()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // The cast below can't be removed because it could throw a null ref exception.
             await TestMissingInRegularAndScriptAsync(
@@ -3845,7 +4117,9 @@ class Program
 
         [WorkItem(17029, "https://github.com/dotnet/roslyn/issues/17029")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnEnumComparison1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -3867,7 +4141,9 @@ class Program
 
         [WorkItem(17029, "https://github.com/dotnet/roslyn/issues/17029")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnEnumComparison2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -3889,7 +4165,9 @@ class Program
 
         [WorkItem(18978, "https://github.com/dotnet/roslyn/issues/18978")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnCallToMethodWithParamsArgs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -3909,7 +4187,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnCallToMethodWithParamsArgsWithIncorrectMethodDefintion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -3929,7 +4209,9 @@ class Program
 
         [WorkItem(18978, "https://github.com/dotnet/roslyn/issues/18978")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastOnCallToMethodWithParamsArgsIfImplicitConversionExists()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -3964,7 +4246,9 @@ class Program
 
         [WorkItem(20630, "https://github.com/dotnet/roslyn/issues/20630")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnCallToAttributeWithParamsArgs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -3991,7 +4275,9 @@ static class Program
 
         [WorkItem(20630, "https://github.com/dotnet/roslyn/issues/20630")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnCallToAttributeWithParamsArgsAndProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4012,7 +4298,9 @@ static class Program
 
         [WorkItem(20630, "https://github.com/dotnet/roslyn/issues/20630")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnCallToAttributeWithParamsArgsPropertyAndOtherArg()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4033,7 +4321,9 @@ static class Program
 
         [WorkItem(20630, "https://github.com/dotnet/roslyn/issues/20630")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnCallToAttributeWithParamsArgsNamedArgsAndProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4054,7 +4344,9 @@ static class Program
 
         [WorkItem(20630, "https://github.com/dotnet/roslyn/issues/20630")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnCallToAttributeWithParamsArgsNamedArgsWithIncorrectMethodDefintion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4075,7 +4367,9 @@ static class Program
 
         [WorkItem(20630, "https://github.com/dotnet/roslyn/issues/20630")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastOnCallToAttributeWithParamsArgsWithImplicitCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -4110,7 +4404,9 @@ static class Program
 
         [WorkItem(20630, "https://github.com/dotnet/roslyn/issues/20630")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastOnCallToAttributeWithCastInPropertySetter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -4147,7 +4443,9 @@ static class Program
         [Theory, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
         [InlineData("-")]
         [InlineData("+")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnInvalidUnaryOperatorEnumValue1(string op)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 $@"
@@ -4171,7 +4469,9 @@ enum Sign
         [Theory, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
         [InlineData("-")]
         [InlineData("+")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontRemoveCastOnInvalidUnaryOperatorEnumValue2(string op)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 $@"
@@ -4193,7 +4493,9 @@ enum Sign
 
         [WorkItem(18510, "https://github.com/dotnet/roslyn/issues/18510")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveCastOnValidUnaryOperatorEnumValue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -4230,7 +4532,9 @@ enum Sign
 
         [WorkItem(25456, "https://github.com/dotnet/roslyn/issues/25456#issuecomment-373549735")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInSwitchCase()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4248,7 +4552,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInSwitchCase_CastInsideParentheses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4266,7 +4572,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInSwitchCase_DefaultInsideParentheses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4284,7 +4592,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInSwitchCase_RemoveDoubleCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -4314,7 +4624,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInPatternSwitchCase()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4332,7 +4644,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInPatternSwitchCase_CastInsideParentheses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4350,7 +4664,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInPatternSwitchCase_DefaultInsideParentheses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4368,7 +4684,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInPatternSwitchCase_RemoveDoubleCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -4398,7 +4716,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInPatternSwitchCase_RemoveInsideWhenClause()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -4428,7 +4748,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInPatternIs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4442,7 +4764,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInPatternIs_CastInsideParentheses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4456,7 +4780,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInPatternIs_DefaultInsideParentheses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -4470,7 +4796,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontIntroduceDefaultLiteralInPatternIs_RemoveDoubleCast()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -4493,7 +4821,9 @@ class C
 
         [WorkItem(27239, "https://github.com/dotnet/roslyn/issues/27239")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnnecessaryCast)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DontOfferToRemoveCastWhereNoConversionExists()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
                 @"

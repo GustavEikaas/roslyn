@@ -24,7 +24,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.FullyQualify
 
         [WorkItem(26887, "https://github.com/dotnet/roslyn/issues/26887")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsFullyQualify)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFullyQualifyUnboundIdentifier1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class Program
@@ -53,7 +55,9 @@ class Test
 
         [WorkItem(26887, "https://github.com/dotnet/roslyn/issues/26887")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsFullyQualify)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestFullyQualifyUnboundIdentifier2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class Program

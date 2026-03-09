@@ -15,7 +15,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.KeywordHighlighting
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithIfAndSingleElse1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -36,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.KeywordHighlighting
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithIfAndSingleElse2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -57,7 +61,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.KeywordHighlighting
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithIfAndElseIfAndElse1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -82,7 +88,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.KeywordHighlighting
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithIfAndElseIfAndElse2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -107,7 +115,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.KeywordHighlighting
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithIfAndElseIfAndElse3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -154,7 +164,9 @@ public class C
 }";
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithElseIfOnDifferentLines1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -180,7 +192,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithElseIfOnDifferentLines2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -206,7 +220,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithElseIfOnDifferentLines3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -232,7 +248,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithElseIfOnDifferentLines4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -276,7 +294,9 @@ public class C
 }";
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithIfAndElseIfAndElseTouching1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -300,7 +320,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithIfAndElseIfAndElseTouching2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -324,7 +346,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIfStatementWithIfAndElseIfAndElseTouching3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -348,7 +372,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExtraSpacesBetweenElseAndIf1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -373,7 +399,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExtraSpacesBetweenElseAndIf2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -398,7 +426,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExtraSpacesBetweenElseAndIf3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -444,7 +474,9 @@ public class C
 }";
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCommentBetweenElseIf1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -469,7 +501,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCommentBetweenElseIf2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -494,7 +528,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCommentBetweenElseIf3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -519,7 +555,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCommentBetweenElseIf4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -567,7 +605,9 @@ public class C
 }";
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedIfDoesNotHighlight1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -597,7 +637,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedIfDoesNotHighlight2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -627,7 +669,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNestedIfDoesNotHighlight3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"public class C
@@ -657,7 +701,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExample1_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -684,7 +730,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExample2_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -711,7 +759,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExample2_2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C
@@ -738,7 +788,9 @@ public class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.KeywordHighlighting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestExample2_3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C

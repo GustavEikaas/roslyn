@@ -17,7 +17,9 @@ namespace Microsoft.VisualStudio.LanguageServices.CSharp.UnitTests.DesignerAttri
     public class DesignerAttributeServiceTests
     {
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoDesignerTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Test { }";
 
@@ -25,7 +27,9 @@ namespace Microsoft.VisualStudio.LanguageServices.CSharp.UnitTests.DesignerAttri
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SimpleDesignerTest()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"[System.ComponentModel.DesignerCategory(""Form"")]
                 class Test { }";

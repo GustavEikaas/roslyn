@@ -65,7 +65,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.UseExplicit
         #region Error Cases
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnFieldDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -77,7 +79,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnFieldLikeEvents()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -89,7 +93,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnAnonymousMethodExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -106,7 +112,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnLambdaExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -121,7 +129,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnDeclarationWithMultipleDeclarators()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -136,7 +146,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnDeclarationWithoutInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -151,7 +163,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotDuringConflicts()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -170,7 +184,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfAlreadyExplicitlyTyped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -186,7 +202,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(27221, "https://github.com/dotnet/roslyn/issues/27221")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotIfRefTypeAlreadyExplicitlyTyped()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -202,7 +220,9 @@ struct Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnRHS()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -221,7 +241,9 @@ class var
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnErrorSymbol()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -239,7 +261,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23907, "https://github.com/dotnet/roslyn/issues/23907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InArrayType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var before = @"
 class Program
@@ -265,7 +289,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23907, "https://github.com/dotnet/roslyn/issues/23907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InArrayTypeWithIntrinsicType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var before = @"
 class Program
@@ -290,7 +316,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23907, "https://github.com/dotnet/roslyn/issues/23907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InNullableIntrinsicType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var before = @"
 class Program
@@ -316,7 +344,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(27221, "https://github.com/dotnet/roslyn/issues/27221")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithRefIntrinsicType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var before = @"
 class Program
@@ -344,7 +374,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(27221, "https://github.com/dotnet/roslyn/issues/27221")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task WithRefIntrinsicTypeInForeach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var before = @"
 class E
@@ -378,7 +410,9 @@ class E
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23907, "https://github.com/dotnet/roslyn/issues/23907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InArrayOfNullableIntrinsicType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var before = @"
 class Program
@@ -404,7 +438,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23907, "https://github.com/dotnet/roslyn/issues/23907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InNullableCustomType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var before = @"
 struct Program
@@ -430,7 +466,9 @@ struct Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23907, "https://github.com/dotnet/roslyn/issues/23907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InPointerTypeWithIntrinsicType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var before = @"
 unsafe class Program
@@ -456,7 +494,9 @@ unsafe class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23907, "https://github.com/dotnet/roslyn/issues/23907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InPointerTypeWithCustomType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var before = @"
 unsafe class Program
@@ -482,7 +522,9 @@ unsafe class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23893, "https://github.com/dotnet/roslyn/issues/23893")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task InOutParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var before = @"
 class Program
@@ -506,7 +548,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnDynamic()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -521,7 +565,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnForEachVarWithAnonymousType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -543,7 +589,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23752, "https://github.com/dotnet/roslyn/issues/23752")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnDeconstructionVarParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -566,7 +614,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnDeconstructionVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -590,7 +640,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23752, "https://github.com/dotnet/roslyn/issues/23752")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnNestedDeconstructionVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -614,7 +666,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23752, "https://github.com/dotnet/roslyn/issues/23752")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnBadlyFormattedNestedDeconstructionVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -638,7 +692,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23752, "https://github.com/dotnet/roslyn/issues/23752")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnForeachNestedDeconstructionVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -662,7 +718,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23752, "https://github.com/dotnet/roslyn/issues/23752")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnNestedDeconstructionVarWithTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -686,7 +744,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23752, "https://github.com/dotnet/roslyn/issues/23752")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnDeconstructionVarWithDiscard()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -710,7 +770,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(23752, "https://github.com/dotnet/roslyn/issues/23752")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnDeconstructionVarWithErrorType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -733,7 +795,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OnForEachVarWithExplicitType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -769,7 +833,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnAnonymousType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -784,7 +850,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnArrayOfAnonymousType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -799,7 +867,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NotOnEnumerableOfAnonymousTypeFromAQueryExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -824,7 +894,9 @@ class Product
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnLocalWithIntrinsicTypeString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -848,7 +920,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnIntrinsicType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -872,7 +946,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnFrameworkType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System.Collections.Generic;
@@ -896,7 +972,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnUserDefinedType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -920,7 +998,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnGenericType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -944,7 +1024,9 @@ class C<T>
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnSingleDimensionalArrayTypeWithNewOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -968,7 +1050,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnSingleDimensionalArrayTypeWithNewOperator2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -992,7 +1076,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnSingleDimensionalJaggedArrayType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1022,7 +1108,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnDeclarationWithObjectInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1056,7 +1144,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnDeclarationWithCollectionInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1082,7 +1172,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnDeclarationWithCollectionAndObjectInitializers()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1124,7 +1216,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnForStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1152,7 +1246,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnForeachStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1184,7 +1280,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnQueryExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1230,7 +1328,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeInUsingStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1274,7 +1374,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnInterpolatedString()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1298,7 +1400,9 @@ class Program
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnExplicitConversion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1324,7 +1428,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnConditionalAccessExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1360,7 +1466,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeInCheckedExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1386,7 +1494,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeInAwaitExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1422,7 +1532,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeInBuiltInNumericType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1446,7 +1558,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeInBuiltInCharType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1474,7 +1588,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeInBuiltInType_string()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // though string isn't an intrinsic type per the compiler
             // we in the IDE treat it as an intrinsic type for this feature.
@@ -1500,7 +1616,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeInBuiltInType_object()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             // object isn't an intrinsic type per the compiler
             // we in the IDE treat it as an intrinsic type for this feature.
@@ -1528,7 +1646,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeNotificationLevelSilent()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source =
 @"using System;
@@ -1546,7 +1666,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeNotificationLevelInfo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source =
 @"using System;
@@ -1565,7 +1687,9 @@ class C
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(23907, "https://github.com/dotnet/roslyn/issues/23907")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeNotificationLevelWarning()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source =
 @"using System;
@@ -1583,7 +1707,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeNotificationLevelError()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source =
 @"using System;
@@ -1601,7 +1727,9 @@ class C
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnLocalWithIntrinsicTypeTuple()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1622,7 +1750,9 @@ options: ExplicitTypeEverywhere());
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnLocalWithIntrinsicTypeTupleWithNames()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1643,7 +1773,9 @@ options: ExplicitTypeEverywhere());
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnLocalWithIntrinsicTypeTupleWithOneName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -1665,7 +1797,9 @@ options: ExplicitTypeEverywhere());
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(20437, "https://github.com/dotnet/roslyn/issues/20437")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task SuggestExplicitTypeOnDeclarationExpressionSyntax()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"using System;
@@ -1691,7 +1825,9 @@ options: ExplicitTypeEverywhere());
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1707,7 +1843,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1725,7 +1863,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1741,7 +1881,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1761,7 +1903,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1778,7 +1922,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1795,7 +1941,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1812,7 +1960,9 @@ class Program
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1834,7 +1984,9 @@ class C
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames9()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1851,7 +2003,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames10()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1869,7 +2023,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseImplicitType)]
         [WorkItem(20244, "https://github.com/dotnet/roslyn/issues/20244")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitTypeOnPredefinedTypesByTheirMetadataNames11()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;
@@ -1886,7 +2042,9 @@ class Program
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.CodeActionsUseExplicitType)]
         [WorkItem(26923, "https://github.com/dotnet/roslyn/issues/26923")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task NoSuggestionOnForeachCollectionExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"using System;

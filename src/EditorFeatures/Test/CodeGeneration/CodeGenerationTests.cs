@@ -477,7 +477,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeGeneration
                 var oldNode = context.GetDestinationNode();
                 var newNode = CodeGenerator.AddAttributes(oldNode, context.Document.Project.Solution.Workspace, new[] { attr }, target)
                                            .WithAdditionalAnnotations(Formatter.Annotation);
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 context.Result = context.Document.WithSyntaxRoot(context.SemanticModel.SyntaxTree.GetRoot().ReplaceNode(oldNode, newNode));
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
             }
         }
 
@@ -496,7 +498,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeGeneration
                 var declarationNode = taggedNode.FirstAncestorOrSelf<T>();
                 var newNode = CodeGenerator.RemoveAttribute(declarationNode, context.Document.Project.Solution.Workspace, attribute)
                                            .WithAdditionalAnnotations(Formatter.Annotation);
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 context.Result = context.Document.WithSyntaxRoot(context.SemanticModel.SyntaxTree.GetRoot().ReplaceNode(declarationNode, newNode));
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
             }
         }
 
@@ -548,7 +552,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeGeneration
                 }
 
                 updatedDeclarationNode = updatedDeclarationNode.WithAdditionalAnnotations(Formatter.Annotation);
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 context.Result = context.Document.WithSyntaxRoot(context.SemanticModel.SyntaxTree.GetRoot().ReplaceNode(declarationNode, updatedDeclarationNode));
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
             }
         }
 
@@ -898,8 +904,14 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.CodeGeneration
                     {
                         this.Document = this.Result;
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                         var actual = Formatter.FormatAsync(Simplifier.ReduceAsync(this.Document, Simplifier.Annotation).Result, Formatter.Annotation).Result
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                             .GetSyntaxRootAsync().Result.ToFullString();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
 
                         Assert.Equal(_expected, actual);
                     }

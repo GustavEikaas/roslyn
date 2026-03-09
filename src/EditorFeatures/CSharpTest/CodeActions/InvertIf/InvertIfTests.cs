@@ -39,7 +39,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_Identifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a) { a(); } else { b(); }",
@@ -47,7 +49,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_IdentifierWithTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if /*0*/(/*1*/a/*2*/)/*3*/ { a(); } else { b(); }",
@@ -55,7 +59,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_NotIdentifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (!a) { a(); } else { b(); }",
@@ -63,7 +69,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_NotIdentifierWithTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if /*0*/(/*1*/!/*1b*/a/*2*/)/*3*/ { a(); } else { b(); }",
@@ -71,7 +79,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_EqualsEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a == b) { a(); } else { b(); }",
@@ -79,7 +89,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_NotEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a != b) { a(); } else { b(); }",
@@ -87,7 +99,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_GreaterThan()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a > b) { a(); } else { b(); }",
@@ -95,7 +109,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_GreaterThanEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a >= b) { a(); } else { b(); }",
@@ -103,7 +119,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_LessThan()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a < b) { a(); } else { b(); }",
@@ -111,7 +129,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_LessThanEquals()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a <= b) { a(); } else { b(); }",
@@ -119,7 +139,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_DoubleParentheses()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if ((a)) { a(); } else { b(); }",
@@ -127,7 +149,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [WpfFact(Skip = "https://github.com/dotnet/roslyn/issues/26427"), Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_DoubleParenthesesWithInnerTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if ((/*1*/a/*2*/)) { a(); } else { b(); }",
@@ -135,7 +159,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_DoubleParenthesesWithMiddleTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (/*1*/(a)/*2*/) { a(); } else { b(); }",
@@ -143,7 +169,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_DoubleParenthesesWithOutsideTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if /*before*/((a))/*after*/ { a(); } else { b(); }",
@@ -151,7 +179,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_Is()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a is Goo) { a(); } else { b(); }",
@@ -159,7 +189,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_MethodCall()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a.Goo()) { a(); } else { b(); }",
@@ -167,7 +199,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_Or()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a || b) { a(); } else { b(); }",
@@ -175,7 +209,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_Or2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (!a || !b) { a(); } else { b(); }",
@@ -183,7 +219,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_Or3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (!a || b) { a(); } else { b(); }",
@@ -191,7 +229,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_Or4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a | b) { a(); } else { b(); }",
@@ -199,7 +239,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_And()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a && b) { a(); } else { b(); }",
@@ -207,7 +249,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_And2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (!a && !b) { a(); } else { b(); }",
@@ -215,7 +259,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_And3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (!a && b) { a(); } else { b(); }",
@@ -223,7 +269,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_And4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a & b) { a(); } else { b(); }",
@@ -232,7 +280,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
 
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_ParenthesizeAndForPrecedence()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a && b || c) { a(); } else { b(); }",
@@ -240,7 +290,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_Plus()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a + b) { a(); } else { b(); }",
@@ -248,7 +300,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_True()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (true) { a(); } else { b(); }",
@@ -256,7 +310,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_TrueWithTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (/*1*/true/*2*/) { a(); } else { b(); }",
@@ -264,7 +320,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_False()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (false) { a(); } else { b(); }",
@@ -272,7 +330,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_OtherLiteralExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (literalexpression) { a(); } else { b(); }",
@@ -280,7 +340,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_TrueAndFalse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (true && false) { a(); } else { b(); }",
@@ -288,7 +350,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_NoCurlyBraces()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a) a(); else b();",
@@ -296,7 +360,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_CurlyBracesOnIf()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a) { a(); } else b();",
@@ -304,7 +370,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_CurlyBracesOnElse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a) a(); else { b(); }",
@@ -312,7 +380,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_IfElseIf()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a) { a(); } else if (b) { b(); }",
@@ -320,7 +390,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_IfElseIfElse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (a) { a(); } else if (b) { b(); } else { c(); }",
@@ -328,7 +400,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_CompoundConditional()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if (((a == b) && (c != d)) || ((e < f) && (!g))) { a(); } else { b(); }",
@@ -336,7 +410,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_Trivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"[||]if /*1*/ (a) /*2*/ { /*3*/ a() /*4*/; /*5*/ } /*6*/ else if /*7*/ (b) /*8*/ { /*9*/ b(); /*10*/ } /*11*/ else /*12*/ { /*13*/ c(); /*14*/} /*15*/",
@@ -344,7 +420,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestKeepTriviaWithinExpression_BrokenCode()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class A
@@ -384,7 +462,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestKeepTriviaWithinExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class A
@@ -434,7 +514,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiline_IfElseIfElse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class A
@@ -479,7 +561,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiline_IfElse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class A
@@ -509,7 +593,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiline_OpenCloseBracesSameLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class A
@@ -540,7 +626,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
 }");
         }
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultiline_Trivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class A
@@ -599,7 +687,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnNonEmptySpan()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -619,7 +709,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOverlapsHiddenPosition1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -641,7 +733,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOverlapsHiddenPosition2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -663,7 +757,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOverlapsHiddenPosition3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -685,7 +781,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOverlapsHiddenPosition4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -707,7 +805,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOverlapsHiddenPosition5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -729,7 +829,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings.Invert
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOverlapsHiddenPosition6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -770,7 +872,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOverlapsHiddenPosition7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"
@@ -815,7 +919,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyToLengthEqualsZero()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"string x; [||]if (x.Length > 0) { GreaterThanZero(); } else { EqualsZero(); } } } ",
@@ -823,7 +929,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyToLengthEqualsZero2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"string[] x; [||]if (x.Length > 0) { GreaterThanZero(); } else { EqualsZero(); } } } ",
@@ -831,7 +939,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyToLengthEqualsZero3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"string x; [||]if (x.Length > 0x0) { a(); } else { b(); } } } ",
@@ -839,7 +949,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyToLengthEqualsZero4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"string x; [||]if (0 < x.Length) { a(); } else { b(); } } } ",
@@ -848,7 +960,9 @@ class C
 
         [WorkItem(545986, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545986")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyToEqualsZero1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"byte x = 1; [||]if (0 < x) { a(); } else { b(); } } } ",
@@ -857,7 +971,9 @@ class C
 
         [WorkItem(545986, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545986")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyToEqualsZero2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"ushort x = 1; [||]if (0 < x) { a(); } else { b(); } } } ",
@@ -866,7 +982,9 @@ class C
 
         [WorkItem(545986, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545986")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyToEqualsZero3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"uint x = 1; [||]if (0 < x) { a(); } else { b(); } } } ",
@@ -875,7 +993,9 @@ class C
 
         [WorkItem(545986, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545986")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyToEqualsZero4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"ulong x = 1; [||]if (x > 0) { a(); } else { b(); } } } ",
@@ -884,7 +1004,9 @@ class C
 
         [WorkItem(545986, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545986")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyToNotEqualsZero1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"ulong x = 1; [||]if (0 == x) { a(); } else { b(); } } } ",
@@ -893,7 +1015,9 @@ class C
 
         [WorkItem(545986, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545986")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyToNotEqualsZero2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"ulong x = 1; [||]if (x == 0) { a(); } else { b(); } } } ",
@@ -902,7 +1026,9 @@ class C
 
         [WorkItem(530505, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/530505")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_SimplifyLongLengthEqualsZero()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"string[] x; [||]if (x.LongLength > 0) { GreaterThanZero(); } else { EqualsZero(); } } } ",
@@ -910,7 +1036,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_DoesNotSimplifyToLengthEqualsZero()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"string x; [||]if (x.Length >= 0) { a(); } else { b(); } } } ",
@@ -918,7 +1046,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInvertIf)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSingleLine_DoesNotSimplifyToLengthEqualsZero2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestFixOneAsync(
 @"string x; [||]if (x.Length > 0.0f) { GreaterThanZero(); } else { EqualsZero(); } } } ",

@@ -89,7 +89,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
             => size == Size.Small ? SmallData2 : size == Size.Medium ? MediumData2 : LargeData2;
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNullFilePaths()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution(nullPaths: true);
 
@@ -108,7 +110,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Solution_WriteReadDifferentInstances()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
             await PersistentService_Solution_WriteReadDifferentInstances(solution, Size.Small);
@@ -116,7 +120,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
             await PersistentService_Solution_WriteReadDifferentInstances(solution, Size.Large);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task PersistentService_Solution_WriteReadDifferentInstances(Solution solution, Size size)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var streamName1 = "PersistentService_Solution_WriteReadDifferentInstances1";
             var streamName2 = "PersistentService_Solution_WriteReadDifferentInstances2";
@@ -135,7 +141,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Solution_WriteReadReopenSolution()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
             await PersistentService_Solution_WriteReadReopenSolution(solution, Size.Small);
@@ -143,7 +151,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
             await PersistentService_Solution_WriteReadReopenSolution(solution, Size.Large);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task PersistentService_Solution_WriteReadReopenSolution(Solution solution, Size size)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var streamName1 = "PersistentService_Solution_WriteReadReopenSolution1";
             var streamName2 = "PersistentService_Solution_WriteReadReopenSolution2";
@@ -164,7 +174,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Solution_WriteReadSameInstance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
             await PersistentService_Solution_WriteReadSameInstance(solution, Size.Small);
@@ -172,7 +184,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
             await PersistentService_Solution_WriteReadSameInstance(solution, Size.Large);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task PersistentService_Solution_WriteReadSameInstance(Solution solution, Size size)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var streamName1 = "PersistentService_Solution_WriteReadSameInstance1";
             var streamName2 = "PersistentService_Solution_WriteReadSameInstance2";
@@ -188,7 +202,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact(Skip = "https://github.com/dotnet/roslyn/issues/22437")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Project_WriteReadSameInstance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
             await PersistentService_Project_WriteReadSameInstance(solution, Size.Small);
@@ -196,7 +212,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
             await PersistentService_Project_WriteReadSameInstance(solution, Size.Large);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task PersistentService_Project_WriteReadSameInstance(Solution solution, Size size)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var streamName1 = "PersistentService_Project_WriteReadSameInstance1";
             var streamName2 = "PersistentService_Project_WriteReadSameInstance2";
@@ -214,7 +232,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Document_WriteReadSameInstance()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
             await PersistentService_Document_WriteReadSameInstance(solution, Size.Small);
@@ -222,7 +242,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
             await PersistentService_Document_WriteReadSameInstance(solution, Size.Large);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task PersistentService_Document_WriteReadSameInstance(Solution solution, Size size)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var streamName1 = "PersistentService_Document_WriteReadSameInstance1";
             var streamName2 = "PersistentService_Document_WriteReadSameInstance2";
@@ -240,7 +262,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Solution_SimultaneousWrites()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
 
@@ -256,7 +280,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Project_SimultaneousWrites()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
 
@@ -272,7 +298,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Document_SimultaneousWrites()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
 
@@ -297,7 +325,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
                 {
                     int id = (int)s;
                     barrier.SignalAndWait();
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                     write(id + "").Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
                     countdown.Signal();
                 }, i);
             }
@@ -306,7 +336,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Solution_SimultaneousReads()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
             await PersistentService_Solution_SimultaneousReads(solution, Size.Small);
@@ -314,7 +346,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
             await PersistentService_Solution_SimultaneousReads(solution, Size.Large);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task PersistentService_Solution_SimultaneousReads(Solution solution, Size size)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var streamName1 = "PersistentService_Solution_SimultaneousReads1";
 
@@ -326,7 +360,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Project_SimultaneousReads()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
             await PersistentService_Project_SimultaneousReads(solution, Size.Small);
@@ -334,7 +370,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
             await PersistentService_Project_SimultaneousReads(solution, Size.Large);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task PersistentService_Project_SimultaneousReads(Solution solution, Size size)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var streamName1 = "PersistentService_Project_SimultaneousReads1";
 
@@ -346,7 +384,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PersistentService_Document_SimultaneousReads()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var solution = CreateOrOpenSolution();
             await PersistentService_Document_SimultaneousReads(solution, Size.Small);
@@ -354,7 +394,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
             await PersistentService_Document_SimultaneousReads(solution, Size.Large);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private async Task PersistentService_Document_SimultaneousReads(Solution solution, Size size)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var streamName1 = "PersistentService_Document_SimultaneousReads1";
 
@@ -373,7 +415,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.WorkspaceServices
             var exceptions = new List<Exception>();
             for (int i = 0; i < NumThreads; i++)
             {
+#pragma warning disable VSTHRD110 // Observe result of async calls
                 Task.Run(async () =>
+#pragma warning restore VSTHRD110 // Observe result of async calls
                 {
                     barrier.SignalAndWait();
                     try

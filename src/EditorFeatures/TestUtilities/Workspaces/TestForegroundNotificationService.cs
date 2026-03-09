@@ -29,7 +29,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests
                 _tasks.Add(task);
             }
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             task.Wait(cancellationToken);
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
 
         private void Execute_NoLock(Func<bool> action, IAsyncToken asyncToken, CancellationToken cancellationToken)
@@ -62,7 +64,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests
                 _tasks.Add(task);
             }
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             task.Wait(cancellationToken);
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
     }
 }

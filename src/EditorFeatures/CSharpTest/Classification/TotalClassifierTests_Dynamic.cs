@@ -10,7 +10,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
     public partial class TotalClassifierTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsParamTypeAndDefault()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(@"void M(dynamic d = default(dynamic",
                 Keyword("void"),
@@ -25,7 +27,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicExplicitConversion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"dynamic d = (dynamic)a;",
@@ -40,7 +44,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicMethodCall()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"dynamic.Equals(1, 1);",
                 Identifier("dynamic"),
@@ -55,7 +61,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicNullable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"dynamic? a",
                 Keyword("dynamic"),
@@ -64,7 +72,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsUsingAliasForClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using dynamic = System.EventArgs;",
@@ -78,7 +88,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsUsingAliasForDelegate()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using dynamic = System.Action;",
@@ -92,7 +104,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsUsingAliasForStruct()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using dynamic = System.DateTime;",
@@ -106,7 +120,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsUsingAliasForEnum()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using dynamic = System.DayOfWeek;",
@@ -120,7 +136,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsUsingAliasForInterface()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"using dynamic = System.IDisposable;",
@@ -134,7 +152,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsExternAlias()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"extern alias dynamic;
@@ -159,7 +179,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsDelegateType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"delegate void dynamic()",
                 Keyword("delegate"),
@@ -170,7 +192,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsDelegateReturnTypeAndParam()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(@"delegate dynamic MyDelegate (dynamic d)",
                 Keyword("delegate"),
@@ -183,7 +207,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsDelegateLocalVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"Func<string> f = delegate
@@ -216,7 +242,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsGenericTypeName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"partial class dynamic<T>
@@ -248,7 +276,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsGenericField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class A<T>
@@ -268,7 +298,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsIndexerTypeAndParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(@"dynamic this[dynamic i]",
                 Keyword("dynamic"),
@@ -280,7 +312,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsOperatorTypeAndParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(@"static dynamic operator +(dynamic d1)",
                 Keyword("static"),
@@ -294,7 +328,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsOperatorName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(@"static explicit operator dynamic(dynamic s)",
                 Keyword("static"),
@@ -308,7 +344,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsPropertyTypeAndName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(@"dynamic dynamic { get; set; }",
                 Keyword("dynamic"),
@@ -322,7 +360,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsEventName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(@"event Action dynamic",
                 Keyword("event"),
@@ -331,7 +371,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsLinqLocalVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"var v = from dynamic in names",
                 Keyword("var"),
@@ -344,7 +386,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsAnonymousTypePropertyName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"var v = from dynamic in names
@@ -367,7 +411,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsArgumentToLambdaExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"var p = names.Select(dynamic => dynamic.Length);",
@@ -388,7 +434,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsAnonymousMethodLocalVariable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"D f = delegate
@@ -416,7 +464,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsMethodName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"dynamic dynamic()
@@ -431,7 +481,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsStaticMethodTypeAndParams()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"static dynamic dynamic(params dynamic[] dynamic)
@@ -452,7 +504,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicArraysInMethodSignature()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"dynamic[] M(dynamic[] p, params dynamic[] pa)
@@ -479,7 +533,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicInPartialMethods()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"partial void F(dynamic d);
@@ -507,7 +563,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicRefAndOutParameters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"void F(ref dynamic r, out dynamic o)
@@ -529,7 +587,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicInExtensionMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"dynamic F(this dynamic self, dynamic p)
@@ -550,7 +610,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsBaseClass()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C : dynamic
@@ -565,7 +627,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsGenericConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<T> where T : dynamic
@@ -585,7 +649,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicSizeOf()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(
 @"unsafe int M()
@@ -608,7 +674,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicTypeOf()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"typeof(dynamic)",
                 Keyword("typeof"),
@@ -618,7 +686,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsArrayName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"int[] dynamic = {
@@ -636,7 +706,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicInForeach()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"foreach (dynamic dynamic in dynamic",
                 Keyword("foreach"),
@@ -648,7 +720,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicInUsing()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"using(dynamic d",
                 Keyword("using"),
@@ -658,7 +732,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsLocalVariableName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"dynamic dynamic;",
@@ -668,7 +744,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsNamespaceName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"namespace dynamic
@@ -681,7 +759,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsClassName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class dynamic
@@ -694,7 +774,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsConstructorDeclarationName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class dynamic
@@ -715,7 +797,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsNamespaceAlias()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"dynamic.FileInfo file;",
@@ -727,7 +811,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsGotoLabel()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"dynamic: int i = 0;
@@ -745,7 +831,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsEnumField()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"A a = A.dynamic;",
@@ -759,7 +847,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsEnumFieldDefinition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"enum A
@@ -774,7 +864,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsEnumType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"enum dynamic
@@ -787,7 +879,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsGenericTypeParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"class C<dynamic, T> where dynamic : T
@@ -813,7 +907,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsFieldType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(@"dynamic d",
                 Keyword("dynamic"),
@@ -821,7 +917,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsStaticFieldType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInClassAsync(@"static dynamic d",
                 Keyword("static"),
@@ -830,7 +928,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsLocalVariableType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"dynamic d",
                 Keyword("dynamic"),
@@ -838,7 +938,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsArrayLocalVariableType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"dynamic[] d",
                 Keyword("dynamic"),
@@ -848,7 +950,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsLambdaParameterType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"var q = a.Where((dynamic d) => d == dynamic);",
@@ -872,7 +976,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicArray()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"dynamic d = new dynamic[5];",
@@ -888,7 +994,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"dynamic d = new dynamic();",
@@ -903,7 +1011,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAfterIs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"if (a is dynamic)",
                 Keyword("if"),
@@ -915,7 +1025,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAfterAs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(@"a = a as dynamic",
                 Identifier("a"),
@@ -926,7 +1038,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsGenericTypeArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"List<dynamic> l = new List<dynamic>();",
@@ -947,7 +1061,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsSecondGenericTypeArgument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"KVP<string, dynamic> kvp;",
@@ -962,7 +1078,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsRegionLabel()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#region dynamic
@@ -976,7 +1094,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsInterfaceType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"interface dynamic
@@ -989,7 +1109,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsStructType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"struct dynamic
@@ -1002,7 +1124,9 @@ partial void F(dynamic d)
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DynamicAsUndefinedGenericType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
 @"dynamic<int> d;",

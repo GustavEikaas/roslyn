@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedLocalFuncti
             => (null, new CSharpRemoveUnusedLocalFunctionCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedLocalFunction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -35,7 +37,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedLocalFuncti
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedLocalFunctionFixAll1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -55,7 +59,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedLocalFuncti
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedLocalFunctionFixAll2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -75,7 +81,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedLocalFuncti
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedLocalFunctionFixAll3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class
@@ -94,7 +102,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.RemoveUnusedLocalFuncti
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsRemoveUnusedLocalFunction)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task RemoveUnusedLocalFunctionFixAll4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class Class

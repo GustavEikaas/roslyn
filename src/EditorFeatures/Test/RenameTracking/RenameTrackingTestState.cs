@@ -162,7 +162,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.RenameTracking
             history.Redo(count);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssertNoTag()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await WaitForAsyncOperationsAsync();
 
@@ -179,7 +181,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.RenameTracking
                 (await document.GetSyntaxRootAsync()).FullSpan)).ToList();
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task AssertTag(string expectedFromName, string expectedToName, bool invokeAction = false)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await WaitForAsyncOperationsAsync();
 

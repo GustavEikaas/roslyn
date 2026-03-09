@@ -38,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.TextEditor
                 var expected = @"class C
 { }";
 
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
                 var newSourceText = newDocument.GetTextAsync().Result;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
                 Assert.Equal(expected, newSourceText.ToString());
 
                 Assert.True(container == newSourceText.Container);

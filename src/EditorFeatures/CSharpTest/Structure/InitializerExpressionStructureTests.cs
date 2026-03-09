@@ -15,7 +15,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
             => new InitializerExpressionStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOuterInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyBlockSpansAsync(
 @"
@@ -34,7 +36,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInnerInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await VerifyBlockSpansAsync(
 @"

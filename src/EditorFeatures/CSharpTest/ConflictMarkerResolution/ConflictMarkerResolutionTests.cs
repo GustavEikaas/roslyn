@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ConflictMarkerResolutio
             => (null, new CSharpResolveConflictMarkerCodeFixProvider());
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsResolveConflictMarker)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTakeTop1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -61,7 +63,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsResolveConflictMarker)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTakeBottom1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -106,7 +110,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsResolveConflictMarker)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTakeBoth1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -159,7 +165,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsResolveConflictMarker)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyTop_TakeTop()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -188,7 +196,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsResolveConflictMarker)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyTop_TakeBottom()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -225,7 +235,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsResolveConflictMarker)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyBottom_TakeTop()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -262,7 +274,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsResolveConflictMarker)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptyBottom_TakeBottom()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -291,7 +305,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsResolveConflictMarker)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTakeTop_WhitespaceInSection()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -340,7 +356,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsResolveConflictMarker)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTakeBottom1_WhitespaceInSection()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"
@@ -389,7 +407,9 @@ namespace N
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsResolveConflictMarker)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTakeBoth_WhitespaceInSection()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScript1Async(
 @"

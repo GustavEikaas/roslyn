@@ -16,7 +16,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.ExtractMethod
             #region Generics
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SelectTypeParameterWithConstraints()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 
@@ -48,7 +50,9 @@ class Program
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SelectTypeParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 
@@ -89,7 +93,9 @@ class Program
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SelectTypeOfTypeParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 
@@ -119,7 +125,9 @@ class Program
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SelectTypeParameterDataFlowOut()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Collections.Generic;
@@ -173,7 +181,9 @@ class Program
 
             [WorkItem(528198, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/528198")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task BugFix6794()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class Program
@@ -222,7 +232,9 @@ class Program
 
             [WorkItem(528198, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/528198")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task BugFix6794_1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class Program
@@ -268,7 +280,9 @@ class Program
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SelectDefaultOfT()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Collections.Generic;
@@ -308,7 +322,9 @@ class Test11<T>
             #region Operators
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SelectPostIncrementOperatorExtractWithRef()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class A
 {
@@ -333,7 +349,9 @@ class Test11<T>
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SelectPostIncrementOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class A
 {
@@ -358,7 +376,9 @@ class Test11<T>
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SelectPreIncrementOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class A
 {
@@ -383,7 +403,9 @@ class Test11<T>
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SelectPostDecrementOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class A
 {
@@ -408,7 +430,9 @@ class Test11<T>
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SelectPreDecrementOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class A
 {
@@ -438,7 +462,9 @@ class Test11<T>
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class T
@@ -462,7 +488,9 @@ class T
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class Complex
@@ -496,7 +524,9 @@ class Complex
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedConversionOperator()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 public struct DBBool
@@ -534,7 +564,9 @@ public struct DBBool
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class T
@@ -556,7 +588,9 @@ class T
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedIndexer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class SampleCollection<T>
@@ -580,7 +614,9 @@ class SampleCollection<T>
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedIndexer2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class SampleCollection<T>
@@ -604,7 +640,9 @@ class SampleCollection<T>
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedMethodWithBlockBodiedAnonymousMethodExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class TestClass
@@ -632,7 +670,9 @@ class TestClass
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedMethodWithSingleLineBlockBodiedAnonymousMethodExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class TestClass
@@ -654,7 +694,9 @@ class TestClass
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedMethodWithBlockBodiedSimpleLambdaExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class TestClass
@@ -682,7 +724,9 @@ class TestClass
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedMethodWithExpressionBodiedSimpleLambdaExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class TestClass
@@ -704,7 +748,9 @@ class TestClass
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedMethodWithBlockBodiedParenthesizedLambdaExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class TestClass
@@ -732,7 +778,9 @@ class TestClass
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedMethodWithExpressionBodiedParenthesizedLambdaExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class TestClass
@@ -754,7 +802,9 @@ class TestClass
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionBodiedMethodWithBlockBodiedAnonymousMethodExpressionInMethodArgs()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class TestClass
@@ -792,7 +842,9 @@ class TestClass
 
             [WorkItem(528, "https://github.com/dotnet/roslyn/issues/528")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task LeadingAndTrailingTriviaOnExpressionBodiedMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class TestClass
@@ -822,7 +874,9 @@ class TestClass
 
             [WorkItem(9244, "https://github.com/dotnet/roslyn/issues/9244")]
             [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task PatternIsDisabled()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"
 using System;
@@ -847,7 +901,9 @@ class Program
 
             [WorkItem(11155, "DevDiv_Projects/Roslyn")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AnonymousTypeMember1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
  
@@ -865,7 +921,9 @@ class Program
 
             [WorkItem(544259, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544259")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExtractMethod_ConstructorInitializer()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class Program
 {
@@ -892,7 +950,9 @@ class Program
 
             [WorkItem(543984, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543984")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExtractMethod_UnsafeAddressTaken()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class C
 {
@@ -921,7 +981,9 @@ class Program
 
             [WorkItem(544387, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544387")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExtractMethod_PointerType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class Test
 {
@@ -956,7 +1018,9 @@ class Program
 
             [WorkItem(544514, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544514")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExtractMethod_AnonymousType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"public class Test
 {
@@ -989,7 +1053,9 @@ class Program
 
             [WorkItem(544920, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544920")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExtractMethod_StackAllocExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"
 unsafe class C
@@ -1020,7 +1086,9 @@ unsafe class C
 
             [WorkItem(539310, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/539310")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task Readonly_Field_WrittenTo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class C
 {
@@ -1036,7 +1104,9 @@ unsafe class C
 
             [WorkItem(539310, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/539310")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task Readonly_Field()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class C
 {
@@ -1068,7 +1138,9 @@ unsafe class C
 
             [WorkItem(545180, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545180")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task NodeHasSyntacticErrors()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Collections.Generic;
@@ -1090,7 +1162,9 @@ class Program
 
             [WorkItem(545292, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545292")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task LocalConst()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class Test
 {
@@ -1104,7 +1178,9 @@ class Program
 
             [WorkItem(545315, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545315")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task Nullable()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class Program
@@ -1135,7 +1211,9 @@ class Program
 
             [WorkItem(545263, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545263")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task SyntacticErrorInSelection()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"class Program
 {
@@ -1157,7 +1235,9 @@ class Program
 
             [WorkItem(544497, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544497")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task StackAllocExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 class Test
@@ -1185,7 +1265,9 @@ class Test
 
             [WorkItem(545503, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545503")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task MethodBodyInScript()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"#r ""System.Management""
 using System;
@@ -1241,7 +1323,9 @@ void NewMethod(string query, string[,] labelKeys)
 
             [WorkItem(544920, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/544920")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task NoSimplificationForStackAlloc()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
  
@@ -1274,7 +1358,9 @@ unsafe class C
 
             [WorkItem(545553, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545553")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task CheckStatementContext1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 
@@ -1323,7 +1409,9 @@ class X
 
             [WorkItem(545553, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545553")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task CheckStatementContext2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 
@@ -1369,7 +1457,9 @@ class X
 
             [WorkItem(545553, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545553")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task CheckStatementContext3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 
@@ -1420,7 +1510,9 @@ class X
 
             [WorkItem(545553, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/545553")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task CheckExpressionContext1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 
@@ -1459,7 +1551,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_Normal_SingleStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Threading.Tasks;
@@ -1490,7 +1584,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_Normal_Expression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Threading.Tasks;
@@ -1521,7 +1617,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_Normal_MultipleStatements()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Threading.Tasks;
@@ -1560,7 +1658,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_Normal_ExpressionWithReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Threading.Tasks;
@@ -1595,7 +1695,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_Normal_ExpressionInAwaitExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Threading.Tasks;
@@ -1626,7 +1728,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_Normal_StatementWithAwaitExpressionWithReturn()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Threading.Tasks;
@@ -1657,7 +1761,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_Normal_AwaitWithReturnParameter()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Threading.Tasks;
@@ -1693,7 +1799,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_Normal_AwaitWithReturnParameter_Error()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Threading.Tasks;
@@ -1711,7 +1819,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_AsyncLambda()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 // this is an error case. but currently, I didn't blocked this. but we could if we want to.
                 var code = @"using System;
@@ -1743,7 +1853,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_AsyncLambda_Body()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 // this is an error case. but currently, I didn't blocked this. but we could if we want to.
                 var code = @"using System;
@@ -1775,7 +1887,9 @@ class X
             }
 
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task AwaitExpression_AsyncLambda_WholeExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 // this is an error case. but currently, I didn't blocked this. but we could if we want to.
                 var code = @"using System;
@@ -1808,7 +1922,9 @@ class X
 
             [WorkItem(1064798, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/1064798")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionInStringInterpolation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 
@@ -1838,7 +1954,9 @@ class X
 
             [WorkItem(859493, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/859493")]
             [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
             public async Task ExpressionInYieldReturnStatement()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             {
                 var code = @"using System;
 using System.Collections.Generic;
@@ -1895,7 +2013,9 @@ public class Test<T>
 
         [WorkItem(3147, "https://github.com/dotnet/roslyn/issues/3147")]
         [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task HandleFormattableStringTargetTyping1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = CodeSnippets.FormattableStringType + @"
 namespace N
@@ -1935,7 +2055,9 @@ namespace N
 
         [WorkItem(17971, "https://github.com/dotnet/roslyn/issues/17971")]
         [Fact, Trait(Traits.Feature, Traits.Features.ExtractMethod)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task BrokenForeachLoop()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"using System;
 namespace ConsoleApp1

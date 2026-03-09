@@ -17,7 +17,9 @@ namespace Roslyn.VisualStudio.Next.UnitTests.Services
     public class VisualStudioSnapshotSerializationTests : SnapshotSerializationTestBase
     {
         [Fact, WorkItem(466282, "https://devdiv.visualstudio.com/DevDiv/_workitems/edit/466282")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnresolvedAnalyzerReference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspace = new AdhocWorkspace();
             var project = workspace.CurrentSolution.AddProject("empty", "empty", LanguageNames.CSharp);

@@ -9,7 +9,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.InlineDeclaration
     public partial class CSharpInlineDeclarationTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInlineDeclaration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllInDocument1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -34,7 +36,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.InlineDeclaration
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInlineDeclaration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllInDocument2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
 
             await TestInRegularAndScriptAsync(
@@ -75,7 +79,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.InlineDeclaration
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsInlineDeclaration)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task FixAllInDocument3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
 
             await TestInRegularAndScriptAsync(

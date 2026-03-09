@@ -12,7 +12,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
     public partial class SyntacticClassifierTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfTrue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if true
@@ -26,7 +28,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfTrueWithComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if true //Goo
@@ -41,7 +45,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfFalse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if false
@@ -55,7 +61,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfGOO()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if GOO
@@ -69,7 +77,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfNotTrue()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if !true
@@ -84,7 +94,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfNotFalse()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if !false
@@ -99,7 +111,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfNotGOO()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if !GOO
@@ -114,7 +128,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfTrueWithParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if (true)
@@ -130,7 +146,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfFalseWithParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if (false)
@@ -146,7 +164,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfGOOWithParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if (GOO)
@@ -162,7 +182,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfOrExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if GOO || BAR
@@ -179,7 +201,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfAndExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if GOO && BAR
@@ -196,7 +220,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfOrAndExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if GOO || BAR && BAZ
@@ -215,7 +241,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfOrExpressionWithParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if (GOO || BAR)
@@ -234,7 +262,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfAndExpressionWithParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if (GOO && BAR)
@@ -253,7 +283,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfOrAndExpressionWithParens()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if GOO || (BAR && BAZ)
@@ -274,7 +306,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_If1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("#if goo",
                 PPKeyword("#"),
@@ -283,7 +317,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_If2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(" #if goo",
                 PPKeyword("#"),
@@ -292,7 +328,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_If3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if goo
@@ -306,7 +344,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_If4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if
@@ -319,7 +359,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Classification
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_If5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if
@@ -337,7 +379,9 @@ aoeu
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_If6()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if
@@ -352,7 +396,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_If7()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if
@@ -370,7 +416,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_If8()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if
@@ -394,7 +442,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_If9()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if //Goo1
@@ -421,7 +471,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_Region1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("#region Goo",
                 PPKeyword("#"),
@@ -430,7 +482,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_Region2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("   #region goo",
                 PPKeyword("#"),
@@ -439,7 +493,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_EndRegion1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("#endregion",
                 PPKeyword("#"),
@@ -447,7 +503,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_EndRegion2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("   #endregion",
                 PPKeyword("#"),
@@ -455,7 +513,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_EndRegion3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("#endregion adsf",
                 PPKeyword("#"),
@@ -464,7 +524,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_EndRegion4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync("   #endregion adsf",
                 PPKeyword("#"),
@@ -473,7 +535,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_RegionEndRegion1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"#region
@@ -485,7 +549,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_CommentAfterRegion1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"#region adsf //comment
@@ -498,7 +564,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_CommentAfterRegion2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"#region //comment
@@ -511,7 +579,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_CommentAfterEndRegion1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"#region
@@ -524,7 +594,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_CommentAfterEndRegion2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"#region
@@ -537,7 +609,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_DeclarationDirectives()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"#define A
@@ -551,7 +625,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_IfElseEndIfDirectives()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"#if true
@@ -572,7 +648,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_DefineDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#define GOO";
             await TestAsync(code,
@@ -582,7 +660,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_DefineDirectiveWithCommentAndNoName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#define //Goo";
             await TestAsync(code,
@@ -592,7 +672,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_DefineDirectiveWithComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#define GOO //Goo";
             await TestAsync(code,
@@ -603,7 +685,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_UndefDirectives()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#undef GOO";
 
@@ -614,7 +698,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_UndefDirectiveWithCommentAndNoName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#undef //Goo";
             await TestAsync(code,
@@ -624,7 +710,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_UndefDirectiveWithComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#undef GOO //Goo";
             await TestAsync(code,
@@ -635,7 +723,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_ErrorDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#error GOO";
 
@@ -646,7 +736,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_ErrorDirectiveWithComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#error GOO //Goo";
 
@@ -657,7 +749,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_WarningDirective()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#warning GOO";
 
@@ -668,7 +762,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_WarningDirectiveWithComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#warning GOO //Goo";
 
@@ -679,7 +775,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_LineHidden()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#line hidden";
 
@@ -690,7 +788,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_LineHiddenWithComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#line hidden //Goo";
 
@@ -702,7 +802,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_LineDefault()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#line default";
 
@@ -713,7 +815,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_LineDefaultWithComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#line default //Goo";
 
@@ -725,7 +829,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_LineNumber()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#line 100";
 
@@ -736,7 +842,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_LineNumberWithComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#line 100 //Goo";
 
@@ -748,7 +856,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_LineNumberWithFilename()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#line 100 ""C:\Goo""";
 
@@ -760,7 +870,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_LineNumberWithFilenameAndComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#line 100 ""C:\Goo"" //Goo";
 
@@ -773,7 +885,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaChecksum1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"#pragma checksum stuff",
@@ -784,7 +898,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaChecksum2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"#pragma checksum ""file.txt"" ""{00000000-0000-0000-0000-000000000000}"" ""2453""",
@@ -797,7 +913,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaChecksum3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestAsync(
 @"#pragma checksum ""file.txt"" ""{00000000-0000-0000-0000-000000000000}"" ""2453"" // Goo",
@@ -811,7 +929,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaWarningDisableOne()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#pragma warning disable 100";
 
@@ -824,7 +944,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaWarningDisableOneWithComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#pragma warning disable 100 //Goo";
 
@@ -838,7 +960,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaWarningRestoreOne()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#pragma warning restore 100";
 
@@ -851,7 +975,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaWarningRestoreOneWithComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#pragma warning restore 100 //Goo";
 
@@ -865,7 +991,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaWarningDisableTwo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#pragma warning disable 100, 101";
 
@@ -880,7 +1008,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaWarningRestoreTwo()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#pragma warning restore 100, 101";
 
@@ -895,7 +1025,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaWarningDisableThree()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#pragma warning disable 100, 101, 102";
 
@@ -912,7 +1044,9 @@ aeu";
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Classification)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task PP_PragmaWarningRestoreThree()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"#pragma warning restore 100, 101, 102";
 
@@ -929,7 +1063,9 @@ aeu";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiscardInOutDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 code: @"M2(out var _);",
@@ -938,7 +1074,9 @@ aeu";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiscardInCasePattern()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 code: @"switch (1) { case int _: }",
@@ -947,7 +1085,9 @@ aeu";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiscardInDeconstruction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 code: @"var (x, _) = (1, 2);",
@@ -957,7 +1097,9 @@ aeu";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task DiscardInDeconstruction2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 code: @"(var _, var _) = (1, 2);",
@@ -967,7 +1109,9 @@ aeu";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ShortDiscardInDeconstruction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 code: @"int x; (_, x) = (1, 2);",
@@ -978,7 +1122,9 @@ aeu";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ShortDiscardInOutDeclaration()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 code: @"M2(out _);",
@@ -987,7 +1133,9 @@ aeu";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ShortDiscardInAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(
                 code: @"_ = 1;",
@@ -995,7 +1143,9 @@ aeu";
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task UnderscoreInAssignment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInMethodAsync(code: @"int _; _ = 1;" ,
                 expected: Classifications(Keyword("int"), Local("_"), Punctuation.Semicolon, Identifier("_"), Operators.Equals,

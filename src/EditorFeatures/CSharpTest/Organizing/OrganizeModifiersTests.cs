@@ -9,7 +9,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
     public class OrganizeModifiersTests : AbstractOrganizerTests
     {
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypes1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"static public class C {
@@ -22,7 +24,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypes2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"public static class D {
@@ -35,7 +39,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypes3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"public static partial class E {
@@ -48,7 +54,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypes4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"static public partial class F {
@@ -61,7 +69,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Organizing
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Organizing)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTypes5()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var initial =
 @"unsafe public static class F {

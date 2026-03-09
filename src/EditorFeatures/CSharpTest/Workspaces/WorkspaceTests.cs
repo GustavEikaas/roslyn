@@ -27,7 +27,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.Workspaces
             return new TestWorkspace(TestExportProvider.ExportProviderWithCSharpAndVisualBasic, disablePartialSolutions: disablePartialSolutions);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private static async Task WaitForWorkspaceOperationsToComplete(TestWorkspace workspace)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var workspaceWaiter = workspace.ExportProvider
                                     .GetExportedValue<AsynchronousOperationListenerProvider>()
@@ -37,7 +39,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.Workspaces
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEmptySolutionUpdateDoesNotFireEvents()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -149,7 +153,9 @@ namespace Microsoft.CodeAnalysis.UnitTests.Workspaces
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeOptions1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -176,7 +182,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestChangeOptions2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -206,7 +214,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAddedSubmissionParseTreeHasEmptyFilePath()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -248,7 +258,9 @@ class D { }
         private static async Task<TypeDeclarationSyntax> GetRootTypeDeclarationAsync(Solution currentSnapshot)
         {
             var tree = await currentSnapshot.Projects.First().Documents.First().GetSyntaxTreeAsync();
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
             var root = (CompilationUnitSyntax)tree.GetRoot();
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
             var type = (TypeDeclarationSyntax)root.Members[0];
             return type;
         }
@@ -412,7 +424,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetCompilation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -433,7 +447,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetCompilationOnDependentProject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -459,7 +475,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetCompilationOnCrossLanguageDependentProject()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -485,7 +503,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetCompilationOnCrossLanguageDependentProjectChanged()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -531,7 +551,9 @@ class D { }
         }
 
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDependentSemanticVersionChangesWhenNotOriginallyAccessed()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace(disablePartialSolutions: false))
             {
@@ -587,7 +609,9 @@ class D { }
         }
 
         [WpfFact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGetCompilationOnCrossLanguageDependentProjectChangedInProgress()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace(disablePartialSolutions: false))
             {
@@ -652,7 +676,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOpenAndChangeDocument()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -671,7 +697,9 @@ class D { }
                 var doc = solution.Projects.Single().Documents.First();
 
                 var syntaxTree = await doc.GetSyntaxTreeAsync(CancellationToken.None);
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                 Assert.True(syntaxTree.GetRoot().Width() > 0, "syntaxTree.GetRoot().Width should be > 0");
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
 
                 workspace.CloseDocument(document.Id);
                 workspace.OnProjectRemoved(project1.Id);
@@ -679,7 +707,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestApplyChangesWithDocumentTextUpdated()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -761,7 +791,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocumentEvents()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -827,7 +859,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAdditionalFile_Properties()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -853,7 +887,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAdditionalFile_DocumentChanged()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -887,7 +923,9 @@ class D { }
         }
 
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAdditionalFile_OpenClose()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = CreateWorkspace())
             {
@@ -986,7 +1024,9 @@ class D { }
         }
 
         [Fact, WorkItem(209299, "https://devdiv.visualstudio.com/DevDiv/_workitems?id=209299")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestLinkedFilesStayInSync()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var originalText = "class Program1 { }";
             var updatedText = "class Program2 { }";

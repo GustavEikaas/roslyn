@@ -15,7 +15,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Structure
         internal override AbstractSyntaxStructureProvider CreateProvider() => new DocumentationCommentStructureProvider();
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocumentationCommentWithoutSummaryTag1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span:/// $$XML doc comment
@@ -31,7 +33,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocumentationCommentWithoutSummaryTag2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span:/** $$Block comment
@@ -48,7 +52,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocumentationCommentWithoutSummaryTag3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span:/// $$<param name=""tree""></param>|}
@@ -61,7 +67,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocumentationComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span:/// <summary>
@@ -76,7 +84,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocumentationCommentWithLongBannerText()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 {|span:/// $$<summary>
@@ -91,7 +101,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultilineDocumentationComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span:/** <summary>
@@ -106,7 +118,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIndentedDocumentationComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
     {|span:/// <summary>
@@ -121,7 +135,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIndentedMultilineDocumentationComment()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
     {|span:/** <summary>
@@ -136,7 +152,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDocumentationCommentOnASingleLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span:/// <summary>$$Hello C#!</summary>|}
@@ -149,7 +167,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultilineDocumentationCommentOnASingleLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span:/** <summary>$$Hello C#!</summary> */|}
@@ -162,7 +182,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIndentedDocumentationCommentOnASingleLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
     {|span:/// <summary>$$Hello C#!</summary>|}
@@ -175,7 +197,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestIndentedMultilineDocumentationCommentOnASingleLine()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
     {|span:/** <summary>$$Hello C#!</summary> */|}
@@ -188,7 +212,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultilineSummaryInDocumentationComment1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span:/// <summary>
@@ -204,7 +230,9 @@ class Class3
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMultilineSummaryInDocumentationComment2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 {|span:/// <summary>
@@ -222,7 +250,9 @@ class Class3
 
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
         [WorkItem(2129, "https://github.com/dotnet/roslyn/issues/2129")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CrefInSummary()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -240,7 +270,9 @@ class C
 
         [WorkItem(402822, "https://devdiv.visualstudio.com/DevDiv/_workitems?id=402822")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSummaryWithPunctuation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 class C
@@ -260,7 +292,9 @@ class C
 
         [WorkItem(20679, "https://github.com/dotnet/roslyn/issues/20679")]
         [Fact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSummaryWithAdditionalTags()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             const string code = @"
 public class Class1

@@ -29,7 +29,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.TypeInferrer
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.TypeInferenceService)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDeclaration1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"using System;
@@ -45,7 +47,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.TypeInferenceService)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAssignment1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"using System;
@@ -62,7 +66,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.TypeInferenceService)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestArgument1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"using System;
@@ -80,7 +86,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.TypeInferenceService)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestConstructor1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"using System;
@@ -98,7 +106,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.TypeInferenceService)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestDelegateConstructor1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"using System;
@@ -114,7 +124,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.TypeInferenceService)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastExpression1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"using System;
@@ -130,7 +142,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.TypeInferenceService)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestCastExpression2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"using System;
@@ -146,7 +160,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.TypeInferenceService)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestReturnFromMethod()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"using System;
@@ -162,7 +178,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.TypeInferenceService)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInsideLambda1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"using System;

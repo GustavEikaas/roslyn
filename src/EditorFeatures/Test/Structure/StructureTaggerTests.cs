@@ -23,7 +23,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Structure
     public class StructureTaggerTests
     {
         [WpfFact(Skip="https://github.com/dotnet/roslyn/issues/22345"), Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CSharpOutliningTagger_RegionIsDefinition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -67,7 +69,9 @@ namespace MyNamespace
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CSharpOutliningTagger_RegionIsNotDefinition()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code =
 @"using System;
@@ -108,7 +112,9 @@ namespace MyNamespace
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task VisualBasicOutliningTagger()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"Imports System
 Namespace MyNamespace
@@ -145,7 +151,9 @@ End Namespace";
         }
 
         [WpfFact, Trait(Traits.Feature, Traits.Features.Outlining)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OutliningTaggerTooltipText()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"Module Module1
     Sub Main(args As String())

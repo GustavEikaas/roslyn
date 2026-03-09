@@ -36,7 +36,9 @@ namespace ResetInteractiveTestsDocument
 
         [WpfFact]
         [Trait(Traits.Feature, Traits.Features.Interactive)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestResetREPLWithProjectContext()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.Create(WorkspaceXmlStr, exportProvider: InteractiveWindowTestHost.ExportProviderFactory.CreateExportProvider()))
             {

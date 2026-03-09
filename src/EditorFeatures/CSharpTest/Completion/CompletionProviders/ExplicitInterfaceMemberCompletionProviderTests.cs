@@ -22,7 +22,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Completion.CompletionPr
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitInterfaceMember()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface IGoo
@@ -44,7 +46,9 @@ class Bar : IGoo
 
         [WorkItem(709988, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/709988")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitOnNotParen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface IGoo
@@ -73,7 +77,9 @@ class Bar : IGoo
 
         [WorkItem(709988, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/709988")]
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task CommitOnParen()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface IGoo
@@ -102,7 +108,9 @@ class Bar : IGoo
 
         [Fact, Trait(Traits.Feature, Traits.Features.Completion)]
         [WorkItem(19947, "https://github.com/dotnet/roslyn/issues/19947")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ExplicitInterfaceMemberCompletionContainsOnlyValidValues()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 interface I1

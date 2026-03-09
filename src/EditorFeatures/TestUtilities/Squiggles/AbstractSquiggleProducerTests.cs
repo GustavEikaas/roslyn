@@ -45,14 +45,18 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Squiggles
     internal sealed class DiagnosticTagProducer<TProvider>
         where TProvider : AbstractDiagnosticsAdornmentTaggerProvider<IErrorTag>
     {
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         internal Task<(ImmutableArray<DiagnosticData>, ImmutableArray<ITagSpan<IErrorTag>>)> GetDiagnosticsAndErrorSpans(
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
             TestWorkspace workspace,
             Dictionary<string, DiagnosticAnalyzer[]> analyzerMap = null)
         {
             return SquiggleUtilities.GetDiagnosticsAndErrorSpansAsync<TProvider>(workspace, analyzerMap);
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         internal async Task<IList<ITagSpan<IErrorTag>>> GetErrorsFromUpdateSource(TestWorkspace workspace, TestHostDocument document, DiagnosticsUpdatedArgs updateArgs)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var source = new TestDiagnosticUpdateSource();
             using (var wrapper = new DiagnosticTaggerWrapper<TProvider>(workspace, source))

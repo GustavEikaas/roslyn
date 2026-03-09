@@ -22,7 +22,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.SpellCheck
             => FlattenActions(actions);
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNoSpellcheckForIfOnly2Characters()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"class Goo
@@ -36,7 +38,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.SpellCheck
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterNewExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text =
 @"class Goo
@@ -51,7 +55,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.SpellCheck
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInLocalType()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Foo
 {
@@ -70,7 +76,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Diagnostics.SpellCheck
 
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInFunc()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -86,7 +94,9 @@ class Goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program
 {
@@ -100,7 +110,9 @@ class Goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInTypeOfIsExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"using System;
 public class Class1
@@ -118,7 +130,9 @@ public class Class1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestInvokeCorrectIdentifier()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program
 {
@@ -142,7 +156,9 @@ public class Class1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestAfterDot()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program
 {
@@ -164,7 +180,9 @@ public class Class1
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotInaccessibleProperty()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program
 {
@@ -183,7 +201,9 @@ class c
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericName1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Goo<T>
 {
@@ -199,7 +219,9 @@ class c
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestGenericName2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Goo<T>
 {
@@ -215,7 +237,9 @@ class c
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestQualifiedName1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program
 {
@@ -245,7 +269,9 @@ class Goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestQualifiedName2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program
 {
@@ -275,7 +301,9 @@ class Goo
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMiddleOfDottedExpression()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program
 {
@@ -307,7 +335,9 @@ class c
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotForOverloadResolutionFailure()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"class Program
 {
@@ -329,7 +359,9 @@ class c
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHandlePredefinedTypeKeywordCorrectly()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -361,7 +393,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestHandlePredefinedTypeKeywordCorrectly1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System;
@@ -393,7 +427,9 @@ class Program
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestOnGeneric()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 interface Enumerable<T>
@@ -425,7 +461,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTestObjectConstruction()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class AwesomeClass
@@ -445,7 +483,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTestMissingName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"[assembly: Microsoft.CodeAnalysis.[||]]");
@@ -453,7 +493,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
         [WorkItem(12990, "https://github.com/dotnet/roslyn/issues/12990")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestTrivia1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var text = @"
 using System.Text;
@@ -480,7 +522,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
         [WorkItem(13345, "https://github.com/dotnet/roslyn/issues/13345")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestNotMissingOnKeywordWhichIsAlsoASnippet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C
@@ -503,7 +547,9 @@ class C
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
         [WorkItem(18626, "https://github.com/dotnet/roslyn/issues/18626")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestForExplicitInterfaceTypeName()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"interface IProjectConfigurationsService
@@ -536,7 +582,9 @@ class Program : IProjectConfigurationsService
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
         [WorkItem(13345, "https://github.com/dotnet/roslyn/issues/13345")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnKeywordWhichIsOnlyASnippet()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"class C
@@ -551,7 +599,9 @@ class Program : IProjectConfigurationsService
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
         [WorkItem(15733, "https://github.com/dotnet/roslyn/issues/15733")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMissingOnVar()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestMissingInRegularAndScriptAsync(
 @"
@@ -568,7 +618,9 @@ class C
         }
 
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestUnmanagedConstraint()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"class C<T> where T : [|umanaged|]
@@ -581,7 +633,9 @@ class C
 
         [WorkItem(28244, "https://github.com/dotnet/roslyn/issues/28244")]
         [Fact, Trait(Traits.Feature, Traits.Features.CodeActionsSpellcheck)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestMisspelledConstructor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             await TestInRegularAndScriptAsync(
 @"public class SomeClass

@@ -13,7 +13,9 @@ namespace Microsoft.CodeAnalysis.Editor.UnitTests.Extensions
     public class ISemanticSnapshotExtensionTests
     {
         [Fact]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TryGetSymbolTouchingPositionOnLeadingTrivia()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             using (var workspace = TestWorkspace.CreateCSharp(
                 @"using System;

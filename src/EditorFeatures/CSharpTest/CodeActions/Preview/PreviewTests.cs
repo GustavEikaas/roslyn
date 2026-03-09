@@ -71,7 +71,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings
                     solution = solution.AddProject(ProjectInfo.Create(s_addedProjectId, VersionStamp.Create(), AddedProjectName, AddedProjectName, LanguageNames.CSharp));
 
                     // Change a document - This will result in IWpfTextView previews.
+#pragma warning disable VSTHRD103 // Call async methods when in an async method
                     solution = solution.WithDocumentSyntaxRoot(_oldDocument.Id, CSharpSyntaxTree.ParseText(ChangedDocumentText, cancellationToken: cancellationToken).GetRoot(cancellationToken));
+#pragma warning restore VSTHRD103 // Call async methods when in an async method
 
                     return Task.FromResult(solution);
                 }
@@ -82,17 +84,25 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.CodeRefactorings
         {
             document = GetDocument(workspace);
             var provider = CreateCodeRefactoringProvider(workspace, parameters);
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             var span = document.GetSyntaxRootAsync().Result.Span;
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             var refactorings = new List<CodeAction>();
             var context = new CodeRefactoringContext(document, span, refactorings.Add, CancellationToken.None);
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             provider.ComputeRefactoringsAsync(context).Wait();
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
             var action = refactorings.Single();
             var editHandler = workspace.ExportProvider.GetExportedValue<ICodeActionEditHandlerService>();
+#pragma warning disable VSTHRD002 // Avoid problematic synchronous waits
             previews = editHandler.GetPreviews(workspace, action.GetPreviewOperationsAsync(CancellationToken.None).Result, CancellationToken.None);
+#pragma warning restore VSTHRD002 // Avoid problematic synchronous waits
         }
 
         [WpfFact(Skip = "https://github.com/dotnet/roslyn/issues/14421")]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPickTheRightPreview_NoPreference()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var parameters = new TestParameters();
             using (var workspace = CreateWorkspaceFromOptions("class D {}", parameters))

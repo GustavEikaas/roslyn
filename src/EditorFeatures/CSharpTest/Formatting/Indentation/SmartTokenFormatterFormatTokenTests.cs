@@ -14,7 +14,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
     {
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmptyFile1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"{";
 
@@ -26,7 +28,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EmptyFile2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"}";
 
@@ -38,7 +42,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Namespace1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {";
@@ -51,7 +57,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Namespace2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 }";
@@ -64,7 +72,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Namespace3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -78,7 +88,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Class1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -93,7 +105,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Class2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -108,7 +122,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Class3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -124,7 +140,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -141,7 +159,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -158,7 +178,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Method3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -176,7 +198,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Property1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -193,7 +217,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Property2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -211,7 +237,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Event1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -228,7 +256,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Event2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -246,7 +276,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Indexer1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -263,7 +295,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Indexer2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -281,7 +315,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Block1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -299,7 +335,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Block2()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -317,7 +355,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Block3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -336,7 +376,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task Block4()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -355,7 +397,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [Fact]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayInitializer1()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -384,7 +428,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
         [Fact]
         [WorkItem(537827, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/537827")]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task ArrayInitializer3()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"namespace NS
 {
@@ -407,7 +453,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
         [Fact]
         [WorkItem(543142, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/543142")]
         [Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task EnterWithTrailingWhitespace()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"class Class
 {
@@ -425,7 +473,9 @@ namespace Microsoft.CodeAnalysis.Editor.CSharp.UnitTests.Formatting.Indentation
 
         [WorkItem(9216, "DevDiv_Projects/Roslyn")]
         [Fact, Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task OpenBraceWithBaseIndentation()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var markup = @"
 class C
@@ -460,12 +510,16 @@ $$}
 #line hidden|]
     }
 }";
+#pragma warning disable VSTHRD110 // Observe result of async calls
             AssertSmartTokenFormatterCloseBraceWithBaseIndentation(markup, baseIndentation: 7, expectedIndentation: 11);
+#pragma warning restore VSTHRD110 // Observe result of async calls
         }
 
         [WorkItem(766159, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/766159")]
         [Fact, Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestPreprocessor()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -481,7 +535,9 @@ class C
 
         [WorkItem(766159, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/766159")]
         [Fact, Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestRegion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -497,7 +553,9 @@ class C
 
         [WorkItem(766159, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/766159")]
         [Fact, Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestEndRegion()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 class C
@@ -515,7 +573,9 @@ class C
 
         [WorkItem(777467, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/777467")]
         [Fact, Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestSelect()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 using System;
@@ -537,7 +597,9 @@ class Program
 
         [WorkItem(777467, "http://vstfdevdiv:8080/DevDiv2/DevDiv/_workitems/edit/777467")]
         [Fact, Trait(Traits.Feature, Traits.Features.SmartTokenFormatting)]
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         public async Task TestWhere()
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             var code = @"
 using System;
@@ -596,7 +658,9 @@ class Program
             }
         }
 
+#pragma warning disable VSTHRD200 // Use "Async" suffix for async methods
         private Task AssertSmartTokenFormatterCloseBraceWithBaseIndentation(string markup, int baseIndentation, int expectedIndentation)
+#pragma warning restore VSTHRD200 // Use "Async" suffix for async methods
         {
             MarkupTestFile.GetPositionAndSpan(markup,
                 out var code, out var position, out TextSpan span);
